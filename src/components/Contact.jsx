@@ -13,13 +13,13 @@ const contactInfo = [
   {
     icon: HiPhone,
     label: 'Téléphone',
-    value: '+33 6 XX XX XX XX',
-    href: 'tel:+33600000000',
+    value: '+33 6 51 01 95 06',
+    href: 'tel:+33651019506',
   },
   {
     icon: HiLocationMarker,
     label: 'Localisation',
-    value: 'France',
+    value: 'Rennes , France',
     href: null,
   },
 ]
