@@ -1,6 +1,6 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { HiExternalLink, HiCode } from 'react-icons/hi'
+import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 
 const projects = [
@@ -12,6 +12,14 @@ const projects = [
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
     githubUrl: null,
+    features: [
+      'Design responsive mobile-first avec navigation adaptative',
+      'Animations au scroll et micro-interactions',
+      'Formulaire de contact sécurisé avec double envoi d\'email',
+      'Sitemap et robots.txt dynamiques générés côté serveur',
+      'Métadonnées SEO complètes (Open Graph, Twitter Cards, Schema.org)',
+      'Bannière cookies conforme RGPD',
+    ],
   },
   {
     title: 'Smart Detection',
@@ -21,12 +29,171 @@ const projects = [
     tags: ['Next.js 14', 'TypeScript', 'OpenAI API', 'Drizzle ORM', 'SQLite'],
     liveUrl: null,
     githubUrl: null,
+    features: [
+      'Tableau de bord analytique en temps réel',
+      'Acquisition multi-sources (CSV, Google Places API)',
+      'Analyse automatisée : HTTPS, responsive, performance, 30+ technologies',
+      'Algorithme de scoring d\'obsolescence (0-100)',
+      'Génération d\'emails IA personnalisés via GPT-4',
+      'Gestion de campagnes avec file d\'attente d\'envoi',
+    ],
+  },
+  {
+    title: 'ResumeForge',
+    description:
+      'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
+    image: '/projects/resumeforge.jpg',
+    tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
+    liveUrl: null,
+    githubUrl: null,
+    features: [
+      '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
+      'Analyse ATS : Score 0-100 avec recommandations',
+      'Suggestions IA pour amélioration du contenu',
+      'Authentification 2FA avec QR code',
+      'Paiement Stripe (1 template gratuit, premium à 4.99€)',
+      'Export PDF haute qualité',
+    ],
+  },
+  {
+    title: 'Carnet de Santé Animal',
+    description:
+      'Application multiplateforme pour éleveurs et propriétaires d\'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.',
+    image: '/projects/carnet-sante.jpg',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Firestore', 'FL Chart'],
+    liveUrl: null,
+    githubUrl: null,
+    features: [
+      'Fiche complète par animal avec photo et identification',
+      'Suivi vaccins avec rappels automatiques',
+      'Historique des traitements et consultations vétérinaires',
+      'Graphique d\'évolution du poids',
+      'Arbre généalogique interactif',
+      'Export PDF du carnet de santé complet',
+    ],
+  },
+  {
+    title: 'Haut en Couleur',
+    description:
+      'Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.',
+    image: '/projects/haut-en-couleur.jpg',
+    tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
+    liveUrl: 'https://haut-en-couleur.fr',
+    githubUrl: null,
+    features: [
+      'Internationalisation complète (FR/EN) avec next-intl',
+      'Dark mode avec persistance des préférences',
+      'Galerie avant/après interactive avec slider tactile',
+      'Avis Google dynamiques via API',
+      'Carte interactive avec zone d\'intervention',
+      'Formulaire sécurisé avec rate limiting et hCaptcha',
+    ],
   },
 ]
+
+function ProjectModal({ project, onClose }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm"
+    >
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95, y: 20 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl"
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors z-10"
+        >
+          <HiX size={20} />
+        </button>
+
+        {/* Header image */}
+        <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+          <HiCode size={64} className="text-primary-500/30" />
+        </div>
+
+        {/* Content */}
+        <div className="p-6 sm:p-8">
+          <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-primary-500/10 text-primary-400 text-sm rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Description */}
+          <p className="text-slate-300 leading-relaxed mb-6">
+            {project.description}
+          </p>
+
+          {/* Features */}
+          {project.features && (
+            <div className="mb-6">
+              <h4 className="text-white font-semibold mb-3">Fonctionnalités clés</h4>
+              <ul className="space-y-2">
+                {project.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2 text-slate-400 text-sm">
+                    <span className="text-primary-400 mt-1">•</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Links */}
+          <div className="flex items-center gap-4 pt-4 border-t border-slate-800">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-sm"
+              >
+                <HiExternalLink size={16} />
+                Voir le site
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary text-sm"
+              >
+                <FaGithub size={16} />
+                Code source
+              </a>
+            )}
+            {!project.liveUrl && !project.githubUrl && (
+              <span className="text-slate-500 text-sm">Projet privé / en développement</span>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
 
 export default function Projects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [selectedProject, setSelectedProject] = useState(null)
 
   return (
     <section id="realisations" className="py-20 sm:py-32">
@@ -55,7 +222,8 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card overflow-hidden group"
+                onClick={() => setSelectedProject(project)}
+                className="card overflow-hidden group cursor-pointer"
               >
                 {/* Project image placeholder */}
                 <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
@@ -66,7 +234,11 @@ export default function Projects() {
                     />
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-300 flex items-center justify-center">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-medium bg-slate-900/80 px-4 py-2 rounded-lg">
+                      Voir les détails
+                    </span>
+                  </div>
                 </div>
 
                 {/* Project info */}
@@ -80,7 +252,7 @@ export default function Projects() {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
                         className="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-md"
@@ -88,6 +260,11 @@ export default function Projects() {
                         {tag}
                       </span>
                     ))}
+                    {project.tags.length > 3 && (
+                      <span className="px-2 py-1 bg-slate-800 text-slate-500 text-xs rounded-md">
+                        +{project.tags.length - 3}
+                      </span>
+                    )}
                   </div>
 
                   {/* Links */}
@@ -97,6 +274,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="flex items-center gap-1 text-sm text-slate-400 hover:text-primary-400 transition-colors"
                       >
                         <HiExternalLink size={16} />
@@ -108,6 +286,7 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition-colors"
                       >
                         <FaGithub size={16} />
@@ -139,6 +318,16 @@ export default function Projects() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   )
 }
