@@ -45,7 +45,7 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/evandavison"
+              href="https://github.com/davisone"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-white transition-colors"
@@ -54,7 +54,7 @@ export default function Footer() {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/evandavison"
+              href="https://www.linkedin.com/in/evan-d-766478247"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-white transition-colors"

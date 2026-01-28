@@ -307,7 +307,7 @@ export default function Projects() {
             className="text-center mt-12"
           >
             <a
-              href="https://github.com/evandavison"
+              href="https://github.com/davisone"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"

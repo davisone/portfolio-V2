@@ -28,12 +28,12 @@ const socialLinks = [
   {
     icon: FaGithub,
     label: 'GitHub',
-    href: 'https://github.com/evandavison',
+    href: 'https://github.com/davisone',
   },
   {
     icon: FaLinkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/evandavison',
+    href: 'https://www.linkedin.com/in/evan-d-766478247',
   },
 ]
 
