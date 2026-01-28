@@ -22,12 +22,12 @@ export default function Footer() {
               <span className="gradient-text">.dev</span>
             </a>
             <p className="text-slate-500 text-sm mt-2">
-              Développeur Fullstack & Freelance
+              Développeur Fullstack • Rennes
             </p>
           </div>
 
           {/* Navigation */}
-          <nav>
+          <nav aria-label="Navigation du footer">
             <ul className="flex flex-wrap justify-center gap-6">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -70,15 +70,19 @@ export default function Footer() {
           <p>
             &copy; {currentYear} Evan Davison. Tous droits réservés.
           </p>
-          <p className="flex items-center gap-1">
-            Fait avec <FaHeart className="text-red-500" size={12} /> et{' '}
+        </div>
+
+        {/* Freelance mention discret */}
+        <div className="text-center mt-6">
+          <p className="text-slate-600 text-xs">
+            Besoin d'un développeur pour votre projet ?{' '}
             <a
-              href="https://react.dev"
+              href="https://dvs-web.fr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-400 hover:text-primary-300"
+              className="text-primary-400 hover:text-primary-300 transition-colors"
             >
-              React
+              Découvrez DVS Web →
             </a>
           </p>
         </div>

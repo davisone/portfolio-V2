@@ -48,13 +48,12 @@ export default function About() {
             {/* Text content */}
             <div className="space-y-6">
               <p className="text-slate-300 text-lg leading-relaxed">
-                Passionné par le développement depuis plusieurs années, je suis actuellement
-                en fin de cursus <strong className="text-white">Bac+3</strong> en développement
-                informatique. Cette formation m'a permis d'acquérir des compétences solides
-                en développement web et mobile.
+                Développeur fullstack basé à <strong className="text-white">Rennes</strong>, je suis en fin
+                de cursus <strong className="text-white">Bac+3</strong> en développement informatique.
+                Ma formation m'a permis de maîtriser le développement web et mobile, du frontend au backend.
               </p>
               <p className="text-slate-300 text-lg leading-relaxed">
-                En parallèle de mes études, j'ai lancé{' '}
+                En parallèle de mes études, j'ai fondé{' '}
                 <a
                   href="https://dvs-web.fr"
                   target="_blank"
@@ -63,14 +62,13 @@ export default function About() {
                 >
                   DVS Web
                 </a>
-                , mon activité freelance. J'accompagne les entreprises et entrepreneurs
-                dans la création de leur présence digitale : sites vitrines, applications
-                web, e-commerce et stratégie SEO.
+                , mon activité freelance où j'accompagne les entreprises dans la création de leurs
+                projets digitaux : sites vitrines, applications web, e-commerce et optimisation SEO.
               </p>
               <p className="text-slate-300 text-lg leading-relaxed">
-                Ma double casquette étudiant/freelance me permet d'allier la rigueur
-                académique à la réalité du terrain, pour des solutions concrètes et
-                adaptées à vos besoins.
+                Cette double casquette <strong className="text-white">étudiant</strong> et{' '}
+                <strong className="text-white">entrepreneur</strong> me permet d'allier rigueur technique
+                et expérience terrain, pour livrer des solutions concrètes et performantes.
               </p>
             </div>
 

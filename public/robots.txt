@@ -1,0 +1,9 @@
+# Robots.txt for evandavison.fr
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://evandavison.fr/sitemap.xml
+
+# Crawl-delay (optional, respecté par certains bots)
+Crawl-delay: 1

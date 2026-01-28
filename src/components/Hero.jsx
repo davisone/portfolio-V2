@@ -27,16 +27,17 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-full text-sm text-slate-400 mb-8"
           >
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            Disponible pour des missions freelance
+            Ouvert aux opportunités
           </motion.div>
 
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Développeur{' '}
-            <span className="gradient-text">Fullstack</span>
+            Evan Davison
             <br />
-            <span className="text-slate-400 text-3xl sm:text-4xl md:text-5xl">
-              & Fondateur de{' '}
+            <span className="gradient-text">Développeur Fullstack</span>
+            <br />
+            <span className="text-slate-400 text-2xl sm:text-3xl md:text-4xl">
+              Rennes • Fondateur de{' '}
               <a
                 href="https://dvs-web.fr"
                 target="_blank"
@@ -50,10 +51,10 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
-            Étudiant Bac+3 passionné par la création d'expériences web modernes.
-            Je conçois des <strong className="text-white">sites web</strong>,{' '}
-            <strong className="text-white">applications mobiles</strong> et optimise
-            votre <strong className="text-white">référencement SEO</strong>.
+            Passionné par le développement web et mobile, je crée des{' '}
+            <strong className="text-white">applications modernes</strong> avec React, Next.js et Flutter.
+            En parallèle, j'accompagne les entreprises via mon activité{' '}
+            <strong className="text-white">freelance</strong>.
           </p>
 
           {/* CTA Buttons */}
