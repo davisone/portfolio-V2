@@ -47,6 +47,7 @@ export default function Contact() {
     subject: '',
     message: '',
   })
+  const [honeypot, setHoneypot] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [status, setStatus] = useState({ type: '', message: '' })
 
@@ -56,6 +57,9 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (honeypot) return
+
     setIsSubmitting(true)
     setStatus({ type: '', message: '' })
 
@@ -186,6 +190,18 @@ export default function Contact() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="card p-8"
             >
+              {/* Honeypot anti-spam */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                className="absolute opacity-0 pointer-events-none"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
+
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label
@@ -278,15 +294,18 @@ export default function Contact() {
                 )}
               </button>
 
-              {status.message && (
-                <p
-                  className={`mt-4 text-center text-sm ${
-                    status.type === 'success' ? 'text-green-400' : 'text-red-400'
-                  }`}
-                >
-                  {status.message}
-                </p>
-              )}
+              <div aria-live="polite" aria-atomic="true">
+                {status.message && (
+                  <p
+                    role={status.type === 'error' ? 'alert' : 'status'}
+                    className={`mt-4 text-center text-sm ${
+                      status.type === 'success' ? 'text-green-400' : 'text-red-400'
+                    }`}
+                  >
+                    {status.message}
+                  </p>
+                )}
+              </div>
             </motion.form>
           </div>
         </motion.div>
