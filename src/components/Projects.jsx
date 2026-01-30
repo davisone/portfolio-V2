@@ -73,6 +73,23 @@ const projects = [
     ],
   },
   {
+    title: 'QR Code Generator',
+    description:
+      'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
+    image: '/projects/qr-code-generator.jpg',
+    tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
+    liveUrl: null,
+    githubUrl: null,
+    features: [
+      'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
+      'Personnalisation avancée : couleurs, taille, correction d\'erreur, logo centré, templates (Ocean, Forest, Sunset…)',
+      'Dashboard avec recherche, filtres (type, favoris) et sélection multiple',
+      'Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports groupés',
+      'Partage public via liens uniques avec tokens',
+      'Authentification complète : inscription, connexion, sessions JWT avec hashage bcrypt',
+    ],
+  },
+  {
     title: 'Haut en Couleur',
     description:
       'Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.',
