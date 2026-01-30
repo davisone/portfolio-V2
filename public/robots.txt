@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://evandavison.fr/sitemap.xml
+Sitemap: https://evandavison.fr/sitemap-index.xml
 
 # Crawl-delay (optional, respecté par certains bots)
 Crawl-delay: 1
