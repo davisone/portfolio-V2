@@ -8,7 +8,7 @@ const projects = [
     title: 'DVS Web',
     description:
       'Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.',
-    image: '/projects/dvs-web.jpg',
+    image: '/projets/DSV-Web.png',
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
     githubUrl: null,
@@ -25,7 +25,7 @@ const projects = [
     title: 'Smart Detection',
     description:
       'Plateforme de prospection B2B automatisée. Identifie les entreprises avec des sites obsolètes, analyse leur présence web (HTTPS, responsive, performance) et génère des emails personnalisés via GPT-4.',
-    image: '/projects/smart-detection.jpg',
+    image: '/projets/scrapping.png',
     tags: ['Next.js 14', 'TypeScript', 'OpenAI API', 'Drizzle ORM', 'SQLite'],
     liveUrl: null,
     githubUrl: null,
@@ -42,9 +42,9 @@ const projects = [
     title: 'ResumeForge',
     description:
       'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
-    image: '/projects/resumeforge.jpg',
+    image: '/projets/resume-forge.png',
     tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
-    liveUrl: null,
+    liveUrl: 'https://cv-intelligent.vercel.app',
     githubUrl: null,
     features: [
       '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
@@ -76,9 +76,9 @@ const projects = [
     title: 'QR Code Generator',
     description:
       'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
-    image: '/projects/qr-code-generator.jpg',
+    image: '/projets/QR-code-image.png',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
-    liveUrl: null,
+    liveUrl: 'https://qr-dvsweb.vercel.app',
     githubUrl: null,
     features: [
       'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
@@ -93,7 +93,7 @@ const projects = [
     title: 'Haut en Couleur',
     description:
       'Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.',
-    image: '/projects/haut-en-couleur.jpg',
+    image: '/projets/haut-en-couleur.png',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
     liveUrl: 'https://haut-en-couleur.fr',
     githubUrl: null,
@@ -134,7 +134,15 @@ function ProjectModal({ project, onClose }) {
 
         {/* Header image */}
         <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-          <HiCode size={64} className="text-primary-500/30" />
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <HiCode size={64} className="text-primary-500/30" />
+          )}
         </div>
 
         {/* Content */}
@@ -242,14 +250,22 @@ export default function Projects() {
                 onClick={() => setSelectedProject(project)}
                 className="card overflow-hidden group cursor-pointer"
               >
-                {/* Project image placeholder */}
+                {/* Project image */}
                 <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <HiCode
-                      size={48}
-                      className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300"
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                  </div>
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <HiCode
+                        size={48}
+                        className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300"
+                      />
+                    </div>
+                  )}
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-300 flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-medium bg-slate-900/80 px-4 py-2 rounded-lg">
