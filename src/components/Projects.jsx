@@ -1,14 +1,51 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
+
+// Composant pour afficher l'image avec screenshot dynamique et fallback
+function ProjectImage({ project, className }) {
+  const [imgSrc, setImgSrc] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if (project.liveUrl) {
+      // Utilise le screenshot dynamique si l'URL live existe
+      setImgSrc(`https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&meta=false&embed=screenshot.url`)
+    } else if (project.image) {
+      setImgSrc(project.image)
+    }
+    setIsLoading(false)
+  }, [project.liveUrl, project.image])
+
+  const handleError = () => {
+    // Si le screenshot échoue, utilise l'image statique en fallback
+    if (project.image && imgSrc !== project.image) {
+      setImgSrc(project.image)
+    }
+  }
+
+  if (!imgSrc) {
+    return <HiCode size={48} className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300" />
+  }
+
+  return (
+    <img
+      src={imgSrc}
+      alt={project.title}
+      className={className}
+      onError={handleError}
+      loading="lazy"
+    />
+  )
+}
 
 const projects = [
   {
     title: 'DVS Web',
     description:
       'Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.',
-    image: '/projets/DSV-Web.png',
+    image: '/projets/DSV-Web.png', // Fallback
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
     githubUrl: null,
@@ -39,7 +76,7 @@ const projects = [
     ],
   },
   {
-    title: 'ResumeForge',
+    title: 'DVS - CV',
     description:
       'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
     image: '/projets/resume-forge.png',
@@ -134,10 +171,9 @@ function ProjectModal({ project, onClose }) {
 
         {/* Header image */}
         <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-          {project.image ? (
-            <img
-              src={project.image}
-              alt={project.title}
+          {(project.liveUrl || project.image) ? (
+            <ProjectImage
+              project={project}
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
@@ -252,10 +288,9 @@ export default function Projects() {
               >
                 {/* Project image */}
                 <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                  {project.image ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
+                  {(project.liveUrl || project.image) ? (
+                    <ProjectImage
+                      project={project}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   ) : (
