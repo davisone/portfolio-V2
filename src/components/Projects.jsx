@@ -3,25 +3,50 @@ import { useRef, useState, useEffect } from 'react'
 import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 
+// Skeleton loader pour l'animation de chargement
+function ImageSkeleton() {
+  return (
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-700/30 to-transparent animate-shimmer" />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-12 h-12 border-2 border-primary-500/30 border-t-primary-500 rounded-full animate-spin" />
+          <span className="text-slate-500 text-sm">Chargement...</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // Composant pour afficher l'image avec screenshot dynamique et fallback
 function ProjectImage({ project, className }) {
   const [imgSrc, setImgSrc] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    setIsLoading(true)
     if (project.liveUrl) {
       // Utilise le screenshot dynamique si l'URL live existe
-      setImgSrc(`https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&meta=false&embed=screenshot.url`)
+      // Le paramètre v= permet d'invalider le cache quand on modifie screenshotVersion
+      const version = project.screenshotVersion || 1
+      setImgSrc(`https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&meta=false&embed=screenshot.url&v=${version}`)
     } else if (project.image) {
       setImgSrc(project.image)
+    } else {
+      setIsLoading(false)
     }
+  }, [project.liveUrl, project.image, project.screenshotVersion])
+
+  const handleLoad = () => {
     setIsLoading(false)
-  }, [project.liveUrl, project.image])
+  }
 
   const handleError = () => {
     // Si le screenshot échoue, utilise l'image statique en fallback
     if (project.image && imgSrc !== project.image) {
       setImgSrc(project.image)
+    } else {
+      setIsLoading(false)
     }
   }
 
@@ -30,13 +55,17 @@ function ProjectImage({ project, className }) {
   }
 
   return (
-    <img
-      src={imgSrc}
-      alt={project.title}
-      className={className}
-      onError={handleError}
-      loading="lazy"
-    />
+    <>
+      {isLoading && <ImageSkeleton />}
+      <img
+        src={imgSrc}
+        alt={project.title}
+        className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading="lazy"
+      />
+    </>
   )
 }
 
@@ -48,6 +77,7 @@ const projects = [
     image: '/projets/DSV-Web.png', // Fallback
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
+    screenshotVersion: 1,
     githubUrl: null,
     features: [
       'Design responsive mobile-first avec navigation adaptative',
@@ -82,6 +112,7 @@ const projects = [
     image: '/projets/resume-forge.png',
     tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
     liveUrl: 'https://cv-intelligent.vercel.app',
+    screenshotVersion: 1,
     githubUrl: null,
     features: [
       '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
@@ -116,6 +147,7 @@ const projects = [
     image: '/projets/QR-code-image.png',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
     liveUrl: 'https://qr-dvsweb.vercel.app',
+    screenshotVersion: 2, // Incrémenté pour forcer le refresh du nouveau design
     githubUrl: null,
     features: [
       'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
@@ -133,6 +165,7 @@ const projects = [
     image: '/projets/haut-en-couleur.png',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
     liveUrl: 'https://haut-en-couleur.fr',
+    screenshotVersion: 1,
     githubUrl: null,
     features: [
       'Internationalisation complète (FR/EN) avec next-intl',
