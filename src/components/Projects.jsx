@@ -18,39 +18,23 @@ function ImageSkeleton() {
   )
 }
 
-// Composant pour afficher l'image avec screenshot dynamique et fallback
+// Composant pour afficher l'image avec chargement optimisé
 function ProjectImage({ project, className }) {
-  const [imgSrc, setImgSrc] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const imgRef = useRef(null)
 
   useEffect(() => {
-    setIsLoading(true)
-    if (project.liveUrl) {
-      // Utilise le screenshot dynamique si l'URL live existe
-      // Le paramètre v= permet d'invalider le cache quand on modifie screenshotVersion
-      const version = project.screenshotVersion || 1
-      setImgSrc(`https://api.microlink.io/?url=${encodeURIComponent(project.liveUrl)}&screenshot=true&meta=false&embed=screenshot.url&v=${version}`)
-    } else if (project.image) {
-      setImgSrc(project.image)
-    } else {
+    // Gère le cas où l'image est déjà en cache
+    if (imgRef.current?.complete) {
       setIsLoading(false)
     }
-  }, [project.liveUrl, project.image, project.screenshotVersion])
+  }, [])
 
   const handleLoad = () => {
     setIsLoading(false)
   }
 
-  const handleError = () => {
-    // Si le screenshot échoue, utilise l'image statique en fallback
-    if (project.image && imgSrc !== project.image) {
-      setImgSrc(project.image)
-    } else {
-      setIsLoading(false)
-    }
-  }
-
-  if (!imgSrc) {
+  if (!project.image) {
     return <HiCode size={48} className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300" />
   }
 
@@ -58,12 +42,11 @@ function ProjectImage({ project, className }) {
     <>
       {isLoading && <ImageSkeleton />}
       <img
-        src={imgSrc}
+        ref={imgRef}
+        src={project.image}
         alt={project.title}
         className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
         onLoad={handleLoad}
-        onError={handleError}
-        loading="lazy"
       />
     </>
   )
@@ -74,10 +57,9 @@ const projects = [
     title: 'DVS Web',
     description:
       'Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.',
-    image: '/projets/DSV-Web.png', // Fallback
+    image: '/projets/2.png',
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
-    screenshotVersion: 1,
     githubUrl: null,
     features: [
       'Design responsive mobile-first avec navigation adaptative',
@@ -109,10 +91,9 @@ const projects = [
     title: 'DVS - CV',
     description:
       'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
-    image: '/projets/resume-forge.png',
+    image: '/projets/1.png',
     tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
     liveUrl: 'https://cv-intelligent.vercel.app',
-    screenshotVersion: 1,
     githubUrl: null,
     features: [
       '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
@@ -144,10 +125,9 @@ const projects = [
     title: 'QR Code Generator',
     description:
       'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
-    image: '/projets/QR-code-image.png',
+    image: '/projets/3.png',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
     liveUrl: 'https://qr-dvsweb.vercel.app',
-    screenshotVersion: 2, // Incrémenté pour forcer le refresh du nouveau design
     githubUrl: null,
     features: [
       'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
@@ -165,7 +145,6 @@ const projects = [
     image: '/projets/haut-en-couleur.png',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
     liveUrl: 'https://haut-en-couleur.fr',
-    screenshotVersion: 1,
     githubUrl: null,
     features: [
       'Internationalisation complète (FR/EN) avec next-intl',
