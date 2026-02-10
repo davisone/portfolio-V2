@@ -108,7 +108,7 @@ const projects = [
     title: 'Carnet de Santé Animal',
     description:
       'Application multiplateforme pour éleveurs et propriétaires d\'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.',
-    image: '/projects/carnet-sante.jpg',
+    image: '/projets/4.png',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore', 'FL Chart'],
     liveUrl: null,
     githubUrl: null,
