@@ -90,18 +90,19 @@ const projects = [
   {
     title: 'CV Builder',
     description:
-      'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
+      'Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
     image: '/projets/cv.png',
-    tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
+    tags: ['Next.js 16', 'TypeScript', 'OpenAI API', 'Stripe', 'Prisma', 'Supabase', 'NextAuth', 'Nodemailer'],
     liveUrl: 'https://cv-builder.fr',
     githubUrl: null,
     features: [
       '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
       'Analyse ATS : Score 0-100 avec recommandations',
       'Suggestions IA pour amélioration du contenu',
-      'Authentification 2FA avec QR code',
+      'Authentification OAuth (Google, GitHub) + 2FA avec QR code',
       'Paiement Stripe (1 template gratuit, premium à 4.99€)',
       'Export PDF haute qualité',
+      'Emails transactionnels (bienvenue, reset password, confirmation paiement)',
     ],
   },
   {
