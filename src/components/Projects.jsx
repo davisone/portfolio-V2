@@ -88,12 +88,12 @@ const projects = [
     ],
   },
   {
-    title: 'DVS - CV',
+    title: 'CV Builder',
     description:
       'Application SaaS de génération de CV avec IA. Intègre Claude API pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
-    image: '/projets/1.png',
+    image: '/projets/cv.png',
     tags: ['Next.js 15', 'TypeScript', 'Claude API', 'Stripe', 'Prisma', 'Supabase'],
-    liveUrl: 'https://cv-intelligent.vercel.app',
+    liveUrl: 'https://cv-builder.fr',
     githubUrl: null,
     features: [
       '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
