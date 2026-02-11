@@ -123,12 +123,12 @@ const projects = [
     ],
   },
   {
-    title: 'QR Code Generator',
+    title: 'QRaft',
     description:
       'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
     image: '/projets/3.png',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
-    liveUrl: 'https://qr-dvsweb.vercel.app',
+    liveUrl: 'https://qr-aft.vercel.app',
     githubUrl: null,
     features: [
       'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
@@ -136,7 +136,7 @@ const projects = [
       'Dashboard avec recherche, filtres (type, favoris) et sélection multiple',
       'Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports groupés',
       'Partage public via liens uniques avec tokens',
-      'Authentification complète : inscription, connexion, sessions JWT avec hashage bcrypt',
+      'Authentification complète avec hashage bcrypt',
     ],
   },
   {
