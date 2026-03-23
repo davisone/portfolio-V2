@@ -74,7 +74,7 @@ const projects = [
     title: 'CV Builder',
     description:
       'Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
-    image: '/projets/cv.png',
+    image: '/projets/cv-builder.png',
     tags: ['Next.js 16', 'TypeScript', 'OpenAI API', 'Stripe', 'Prisma', 'Supabase', 'NextAuth', 'Nodemailer'],
     liveUrl: 'https://cv-builder.fr',
     githubUrl: null,
@@ -92,7 +92,7 @@ const projects = [
     title: 'Carnet de Santé Animal',
     description:
       'Application multiplateforme pour éleveurs et propriétaires d\'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.',
-    image: '/projets/4.png',
+    image: '/projets/carnet-de-sante.png',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore', 'FL Chart'],
     liveUrl: null,
     githubUrl: null,
