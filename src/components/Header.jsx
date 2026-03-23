@@ -5,10 +5,8 @@ import { HiMenu, HiX } from 'react-icons/hi'
 const navLinks = [
   { name: 'Accueil', href: '#accueil' },
   { name: 'À propos', href: '#apropos' },
-  { name: 'Services', href: '#services' },
-  { name: 'Expériences', href: '#experiences' },
   { name: 'Réalisations', href: '#realisations' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Blog', href: '/blog' },
 ]
 
 export default function Header() {

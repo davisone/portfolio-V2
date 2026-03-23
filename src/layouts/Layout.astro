@@ -1,5 +1,23 @@
 ---
 import '../styles/global.css'
+
+interface Props {
+  title?: string
+  description?: string
+  canonical?: string
+  ogImage?: string
+  schema?: object
+}
+
+const {
+  title = 'Evan Davison | Développeur Fullstack Rennes - Portfolio',
+  description = "Portfolio d'Evan Davison, développeur fullstack à Rennes. Découvrez mes projets, compétences (React, Next.js, Flutter, Node.js) et mon parcours. Fondateur de DVS Web.",
+  canonical = 'https://evandavison.fr',
+  ogImage = 'https://evandavison.fr/og-image.png',
+  schema,
+} = Astro.props
+
+const today = new Date().toISOString().split('T')[0]
 ---
 
 <!DOCTYPE html>
@@ -10,13 +28,13 @@ import '../styles/global.css'
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Primary - Portfolio orienté -->
-    <title>Evan Davison | Développeur Fullstack Rennes - Portfolio</title>
-    <meta name="description" content="Portfolio d'Evan Davison, développeur fullstack à Rennes. Découvrez mes projets, compétences (React, Next.js, Flutter, Node.js) et mon parcours. Fondateur de DVS Web." />
+    <!-- SEO Primary -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta name="keywords" content="Evan Davison, développeur fullstack, portfolio développeur Rennes, développeur web Rennes, CV développeur, React, Next.js, TypeScript, Flutter, Node.js, DVS Web" />
     <meta name="author" content="Evan Davison" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://evandavison.fr" />
+    <link rel="canonical" href={canonical} />
 
     <!-- Geo Meta Tags -->
     <meta name="geo.region" content="FR-35" />
@@ -26,10 +44,10 @@ import '../styles/global.css'
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile" />
-    <meta property="og:url" content="https://evandavison.fr" />
-    <meta property="og:title" content="Evan Davison | Développeur Fullstack Rennes" />
-    <meta property="og:description" content="Portfolio d'Evan Davison, développeur fullstack à Rennes. Projets, compétences et parcours. Fondateur de DVS Web." />
-    <meta property="og:image" content="https://evandavison.fr/og-image.jpg" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="Evan Davison - Portfolio" />
     <meta property="profile:first_name" content="Evan" />
@@ -37,14 +55,13 @@ import '../styles/global.css'
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://evandavison.fr" />
-    <meta name="twitter:title" content="Evan Davison | Développeur Fullstack Rennes" />
-    <meta name="twitter:description" content="Portfolio d'Evan Davison, développeur fullstack à Rennes. Découvrez mes projets et compétences." />
-    <meta name="twitter:image" content="https://evandavison.fr/og-image.jpg" />
+    <meta name="twitter:url" content={canonical} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Schema.org Person + Portfolio -->
-    <script type="application/ld+json">
-    {
+    <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -58,7 +75,7 @@ import '../styles/global.css'
           "url": "https://evandavison.fr",
           "email": "contact@evandavison.fr",
           "telephone": "+33651019506",
-          "image": "https://evandavison.fr/og-image.jpg",
+          "image": "https://evandavison.fr/og-image.png",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Rennes",
@@ -75,20 +92,9 @@ import '../styles/global.css'
             }
           },
           "knowsAbout": [
-            "Développement web",
-            "React",
-            "Next.js",
-            "TypeScript",
-            "JavaScript",
-            "Node.js",
-            "Flutter",
-            "Dart",
-            "Tailwind CSS",
-            "PostgreSQL",
-            "MongoDB",
-            "Firebase",
-            "SEO",
-            "UI/UX Design"
+            "Développement web", "React", "Next.js", "TypeScript", "JavaScript",
+            "Node.js", "Flutter", "Dart", "Tailwind CSS", "PostgreSQL",
+            "MongoDB", "Firebase", "SEO", "UI/UX Design"
           ],
           "sameAs": [
             "https://github.com/davisone",
@@ -107,9 +113,7 @@ import '../styles/global.css'
           "url": "https://evandavison.fr",
           "name": "Evan Davison - Portfolio Développeur Fullstack",
           "description": "Portfolio et CV en ligne d'Evan Davison, développeur fullstack à Rennes",
-          "publisher": {
-            "@id": "https://evandavison.fr/#person"
-          },
+          "publisher": { "@id": "https://evandavison.fr/#person" },
           "inLanguage": "fr-FR"
         },
         {
@@ -117,28 +121,25 @@ import '../styles/global.css'
           "@id": "https://evandavison.fr/#profilepage",
           "url": "https://evandavison.fr",
           "name": "Portfolio d'Evan Davison",
-          "mainEntity": {
-            "@id": "https://evandavison.fr/#person"
-          },
+          "mainEntity": { "@id": "https://evandavison.fr/#person" },
           "dateCreated": "2026-01-28",
-          "dateModified": "2026-01-28",
+          "dateModified": today,
           "inLanguage": "fr-FR"
         },
         {
           "@type": "BreadcrumbList",
           "@id": "https://evandavison.fr/#breadcrumb",
           "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Portfolio",
-              "item": "https://evandavison.fr"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://evandavison.fr" }
           ]
         }
       ]
-    }
-    </script>
+    })} />
+
+    <!-- Schema.org additionnel par page -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS8DC81PH4"></script>
@@ -148,10 +149,6 @@ import '../styles/global.css'
       gtag('js', new Date());
       gtag('config', 'G-ZS8DC81PH4');
     </script>
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body class="bg-slate-950 text-slate-100">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:outline-none">

@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création boutique en ligne à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "E-commerce",
+      "description": "Création de boutiques en ligne à Rennes : e-commerce sur mesure ou Shopify, paiements sécurisés, gestion des stocks, SEO intégré. Solution clé en main pour vendre en ligne.",
+      "url": "https://evandavison.fr/services/creation-boutique-en-ligne"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création boutique en ligne Rennes", "item": "https://evandavison.fr/services/creation-boutique-en-ligne" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quel est le coût de création d'une boutique en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Une boutique en ligne démarre à partir de 1 500€ pour une solution Shopify personnalisée, et à partir de 3 000€ pour un e-commerce sur mesure avec fonctionnalités avancées. Le prix dépend du nombre de produits, des fonctionnalités et des intégrations nécessaires." }
+        },
+        {
+          "@type": "Question",
+          "name": "Shopify ou développement sur mesure, comment choisir ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Shopify est idéal pour démarrer rapidement avec un catalogue standard : mise en ligne rapide, hébergement inclus, écosystème d'apps. Le sur-mesure s'impose pour des besoins spécifiques : logique de prix complexe, intégration ERP, expérience client très différenciante." }
+        },
+        {
+          "@type": "Question",
+          "name": "Les paiements en ligne sont-ils sécurisés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des solutions de paiement certifiées PCI-DSS : Stripe, PayPal, ou les modules Shopify Payments. Les données de carte ne transitent jamais par votre serveur — elles sont traitées directement par le prestataire de paiement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourrai-je gérer mes produits moi-même ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je mets en place une interface d'administration simple et vous forme à son utilisation : ajout de produits, gestion des stocks, suivi des commandes. Vous êtes autonome dès la livraison." }
+        },
+        {
+          "@type": "Question",
+          "name": "La boutique sera-t-elle bien référencée sur Google ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, le SEO e-commerce est intégré dès la conception : structure des URLs propre, balises meta par produit et catégorie, données structurées Product et BreadcrumbList, sitemap XML, temps de chargement optimisé." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création boutique en ligne Rennes | Evan Davison — E-commerce"
+  description="Créez votre boutique en ligne à Rennes avec Evan Davison. E-commerce sur mesure ou Shopify, paiements sécurisés, SEO intégré, formation incluse. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-boutique-en-ligne"
+  schema={schema}
+>
+  <div class="min-h-screen bg-slate-950">
+    <Header client:load />
+
+    <main id="main-content" class="pt-20">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Fil d'ariane" class="section-container py-4">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-slate-300 transition-colors">Accueil</a></li>
+          <li class="text-slate-700">/</li>
+          <li><a href="/#services" class="hover:text-slate-300 transition-colors">Services</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">Boutique en ligne Rennes</li>
+        </ol>
+      </nav>
+
+      <!-- Hero -->
+      <section class="section-container py-16 sm:py-24">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Création <span class="gradient-text">boutique<br/>en ligne</span> à Rennes
+          </h1>
+          <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+            Vous voulez vendre en ligne ? Je crée votre boutique e-commerce : design soigné, tunnel d'achat optimisé, paiements sécurisés — et vous êtes autonome pour la gérer.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/#contact" class="btn-primary">
+              Obtenir un devis gratuit
+            </a>
+            <a href="/#realisations" class="btn-secondary">
+              Voir mes projets
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problème / Solution -->
+      <section class="py-16 bg-slate-900/30">
+        <div class="section-container">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">
+                Une boutique qui <span class="gradient-text">vend vraiment</span>
+              </h2>
+              <div class="space-y-4 text-slate-400">
+                <p>Trop de boutiques en ligne perdent des ventes à cause d'un tunnel d'achat mal pensé, d'un design peu crédible ou de pages produits sans SEO.</p>
+                <p>Je conçois des e-commerces pensés pour convertir : UX fluide, fiches produit optimisées pour Google, paiements en un clic, et interface d'administration que vous maîtrisez dès le premier jour.</p>
+                <p>Que vous vendiez 10 produits ou 1 000, la solution est dimensionnée pour votre activité — pas surdimensionnée, pas sous-dimensionnée.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              {[
+                { label: 'À partir de', value: '1 500€' },
+                { label: 'Paiements', value: 'Sécurisés' },
+                { label: 'Livraison', value: '3-5 sem.' },
+                { label: 'Formation', value: 'Incluse' },
+              ].map(stat => (
+                <div class="card p-6 text-center">
+                  <div class="text-xl font-bold gradient-text mb-1">{stat.value}</div>
+                  <div class="text-slate-400 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section-container py-16 sm:py-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
+          Votre boutique en <span class="gradient-text">5 étapes</span>
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {[
+            { step: '01', title: 'Audit', desc: 'Analyse de vos produits, de votre cible et de la concurrence. Choix de la solution technique.' },
+            { step: '02', title: 'Design', desc: 'Charte graphique, maquettes pages principales. Design qui inspire confiance et donne envie d\'acheter.' },
+            { step: '03', title: 'Intégration', desc: 'Développement, import des produits, configuration des paiements et de la livraison.' },
+            { step: '04', title: 'SEO', desc: 'Optimisation des fiches produits, catégories, balises meta, vitesse de chargement.' },
+            { step: '05', title: 'Formation', desc: 'Prise en main de l\'administration. Vous gérez votre catalogue et vos commandes en autonomie.' },
+          ].map(item => (
+            <div class="card p-6">
+              <div class="text-4xl font-black text-primary-500/30 mb-3">{item.step}</div>
+              <h3 class="text-white font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Réalisations liées -->
+      <section class="py-16 bg-slate-900/30">
+        <div class="section-container text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Quelques <span class="gradient-text">boutiques réalisées</span>
+          </h2>
+          <p class="text-slate-400 mb-8">Des projets e-commerce concrets pour des clients bretons.</p>
+          <a href="/#realisations" class="btn-primary">
+            Voir toutes mes réalisations
+          </a>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section-container py-16 sm:py-24">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
+          Questions <span class="gradient-text">fréquentes</span>
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-4">
+          {[
+            {
+              q: 'Quel est le coût de création d\'une boutique en ligne ?',
+              a: 'Une boutique démarre à partir de 1 500€ pour une solution Shopify personnalisée, et à partir de 3 000€ pour un e-commerce sur mesure. Le prix dépend du nombre de produits, des fonctionnalités et des intégrations nécessaires.'
+            },
+            {
+              q: 'Shopify ou développement sur mesure, comment choisir ?',
+              a: 'Shopify est idéal pour démarrer rapidement : mise en ligne rapide, hébergement inclus, écosystème d\'apps. Le sur-mesure s\'impose pour des besoins spécifiques : logique de prix complexe, intégration ERP, expérience très différenciante.'
+            },
+            {
+              q: 'Les paiements en ligne sont-ils sécurisés ?',
+              a: 'Oui, j\'intègre des solutions certifiées PCI-DSS : Stripe, PayPal, ou Shopify Payments. Les données de carte ne transitent jamais par votre serveur.'
+            },
+            {
+              q: 'Pourrai-je gérer mes produits moi-même ?',
+              a: 'Absolument. Je vous forme à l\'interface d\'administration : ajout de produits, gestion des stocks, suivi des commandes. Vous êtes autonome dès la livraison.'
+            },
+            {
+              q: 'La boutique sera-t-elle bien référencée sur Google ?',
+              a: 'Oui, le SEO e-commerce est intégré : URLs propres, balises meta par produit, données structurées Product et BreadcrumbList, sitemap XML, chargement optimisé.'
+            },
+          ].map(item => (
+            <details class="card p-6 group">
+              <summary class="text-white font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+                {item.q}
+                <span class="text-primary-400 shrink-0">+</span>
+              </summary>
+              <p class="text-slate-400 mt-4 leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA Contact -->
+      <section class="py-16 bg-slate-900/30">
+        <div class="section-container text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Prêt à vendre en ligne ?
+          </h2>
+          <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+            Décrivez-moi votre projet. Je reviens vers vous avec une proposition adaptée à vos besoins et votre budget.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/#contact" class="btn-primary">Me contacter</a>
+            <a href="/" class="btn-secondary">Retour à l'accueil</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

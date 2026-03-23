@@ -71,23 +71,6 @@ const projects = [
     ],
   },
   {
-    title: 'Smart Detection',
-    description:
-      'Plateforme de prospection B2B automatisée. Identifie les entreprises avec des sites obsolètes, analyse leur présence web (HTTPS, responsive, performance) et génère des emails personnalisés via GPT-4.',
-    image: '/projets/scrapping.png',
-    tags: ['Next.js 14', 'TypeScript', 'OpenAI API', 'Drizzle ORM', 'SQLite'],
-    liveUrl: null,
-    githubUrl: null,
-    features: [
-      'Tableau de bord analytique en temps réel',
-      'Acquisition multi-sources (CSV, Google Places API)',
-      'Analyse automatisée : HTTPS, responsive, performance, 30+ technologies',
-      'Algorithme de scoring d\'obsolescence (0-100)',
-      'Génération d\'emails IA personnalisés via GPT-4',
-      'Gestion de campagnes avec file d\'attente d\'envoi',
-    ],
-  },
-  {
     title: 'CV Builder',
     description:
       'Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',

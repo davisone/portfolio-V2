@@ -54,24 +54,28 @@ const services = [
     title: 'Développement Web',
     description:
       'Sites vitrines, applications web, e-commerce. Des solutions modernes et performantes adaptées à vos besoins.',
+    href: '/services/creation-site-web-rennes',
   },
   {
     icon: HiDeviceMobile,
     title: 'Applications Mobiles',
     description:
       'Applications iOS et Android avec Flutter. Une seule codebase pour toutes les plateformes.',
+    href: '/services/developpement-application-mobile',
   },
   {
     icon: HiRefresh,
     title: 'Refonte de site',
     description:
       'Modernisation de votre site existant : design, performance, accessibilité et expérience utilisateur.',
+    href: '/services/creation-site-web-rennes',
   },
   {
     icon: HiSearchCircle,
     title: 'SEO & Performance',
     description:
       'Optimisation du référencement naturel et des performances pour une meilleure visibilité Google.',
+    href: '/services/creation-site-web-rennes',
   },
 ]
 
@@ -157,7 +161,7 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card p-6 text-center hover:scale-105 group"
+                className="card p-6 text-center hover:scale-105 group flex flex-col"
               >
                 <div className="inline-flex p-4 bg-primary-500/10 rounded-xl text-primary-400 mb-4 group-hover:bg-primary-500/20 transition-colors">
                   <service.icon size={32} />
@@ -165,9 +169,15 @@ export default function Services() {
                 <h3 className="text-white font-semibold text-lg mb-2">
                   {service.title}
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed flex-1">
                   {service.description}
                 </p>
+                <a
+                  href={service.href}
+                  className="mt-4 text-primary-400 text-sm font-medium hover:text-primary-300 transition-colors inline-flex items-center gap-1 justify-center"
+                >
+                  En savoir plus →
+                </a>
               </motion.div>
             ))}
           </div>
