@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,11 +10,11 @@
   }
 
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased bg-paper text-ink font-light;
   }
 
   ::selection {
-    @apply bg-primary-500/30 text-white;
+    @apply bg-accent/20 text-ink;
   }
 }
 
@@ -23,47 +23,55 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .section-title {
-    @apply text-3xl sm:text-4xl font-bold text-white mb-4;
+  .section-label {
+    @apply font-mono text-xs tracking-[0.15em] uppercase text-accent flex items-center gap-3;
   }
 
-  .section-subtitle {
-    @apply text-slate-400 text-lg max-w-2xl;
+  .section-label::before {
+    content: '';
+    @apply block w-8 h-px bg-accent;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl sm:text-5xl font-bold text-ink leading-none tracking-tight;
+  }
+
+  .section-title em {
+    @apply italic text-accent not-italic;
+    font-style: italic;
+  }
+
+  .section-num {
+    @apply font-serif text-[8rem] font-black text-border/50 leading-none absolute right-4 sm:right-8 lg:right-16 -top-5 select-none pointer-events-none;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-500
-           text-white font-semibold rounded-lg transition-all duration-300
-           hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-ink text-paper
+           text-xs font-medium tracking-[0.1em] uppercase
+           transition-all duration-200 hover:bg-accent;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-700
-           hover:border-primary-500 text-slate-300 hover:text-white font-semibold
-           rounded-lg transition-all duration-300 hover:-translate-y-0.5;
-  }
-
-  .card {
-    @apply bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl
-           hover:border-primary-500/50 transition-all duration-300;
-  }
-
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400
-           bg-clip-text text-transparent;
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-ink text-ink
+           text-xs font-normal tracking-[0.1em] uppercase
+           transition-all duration-200 hover:bg-ink hover:text-paper;
   }
 }
 
-/* Custom scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply
-  bg-slate-900;
+  background: #f5f0e8;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-slate-700 rounded-full hover:bg-slate-600;
+  background: #d4cbbf;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a7f72;
 }

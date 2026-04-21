@@ -3,36 +3,28 @@ export default {
   content: [
     "./src/**/*.{astro,html,js,jsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
-        },
-        accent: {
-          400: '#22d3ee',
-          500: '#06b6d4',
-          600: '#0891b2',
-        }
+        ink: '#1a1108',
+        paper: '#f5f0e8',
+        'paper-alt': '#ede8df',
+        accent: '#c0392b',
+        'accent-hover': '#e74c3c',
+        muted: '#8a7f72',
+        border: '#d4cbbf',
+        'text-body': '#4a4035',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        mono: ['DM Mono', 'monospace'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'shimmer': 'shimmer 1.5s infinite',
+        'marquee': 'marquee 30s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -46,6 +38,10 @@ export default {
         shimmer: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },
