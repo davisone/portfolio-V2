@@ -4,120 +4,129 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Hero() {
   return (
-    <section
-      id="accueil"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-    >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
-      <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl" />
-
-      <div className="section-container relative z-10 text-center py-20">
+    <section id="accueil" className="min-h-screen flex flex-col justify-between py-12 sm:py-16 lg:py-20">
+      <div className="section-container flex-1 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-full text-sm text-slate-400 mb-8"
-          >
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            Ouvert aux opportunités
-          </motion.div>
+          {/* Label */}
+          <div className="section-label mb-10 sm:mb-14">
+            En recherche d'alternance — Chef de projet IT
+          </div>
 
-          {/* Main heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Evan Davison
-            <br />
-            <span className="gradient-text">Développeur Fullstack</span>
-            <br />
-            <span className="text-slate-400 text-2xl sm:text-3xl md:text-4xl">
-              Rennes • Fondateur de{' '}
-              <a
-                href="https://dvs-web.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent-400 hover:text-accent-500 transition-colors"
-              >
-                DVS Web
-              </a>
+          {/* Titre geant */}
+          <h1 className="font-serif text-[clamp(4rem,10vw,9rem)] font-black leading-[0.9] tracking-tight text-ink mb-0">
+            <span className="block">Evan</span>
+            <span className="block">
+              Davi<em className="italic text-accent">son</em>
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+          {/* Sous-titre */}
+          <p className="font-sans text-lg sm:text-xl text-muted mt-4 mb-0">
+            Développeur Fullstack — Rennes, Fondateur de{' '}
+            <a
+              href="https://dvs-web.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:text-accent-hover transition-colors underline underline-offset-4 decoration-accent/40"
+            >
+              DVS Web
+            </a>
+          </p>
+        </motion.div>
+
+        {/* Grille editoriale */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="border-t border-border mt-10 sm:mt-14 pt-8 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16"
+        >
+          {/* Colonne gauche — description */}
+          <p className="font-sans text-base leading-relaxed text-body max-w-lg">
             Passionné par le développement web et mobile, je crée des{' '}
-            <strong className="text-white">applications modernes</strong> avec React, Next.js et Flutter.
-            En parallèle, j'accompagne les entreprises via mon activité{' '}
-            <strong className="text-white">freelance</strong>.
+            <strong className="text-ink font-medium">applications modernes</strong> avec React,
+            Next.js et Flutter. En parallèle, j'accompagne les entreprises via mon activité{' '}
+            <strong className="text-ink font-medium">freelance</strong>. Je recherche une{' '}
+            <strong className="text-ink font-medium">alternance en gestion de projet IT</strong>{' '}
+            pour allier ma vision technique à une approche stratégique et organisationnelle.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-primary"
-            >
-              Discutons de votre projet
-            </motion.a>
-            <motion.a
-              href="/cv-evan-davison.pdf"
-              download
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-secondary"
-            >
-              <HiDownload />
-              Télécharger mon CV
-            </motion.a>
-          </div>
+          {/* Colonne droite — badge + CTA */}
+          <div className="flex flex-col items-start md:items-end justify-end gap-6">
+            <span className="font-mono text-xs border border-border px-4 py-2 text-muted tracking-wide">
+              Disponible — Bac+3 Sup de Vinci
+            </span>
 
-          {/* Social Links */}
-          <div className="flex items-center justify-center gap-4">
-            <a
-              href="https://github.com/davisone"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-white transition-colors p-2"
-              aria-label="GitHub"
-            >
-              <FaGithub size={24} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/evan-d-766478247"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-white transition-colors p-2"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin size={24} />
-            </a>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+              <motion.a
+                href="#contact"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-primary"
+              >
+                Me contacter →
+              </motion.a>
+              <motion.a
+                href="/cv/Evan_Davison_cv.pdf"
+                download
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-secondary"
+              >
+                <HiDownload />
+                Télécharger mon CV
+              </motion.a>
+            </div>
           </div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.a
-          href="#apropos"
+        {/* Social links */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-500 hover:text-white transition-colors"
+          transition={{ delay: 0.5 }}
+          className="flex items-center gap-4 mt-10 sm:mt-14"
         >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
+          <a
+            href="https://github.com/davisone"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-ink transition-colors p-1"
+            aria-label="GitHub"
           >
-            <HiArrowDown size={24} />
-          </motion.div>
-        </motion.a>
+            <FaGithub size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/evan-d-766478247"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted hover:text-ink transition-colors p-1"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={20} />
+          </a>
+        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.a
+        href="#apropos"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="flex justify-center text-muted hover:text-ink transition-colors mt-8"
+      >
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+        >
+          <HiArrowDown size={20} />
+        </motion.div>
+      </motion.a>
     </section>
   )
 }
