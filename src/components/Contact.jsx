@@ -1,38 +1,25 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
 
-const contactInfo = [
+const contactLinks = [
   {
-    icon: HiMail,
-    label: 'Email',
-    value: 'contact@evandavison.fr',
+    label: 'contact@evandavison.fr',
     href: 'mailto:contact@evandavison.fr',
   },
   {
-    icon: HiPhone,
-    label: 'Téléphone',
-    value: '+33 6 51 01 95 06',
+    label: '+33 6 51 01 95 06',
     href: 'tel:+33651019506',
   },
   {
-    icon: HiLocationMarker,
-    label: 'Localisation',
-    value: 'Rennes , France',
+    label: 'Rennes, France',
     href: null,
   },
-]
-
-const socialLinks = [
   {
-    icon: FaGithub,
     label: 'GitHub',
     href: 'https://github.com/davisone',
   },
   {
-    icon: FaLinkedin,
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/evan-d-766478247',
   },
@@ -76,240 +63,191 @@ export default function Contact() {
         import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
       )
 
-      setStatus({ type: 'success', message: 'Message envoyé avec succès !' })
+      setStatus({ type: 'success', message: 'Message envoye avec succes !' })
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('EmailJS error:', error)
-      setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez réessayer.' })
+      setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez reessayer.' })
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-slate-900/30">
-      <div className="section-container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="section-title">
-              Me <span className="gradient-text">contacter</span>
-            </h2>
-            <p className="section-subtitle mx-auto">
-              Un projet en tête ? Discutons-en ensemble.
-            </p>
+    <section id="contact" className="border-t border-border relative" ref={ref}>
+      <span className="section-num">05</span>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+        className="grid lg:grid-cols-2"
+      >
+        {/* Colonne gauche — infos */}
+        <div className="bg-accent text-paper p-12 sm:p-16">
+          <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-paper/60 mb-6 block">
+            Contact
+          </span>
+
+          <h2 className="font-serif text-4xl sm:text-5xl font-bold text-paper leading-none mb-6">
+            Un projet<br />
+            en <em>tete</em> ?
+          </h2>
+
+          <p className="text-paper/80 text-base leading-relaxed mb-8">
+            Que ce soit pour un site vitrine, une application web ou mobile,
+            une refonte ou une optimisation SEO, je suis a votre ecoute.
+          </p>
+
+          <div className="flex flex-col gap-4 mb-10">
+            {contactLinks.map((link) =>
+              link.href ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="flex items-center gap-3 text-paper/80 hover:text-paper font-sans text-sm transition-colors"
+                >
+                  <span className="w-4 h-px bg-paper/60 shrink-0" />
+                  {link.label}
+                </a>
+              ) : (
+                <span
+                  key={link.label}
+                  className="flex items-center gap-3 text-paper/80 font-sans text-sm"
+                >
+                  <span className="w-4 h-px bg-paper/60 shrink-0" />
+                  {link.label}
+                </span>
+              )
+            )}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Travaillons ensemble
-                </h3>
-                <p className="text-slate-400 leading-relaxed">
-                  Que ce soit pour un site vitrine, une application web ou mobile,
-                  une refonte ou une optimisation SEO, je suis à votre écoute.
-                  N'hésitez pas à me contacter via le formulaire ou directement
-                  par email.
-                </p>
-              </div>
+          <a
+            href="https://dvs-web.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-paper/50 hover:text-paper text-xs font-sans transition-colors"
+          >
+            Besoin d'un site pro ? &rarr; dvs-web.fr
+          </a>
+        </div>
 
-              {/* Contact details */}
-              <div className="space-y-4">
-                {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-center gap-4">
-                    <div className="p-3 bg-primary-500/10 rounded-lg text-primary-400">
-                      <info.icon size={20} />
-                    </div>
-                    <div>
-                      <p className="text-slate-500 text-sm">{info.label}</p>
-                      {info.href ? (
-                        <a
-                          href={info.href}
-                          className="text-white hover:text-primary-400 transition-colors"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-white">{info.value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {/* Colonne droite — formulaire */}
+        <div className="bg-paper p-12 sm:p-16">
+          <form onSubmit={handleSubmit}>
+            {/* Honeypot anti-spam */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              className="absolute opacity-0 pointer-events-none"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+            />
 
-              {/* Social links */}
-              <div>
-                <p className="text-slate-500 text-sm mb-3">Retrouvez-moi sur</p>
-                <div className="flex items-center gap-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-400 hover:text-white transition-all duration-300"
-                      aria-label={social.label}
-                    >
-                      <social.icon size={20} />
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* DVS Web CTA */}
-              <div className="card p-6 bg-gradient-to-r from-primary-500/10 to-accent-500/10 border-primary-500/30">
-                <h4 className="text-white font-semibold mb-2">
-                  Besoin d'un site professionnel ?
-                </h4>
-                <p className="text-slate-400 text-sm mb-4">
-                  Découvrez les services de DVS Web pour votre projet digital.
-                </p>
-                <a
-                  href="https://dvs-web.fr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-sm"
-                >
-                  Visiter DVS Web
-                </a>
-              </div>
-            </div>
-
-            {/* Contact form */}
-            <motion.form
-              onSubmit={handleSubmit}
-              initial={{ opacity: 0, x: 20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="card p-8"
-            >
-              {/* Honeypot anti-spam */}
+            <div className="mb-6">
+              <label
+                htmlFor="name"
+                className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
+              >
+                Nom complet
+              </label>
               <input
                 type="text"
-                name="website"
-                value={honeypot}
-                onChange={(e) => setHoneypot(e.target.value)}
-                className="absolute opacity-0 pointer-events-none"
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden="true"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
+                placeholder="John Doe"
               />
+            </div>
 
-              <div className="grid sm:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-slate-400 text-sm mb-2"
-                  >
-                    Nom complet
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-slate-400 text-sm mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
-                    placeholder="john@exemple.com"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label
-                  htmlFor="subject"
-                  className="block text-slate-400 text-sm mb-2"
-                >
-                  Sujet
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="Création d'un site web"
-                />
-              </div>
-
-              <div className="mb-6">
-                <label
-                  htmlFor="message"
-                  className="block text-slate-400 text-sm mb-2"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
-                  placeholder="Décrivez votre projet..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="btn-primary w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            <div className="mb-6">
+              <label
+                htmlFor="email"
+                className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
               >
-                {isSubmitting ? (
-                  'Envoi en cours...'
-                ) : (
-                  <>
-                    <HiPaperAirplane className="rotate-90" />
-                    Envoyer le message
-                  </>
-                )}
-              </button>
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
+                placeholder="john@exemple.com"
+              />
+            </div>
 
-              <div aria-live="polite" aria-atomic="true">
-                {status.message && (
-                  <p
-                    role={status.type === 'error' ? 'alert' : 'status'}
-                    className={`mt-4 text-center text-sm ${
-                      status.type === 'success' ? 'text-green-400' : 'text-red-400'
-                    }`}
-                  >
-                    {status.message}
-                  </p>
-                )}
-              </div>
-            </motion.form>
-          </div>
-        </motion.div>
-      </div>
+            <div className="mb-6">
+              <label
+                htmlFor="subject"
+                className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
+              >
+                Sujet
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
+                placeholder="Creation d'un site web"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label
+                htmlFor="message"
+                className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors resize-y min-h-[100px]"
+                placeholder="Decrivez votre projet..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="btn-primary w-full justify-center mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+            </button>
+
+            <div aria-live="polite" aria-atomic="true">
+              {status.message && (
+                <p
+                  role={status.type === 'error' ? 'alert' : 'status'}
+                  className={`text-sm mt-4 text-center ${
+                    status.type === 'success' ? 'text-green-700' : 'text-red-700'
+                  }`}
+                >
+                  {status.message}
+                </p>
+              )}
+            </div>
+          </form>
+        </div>
+      </motion.div>
     </section>
   )
 }
