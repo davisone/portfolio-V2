@@ -1,6 +1,5 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { HiAcademicCap, HiBriefcase } from 'react-icons/hi'
 
 const experiences = [
   {
@@ -42,7 +41,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="experiences" className="py-20 sm:py-32 bg-slate-900/30">
+    <section id="experiences" className="relative border-t border-border py-20 bg-paper-alt">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -50,63 +49,41 @@ export default function Experience() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          {/* Section header */}
-          <div className="text-center mb-16">
+          <span className="section-num">03</span>
+
+          <div className="mb-16">
+            <p className="section-label">Parcours</p>
             <h2 className="section-title">
-              Mon <span className="gradient-text">parcours</span>
+              Mon <em>parcours</em>
             </h2>
-            <p className="section-subtitle mx-auto">
-              Expériences professionnelles et formation académique.
-            </p>
           </div>
 
-          {/* Timeline */}
-          <div className="max-w-3xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-slate-700 transform md:-translate-x-1/2" />
+          <div>
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.12 }}
+                className="border-b border-border py-8 grid grid-cols-1 lg:grid-cols-[100px_1fr_1fr] gap-4 lg:gap-8 hover:pl-2 transition-all duration-300"
+              >
+                <div className="font-mono text-xs text-muted uppercase tracking-wide">
+                  {exp.period}
+                </div>
 
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className={`relative flex items-center mb-8 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-0 md:left-1/2 w-10 h-10 bg-slate-900 border-2 border-primary-500 rounded-full transform md:-translate-x-1/2 flex items-center justify-center z-10">
-                    {exp.type === 'work' ? (
-                      <HiBriefcase className="text-primary-400" size={18} />
-                    ) : (
-                      <HiAcademicCap className="text-primary-400" size={18} />
-                    )}
-                  </div>
+                <div>
+                  <span className="font-mono text-[0.65rem] text-muted uppercase tracking-wide">
+                    {exp.type === 'education' ? 'Formation' : 'Experience'}
+                  </span>
+                  <h3 className="font-medium text-ink text-base">{exp.title}</h3>
+                  <p className="text-sm text-accent mt-1">{exp.company}</p>
+                </div>
 
-                  {/* Content card */}
-                  <div
-                    className={`ml-16 md:ml-0 md:w-1/2 ${
-                      index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
-                    }`}
-                  >
-                    <div className="card p-6 hover:scale-[1.02]">
-                      <span className="text-primary-400 text-sm font-medium">
-                        {exp.period}
-                      </span>
-                      <h3 className="text-white font-semibold text-lg mt-1">
-                        {exp.title}
-                      </h3>
-                      <p className="text-accent-400 text-sm mb-2">{exp.company}</p>
-                      <p className="text-slate-400 text-sm leading-relaxed">
-                        {exp.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                <div>
+                  <p className="text-sm text-text-body leading-relaxed">{exp.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
