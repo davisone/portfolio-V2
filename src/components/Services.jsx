@@ -1,77 +1,30 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import {
-  HiGlobe,
-  HiDeviceMobile,
-  HiRefresh,
-  HiSearchCircle,
-} from 'react-icons/hi'
-import {
-  SiTypescript,
-  SiCss3,
-  SiJavascript,
-  SiDart,
-  SiCplusplus,
-  SiPython,
-  SiHtml5,
-  SiPhp,
-  SiVuedotjs,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiDocker,
-  SiVercel,
-  SiSupabase,
-  SiFirebase,
-  SiStripe,
-  SiGithub,
-  SiPostgresql,
-  SiFigma,
-  SiGit,
-  SiMongodb,
-  SiReact,
-  SiAngular,
-  SiBootstrap,
-  SiNodedotjs,
-  SiSpring,
-  SiLaravel,
-  SiMysql,
-  SiPrisma,
-  SiGooglecloud,
-  SiRailway,
-  SiGitlab,
-  SiAuth0,
-  SiCanva,
-  SiPostman,
-  SiGoogle,
-} from 'react-icons/si'
-import { TbBrandCSharp } from 'react-icons/tb'
-import { FaJava } from 'react-icons/fa'
-import { SiResend } from 'react-icons/si'
 
 const services = [
   {
-    icon: HiGlobe,
+    num: '01',
     title: 'Développement Web',
     description:
       'Sites vitrines, applications web, e-commerce. Des solutions modernes et performantes adaptées à vos besoins.',
     href: '/services/creation-site-web-rennes',
   },
   {
-    icon: HiDeviceMobile,
+    num: '02',
     title: 'Applications Mobiles',
     description:
       'Applications iOS et Android avec Flutter. Une seule codebase pour toutes les plateformes.',
     href: '/services/developpement-application-mobile',
   },
   {
-    icon: HiRefresh,
+    num: '03',
     title: 'Refonte de site',
     description:
       'Modernisation de votre site existant : design, performance, accessibilité et expérience utilisateur.',
     href: '/services/creation-site-web-rennes',
   },
   {
-    icon: HiSearchCircle,
+    num: '04',
     title: 'SEO & Performance',
     description:
       'Optimisation du référencement naturel et des performances pour une meilleure visibilité Google.',
@@ -79,55 +32,13 @@ const services = [
   },
 ]
 
-const languages = [
-  { icon: SiTypescript, name: 'TypeScript', color: 'text-blue-400' },
-  { icon: SiJavascript, name: 'JavaScript', color: 'text-yellow-400' },
-  { icon: SiPython, name: 'Python', color: 'text-yellow-300' },
-  { icon: SiDart, name: 'Dart', color: 'text-cyan-400' },
-  { icon: SiCplusplus, name: 'C++', color: 'text-blue-500' },
-  { icon: TbBrandCSharp, name: 'C#', color: 'text-purple-500' },
-  { icon: FaJava, name: 'Java', color: 'text-red-500' },
-  { icon: SiPhp, name: 'PHP', color: 'text-indigo-400' },
-  { icon: SiHtml5, name: 'HTML', color: 'text-orange-500' },
-  { icon: SiCss3, name: 'CSS', color: 'text-blue-400' },
-]
-
-const frameworks = [
-  { icon: SiReact, name: 'React', color: 'text-cyan-400' },
-  { icon: SiVuedotjs, name: 'Vue.js', color: 'text-green-500' },
-  { icon: SiAngular, name: 'Angular', color: 'text-red-600' },
-  { icon: SiNextdotjs, name: 'Next.js', color: 'text-white' },
-  { icon: SiNodedotjs, name: 'Node.js', color: 'text-green-500' },
-  { icon: SiSpring, name: 'Spring Boot', color: 'text-green-500' },
-  { icon: SiLaravel, name: 'Laravel', color: 'text-red-500' },
-  { icon: SiTailwindcss, name: 'Tailwind', color: 'text-cyan-400' },
-  { icon: SiBootstrap, name: 'Bootstrap', color: 'text-purple-500' },
-  { icon: SiPrisma, name: 'Prisma', color: 'text-slate-300' },
-]
-
-const databases = [
-  { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-400' },
-  { icon: SiMysql, name: 'MySQL', color: 'text-blue-500' },
-  { icon: SiMongodb, name: 'MongoDB', color: 'text-green-500' },
-  { icon: SiSupabase, name: 'Supabase', color: 'text-green-500' },
-  { icon: SiFirebase, name: 'Firebase', color: 'text-yellow-500' },
-]
-
-const tools = [
-  { icon: SiDocker, name: 'Docker', color: 'text-blue-500' },
-  { icon: SiGit, name: 'Git', color: 'text-orange-500' },
-  { icon: SiGithub, name: 'GitHub', color: 'text-white' },
-  { icon: SiGitlab, name: 'GitLab', color: 'text-orange-600' },
-  { icon: SiVercel, name: 'Vercel', color: 'text-white' },
-  { icon: SiRailway, name: 'Railway', color: 'text-white' },
-  { icon: SiGooglecloud, name: 'Google Cloud', color: 'text-blue-400' },
-  { icon: SiStripe, name: 'Stripe', color: 'text-purple-400' },
-  { icon: SiAuth0, name: 'Auth0', color: 'text-orange-500' },
-  { icon: SiResend, name: 'Resend', color: 'text-white' },
-  { icon: SiPostman, name: 'Postman', color: 'text-orange-500' },
-  { icon: SiFigma, name: 'Figma', color: 'text-purple-400' },
-  { icon: SiCanva, name: 'Canva', color: 'text-cyan-400' },
-  { icon: SiGoogle, name: 'Google Business', color: 'text-blue-500' },
+const techNames = [
+  'TypeScript', 'JavaScript', 'Python', 'Dart', 'C++', 'C#', 'Java', 'PHP',
+  'HTML', 'CSS', 'React', 'Vue.js', 'Angular', 'Next.js', 'Node.js',
+  'Spring Boot', 'Laravel', 'Tailwind', 'Bootstrap', 'Prisma', 'PostgreSQL',
+  'MySQL', 'MongoDB', 'Supabase', 'Firebase', 'Docker', 'Git', 'GitHub',
+  'GitLab', 'Vercel', 'Railway', 'Google Cloud', 'Stripe', 'Auth0', 'Resend',
+  'Postman', 'Figma', 'Canva',
 ]
 
 export default function Services() {
@@ -135,7 +46,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="services" className="py-20 sm:py-32">
+    <section id="services" className="border-t border-border py-20 relative">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -143,141 +54,50 @@ export default function Services() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          {/* Section header */}
-          <div className="text-center mb-16">
+          <span className="section-num">02</span>
+
+          <div className="mb-16">
+            <span className="section-label">Expertise</span>
             <h2 className="section-title">
-              Mes <span className="gradient-text">services</span>
+              Mes <em>services</em>
             </h2>
-            <p className="section-subtitle mx-auto">
-              Des solutions digitales complètes pour votre projet.
-            </p>
           </div>
 
-          {/* Services grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
-              <motion.div
+              <motion.a
                 key={service.title}
+                href={service.href}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card p-6 text-center hover:scale-105 group flex flex-col"
+                className="group border-r border-border last:border-r-0 py-8 px-6 transition-colors duration-300 hover:bg-ink"
               >
-                <div className="inline-flex p-4 bg-primary-500/10 rounded-xl text-primary-400 mb-4 group-hover:bg-primary-500/20 transition-colors">
-                  <service.icon size={32} />
-                </div>
-                <h3 className="text-white font-semibold text-lg mb-2">
+                <span className="font-serif text-5xl font-black text-border/30 mb-6 block group-hover:text-paper/10 transition-colors duration-300">
+                  {service.num}
+                </span>
+                <h3 className="font-medium text-ink text-base mb-2 group-hover:text-paper transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-slate-400 text-sm leading-relaxed flex-1">
+                <p className="text-sm text-muted leading-relaxed group-hover:text-paper/60 transition-colors duration-300">
                   {service.description}
                 </p>
-                <a
-                  href={service.href}
-                  className="mt-4 text-primary-400 text-sm font-medium hover:text-primary-300 transition-colors inline-flex items-center gap-1 justify-center"
-                >
-                  En savoir plus →
-                </a>
-              </motion.div>
+                <span className="text-xs text-accent hover:text-accent-hover uppercase tracking-wide mt-4 inline-block group-hover:text-accent-hover transition-colors duration-300">
+                  En savoir plus &rarr;
+                </span>
+              </motion.a>
             ))}
           </div>
 
-          {/* Langages */}
-          <div className="text-center mb-12">
-            <h3 className="text-xl font-semibold text-white mb-8">
-              Langages
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
-              {languages.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.02 }}
-                  className="flex flex-col items-center gap-2 group"
-                >
-                  <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700 group-hover:border-primary-500/50 transition-all duration-300 group-hover:scale-110">
-                    <tech.icon size={26} className={tech.color} />
-                  </div>
-                  <span className="text-slate-500 text-xs group-hover:text-slate-300 transition-colors">
-                    {tech.name}
+          <div className="mt-16 border-t border-b border-border py-4 overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...techNames, ...techNames].map((name, i) => (
+                <span key={`${name}-${i}`} className="flex items-center shrink-0">
+                  <span className="font-mono text-xs uppercase tracking-[0.12em] text-muted">
+                    {name}
                   </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Frameworks */}
-          <div className="text-center mb-12">
-            <h3 className="text-xl font-semibold text-white mb-8">
-              Frameworks & Librairies
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
-              {frameworks.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.5 + index * 0.02 }}
-                  className="flex flex-col items-center gap-2 group"
-                >
-                  <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700 group-hover:border-primary-500/50 transition-all duration-300 group-hover:scale-110">
-                    <tech.icon size={26} className={tech.color} />
-                  </div>
-                  <span className="text-slate-500 text-xs group-hover:text-slate-300 transition-colors">
-                    {tech.name}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Bases de données */}
-          <div className="text-center mb-12">
-            <h3 className="text-xl font-semibold text-white mb-8">
-              Bases de données
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
-              {databases.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.6 + index * 0.02 }}
-                  className="flex flex-col items-center gap-2 group"
-                >
-                  <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700 group-hover:border-primary-500/50 transition-all duration-300 group-hover:scale-110">
-                    <tech.icon size={26} className={tech.color} />
-                  </div>
-                  <span className="text-slate-500 text-xs group-hover:text-slate-300 transition-colors">
-                    {tech.name}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Outils & Services */}
-          <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-8">
-              Outils & Services
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
-              {tools.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.7 + index * 0.02 }}
-                  className="flex flex-col items-center gap-2 group"
-                >
-                  <div className="p-3 bg-slate-800/50 rounded-xl border border-slate-700 group-hover:border-primary-500/50 transition-all duration-300 group-hover:scale-110">
-                    <tech.icon size={26} className={tech.color} />
-                  </div>
-                  <span className="text-slate-500 text-xs group-hover:text-slate-300 transition-colors">
-                    {tech.name}
-                  </span>
-                </motion.div>
+                  <span className="text-accent mx-3">&middot;</span>
+                </span>
               ))}
             </div>
           </div>
