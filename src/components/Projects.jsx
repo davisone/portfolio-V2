@@ -6,25 +6,25 @@ import { FaGithub } from 'react-icons/fa'
 // Skeleton loader pour l'animation de chargement
 function ImageSkeleton() {
   return (
-    <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900">
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-700/30 to-transparent animate-shimmer" />
+    <div className="absolute inset-0 bg-paper-alt">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/30 to-transparent animate-shimmer" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-12 h-12 border-2 border-primary-500/30 border-t-primary-500 rounded-full animate-spin" />
-          <span className="text-slate-500 text-sm">Chargement...</span>
+          <div className="w-12 h-12 border-2 border-accent/30 border-t-accent rounded-full animate-spin" />
+          <span className="text-muted text-sm font-mono">Chargement...</span>
         </div>
       </div>
     </div>
   )
 }
 
-// Composant pour afficher l'image avec chargement optimisé
+// Composant pour afficher l'image avec chargement optimise
 function ProjectImage({ project, className }) {
   const [isLoading, setIsLoading] = useState(true)
   const imgRef = useRef(null)
 
   useEffect(() => {
-    // Gère le cas où l'image est déjà en cache
+    // Gere le cas ou l'image est deja en cache
     if (imgRef.current?.complete) {
       setIsLoading(false)
     }
@@ -35,7 +35,7 @@ function ProjectImage({ project, className }) {
   }
 
   if (!project.image) {
-    return <HiCode size={48} className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300" />
+    return <HiCode size={48} className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300" />
   }
 
   return (
@@ -148,45 +148,45 @@ function ProjectModal({ project, onClose }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/80 backdrop-blur-sm"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto bg-paper border border-border rounded-sm shadow-2xl"
       >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors z-10"
+          className="absolute top-4 right-4 p-2 text-muted hover:text-ink hover:bg-paper-alt transition-colors z-10"
         >
           <HiX size={20} />
         </button>
 
         {/* Header image */}
-        <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="relative h-48 bg-paper-alt flex items-center justify-center overflow-hidden">
           {(project.liveUrl || project.image) ? (
             <ProjectImage
               project={project}
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
-            <HiCode size={64} className="text-primary-500/30" />
+            <HiCode size={64} className="text-muted/30" />
           )}
         </div>
 
         {/* Content */}
-        <div className="p-6 sm:p-8">
-          <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+        <div className="p-8">
+          <h3 className="font-serif text-2xl font-bold text-ink mb-3">{project.title}</h3>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 bg-primary-500/10 text-primary-400 text-sm rounded-full"
+                className="px-3 py-1 bg-accent/10 text-accent text-xs font-mono"
               >
                 {tag}
               </span>
@@ -194,18 +194,18 @@ function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Description */}
-          <p className="text-slate-300 leading-relaxed mb-6">
+          <p className="text-text-body leading-relaxed mb-6">
             {project.description}
           </p>
 
           {/* Features */}
           {project.features && (
             <div className="mb-6">
-              <h4 className="text-white font-semibold mb-3">Fonctionnalités clés</h4>
+              <h4 className="text-ink font-medium mb-3">Fonctionnalites cles</h4>
               <ul className="space-y-2">
                 {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2 text-slate-400 text-sm">
-                    <span className="text-primary-400 mt-1">•</span>
+                  <li key={index} className="flex items-start gap-2 text-text-body text-sm">
+                    <span className="text-accent mt-0.5">&#8226;</span>
                     {feature}
                   </li>
                 ))}
@@ -214,7 +214,7 @@ function ProjectModal({ project, onClose }) {
           )}
 
           {/* Links */}
-          <div className="flex items-center gap-4 pt-4 border-t border-slate-800">
+          <div className="flex items-center gap-4 pt-6 border-t border-border">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -238,7 +238,7 @@ function ProjectModal({ project, onClose }) {
               </a>
             )}
             {!project.liveUrl && !project.githubUrl && (
-              <span className="text-slate-500 text-sm">Projet privé / en développement</span>
+              <span className="text-muted text-sm">Projet prive / en developpement</span>
             )}
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null)
 
   return (
-    <section id="realisations" className="py-20 sm:py-32">
+    <section id="realisations" className="border-t border-border py-20 relative">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -261,18 +261,19 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
+          {/* Big number */}
+          <span className="section-num">04</span>
+
           {/* Section header */}
-          <div className="text-center mb-16">
+          <div className="mb-16">
+            <span className="section-label">Mes travaux</span>
             <h2 className="section-title">
-              Mes <span className="gradient-text">réalisations</span>
+              Reali<em>sations</em>
             </h2>
-            <p className="section-subtitle mx-auto">
-              Une sélection de projets sur lesquels j'ai travaillé.
-            </p>
           </div>
 
           {/* Projects grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="border border-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <motion.article
                 key={project.title}
@@ -280,106 +281,69 @@ export default function Projects() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => setSelectedProject(project)}
-                className="card overflow-hidden group cursor-pointer"
+                className={`group cursor-pointer p-8 border-b border-border transition-colors duration-300 hover:bg-paper-alt ${
+                  (index + 1) % 3 !== 0 ? 'lg:border-r' : ''
+                } ${
+                  (index + 1) % 2 !== 0 ? 'md:border-r lg:border-r-0' : 'md:border-r-0'
+                } ${
+                  (index + 1) % 3 !== 0 ? 'lg:border-r' : 'lg:border-r-0'
+                }`}
               >
                 {/* Project image */}
-                <div className="relative h-48 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-paper-alt">
                   {(project.liveUrl || project.image) ? (
                     <ProjectImage
                       project={project}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <HiCode
                         size={48}
-                        className="text-slate-700 group-hover:text-primary-500/50 transition-colors duration-300"
+                        className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300"
                       />
                     </div>
                   )}
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-300 flex items-center justify-center">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-white text-sm font-medium bg-slate-900/80 px-4 py-2 rounded-lg">
-                      Voir les détails
-                    </span>
-                  </div>
                 </div>
 
-                {/* Project info */}
-                <div className="p-6">
-                  <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-primary-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 text-sm mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
+                {/* Tag line */}
+                <p className="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-accent mb-3">
+                  {project.tags.slice(0, 3).join(' \u00b7 ')}
+                </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-md"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    {project.tags.length > 3 && (
-                      <span className="px-2 py-1 bg-slate-800 text-slate-500 text-xs rounded-md">
-                        +{project.tags.length - 3}
-                      </span>
-                    )}
-                  </div>
+                {/* Project name */}
+                <h3 className="font-serif text-xl font-bold text-ink mb-2">
+                  {project.title}
+                </h3>
 
-                  {/* Links */}
-                  <div className="flex items-center gap-4">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-sm text-slate-400 hover:text-primary-400 transition-colors"
-                      >
-                        <HiExternalLink size={16} />
-                        Voir le site
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-sm text-slate-400 hover:text-white transition-colors"
-                      >
-                        <FaGithub size={16} />
-                        Code source
-                      </a>
-                    )}
-                  </div>
-                </div>
+                {/* Description */}
+                <p className="text-sm text-muted line-clamp-2 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Arrow */}
+                <span className="inline-block text-ink mt-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5">
+                  &#8599;
+                </span>
               </motion.article>
             ))}
-          </div>
 
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.6 }}
-            className="text-center mt-12"
-          >
-            <a
+            {/* Ghost card — voir plus sur GitHub */}
+            <motion.a
               href="https://github.com/davisone"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: projects.length * 0.1 }}
+              className="group flex flex-col items-center justify-center p-8 border-b border-border text-center transition-colors duration-300 hover:bg-paper-alt md:border-r-0 lg:border-r-0"
             >
-              <FaGithub />
-              Voir plus sur GitHub
-            </a>
-          </motion.div>
+              <FaGithub size={32} className="text-muted/40 mb-4 group-hover:text-ink transition-colors duration-300" />
+              <span className="font-mono text-sm text-muted group-hover:text-ink transition-colors duration-300">
+                Voir plus sur GitHub &rarr;
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
       </div>
 
