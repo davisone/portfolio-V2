@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Redon",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Redon" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour les professionnels de Redon et du Pays de Redon : commerces, artisans, services et acteurs du tourisme fluvial. Sites performants avec SEO local.",
+      "url": "https://evandavison.fr/services/creation-site-web-redon"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Redon", "item": "https://evandavison.fr/services/creation-site-web-redon" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites pour les commerçants du marché de Redon ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, le marché de Redon est l'un des plus grands de Bretagne. Je crée des sites web pour les commerçants et producteurs locaux qui souhaitent développer leur visibilité au-delà du marché : vente en ligne, présentation de produits, click-and-collect." }
+        },
+        {
+          "@type": "Question",
+          "name": "Redon est au carrefour de 3 départements, cela change-t-il la stratégie SEO ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. La position unique de Redon, entre Ille-et-Vilaine, Morbihan et Loire-Atlantique, permet de cibler une zone de chalandise élargie. J'optimise votre référencement pour capter des clients des trois départements." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des sites pour le tourisme fluvial à Redon ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Redon est un port fluvial au confluent de la Vilaine et du canal de Nantes à Brest. Je crée des sites pour les loueurs de bateaux, gîtes fluviaux, restaurants du port et activités nautiques avec réservation en ligne." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le coût d'un site web à Redon ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, un site e-commerce à partir de 1 500 euros. Le tarif dépend de la complexité du projet. Premier échange et devis gratuits, sans engagement." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Redon | Evan Davison — Développeur Web"
+  description="Création de sites web à Redon pour commerces, artisans et tourisme fluvial. Sites performants, design soigné et SEO local. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-redon"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Redon</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Redon
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Carrefour entre la Bretagne et les Pays de la Loire, port fluvial au confluent de la Vilaine et du canal de Nantes a Brest — Redon est une ville de connexions. Votre site web doit tirer parti de cette position strategique unique, a cheval sur trois departements, pour toucher une clientele elargie bien au-dela des frontieres communales.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Exploiter un <em class="text-accent">carrefour strategique</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Redon est la seule ville de Bretagne situee a la frontiere de trois departements : Ille-et-Vilaine, Morbihan et Loire-Atlantique. Son marche du samedi, l'un des plus grands de la region, attire des milliers de visiteurs chaque semaine. Pourtant, beaucoup de commercants et artisans redonnais restent invisibles en ligne.</p>
+              <p>Je cree des sites web qui exploitent cette position geographique unique : referencement multi-departements, visibilite sur les recherches locales des trois bassins de vie, et design qui met en valeur l'identite de votre commerce ou activite.</p>
+              <p>Le tourisme fluvial, le patrimoine portuaire et le dynamisme commercial du centre-ville sont autant d'atouts que votre site doit refleter. Base pres de Rennes, je suis a 50 minutes de Redon.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '2-3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Echange', desc: "On discute de votre activite, de votre zone de chalandise (Redon et les 3 departements) et de vos objectifs de croissance en ligne." },
+          { step: '02', title: 'Maquette', desc: "Design personnalise qui reflete votre identite et votre ancrage local. Pas de template — un site unique pour votre entreprise." },
+          { step: '03', title: 'Developpement', desc: "Code rapide, mobile-first, optimise pour le SEO local multi-departements. Points d'avancement reguliers." },
+          { step: '04', title: 'Lancement', desc: "Mise en ligne, referencement local sur les 3 departements, Google Business et formation a la gestion du contenu." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets realises pour des professionnels du Pays de Redon et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les commercants du marche de Redon ?',
+            a: 'Oui, le marche de Redon est l\'un des plus grands de Bretagne. Je cree des sites pour les commercants et producteurs locaux qui souhaitent se developper au-dela du marche : vente en ligne, presentation de produits, click-and-collect.'
+          },
+          {
+            q: 'La position de Redon entre 3 departements change-t-elle la strategie SEO ?',
+            a: 'Absolument. La position unique de Redon, entre Ille-et-Vilaine, Morbihan et Loire-Atlantique, permet de cibler une zone de chalandise elargie. J\'optimise votre referencement pour capter des clients des trois departements.'
+          },
+          {
+            q: 'Proposez-vous des sites pour le tourisme fluvial a Redon ?',
+            a: 'Oui, Redon est un port fluvial au confluent de la Vilaine et du canal de Nantes a Brest. Je cree des sites pour les loueurs de bateaux, gites fluviaux, restaurants du port et activites nautiques.'
+          },
+          {
+            q: 'Quel est le cout d\'un site web a Redon ?',
+            a: 'Un site vitrine demarre a partir de 800 euros, un site e-commerce a partir de 1 500 euros. Le tarif depend de la complexite du projet. Premier echange et devis gratuits, sans engagement.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Redon ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Rencontrons-nous au bord de la Vilaine ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

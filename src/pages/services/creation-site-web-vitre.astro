@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Vitré",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Vitré" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour les professionnels de Vitré : artisans, commerçants, industriels et acteurs du tourisme patrimonial. Sites performants avec SEO local intégré.",
+      "url": "https://evandavison.fr/services/creation-site-web-vitre"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Vitré", "item": "https://evandavison.fr/services/creation-site-web-vitre" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites pour les artisans et commerçants de Vitré ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je conçois des sites web adaptés aux artisans et commerçants vitréens : présentation de vos savoir-faire, galerie de réalisations, formulaire de devis et optimisation pour les recherches locales type 'artisan Vitré' ou 'commerce centre-ville Vitré'." }
+        },
+        {
+          "@type": "Question",
+          "name": "Un site web peut-il aider une entreprise de la zone industrielle de Vitré ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Les entreprises de la zone industrielle Est bénéficient d'un site professionnel pour renforcer leur crédibilité auprès des donneurs d'ordre, présenter leur catalogue produits et générer des demandes de devis qualifiées en ligne." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des sites pour les acteurs du tourisme patrimonial à Vitré ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Vitré est une cité médiévale classée parmi les plus belles de Bretagne. Je crée des sites qui mettent en valeur le patrimoine local : hébergements, visites guidées, restaurants du centre historique, avec un design à la hauteur du cadre." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web à Vitré ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, un site e-commerce à partir de 1 500 euros. Chaque devis est personnalisé selon vos besoins. Le premier échange est gratuit et sans engagement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Êtes-vous basé à Vitré ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Je suis basé près de Rennes, à 35 minutes de Vitré. Je me déplace pour les rendez-vous en personne et je travaille aussi en visio. La proximité géographique garantit une collaboration fluide." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Vitré | Evan Davison — Développeur Web"
+  description="Création de sites web à Vitré pour artisans, commerçants et industriels. Sites performants, design soigné et SEO local. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-vitre"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Vitré</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Vitré
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Cite medievale d'exception, pole industriel dynamique et porte d'entree de la Bretagne — Vitre conjugue patrimoine et modernite. Votre site web doit refleter cette dualite : ancrage local fort et ambition tournee vers l'exterieur, que vous soyez artisan du centre historique, industriel de la zone Est ou acteur du tourisme patrimonial.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Se demarquer dans une <em class="text-accent">cite historique</em> en plein essor
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Vitre attire chaque annee des milliers de visiteurs grace a son chateau, ses ruelles medievales et son marche du samedi. Mais le tissu economique local ne se resume pas au tourisme : la zone industrielle Est concentre des entreprises de l'agroalimentaire, de la mecanique et de la logistique qui ont besoin d'une presence en ligne credible.</p>
+              <p>Je concois des sites adaptes a chaque realite vitreenne : sites vitrines pour les commercants du centre-ville, sites institutionnels pour les PME industrielles, plateformes de reservation pour les hebergements touristiques. Chaque projet est pense pour le referencement local et la performance mobile.</p>
+              <p>Base pres de Rennes, je suis a 35 minutes de Vitre. Je connais le Pays de Vitre — Porte de Bretagne et ses specificites economiques, entre dynamisme industriel et patrimoine d'exception.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '2-3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Echange', desc: "On discute de votre activite, de votre implantation a Vitre et de vos objectifs : visibilite locale, prospection B2B, reservation en ligne." },
+          { step: '02', title: 'Maquette', desc: "Design sur mesure qui reflete votre identite. Pas de template generique — un site a l'image de votre entreprise et du Pays de Vitre." },
+          { step: '03', title: 'Developpement', desc: "Code performant, mobile-first, optimise pour le SEO local. Points d'avancement reguliers jusqu'a la livraison." },
+          { step: '04', title: 'Lancement', desc: "Mise en ligne, configuration Google Business, referencement local et formation a la gestion de votre contenu." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets realises pour des professionnels du Pays de Vitre et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les artisans et commercants de Vitre ?',
+            a: 'Oui, je concois des sites adaptes aux artisans et commercants vitreens : presentation de vos savoir-faire, galerie de realisations, formulaire de devis et optimisation pour les recherches locales type "artisan Vitre" ou "commerce centre-ville Vitre".'
+          },
+          {
+            q: 'Un site web peut-il aider une entreprise de la zone industrielle ?',
+            a: 'Absolument. Les entreprises de la zone industrielle Est beneficient d\'un site professionnel pour renforcer leur credibilite aupres des donneurs d\'ordre, presenter leur catalogue produits et generer des demandes de devis qualifiees.'
+          },
+          {
+            q: 'Proposez-vous des sites pour le tourisme patrimonial a Vitre ?',
+            a: 'Oui, Vitre est classee parmi les plus belles cites medievales de Bretagne. Je cree des sites qui mettent en valeur le patrimoine local : hebergements, visites guidees, restaurants du centre historique.'
+          },
+          {
+            q: 'Combien coute un site web a Vitre ?',
+            a: 'Un site vitrine demarre a partir de 800 euros, un site e-commerce a partir de 1 500 euros. Chaque devis est personnalise selon vos besoins. Le premier echange est gratuit et sans engagement.'
+          },
+          {
+            q: 'Etes-vous base a Vitre ?',
+            a: 'Je suis base pres de Rennes, a 35 minutes de Vitre. Je me deplace pour les rendez-vous en personne et je travaille aussi en visio. La proximite geographique garantit une collaboration fluide.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Vitre ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Rencontrons-nous au coeur de la cite medievale ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

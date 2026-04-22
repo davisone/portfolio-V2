@@ -63,164 +63,162 @@ const schema = {
   canonical="https://evandavison.fr/services/developpement-application-mobile"
   schema={schema}
 >
-  <div class="min-h-screen bg-slate-950">
-    <Header client:load />
+  <Header client:load />
 
-    <main id="main-content" class="pt-20">
+  <main id="main-content" class="pt-20">
 
-      <!-- Breadcrumb -->
-      <nav aria-label="Fil d'ariane" class="section-container py-4">
-        <ol class="flex items-center gap-2 text-sm text-slate-500">
-          <li><a href="/" class="hover:text-slate-300 transition-colors">Accueil</a></li>
-          <li class="text-slate-700">/</li>
-          <li><a href="/#services" class="hover:text-slate-300 transition-colors">Services</a></li>
-          <li class="text-slate-700">/</li>
-          <li class="text-slate-300">Application mobile Rennes</li>
-        </ol>
-      </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Application mobile Rennes</li>
+      </ol>
+    </nav>
 
-      <!-- Hero -->
-      <section class="section-container py-16 sm:py-24">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Application <span class="gradient-text">mobile</span><br/>iOS & Android
-          </h1>
-          <p class="text-xl text-slate-400 mb-8 leading-relaxed">
-            Je développe des applications mobiles performantes avec Flutter — une seule codebase pour iPhone et Android. Idéal pour les startups et PME qui veulent aller vite sans sacrifier la qualité.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/#contact" class="btn-primary">
-              Parler de mon projet
-            </a>
-            <a href="/#realisations" class="btn-secondary">
-              Voir mes projets
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Problème / Solution -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">
-                Deux applis pour le prix <span class="gradient-text">d'une seule</span>
-              </h2>
-              <div class="space-y-4 text-slate-400">
-                <p>Développer une app native iOS et une app Android séparément coûte cher et prend deux fois plus de temps. Flutter change la donne : une seule base de code, deux plateformes, performances proches du natif.</p>
-                <p>Que vous ayez besoin d'une application de gestion interne, d'un outil client B2C, ou d'une app de fidélité — je conçois une solution adaptée à vos besoins et à votre budget.</p>
-                <p>Basé à Rennes, je travaille en direct avec vous, sans intermédiaire.</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              {[
-                { label: 'Plateformes', value: 'iOS + Android' },
-                { label: 'Technologie', value: 'Flutter' },
-                { label: 'Délai moyen', value: '6-8 sem.' },
-                { label: 'Publication stores', value: 'Incluse' },
-              ].map(stat => (
-                <div class="card p-6 text-center">
-                  <div class="text-xl font-bold gradient-text mb-1">{stat.value}</div>
-                  <div class="text-slate-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section class="section-container py-16 sm:py-24">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-          Le process <span class="gradient-text">de A à Z</span>
-        </h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { step: '01', title: 'Cadrage', desc: 'Définition des fonctionnalités, user flows, wireframes. On aligne la vision avant d\'écrire une ligne de code.' },
-            { step: '02', title: 'Design', desc: 'Maquettes UI adaptées aux guidelines iOS et Material Design. Interface intuitive et cohérente.' },
-            { step: '03', title: 'Développement', desc: 'Flutter front-end + back-end API si nécessaire. Tests sur vrais appareils iOS et Android.' },
-            { step: '04', title: 'Publication', desc: 'Soumission App Store et Google Play, suivi de validation, et accompagnement post-lancement.' },
-          ].map(item => (
-            <div class="card p-6">
-              <div class="text-4xl font-black text-primary-500/30 mb-3">{item.step}</div>
-              <h3 class="text-white font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Réalisations liées -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Mes <span class="gradient-text">projets mobiles</span>
-          </h2>
-          <p class="text-slate-400 mb-8">Des applications concrètes développées avec Flutter.</p>
-          <a href="/#realisations" class="btn-primary">
-            Voir toutes mes réalisations
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Application <em class="text-accent">mobile</em><br/>iOS & Android
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Je développe des applications mobiles performantes avec Flutter — une seule codebase pour iPhone et Android. Idéal pour les startups et PME qui veulent aller vite sans sacrifier la qualité.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Parler de mon projet
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes projets
           </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ -->
-      <section class="section-container py-16 sm:py-24">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-          Questions <span class="gradient-text">fréquentes</span>
-        </h2>
-        <div class="max-w-3xl mx-auto space-y-4">
-          {[
-            {
-              q: 'Quel est le coût de développement d\'une application mobile ?',
-              a: 'Une app simple démarre autour de 2 000€, une application avec authentification, base de données et fonctionnalités avancées peut aller de 4 000€ à 10 000€. Un devis précis est établi après analyse de vos besoins.'
-            },
-            {
-              q: 'Pourquoi Flutter plutôt que React Native ou du natif ?',
-              a: 'Flutter permet de livrer une app iOS et Android à partir d\'une seule codebase, avec des performances proches du natif. Le développement est plus rapide et moins coûteux que deux apps natives distinctes, tout en gardant une qualité visuelle très élevée.'
-            },
-            {
-              q: 'Combien de temps faut-il pour développer une application mobile ?',
-              a: 'Une application simple est livrable en 4 à 6 semaines. Une app avec back-end, authentification et fonctionnalités métier prend généralement 8 à 16 semaines.'
-            },
-            {
-              q: 'L\'application sera-t-elle publiée sur l\'App Store et Google Play ?',
-              a: 'Oui, je gère la publication sur les deux stores : assets, configuration des comptes développeur, soumission et suivi de la validation.'
-            },
-            {
-              q: 'Peut-on connecter l\'application à un back-end existant ?',
-              a: 'Oui, je développe aussi bien le back-end (API REST, authentification, base de données) que le front-end mobile. Si vous avez déjà une API, je l\'intègre directement.'
-            },
-          ].map(item => (
-            <details class="card p-6 group">
-              <summary class="text-white font-medium cursor-pointer list-none flex items-center justify-between gap-4">
-                {item.q}
-                <span class="text-primary-400 shrink-0">+</span>
-              </summary>
-              <p class="text-slate-400 mt-4 leading-relaxed">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <!-- CTA Contact -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Votre app est à portée de main
-          </h2>
-          <p class="text-slate-400 mb-8 max-w-xl mx-auto">
-            Dites-moi ce que vous voulez construire. Je vous aide à définir le périmètre et à lancer le projet.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/#contact" class="btn-primary">Me contacter</a>
-            <a href="/" class="btn-secondary">Retour à l'accueil</a>
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Deux applis pour le prix <em class="text-accent">d'une seule</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Développer une app native iOS et une app Android séparément coûte cher et prend deux fois plus de temps. Flutter change la donne : une seule base de code, deux plateformes, performances proches du natif.</p>
+              <p>Que vous ayez besoin d'une application de gestion interne, d'un outil client B2C, ou d'une app de fidélité — je conçois une solution adaptée à vos besoins et à votre budget.</p>
+              <p>Basé à Rennes, je travaille en direct avec vous, sans intermédiaire.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Plateformes', value: 'iOS + Android' },
+              { label: 'Technologie', value: 'Flutter' },
+              { label: 'Délai moyen', value: '6-8 sem.' },
+              { label: 'Publication stores', value: 'Incluse' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Le process <em class="text-accent">de A à Z</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Cadrage', desc: 'Définition des fonctionnalités, user flows, wireframes. On aligne la vision avant d\'écrire une ligne de code.' },
+          { step: '02', title: 'Design', desc: 'Maquettes UI adaptées aux guidelines iOS et Material Design. Interface intuitive et cohérente.' },
+          { step: '03', title: 'Développement', desc: 'Flutter front-end + back-end API si nécessaire. Tests sur vrais appareils iOS et Android.' },
+          { step: '04', title: 'Publication', desc: 'Soumission App Store et Google Play, suivi de validation, et accompagnement post-lancement.' },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
-    <Footer />
-  </div>
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Mes <em class="text-accent">projets mobiles</em>
+        </h2>
+        <p class="text-text-body mb-8">Des applications concrètes développées avec Flutter.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">fréquentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Quel est le coût de développement d\'une application mobile ?',
+            a: 'Une app simple démarre autour de 2 000€, une application avec authentification, base de données et fonctionnalités avancées peut aller de 4 000€ à 10 000€. Un devis précis est établi après analyse de vos besoins.'
+          },
+          {
+            q: 'Pourquoi Flutter plutôt que React Native ou du natif ?',
+            a: 'Flutter permet de livrer une app iOS et Android à partir d\'une seule codebase, avec des performances proches du natif. Le développement est plus rapide et moins coûteux que deux apps natives distinctes, tout en gardant une qualité visuelle très élevée.'
+          },
+          {
+            q: 'Combien de temps faut-il pour développer une application mobile ?',
+            a: 'Une application simple est livrable en 4 à 6 semaines. Une app avec back-end, authentification et fonctionnalités métier prend généralement 8 à 16 semaines.'
+          },
+          {
+            q: 'L\'application sera-t-elle publiée sur l\'App Store et Google Play ?',
+            a: 'Oui, je gère la publication sur les deux stores : assets, configuration des comptes développeur, soumission et suivi de la validation.'
+          },
+          {
+            q: 'Peut-on connecter l\'application à un back-end existant ?',
+            a: 'Oui, je développe aussi bien le back-end (API REST, authentification, base de données) que le front-end mobile. Si vous avez déjà une API, je l\'intègre directement.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Votre app est à portée de main
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Dites-moi ce que vous voulez construire. Je vous aide à définir le périmètre et à lancer le projet.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
 </Layout>

@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Betton",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Betton" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour les professionnels de Betton : commerces de proximité, artisans, professions libérales et services. Sites modernes avec SEO local intégré.",
+      "url": "https://evandavison.fr/services/creation-site-web-betton"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Betton", "item": "https://evandavison.fr/services/creation-site-web-betton" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites pour les commerces de proximité de Betton ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je conçois des sites web pour les commerces et artisans bettonnais : boulangeries, restaurants, salons de coiffure, cabinets médicaux. Un site bien référencé vous rend visible auprès des nouveaux habitants qui affluent chaque année." }
+        },
+        {
+          "@type": "Question",
+          "name": "Betton grandit vite, un site web est-il vraiment nécessaire ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Justement. La croissance démographique de Betton signifie que de nouveaux habitants arrivent régulièrement et cherchent leurs commerces en ligne. Sans site web, vous êtes invisible pour cette nouvelle clientèle qui ne connaît pas encore la ville." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des sites pour les professions libérales de Betton ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, les professions libérales (kinés, ostéopathes, avocats, architectes) bénéficient d'un site professionnel pour présenter leurs services, permettre la prise de rendez-vous en ligne et rassurer les patients ou clients potentiels." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le coût d'un site web à Betton ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, un site e-commerce à partir de 1 500 euros. Chaque devis est adapté à vos besoins réels. Premier échange gratuit et sans engagement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Êtes-vous proche de Betton ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, basé près de Rennes, Betton est à quelques minutes au nord. Je me déplace facilement pour les rendez-vous en personne. La proximité permet une collaboration réactive et efficace." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Betton | Evan Davison — Développeur Web"
+  description="Création de sites web à Betton pour commerces, artisans et professions libérales. Sites performants, design soigné et SEO local. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-betton"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Betton</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Betton
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Commune dynamique au nord de Rennes, Betton connait une croissance demographique soutenue depuis plusieurs annees. Nouveaux habitants, nouveaux besoins, nouvelles habitudes de consommation — les professionnels bettonnais qui ne sont pas visibles en ligne passent a cote d'une clientele grandissante qui cherche ses commerces et services sur Google.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Accompagner la <em class="text-accent">croissance</em> de Betton
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Betton accueille chaque annee de nouvelles familles et de nouveaux actifs attires par sa qualite de vie, sa proximite avec Rennes et ses equipements. Ces nouveaux arrivants ont un reflexe : chercher en ligne les commerces, artisans et services de proximite. Si vous n'avez pas de site, c'est votre concurrent qui apparait en premier.</p>
+              <p>Je cree des sites web qui vous placent devant cette clientele en mouvement : referencement local sur "Betton" et les communes voisines, design professionnel qui inspire confiance, et experience mobile irremprochable pour les recherches en deplacement.</p>
+              <p>Base pres de Rennes, Betton est a quelques minutes au nord. Je connais la commune, son centre-ville dynamique et son tissu de commerces de proximite qui fait sa force.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '2-3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Rencontre', desc: "On echange sur votre activite a Betton, votre clientele de proximite et vos objectifs : plus de visibilite, plus de clients, reservation en ligne." },
+          { step: '02', title: 'Maquette', desc: "Design sur mesure qui reflete votre identite et inspire confiance aux nouveaux habitants. Aucun template generique." },
+          { step: '03', title: 'Developpement', desc: "Code performant, mobile-first, optimise pour le referencement local sur Betton et les communes du nord de Rennes." },
+          { step: '04', title: 'Lancement', desc: "Mise en ligne, fiche Google Business, referencement local et formation pour que vous soyez autonome sur votre site." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets realises pour des professionnels de la metropole rennaise et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les commerces de proximite de Betton ?',
+            a: 'Oui, je concois des sites pour les commerces et artisans bettonnais : boulangeries, restaurants, salons de coiffure, cabinets medicaux. Un site bien reference vous rend visible aupres des nouveaux habitants.'
+          },
+          {
+            q: 'Betton grandit vite, un site web est-il vraiment necessaire ?',
+            a: 'Justement. La croissance demographique signifie que de nouveaux habitants arrivent regulierement et cherchent leurs commerces en ligne. Sans site, vous etes invisible pour cette nouvelle clientele.'
+          },
+          {
+            q: 'Proposez-vous des sites pour les professions liberales ?',
+            a: 'Oui, les professions liberales (kines, osteopathes, avocats, architectes) beneficient d\'un site professionnel pour presenter leurs services et permettre la prise de rendez-vous en ligne.'
+          },
+          {
+            q: 'Quel est le cout d\'un site web a Betton ?',
+            a: 'Un site vitrine demarre a partir de 800 euros, un site e-commerce a partir de 1 500 euros. Chaque devis est adapte a vos besoins reels. Premier echange gratuit et sans engagement.'
+          },
+          {
+            q: 'Etes-vous proche de Betton ?',
+            a: 'Oui, base pres de Rennes, Betton est a quelques minutes au nord. Je me deplace facilement pour les rendez-vous en personne.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Betton ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Rencontrons-nous au centre-ville ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

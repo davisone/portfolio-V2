@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Dinard",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Dinard" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour les professionnels de Dinard : hôtels, restaurants, thalasso, commerces et activités touristiques de la Côte d'Émeraude. Sites performants avec SEO local.",
+      "url": "https://evandavison.fr/services/creation-site-web-dinard"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Dinard", "item": "https://evandavison.fr/services/creation-site-web-dinard" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites pour les hôtels et thalassos de Dinard ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je réalise des sites web pour l'hôtellerie et le bien-être à Dinard : galeries photos de qualité, système de réservation, intégration Booking et TripAdvisor, pages multilingues pour la clientèle internationale. Le design met en valeur votre établissement et la Côte d'Émeraude." }
+        },
+        {
+          "@type": "Question",
+          "name": "Un site multilingue est-il nécessaire à Dinard ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Fortement recommandé. Dinard a une tradition d'accueil de la clientèle britannique, renforcée par le Festival du Film Britannique. Un site en français et en anglais vous ouvre à cette clientèle internationale fidèle à la station." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des sites e-commerce pour les boutiques de Dinard ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, les boutiques de la station balnéaire peuvent prolonger leur saison grâce à la vente en ligne. Je développe des sites e-commerce pour vendre vos produits toute l'année, bien au-delà de la saison estivale." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le délai pour créer un site web à Dinard ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine est livré en 2 à 3 semaines, une boutique en ligne en 4 à 6 semaines. Si vous avez besoin d'être en ligne avant la saison touristique, on anticipe le planning en conséquence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Vous déplacez-vous à Dinard ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, basé près de Rennes, Dinard est à environ 1 heure. Je me déplace pour les rendez-vous, les séances photo et les points d'avancement. Je connais bien la Côte d'Émeraude et ses acteurs touristiques." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Dinard | Evan Davison — Développeur Web"
+  description="Création de sites web à Dinard pour hôtels, restaurants et tourisme. Sites performants, design élégant et SEO local. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-dinard"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Dinard</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Dinard
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Station balneaire elegante de la Cote d'Emeraude, terre d'accueil du Festival du Film Britannique, destination prisee de l'hotellerie haut de gamme et de la thalassotherapie — Dinard vit du tourisme et de l'art de vivre. Votre site web doit etre a la hauteur de ce standing : design raffine, performances irreprochables et visibilite maximale aupres des voyageurs.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Seduire une clientele <em class="text-accent">touristique exigeante</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>A Dinard, vos clients comparent les etablissements en ligne avant de reserver. Un site lent, au design depasse ou mal reference sur mobile, c'est une reservation perdue au profit d'un concurrent — ou d'une plateforme qui prend 15 a 20% de commission. Les voyageurs s'attendent a un site a la hauteur du cadre exceptionnel de la Cote d'Emeraude.</p>
+              <p>Je cree des sites penses pour l'hotellerie, la restauration et le tourisme dinardais : visuels plein ecran qui mettent en valeur les villas Belle Epoque et les plages, systeme de reservation directe pour reduire la dependance aux OTA, version anglaise pour la clientele britannique historique.</p>
+              <p>Base pres de Rennes, je suis a 1 heure de Dinard. Je connais la Cote d'Emeraude, la saisonnalite du tourisme et les attentes d'une clientele premium habituee aux standards internationaux.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '2-3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Decouverte', desc: "On echange sur votre etablissement, votre clientele (francaise, britannique, internationale) et vos objectifs : reservations directes, notoriete, vente en ligne." },
+          { step: '02', title: 'Maquette', desc: "Design elegant et sur mesure, a la hauteur du standing dinardais. Visuels soignes, navigation fluide, version multilingue si necessaire." },
+          { step: '03', title: 'Developpement', desc: "Code performant, mobile-first pour les touristes en deplacement. Integration reservation, avis clients et SEO local Cote d'Emeraude." },
+          { step: '04', title: 'Mise en ligne', desc: "Lancement, referencement local, integration Google Business et formation a la gestion de votre contenu saisonnier." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets realises pour des professionnels de la Cote d'Emeraude et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les hotels et thalassos de Dinard ?',
+            a: 'Oui, je realise des sites pour l\'hotellerie et le bien-etre a Dinard : galeries photos, systeme de reservation, integration Booking et TripAdvisor, pages multilingues pour la clientele internationale.'
+          },
+          {
+            q: 'Un site multilingue est-il necessaire a Dinard ?',
+            a: 'Fortement recommande. Dinard a une tradition d\'accueil de la clientele britannique, renforcee par le Festival du Film Britannique. Un site en francais et en anglais vous ouvre a cette clientele internationale fidele.'
+          },
+          {
+            q: 'Proposez-vous des sites e-commerce pour les boutiques de Dinard ?',
+            a: 'Oui, les boutiques de la station balneaire peuvent prolonger leur saison grace a la vente en ligne. Je developpe des sites e-commerce pour vendre vos produits toute l\'annee, au-dela de la saison estivale.'
+          },
+          {
+            q: 'Quel est le delai pour creer un site a Dinard ?',
+            a: 'Un site vitrine est livre en 2 a 3 semaines, une boutique en ligne en 4 a 6 semaines. Si vous devez etre en ligne avant la saison touristique, on anticipe le planning.'
+          },
+          {
+            q: 'Vous deplacez-vous a Dinard ?',
+            a: 'Oui, base pres de Rennes, Dinard est a environ 1 heure. Je me deplace pour les rendez-vous et les points d\'avancement. Je connais bien la Cote d\'Emeraude et ses acteurs touristiques.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Dinard ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Rencontrons-nous face a la mer ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

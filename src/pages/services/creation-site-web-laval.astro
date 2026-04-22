@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Laval",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Laval" },
+      "serviceType": "Développement web",
+      "description": "Développeur web freelance pour les entreprises lavalloises : sites vitrines, applications web et e-commerce. Technologies modernes, performances et SEO.",
+      "url": "https://evandavison.fr/services/creation-site-web-laval"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Laval", "item": "https://evandavison.fr/services/creation-site-web-laval" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous avec des entreprises du secteur de la réalité virtuelle à Laval ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Laval est reconnue internationalement pour son écosystème en réalité virtuelle et technologies immersives, notamment grâce au salon Laval Virtual. Je travaille avec des entreprises tech et innovantes pour créer des sites à la hauteur de leur expertise." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se déroulent les échanges si vous êtes basé près de Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les échanges courants se font en visioconférence, et je me déplace à Laval pour les rendez-vous importants. Le trajet Rennes-Laval prend environ 1h en voiture ou 30 minutes en TGV. La collaboration reste fluide et réactive." }
+        },
+        {
+          "@type": "Question",
+          "name": "Pouvez-vous créer un site pour une entreprise agroalimentaire en Mayenne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, la Mayenne étant un département fortement agricole et agroalimentaire, je développe des sites vitrines et e-commerce pour les producteurs et transformateurs locaux, avec une stratégie SEO adaptée au marché mayennais." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel budget prévoir pour un site web à Laval ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, un e-commerce à partir de 1 500 euros. Pour les projets techniques plus complexes (portails métier, applications web), le budget est défini sur devis après analyse de vos besoins spécifiques." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous un hébergement et une maintenance pour les sites lavallois ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je propose des forfaits d'hébergement performant et de maintenance mensuelle : mises à jour de sécurité, sauvegardes automatiques, monitoring des performances et corrections. Votre site reste rapide et sécurisé dans le temps." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Laval | Evan Davison — Développeur Web"
+  description="Création de sites web à Laval : vitrines, applications web et e-commerce pour les entreprises de Mayenne. Code performant, SEO intégré. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-laval"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Laval</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Laval
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Laval, capitale de la Mayenne et ville pionniere de la realite virtuelle avec Laval Virtual, est un territoire qui allie innovation technologique et savoir-faire industriel. Que vous soyez une startup du technopole, une entreprise de la zone des Touches ou un commerce du Vieux-Laval, je concois des sites web a la hauteur de votre ambition — pas des pages generiques sans ame.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              La capitale de la <em class="text-accent">realite virtuelle merite mieux</em> qu'un template
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Le tissu economique lavallois est plus riche qu'on ne le pense : ecosysteme de la realite virtuelle et des technologies immersives, industrie agroalimentaire, plasturgie, electronique et un tissu de PME dynamiques. Pourtant, beaucoup d'entreprises locales se contentent de sites vieillissants qui ne refletent pas leur expertise.</p>
+              <p>Je developpe des sites sur mesure qui repondent aux enjeux de chaque secteur : vitrine technique pour une entreprise de VR, site e-commerce pour un producteur mayennais, ou application web pour une PME industrielle. Chaque projet est unique.</p>
+              <p>Depuis Rennes, j'interviens a Laval en visio et en presentiel. A seulement 1h de route, la collaboration est particulierement fluide, avec des points d'etape reguliers et une livraison dans les delais.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Projets livrés', value: '20+' },
+              { label: 'Délai moyen', value: '3-4 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Clients satisfaits', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Briefing', desc: "Echange approfondi sur votre activite, votre secteur et vos objectifs. On definit ensemble le perimetre du projet." },
+          { step: '02', title: 'Conception', desc: "Maquette personnalisee, architecture technique adaptee a votre metier et strategie SEO pour le marche lavallois." },
+          { step: '03', title: 'Production', desc: "Developpement avec des technologies modernes. Code propre, performant, et suivi transparent a chaque etape." },
+          { step: '04', title: 'Deploiement', desc: "Mise en production, optimisation SEO local Mayenne, formation et support technique post-lancement." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets concrets pour des entreprises de l'Ouest, de la Mayenne a l'Ille-et-Vilaine.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Travaillez-vous avec des entreprises du secteur de la realite virtuelle a Laval ?',
+            a: 'Oui, Laval est reconnue internationalement pour son ecosysteme en realite virtuelle et technologies immersives, notamment grace au salon Laval Virtual. Je travaille avec des entreprises tech et innovantes pour creer des sites a la hauteur de leur expertise.'
+          },
+          {
+            q: 'Comment se passent les echanges si vous etes base pres de Rennes ?',
+            a: 'Les echanges courants se font en visio, et je me deplace a Laval pour les rendez-vous importants. Le trajet Rennes-Laval prend environ 1h en voiture ou 30 minutes en TGV. La proximite facilite les echanges.'
+          },
+          {
+            q: 'Pouvez-vous creer un site pour une entreprise agroalimentaire en Mayenne ?',
+            a: 'Oui, la Mayenne etant un departement fortement agricole et agroalimentaire, je developpe des sites vitrines et e-commerce pour les producteurs et transformateurs locaux, avec une strategie SEO adaptee.'
+          },
+          {
+            q: 'Quel budget prevoir pour un site web a Laval ?',
+            a: 'Un site vitrine demarre a 800 euros, un e-commerce a partir de 1 500 euros. Pour les projets techniques complexes (portails metier, applications web), le budget est defini sur devis apres analyse de vos besoins.'
+          },
+          {
+            q: 'Proposez-vous hebergement et maintenance ?',
+            a: 'Oui, je propose des forfaits d\'hebergement performant et de maintenance mensuelle : mises a jour de securite, sauvegardes automatiques, monitoring et corrections. Votre site reste rapide et securise.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Laval ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Echangeons sur votre besoin en visio ou lors d'un deplacement a Laval. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

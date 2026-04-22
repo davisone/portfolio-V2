@@ -63,166 +63,164 @@ const schema = {
   canonical="https://evandavison.fr/services/creation-site-web-rennes"
   schema={schema}
 >
-  <div class="min-h-screen bg-slate-950">
-    <Header client:load />
+  <Header client:load />
 
-    <main id="main-content" class="pt-20">
+  <main id="main-content" class="pt-20">
 
-      <!-- Breadcrumb -->
-      <nav aria-label="Fil d'ariane" class="section-container py-4">
-        <ol class="flex items-center gap-2 text-sm text-slate-500">
-          <li><a href="/" class="hover:text-slate-300 transition-colors">Accueil</a></li>
-          <li class="text-slate-700">/</li>
-          <li><a href="/#services" class="hover:text-slate-300 transition-colors">Services</a></li>
-          <li class="text-slate-700">/</li>
-          <li class="text-slate-300">Création site web Rennes</li>
-        </ol>
-      </nav>
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Rennes</li>
+      </ol>
+    </nav>
 
-      <!-- Hero -->
-      <section class="section-container py-16 sm:py-24">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Création <span class="gradient-text">site web</span><br/>à Rennes
-          </h1>
-          <p class="text-xl text-slate-400 mb-8 leading-relaxed">
-            Vous avez un projet web ? Je conçois des sites modernes, rapides et bien référencés — adaptés à vos objectifs, pas à un template générique.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/#contact" class="btn-primary">
-              Obtenir un devis gratuit
-            </a>
-            <a href="/#realisations" class="btn-secondary">
-              Voir mes réalisations
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Problème / Solution -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6">
-                Un site web qui <span class="gradient-text">travaille pour vous</span>
-              </h2>
-              <div class="space-y-4 text-slate-400">
-                <p>Votre site vitrine actuel est trop lent ? Il ne remonte pas sur Google ? Les visiteurs ne savent pas comment vous contacter ?</p>
-                <p>Je construis des sites web pensés pour convertir : design soigné, performances optimales, SEO intégré dès le départ. Pas un template qu'on habille — une solution conçue pour votre activité.</p>
-                <p>Basé près de Rennes, je travaille avec des entrepreneurs, TPE et PME bretonnes qui veulent une présence en ligne à la hauteur de leur métier.</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              {[
-                { label: 'Sites livrés', value: '20+' },
-                { label: 'Délai moyen', value: '3 sem.' },
-                { label: 'Score Lighthouse', value: '95+' },
-                { label: 'Clients satisfaits', value: '100%' },
-              ].map(stat => (
-                <div class="card p-6 text-center">
-                  <div class="text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-                  <div class="text-slate-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section class="section-container py-16 sm:py-24">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-          Comment ça <span class="gradient-text">se passe</span> ?
-        </h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { step: '01', title: 'Échange', desc: "On fait le point sur votre projet, vos objectifs et votre cible. Gratuit et sans engagement." },
-            { step: '02', title: 'Conception', desc: "Maquette sur mesure, choix des technologies adaptées, architecture pensée pour le SEO." },
-            { step: '03', title: 'Développement', desc: "Code propre, performant et maintenable. Points d'étape réguliers pour valider ensemble." },
-            { step: '04', title: 'Livraison', desc: "Mise en ligne, formation à l'interface d'administration, et suivi post-lancement." },
-          ].map(item => (
-            <div class="card p-6">
-              <div class="text-4xl font-black text-primary-500/30 mb-3">{item.step}</div>
-              <h3 class="text-white font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <!-- Réalisations liées -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Quelques <span class="gradient-text">réalisations</span>
-          </h2>
-          <p class="text-slate-400 mb-8">Des projets concrets réalisés pour des clients bretons et au-delà.</p>
-          <a href="/#realisations" class="btn-primary">
-            Voir toutes mes réalisations
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Rennes
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Vous avez un projet web ? Je conçois des sites modernes, rapides et bien référencés — adaptés à vos objectifs, pas à un template générique.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
           </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ -->
-      <section class="section-container py-16 sm:py-24">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-          Questions <span class="gradient-text">fréquentes</span>
-        </h2>
-        <div class="max-w-3xl mx-auto space-y-4">
-          {[
-            {
-              q: 'Combien coûte la création d\'un site web à Rennes ?',
-              a: 'Le prix varie selon la complexité : un site vitrine démarre autour de 800€, une boutique en ligne à partir de 1 500€. Chaque projet est unique — un devis gratuit est réalisé après analyse de vos besoins.'
-            },
-            {
-              q: 'Combien de temps faut-il pour créer un site web ?',
-              a: 'Un site vitrine est livré en 2 à 4 semaines. Une application web complexe peut prendre 4 à 8 semaines. Les délais dépendent de la complexité et de la réactivité pour les contenus.'
-            },
-            {
-              q: 'Quelles technologies utilisez-vous ?',
-              a: 'J\'utilise des technologies modernes adaptées à chaque projet : Astro ou Next.js pour les sites vitrine, Next.js avec base de données pour les applications web, et des solutions e-commerce sur mesure ou Shopify selon les besoins.'
-            },
-            {
-              q: 'Le site sera-t-il bien référencé sur Google ?',
-              a: 'Oui, le SEO est intégré dès la conception : HTML sémantique, balises meta, temps de chargement optimisé, sitemap, données structurées Schema.org. Un bon référencement est inclus dans chaque prestation.'
-            },
-            {
-              q: 'Proposez-vous la maintenance après livraison ?',
-              a: 'Oui, des forfaits de maintenance mensuelle sont disponibles : mises à jour de sécurité, sauvegardes, et petites modifications de contenu. Idéal pour garder votre site performant dans le temps.'
-            },
-          ].map(item => (
-            <details class="card p-6 group">
-              <summary class="text-white font-medium cursor-pointer list-none flex items-center justify-between gap-4">
-                {item.q}
-                <span class="text-primary-400 shrink-0 transition-transform group-open:rotate-45">+</span>
-              </summary>
-              <p class="text-slate-400 mt-4 leading-relaxed">{item.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <!-- CTA Contact -->
-      <section class="py-16 bg-slate-900/30">
-        <div class="section-container text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Prêt à lancer votre projet ?
-          </h2>
-          <p class="text-slate-400 mb-8 max-w-xl mx-auto">
-            Discutons de votre besoin. Premier échange gratuit, sans engagement.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="/#contact" class="btn-primary">Me contacter</a>
-            <a href="/" class="btn-secondary">Retour à l'accueil</a>
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Un site web qui <em class="text-accent">travaille pour vous</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Votre site vitrine actuel est trop lent ? Il ne remonte pas sur Google ? Les visiteurs ne savent pas comment vous contacter ?</p>
+              <p>Je construis des sites web pensés pour convertir : design soigné, performances optimales, SEO intégré dès le départ. Pas un template qu'on habille — une solution conçue pour votre activité.</p>
+              <p>Basé près de Rennes, je travaille avec des entrepreneurs, TPE et PME bretonnes qui veulent une présence en ligne à la hauteur de leur métier.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Clients satisfaits', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Échange', desc: "On fait le point sur votre projet, vos objectifs et votre cible. Gratuit et sans engagement." },
+          { step: '02', title: 'Conception', desc: "Maquette sur mesure, choix des technologies adaptées, architecture pensée pour le SEO." },
+          { step: '03', title: 'Développement', desc: "Code propre, performant et maintenable. Points d'étape réguliers pour valider ensemble." },
+          { step: '04', title: 'Livraison', desc: "Mise en ligne, formation à l'interface d'administration, et suivi post-lancement." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
-    <Footer />
-  </div>
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">réalisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets concrets réalisés pour des clients bretons et au-delà.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">fréquentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Combien coûte la création d\'un site web à Rennes ?',
+            a: 'Le prix varie selon la complexité : un site vitrine démarre autour de 800€, une boutique en ligne à partir de 1 500€. Chaque projet est unique — un devis gratuit est réalisé après analyse de vos besoins.'
+          },
+          {
+            q: 'Combien de temps faut-il pour créer un site web ?',
+            a: 'Un site vitrine est livré en 2 à 4 semaines. Une application web complexe peut prendre 4 à 8 semaines. Les délais dépendent de la complexité et de la réactivité pour les contenus.'
+          },
+          {
+            q: 'Quelles technologies utilisez-vous ?',
+            a: 'J\'utilise des technologies modernes adaptées à chaque projet : Astro ou Next.js pour les sites vitrine, Next.js avec base de données pour les applications web, et des solutions e-commerce sur mesure ou Shopify selon les besoins.'
+          },
+          {
+            q: 'Le site sera-t-il bien référencé sur Google ?',
+            a: 'Oui, le SEO est intégré dès la conception : HTML sémantique, balises meta, temps de chargement optimisé, sitemap, données structurées Schema.org. Un bon référencement est inclus dans chaque prestation.'
+          },
+          {
+            q: 'Proposez-vous la maintenance après livraison ?',
+            a: 'Oui, des forfaits de maintenance mensuelle sont disponibles : mises à jour de sécurité, sauvegardes, et petites modifications de contenu. Idéal pour garder votre site performant dans le temps.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Prêt à lancer votre projet ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre besoin. Premier échange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
 </Layout>
 
 <style>

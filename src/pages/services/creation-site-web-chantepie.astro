@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Chantepie",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Chantepie" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour les professionnels de Chantepie : commerces de la zone d'activité, entreprises, services et professions libérales. Sites performants avec SEO local.",
+      "url": "https://evandavison.fr/services/creation-site-web-chantepie"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Chantepie", "item": "https://evandavison.fr/services/creation-site-web-chantepie" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites pour les entreprises de la zone d'activité de Chantepie ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je conçois des sites professionnels pour les entreprises de la ZA de Chantepie : sites vitrines, catalogues en ligne, formulaires de contact B2B. Un site performant renforce votre crédibilité et génère des leads qualifiés." }
+        },
+        {
+          "@type": "Question",
+          "name": "Un site web est-il utile pour un commerce à Chantepie ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Chantepie est en pleine expansion avec de nouveaux quartiers résidentiels. Les habitants et les étudiants de Sup de Vinci cherchent leurs services en ligne. Un site bien référencé vous place devant la concurrence rennaise." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des tarifs adaptés aux petites entreprises ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, mes tarifs sont pensés pour les TPE et PME. Un site vitrine démarre à partir de 800 euros. Je propose des solutions adaptées à chaque budget, sans sacrifier la qualité ni les performances." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le délai pour un site web à Chantepie ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine est livré en 2 à 3 semaines, un site e-commerce en 4 à 6 semaines. Basé à quelques minutes de Chantepie, je suis réactif et disponible pour des points réguliers." }
+        },
+        {
+          "@type": "Question",
+          "name": "La proximité avec Rennes Est est-elle un avantage SEO ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je référence votre site sur les recherches liées à Chantepie mais aussi à Rennes Est, ce qui élargit votre zone de visibilité sans effort supplémentaire. Vous captez les clients des deux zones." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Chantepie | Evan Davison — Développeur Web"
+  description="Création de sites web à Chantepie pour commerces, entreprises et services. Sites performants, design soigné et SEO local. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-chantepie"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Chantepie</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Chantepie
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Zone d'activite dynamique, campus Sup de Vinci, proximite immediate de Rennes Est — Chantepie est une commune en pleine expansion qui attire entreprises et nouveaux habitants. Votre site web doit capter cette croissance et vous positionner comme un acteur incontournable de l'est de la metropole rennaise.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Tirer parti de la <em class="text-accent">dynamique Rennes Est</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Chantepie beneficie d'une position strategique aux portes de Rennes Est, avec sa zone d'activite qui accueille des dizaines d'entreprises et le campus Sup de Vinci qui amene une population etudiante. La commune grandit, de nouveaux quartiers sortent de terre, et les besoins en services et commerces locaux explosent.</p>
+              <p>Pourtant, beaucoup de professionnels cantepiens n'ont pas de presence en ligne ou possedent un site vieillissant. Je cree des sites web qui captent la clientele de Chantepie et de Rennes Est : referencement local double (Chantepie + Rennes Est), design professionnel et performances optimales sur mobile.</p>
+              <p>Base pres de Rennes, je suis a quelques minutes de Chantepie. Je connais la zone d'activite, les commerces du centre et les specificites d'une commune satellite en forte croissance.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '2-3 sem.' },
+              { label: 'Score Lighthouse', value: '95+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Echange', desc: "On discute de votre activite a Chantepie, de votre clientele (locale, Rennes Est, etudiants) et de vos objectifs de visibilite en ligne." },
+          { step: '02', title: 'Maquette', desc: "Design sur mesure qui reflete votre identite professionnelle. Pas de template — un site unique pour vous demarquer." },
+          { step: '03', title: 'Developpement', desc: "Code performant, mobile-first, SEO local optimise sur Chantepie et Rennes Est. Points d'avancement reguliers." },
+          { step: '04', title: 'Lancement', desc: "Mise en ligne, Google Business, referencement local et formation a la gestion autonome de votre contenu." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets realises pour des professionnels de la metropole rennaise et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les entreprises de la zone d\'activite de Chantepie ?',
+            a: 'Oui, je concois des sites professionnels pour les entreprises de la ZA de Chantepie : sites vitrines, catalogues en ligne, formulaires de contact B2B. Un site performant renforce votre credibilite et genere des leads qualifies.'
+          },
+          {
+            q: 'Un site web est-il utile pour un commerce a Chantepie ?',
+            a: 'Oui, Chantepie est en pleine expansion avec de nouveaux quartiers residentiels. Les habitants et les etudiants de Sup de Vinci cherchent leurs services en ligne. Un site bien reference vous place devant la concurrence.'
+          },
+          {
+            q: 'Proposez-vous des tarifs adaptes aux petites entreprises ?',
+            a: 'Oui, mes tarifs sont penses pour les TPE et PME. Un site vitrine demarre a partir de 800 euros. Je propose des solutions adaptees a chaque budget, sans sacrifier la qualite.'
+          },
+          {
+            q: 'La proximite avec Rennes Est est-elle un avantage SEO ?',
+            a: 'Absolument. Je reference votre site sur les recherches liees a Chantepie mais aussi a Rennes Est, ce qui elargit votre zone de visibilite. Vous captez les clients des deux zones.'
+          },
+          {
+            q: 'Quel est le delai pour un site a Chantepie ?',
+            a: 'Un site vitrine est livre en 2 a 3 semaines, un site e-commerce en 4 a 6 semaines. Base a quelques minutes de Chantepie, je suis reactif et disponible.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Chantepie ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Rencontrons-nous sur place ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

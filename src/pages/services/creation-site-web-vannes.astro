@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web à Vannes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Vannes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web professionnels à Vannes et dans le Golfe du Morbihan. Sites vitrines, e-commerce et applications web pour les entreprises vannetaises.",
+      "url": "https://evandavison.fr/services/creation-site-web-vannes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Création site web Vannes", "item": "https://evandavison.fr/services/creation-site-web-vannes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Créez-vous des sites web pour les professionnels du tourisme dans le Golfe du Morbihan ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je réalise des sites web pour les acteurs du tourisme vannetais : locations saisonnières, activités nautiques, campings, chambres d'hôtes. Le design et le SEO sont pensés pour capter la clientèle touristique du Golfe du Morbihan." }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon commerce à Vannes a-t-il besoin d'un site web en plus des réseaux sociaux ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les réseaux sociaux sont utiles mais vous ne les possédez pas. Un site web est votre vitrine permanente, visible 24h/24 sur Google. Il renforce votre crédibilité et vous permet de convertir les visiteurs sans dépendre d'un algorithme." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des solutions de réservation en ligne pour Vannes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des systèmes de réservation en ligne adaptés à votre activité : créneaux, calendrier de disponibilités, paiement en ligne. Idéal pour les prestataires de services, les thérapeutes ou les activités touristiques du Morbihan." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour créer un site web à Vannes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine est livré en 2 à 4 semaines, un e-commerce en 4 à 6 semaines. Le planning est défini ensemble dès le départ, avec des jalons clairs pour que vous sachiez exactement où en est votre projet." }
+        },
+        {
+          "@type": "Question",
+          "name": "Faites-vous aussi le référencement Google pour Vannes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le SEO technique et le référencement local sont inclus dans chaque projet : structure optimisée, balises meta, données structurées, vitesse de chargement. Je peux aussi vous accompagner sur une stratégie de contenu pour renforcer votre positionnement sur le long terme." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Création site web Vannes | Evan Davison — Développeur Web"
+  description="Développeur web freelance à Vannes et dans le Golfe du Morbihan. Sites vitrines, e-commerce et applications web sur mesure. SEO local intégré. Devis gratuit."
+  canonical="https://evandavison.fr/services/creation-site-web-vannes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Création site web Vannes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Création <em class="text-accent">site web</em><br/>à Vannes
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Entre le charme de la vieille ville et l'attractivite du Golfe du Morbihan, Vannes est une ville ou le commerce local et le tourisme se croisent en permanence. Je concois des sites web qui captent cette double audience — des outils de croissance, pas de simples pages decoratives.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Obtenir un devis gratuit
+          </a>
+          <a href="/#realisations" class="btn-secondary">
+            Voir mes réalisations
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problème / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Votre activite merite une <em class="text-accent">presence en ligne serieuse</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Vannes connait une croissance demographique et economique soutenue. De nouveaux commerces ouvrent dans le centre historique, des entreprises s'installent dans les zones d'activite de Luscanen et du Parc du Golfe. La concurrence en ligne s'intensifie.</p>
+              <p>Un site web professionnel n'est plus un luxe mais une necessite. Je cree des sites penses pour votre marche local : design soigne, temps de chargement rapide, et referencement naturel qui vous positionne devant vos concurrents vannetais sur Google.</p>
+              <p>Depuis Rennes, Vannes est a une heure de route. Je me deplace pour les rendez-vous importants et travaille en visio pour le suivi courant — une collaboration proche et reactive.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Sites livrés', value: '20+' },
+              { label: 'Délai moyen', value: '3 sem.' },
+              { label: 'Score Lighthouse', value: '96+' },
+              { label: 'Satisfaction client', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Comment ça <em class="text-accent">se passe</em> ?
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { step: '01', title: 'Analyse', desc: "On etudie votre marche, vos concurrents locaux et vos objectifs. Je comprends votre activite avant de proposer une solution." },
+          { step: '02', title: 'Design', desc: "Maquette unique qui reflete votre identite et parle a votre clientele vannetaise. Validation avant le moindre code." },
+          { step: '03', title: 'Code', desc: "Developpement avec des technologies modernes et performantes. Suivi transparent avec des demos regulieres." },
+          { step: '04', title: 'Lancement', desc: "Mise en ligne, SEO local Morbihan, formation a l'administration du site et accompagnement les premieres semaines." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Réalisations liées -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Quelques <em class="text-accent">realisations</em>
+        </h2>
+        <p class="text-text-body mb-8">Des projets livres pour des entrepreneurs du Morbihan et de toute la Bretagne.</p>
+        <a href="/#realisations" class="btn-primary">
+          Voir toutes mes réalisations
+        </a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Creez-vous des sites pour les professionnels du tourisme dans le Golfe ?',
+            a: 'Oui, je realise des sites pour les acteurs du tourisme vannetais : locations saisonnieres, activites nautiques, campings, chambres d\'hotes. Le design et le SEO sont penses pour capter la clientele touristique du Golfe du Morbihan.'
+          },
+          {
+            q: 'Mon commerce a-t-il besoin d\'un site en plus des reseaux sociaux ?',
+            a: 'Les reseaux sociaux sont utiles mais vous ne les possedez pas. Un site web est votre vitrine permanente, visible 24h/24 sur Google. Il renforce votre credibilite et vous permet de convertir sans dependre d\'un algorithme.'
+          },
+          {
+            q: 'Proposez-vous des solutions de reservation en ligne ?',
+            a: 'Oui, j\'integre des systemes de reservation adaptes a votre activite : creneaux, calendrier de disponibilites, paiement en ligne. Ideal pour les prestataires de services et les activites touristiques du Morbihan.'
+          },
+          {
+            q: 'Combien de temps pour creer un site web a Vannes ?',
+            a: 'Un site vitrine est livre en 2 a 4 semaines, un e-commerce en 4 a 6 semaines. Le planning est defini ensemble des le depart, avec des jalons clairs.'
+          },
+          {
+            q: 'Faites-vous aussi le referencement Google pour Vannes ?',
+            a: 'Le SEO technique et le referencement local sont inclus dans chaque projet. Je peux aussi vous accompagner sur une strategie de contenu pour renforcer votre positionnement sur le long terme dans le Morbihan.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet web a Vannes ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre projet a Vannes ou en visio. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>
