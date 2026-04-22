@@ -1,0 +1,289 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Maintenance web",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "serviceType": "Maintenance de sites web",
+      "description": "Service de maintenance web mensuelle : mises a jour, sauvegardes automatiques, monitoring, corrections de bugs et support technique reactif pour garantir la perennite de votre site.",
+      "url": "https://evandavison.fr/services/maintenance-web"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Maintenance web", "item": "https://evandavison.fr/services/maintenance-web" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Que comprend un forfait de maintenance web ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Selon la formule choisie, le forfait inclut les mises a jour techniques (CMS, plugins, dependances), les sauvegardes regulieres, le monitoring de disponibilite, les corrections de bugs, les optimisations de performance et un support technique par email ou telephone." }
+        },
+        {
+          "@type": "Question",
+          "name": "A quelle frequence les mises a jour sont-elles effectuees ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Les mises a jour de securite critiques sont appliquees sous 24h. Les mises a jour mineures et les optimisations sont effectuees de maniere hebdomadaire ou mensuelle selon votre forfait. Chaque intervention est documentee dans un rapport mensuel." }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si mon site tombe en panne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le monitoring detecte les pannes en temps reel. Selon votre forfait, l'intervention a lieu sous 24h (basique), 4h (pro) ou 1h (premium). Les sauvegardes permettent une restauration rapide en cas de probleme majeur." }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je changer de formule en cours de contrat ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, vous pouvez passer a une formule superieure a tout moment. Le passage a une formule inferieure est possible a chaque date anniversaire mensuelle. Aucun engagement longue duree n'est impose." }
+        },
+        {
+          "@type": "Question",
+          "name": "La maintenance est-elle compatible avec tous les types de sites ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Je maintiens des sites developpes avec les technologies modernes (Next.js, Astro, React) comme des sites WordPress ou autres CMS. Chaque forfait est adapte a la complexite technique de votre projet." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Maintenance web | Evan Davison — Developpeur Web Freelance"
+  description="Maintenance web mensuelle : mises a jour, sauvegardes, monitoring, corrections de bugs et support technique. Gardez votre site performant et securise. A partir de 49 euros/mois."
+  canonical="https://evandavison.fr/services/maintenance-web"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Maintenance web</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Maintenance <em class="text-accent">web</em><br/>mensuelle
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Un site web n'est pas un produit fini — c'est un outil vivant qui necessite un suivi regulier. Mises a jour, securite, performances, sauvegardes : je m'occupe de tout pour que vous puissiez vous concentrer sur votre activite.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Demander un devis
+          </a>
+          <a href="#tarifs" class="btn-secondary">
+            Voir les formules
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Un site sans maintenance, c'est un <em class="text-accent">risque permanent</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Les failles de securite, les plugins obsoletes, les temps de chargement qui se degradent — un site non maintenu accumule les problemes invisibles jusqu'au jour ou tout casse. Et a ce moment-la, le cout de reparation est bien plus eleve qu'un forfait mensuel.</p>
+              <p>Avec un contrat de maintenance, votre site reste a jour, securise et performant. Je surveille les indicateurs cles en permanence et j'interviens avant que les problemes ne deviennent critiques.</p>
+              <p>Chaque mois, vous recevez un rapport detaille : interventions effectuees, temps de disponibilite, performances et recommandations d'amelioration.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Disponibilite garantie', value: '99.9%' },
+              { label: 'Temps de reaction', value: '<4h' },
+              { label: 'Sites maintenus', value: '15+' },
+              { label: 'Incidents resolus', value: '100%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que la maintenance <em class="text-accent">inclut</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Mises a jour techniques', desc: "Application reguliere des mises a jour de securite, du CMS, des plugins et des dependances pour eliminer les vulnerabilites." },
+          { title: 'Sauvegardes automatiques', desc: "Sauvegardes quotidiennes ou hebdomadaires de vos fichiers et base de donnees, stockees sur un serveur externe securise." },
+          { title: 'Monitoring 24/7', desc: "Surveillance continue de la disponibilite et des performances de votre site. Alerte immediate en cas de panne ou de ralentissement." },
+          { title: 'Corrections de bugs', desc: "Identification et resolution rapide des dysfonctionnements : liens casses, erreurs d'affichage, formulaires defaillants." },
+          { title: 'Optimisation performances', desc: "Audit regulier des temps de chargement, compression des images, nettoyage du cache et optimisation du code." },
+          { title: 'Support technique', desc: "Un interlocuteur unique et reactif pour toutes vos questions techniques. Assistance par email, telephone ou visio." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section id="tarifs" class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+          Nos <em class="text-accent">formules</em>
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              name: 'Basique',
+              price: 'A partir de 49',
+              unit: '/mois',
+              features: [
+                'Mises a jour mensuelles',
+                'Sauvegarde hebdomadaire',
+                'Monitoring disponibilite',
+                'Rapport mensuel',
+                'Support par email',
+                'Intervention sous 24h',
+              ]
+            },
+            {
+              name: 'Pro',
+              price: 'A partir de 99',
+              unit: '/mois',
+              features: [
+                'Mises a jour hebdomadaires',
+                'Sauvegarde quotidienne',
+                'Monitoring performances',
+                'Rapport detaille mensuel',
+                'Support email + telephone',
+                'Intervention sous 4h',
+              ]
+            },
+            {
+              name: 'Premium',
+              price: 'A partir de 199',
+              unit: '/mois',
+              features: [
+                'Mises a jour en continu',
+                'Sauvegarde quotidienne + externe',
+                'Monitoring avance 24/7',
+                'Rapport hebdomadaire',
+                'Support prioritaire illimite',
+                'Intervention sous 1h',
+              ]
+            },
+          ].map(plan => (
+            <div class="border border-border p-8 flex flex-col">
+              <h3 class="text-ink font-semibold text-xl mb-2">{plan.name}</h3>
+              <div class="mb-6">
+                <span class="text-3xl font-serif font-bold text-accent">{plan.price}</span>
+                <span class="text-muted text-sm"> euros{plan.unit}</span>
+              </div>
+              <ul class="space-y-3 text-text-body text-sm mb-8 flex-1">
+                {plan.features.map(f => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-0.5 shrink-0">-</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/#contact" class="btn-primary text-center w-full">
+                Choisir cette formule
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Que comprend un forfait de maintenance web ?',
+            a: 'Selon la formule choisie, le forfait inclut les mises a jour techniques, les sauvegardes regulieres, le monitoring de disponibilite, les corrections de bugs, les optimisations de performance et un support technique par email ou telephone.'
+          },
+          {
+            q: 'A quelle frequence les mises a jour sont-elles effectuees ?',
+            a: 'Les mises a jour de securite critiques sont appliquees sous 24h. Les mises a jour mineures et les optimisations sont effectuees de maniere hebdomadaire ou mensuelle selon votre forfait.'
+          },
+          {
+            q: 'Que se passe-t-il si mon site tombe en panne ?',
+            a: 'Le monitoring detecte les pannes en temps reel. Selon votre forfait, l\'intervention a lieu sous 24h (basique), 4h (pro) ou 1h (premium). Les sauvegardes permettent une restauration rapide.'
+          },
+          {
+            q: 'Puis-je changer de formule en cours de contrat ?',
+            a: 'Oui, vous pouvez passer a une formule superieure a tout moment. Le passage a une formule inferieure est possible a chaque date anniversaire mensuelle. Aucun engagement longue duree.'
+          },
+          {
+            q: 'La maintenance est-elle compatible avec tous les types de sites ?',
+            a: 'Je maintiens des sites developpes avec les technologies modernes (Next.js, Astro, React) comme des sites WordPress ou autres CMS. Chaque forfait est adapte a la complexite technique de votre projet.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Besoin d'un suivi <em class="text-accent">fiable</em> pour votre site ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Echangeons sur vos besoins de maintenance. Premier diagnostic gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

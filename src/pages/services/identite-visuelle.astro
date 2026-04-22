@@ -1,0 +1,289 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Identite visuelle",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "Country", "name": "France" },
+      "serviceType": "Creation d'identite visuelle",
+      "description": "Creation d'identite visuelle complete : logo, charte graphique, palette de couleurs, typographie et declinaisons sur tous vos supports. Une image de marque coherente et memorable.",
+      "url": "https://evandavison.fr/services/identite-visuelle"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Identite visuelle", "item": "https://evandavison.fr/services/identite-visuelle" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la difference entre un logo et une identite visuelle ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le logo est un element central de votre identite visuelle, mais celle-ci va bien au-dela : elle englobe la palette de couleurs, la typographie, les regles d'utilisation, les declinaisons sur differents supports et l'univers graphique global de votre marque." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de propositions de logo recevrai-je ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Selon la formule, vous recevez 2 a 5 propositions de logo distinctes. Chaque proposition est accompagnee d'une explication du concept et du choix creatif. Vous pouvez ensuite demander des ajustements sur la direction retenue." }
+        },
+        {
+          "@type": "Question",
+          "name": "Les fichiers sources sont-ils fournis ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, vous recevez tous les fichiers sources (AI, SVG, PDF) ainsi que les formats d'export courants (PNG, JPG) dans toutes les declinaisons. Vous etes proprietaire de l'integralite des fichiers livres." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le delai de realisation ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Comptez 1 a 2 semaines pour un logo seul, 2 a 4 semaines pour une identite visuelle complete et 4 a 6 semaines pour un branding complet avec toutes les declinaisons. Les delais dependent aussi de votre reactivite sur les retours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des declinaisons pour les reseaux sociaux ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, les formules Identite complete et Branding complet incluent les declinaisons pour les reseaux sociaux : photo de profil, banniere, templates de publications. Tout est fourni aux dimensions exactes de chaque plateforme." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Identite visuelle | Evan Davison — Developpeur Web Freelance"
+  description="Creation d'identite visuelle : logo, charte graphique, palette de couleurs, typographie et declinaisons. Une image de marque unique et coherente. A partir de 500 euros."
+  canonical="https://evandavison.fr/services/identite-visuelle"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Identite visuelle</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Identite <em class="text-accent">visuelle</em><br/>sur mesure
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Votre image de marque est la premiere impression que vous laissez. Logo, couleurs, typographie, charte graphique — je cree une identite visuelle coherente et distinctive qui reflete votre positionnement et marque les esprits.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">
+            Demander un devis
+          </a>
+          <a href="#tarifs" class="btn-secondary">
+            Voir les formules
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Une identite generique <em class="text-accent">nuit a votre credibilite</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Un logo fait sur Canva, des couleurs choisies au hasard, une typographie standard — vos prospects le remarquent. Une identite visuelle approximative envoie un signal de manque de professionnalisme, meme si votre travail est excellent.</p>
+              <p>Je concois des identites visuelles pensees pour durer. Chaque choix est justifie : les couleurs vehiculent les bonnes emotions, la typographie renforce votre ton, le logo fonctionne sur tous les supports — du favicon a l'enseigne.</p>
+              <p>Vous recevez une charte graphique complete qui permet a quiconque de decliner votre identite de maniere coherente, que ce soit sur le web, l'impression ou les reseaux sociaux.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Identites creees', value: '15+' },
+              { label: 'Propositions par projet', value: '3-5' },
+              { label: 'Satisfaction client', value: '100%' },
+              { label: 'Delai moyen', value: '2-4 sem.' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que je <em class="text-accent">cree</em> pour vous
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Logo et variations', desc: "Creation d'un logo principal et de ses declinaisons : version horizontale, verticale, monochrome, favicon. Chaque version est optimisee pour son contexte d'utilisation." },
+          { title: 'Palette de couleurs', desc: "Selection d'une palette principale et secondaire avec codes hexadecimaux, RGB et CMJN. Chaque couleur est choisie pour vehiculer les valeurs de votre marque." },
+          { title: 'Typographie', desc: "Choix de polices pour les titres, le corps de texte et les accents visuels. Regles d'utilisation, hierarchie et combinaisons definies pour garantir la lisibilite." },
+          { title: 'Charte graphique', desc: "Document de reference complet : regles d'utilisation du logo, espacements, interdits, associations de couleurs et mise en page type." },
+          { title: 'Declinaisons supports', desc: "Application de l'identite sur vos supports : cartes de visite, papier a en-tete, signatures email, templates reseaux sociaux, presentations." },
+          { title: 'Fichiers sources', desc: "Livraison de tous les fichiers sources editables (AI, SVG, PDF) et des exports dans tous les formats courants (PNG, JPG, WebP) pour web et impression." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section id="tarifs" class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+          Nos <em class="text-accent">formules</em>
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              name: 'Logo essentiel',
+              price: 'A partir de 500',
+              unit: '',
+              features: [
+                '2 propositions de logo',
+                '2 tours de retouches',
+                'Declinaisons principales',
+                'Palette de couleurs',
+                'Fichiers sources + exports',
+                'Livraison sous 2 semaines',
+              ]
+            },
+            {
+              name: 'Identite complete',
+              price: 'A partir de 1 200',
+              unit: '',
+              features: [
+                '3 propositions de logo',
+                'Retouches illimitees',
+                'Charte graphique complete',
+                'Typographie + palette',
+                'Declinaisons reseaux sociaux',
+                'Livraison sous 3 semaines',
+              ]
+            },
+            {
+              name: 'Branding complet',
+              price: 'A partir de 2 500',
+              unit: '',
+              features: [
+                '5 propositions de logo',
+                'Retouches illimitees',
+                'Charte graphique detaillee',
+                'Templates print + digital',
+                'Cartes de visite + papeterie',
+                'Livraison sous 5 semaines',
+              ]
+            },
+          ].map(plan => (
+            <div class="border border-border p-8 flex flex-col">
+              <h3 class="text-ink font-semibold text-xl mb-2">{plan.name}</h3>
+              <div class="mb-6">
+                <span class="text-3xl font-serif font-bold text-accent">{plan.price}</span>
+                <span class="text-muted text-sm"> euros{plan.unit}</span>
+              </div>
+              <ul class="space-y-3 text-text-body text-sm mb-8 flex-1">
+                {plan.features.map(f => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-0.5 shrink-0">-</span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <a href="/#contact" class="btn-primary text-center w-full">
+                Choisir cette formule
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Quelle est la difference entre un logo et une identite visuelle ?',
+            a: 'Le logo est un element central, mais l\'identite visuelle va bien au-dela : palette de couleurs, typographie, regles d\'utilisation, declinaisons sur differents supports et univers graphique global de votre marque.'
+          },
+          {
+            q: 'Combien de propositions de logo recevrai-je ?',
+            a: 'Selon la formule, vous recevez 2 a 5 propositions distinctes. Chaque proposition est accompagnee d\'une explication du concept. Vous pouvez ensuite demander des ajustements sur la direction retenue.'
+          },
+          {
+            q: 'Les fichiers sources sont-ils fournis ?',
+            a: 'Oui, vous recevez tous les fichiers sources (AI, SVG, PDF) ainsi que les formats d\'export courants (PNG, JPG). Vous etes proprietaire de l\'integralite des fichiers livres.'
+          },
+          {
+            q: 'Quel est le delai de realisation ?',
+            a: 'Comptez 1 a 2 semaines pour un logo seul, 2 a 4 semaines pour une identite complete et 4 a 6 semaines pour un branding complet. Les delais dependent aussi de votre reactivite sur les retours.'
+          },
+          {
+            q: 'Proposez-vous des declinaisons pour les reseaux sociaux ?',
+            a: 'Oui, les formules Identite complete et Branding complet incluent les declinaisons reseaux sociaux : photo de profil, banniere, templates de publications aux dimensions exactes de chaque plateforme.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a construire une image de marque <em class="text-accent">forte</em> ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Echangeons sur votre projet. Premier echange gratuit pour comprendre votre vision et vos objectifs.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>
