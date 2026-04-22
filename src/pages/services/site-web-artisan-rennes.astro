@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour artisan à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites vitrines pour artisans à Rennes : galerie avant/après, zone d'intervention, demande de devis en ligne. Visibilité locale garantie.",
+      "url": "https://evandavison.fr/services/site-web-artisan-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web artisan Rennes", "item": "https://evandavison.fr/services/site-web-artisan-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ai-je vraiment besoin d'un site web en tant qu'artisan ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui. 97% des consommateurs recherchent un artisan local sur internet. Sans site web, vous êtes invisible face à vos concurrents qui en ont un. Un site vitrine professionnel crédibilise votre activité et génère des demandes de devis." }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je montrer mes chantiers avant/après sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je crée une galerie dédiée avant/après avec des visuels de qualité. C'est le meilleur argument commercial pour un artisan : montrer concrètement la qualité de votre travail." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site permet-il de recevoir des demandes de devis ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, un formulaire de demande de devis personnalisé est intégré. Les prospects renseignent le type de travaux, leur localisation et leurs coordonnées. Vous recevez tout par email, prêt à être traité." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment afficher ma zone d'intervention sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "J'intègre une carte interactive avec votre zone d'intervention clairement définie (rayon autour de Rennes, communes desservies). Cela rassure les prospects et améliore votre référencement local." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web artisan Rennes | Evan Davison — Développeur Web"
+  description="Création de site vitrine pour artisan à Rennes. Galerie avant/après, zone d'intervention, devis en ligne. Soyez visible quand vos clients vous cherchent."
+  canonical="https://evandavison.fr/services/site-web-artisan-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web artisan Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un site vitrine pour <em class="text-accent">artisan</em><br/>qui genere des chantiers
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Galerie avant/apres, zone d'intervention, formulaire de devis — un site concu pour transformer les recherches Google en appels de clients autour de Rennes.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Le bouche-a-oreille ne suffit plus pour trouver des <em class="text-accent">chantiers</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Quand un particulier cherche un plombier, un electricien ou un menuisier a Rennes, son premier reflexe est Google. Si vous n'apparaissez pas dans les resultats, c'est votre concurrent qui decroche le chantier.</p>
+              <p>Un site vitrine professionnel pour artisan, ce n'est pas un gadget : c'est un commercial qui travaille pour vous 24h/24. Il montre vos realisations, affiche votre zone d'intervention et permet aux prospects de demander un devis en 2 minutes.</p>
+              <p>Je travaille avec des artisans du batiment et des metiers manuels en Bretagne. Je connais vos contraintes : peu de temps pour gerer un site, besoin de resultats concrets, et une clientele locale a capter.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un artisan en ligne', value: '97%' },
+              { label: 'Regardent les realisations', value: '85%' },
+              { label: 'Veulent un devis en ligne', value: '60%' },
+              { label: 'Verifient la zone desservie', value: '74%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Un site pense pour le <em class="text-accent">metier d'artisan</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Galerie avant / apres', desc: "Montrez la transformation de vos chantiers avec des visuels comparatifs. Rien ne convainc mieux un client que la preuve par l'image." },
+          { title: 'Zone d\'intervention', desc: "Carte interactive affichant les communes que vous desservez autour de Rennes. Vos prospects savent immediatement si vous intervenez chez eux." },
+          { title: 'Formulaire de devis', desc: "Formulaire personnalise selon votre corps de metier : type de travaux, surface, budget estimatif. Vous recevez des demandes qualifiees." },
+          { title: 'Temoignages clients', desc: "Section dediee aux avis de vos anciens clients avec possibilite d'afficher vos avis Google. La confiance se construit par les preuves." },
+          { title: 'Fiche metier detaillee', desc: "Presentation claire de vos competences, certifications (RGE, Qualibat) et specialisations. Les prospects comprennent exactement ce que vous faites." },
+          { title: 'SEO local pousse', desc: "Referencement optimise pour 'artisan + votre metier + Rennes' et les communes alentour. Vous apparaissez quand on vous cherche." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui <em class="text-accent">remplissent les carnets</em> de commandes
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des artisans et professionnels du batiment.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Ai-je vraiment besoin d\'un site web en tant qu\'artisan ?',
+            a: 'Oui. 97% des consommateurs recherchent un artisan local sur internet. Sans site web, vous etes invisible face a vos concurrents qui en ont un. Un site vitrine professionnel credibilise votre activite et genere des demandes de devis.'
+          },
+          {
+            q: 'Puis-je montrer mes chantiers avant/apres sur le site ?',
+            a: 'Absolument. Je cree une galerie dediee avant/apres avec des visuels de qualite. C\'est le meilleur argument commercial pour un artisan : montrer concretement la qualite de votre travail.'
+          },
+          {
+            q: 'Le site permet-il de recevoir des demandes de devis ?',
+            a: 'Oui, un formulaire de demande de devis personnalise est integre. Les prospects renseignent le type de travaux, leur localisation et leurs coordonnees. Vous recevez tout par email, pret a etre traite.'
+          },
+          {
+            q: 'Comment afficher ma zone d\'intervention sur le site ?',
+            a: 'J\'integre une carte interactive avec votre zone d\'intervention clairement definie (rayon autour de Rennes, communes desservies). Cela rassure les prospects et ameliore votre referencement local.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a decrocher plus de chantiers ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre activite et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

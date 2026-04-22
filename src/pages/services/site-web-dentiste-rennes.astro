@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour dentiste à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour cabinets dentaires à Rennes : prise de rendez-vous en ligne, présentation des soins, urgences dentaires et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-dentiste-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web dentiste Rennes", "item": "https://evandavison.fr/services/site-web-dentiste-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on intégrer Doctolib ou un autre système de rendez-vous en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre Doctolib, Dental Monitoring ou tout autre outil de prise de rendez-vous directement dans votre site, pour que vos patients réservent un créneau à toute heure." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site respectera-t-il les obligations déontologiques du conseil de l'Ordre ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Le site est conforme aux recommandations de l'Ordre national des chirurgiens-dentistes : pas de publicité, informations objectives sur les soins, mentions légales conformes et transparence sur les tarifs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on présenter les différents types de soins proposés ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, chaque type de soin (implantologie, orthodontie, esthétique dentaire, pédodontie, etc.) dispose de sa propre page détaillée, ce qui rassure les patients et améliore votre référencement Google." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment gérer les urgences dentaires sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Je crée une section urgences bien visible avec numéro d'appel direct, horaires de garde et conseils de premiers secours dentaires. Cette page est optimisée pour apparaître sur les recherches 'urgence dentiste Rennes'." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un cabinet dentaire à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour cabinet dentaire avec prise de rendez-vous et présentation des soins démarre autour de 900 euros. Le prix varie selon les fonctionnalités (multi-praticiens, visite virtuelle du cabinet, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web dentiste Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour dentiste à Rennes : prise de RDV en ligne, présentation des soins, urgences dentaires, SEO local. Un site qui rassure vos patients. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-dentiste-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web dentiste Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre cabinet <em class="text-accent">dentaire</em> merite<br/>un site qui rassure
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Prise de rendez-vous en ligne, presentation des soins, gestion des urgences — un site web concu pour accueillir de nouveaux patients et renforcer la confiance a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos futurs patients comparent les cabinets <em class="text-accent">en ligne</em> avant de prendre rendez-vous
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>En France, 8 patients sur 10 recherchent un dentiste sur internet avant de prendre rendez-vous. Ils comparent les avis, regardent les soins proposes et verifient les disponibilites. Sans site web professionnel, votre cabinet est invisible face a la concurrence.</p>
+              <p>Un site de cabinet dentaire efficace, c'est une prise de rendez-vous accessible 24h/24, une presentation detaillee de chaque type de soin, une section urgences facilement trouvable, et un design qui inspire confiance des la premiere visite.</p>
+              <p>Je concois des sites specifiquement adaptes aux cabinets dentaires : conformes aux regles deontologiques, navigation intuitive sur mobile, et referencement local optimise pour que vous apparaissiez quand quelqu'un cherche "dentiste Rennes".</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un dentiste en ligne', value: '80%' },
+              { label: 'Prennent RDV en ligne', value: '67%' },
+              { label: 'Consultent les avis patients', value: '92%' },
+              { label: 'Recherchent sur mobile', value: '70%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">cabinet dentaire</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Prise de rendez-vous en ligne', desc: "Integration Doctolib ou formulaire sur mesure. Vos patients reservent un creneau 24h/24, avec rappel automatique pour reduire les rendez-vous manques." },
+          { title: 'Presentation des soins', desc: "Pages dediees pour chaque specialite : implantologie, orthodontie, blanchiment, soins conservateurs, pedodontie. Explications claires et rassurantes." },
+          { title: 'Section urgences dentaires', desc: "Page dediee bien visible avec numero d'appel direct, horaires de garde et premiers gestes. Optimisee pour les recherches 'urgence dentiste Rennes'." },
+          { title: 'Equipe et cabinet', desc: "Presentation de chaque praticien avec parcours et specialites. Photos du cabinet pour familiariser les patients avant leur premiere visite." },
+          { title: 'Tarifs et remboursements', desc: "Grille tarifaire transparente avec informations sur les prises en charge Securite sociale et complements mutuelle. Conformite totale." },
+          { title: 'Acces et informations pratiques', desc: "Google Maps integre, acces transports en commun, parking, accessibilite PMR et horaires d'ouverture. Tout pour faciliter la venue au cabinet." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui inspirent <em class="text-accent">confiance</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on integrer Doctolib ou un autre systeme de rendez-vous en ligne ?',
+            a: 'Oui, j\'integre Doctolib, Dental Monitoring ou tout autre outil de prise de rendez-vous directement dans votre site, pour que vos patients reservent un creneau a toute heure.'
+          },
+          {
+            q: 'Le site respectera-t-il les obligations deontologiques du conseil de l\'Ordre ?',
+            a: 'Absolument. Le site est conforme aux recommandations de l\'Ordre national des chirurgiens-dentistes : pas de publicite, informations objectives sur les soins, mentions legales conformes et transparence sur les tarifs.'
+          },
+          {
+            q: 'Peut-on presenter les differents types de soins proposes ?',
+            a: 'Oui, chaque type de soin (implantologie, orthodontie, esthetique dentaire, pedodontie, etc.) dispose de sa propre page detaillee, ce qui rassure les patients et ameliore votre referencement Google.'
+          },
+          {
+            q: 'Comment gerer les urgences dentaires sur le site ?',
+            a: 'Je cree une section urgences bien visible avec numero d\'appel direct, horaires de garde et conseils de premiers secours dentaires. Cette page est optimisee pour apparaitre sur les recherches "urgence dentiste Rennes".'
+          },
+          {
+            q: 'Combien coute un site web pour un cabinet dentaire a Rennes ?',
+            a: 'Un site vitrine pour cabinet dentaire avec prise de rendez-vous et presentation des soins demarre autour de 900 euros. Le prix varie selon les fonctionnalites (multi-praticiens, visite virtuelle du cabinet, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a accueillir de nouveaux patients ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre cabinet et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

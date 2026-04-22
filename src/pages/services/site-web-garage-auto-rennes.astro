@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour garage automobile à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour garages automobiles à Rennes : prise de rendez-vous atelier, catalogue véhicules d'occasion, devis en ligne et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-garage-auto-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web garage auto Rennes", "item": "https://evandavison.fr/services/site-web-garage-auto-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on intégrer un système de prise de rendez-vous atelier ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place un formulaire de prise de rendez-vous atelier avec choix de la prestation (vidange, contrôle technique, pneus, etc.), date et créneau horaire. Vos clients réservent en ligne sans appeler." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il présenter les véhicules d'occasion en vente ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je crée un catalogue de véhicules d'occasion avec fiches détaillées (photos, kilométrage, prix, équipements), moteur de recherche par critères et possibilité d'ajouter ou retirer des véhicules facilement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se démarquer des grandes enseignes (Midas, Norauto, etc.) ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Votre site met en avant votre expertise locale, votre proximité, vos avis clients et votre rapport qualité-prix. Le SEO local vous positionne sur les recherches de proximité où les grandes enseignes sont moins présentes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on proposer un devis en ligne pour les réparations ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée un formulaire de demande de devis avec sélection du véhicule (marque, modèle, année), type de prestation et description du problème. Vous recevez la demande par email pour répondre rapidement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un garage automobile à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour garage avec prise de rendez-vous et catalogue véhicules démarre autour de 900 euros. Le prix varie selon les fonctionnalités souhaitées (devis automatisé, espace client, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web garage automobile Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour garage auto à Rennes : prise de RDV atelier, catalogue véhicules, devis en ligne, SEO local. Un site qui remplit votre atelier. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-garage-auto-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web garage auto Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre <em class="text-accent">garage automobile</em> merite<br/>un site qui roule
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Prise de rendez-vous atelier, catalogue vehicules d'occasion, devis en ligne — un site web concu pour remplir votre planning et vendre vos vehicules a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients comparent les garages <em class="text-accent">en ligne</em> avant de confier leur vehicule
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Selon une etude de l'Argus, 76% des automobilistes recherchent un garage en ligne avant de prendre rendez-vous. Ils comparent les avis, verifient les prestations proposees et les tarifs. Les garages independants avec un site web professionnel captent 30% de clients supplementaires.</p>
+              <p>Un site de garage automobile efficace, c'est une prise de rendez-vous atelier accessible en ligne, un catalogue de vehicules d'occasion avec photos et fiches detaillees, un formulaire de devis et des avis clients bien visibles.</p>
+              <p>Je concois des sites adaptes aux garages : navigation simple sur mobile, bouton d'appel visible, systeme de rendez-vous intuitif et referencement local pousse pour capter les automobilistes qui cherchent "garage Rennes" ou "mecano pres de chez moi".</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un garage en ligne', value: '76%' },
+              { label: 'Comparent les avis avant', value: '85%' },
+              { label: 'Clients en plus avec un site', value: '+30%' },
+              { label: 'Prennent RDV en ligne', value: '52%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">garage automobile</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Prise de rendez-vous atelier', desc: "Formulaire de reservation avec choix de la prestation (vidange, freins, pneus, controle technique), date et creneau. Vos clients reservent en ligne sans appeler." },
+          { title: 'Catalogue vehicules d\'occasion', desc: "Fiches detaillees pour chaque vehicule : photos, kilometrage, prix, equipements, rapport d'historique. Moteur de recherche par marque, budget et criteres." },
+          { title: 'Formulaire de devis', desc: "Demande de devis en ligne avec selection du vehicule, type d'intervention et description du probleme. Possibilite de joindre des photos pour un diagnostic rapide." },
+          { title: 'Liste des prestations', desc: "Presentation claire de vos services : mecanique, carrosserie, electricite auto, climatisation, pneus, controle technique. Chaque prestation detaillee et referencee." },
+          { title: 'Avis clients et confiance', desc: "Integration des avis Google et temoignages clients directement sur le site. La preuve de la qualite de votre travail pour convaincre les nouveaux clients." },
+          { title: 'Localisation et acces', desc: "Google Maps integre, horaires d'ouverture, acces et parking. Tout pour que vos clients trouvent votre garage facilement et sachent quand vous etes ouvert." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui remplissent votre <em class="text-accent">atelier</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de l'automobile.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on integrer un systeme de prise de rendez-vous atelier ?',
+            a: 'Oui, je mets en place un formulaire de prise de rendez-vous atelier avec choix de la prestation (vidange, controle technique, pneus, etc.), date et creneau horaire. Vos clients reservent en ligne sans appeler.'
+          },
+          {
+            q: 'Le site peut-il presenter les vehicules d\'occasion en vente ?',
+            a: 'Absolument. Je cree un catalogue de vehicules d\'occasion avec fiches detaillees (photos, kilometrage, prix, equipements), moteur de recherche par criteres et possibilite d\'ajouter ou retirer des vehicules facilement.'
+          },
+          {
+            q: 'Comment se demarquer des grandes enseignes (Midas, Norauto, etc.) ?',
+            a: 'Votre site met en avant votre expertise locale, votre proximite, vos avis clients et votre rapport qualite-prix. Le SEO local vous positionne sur les recherches de proximite ou les grandes enseignes sont moins presentes.'
+          },
+          {
+            q: 'Peut-on proposer un devis en ligne pour les reparations ?',
+            a: 'Oui, je cree un formulaire de demande de devis avec selection du vehicule (marque, modele, annee), type de prestation et description du probleme. Vous recevez la demande par email pour repondre rapidement.'
+          },
+          {
+            q: 'Combien coute un site web pour un garage automobile a Rennes ?',
+            a: 'Un site vitrine pour garage avec prise de rendez-vous et catalogue vehicules demarre autour de 900 euros. Le prix varie selon les fonctionnalites souhaitees (devis automatise, espace client, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a remplir votre atelier et vendre plus de vehicules ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre garage et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

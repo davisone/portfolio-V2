@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour médecin à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour médecins et professionnels de santé à Rennes : intégration Doctolib, téléconsultation, informations patients, accessibilité RGAA.",
+      "url": "https://evandavison.fr/services/site-web-medecin-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web médecin Rennes", "item": "https://evandavison.fr/services/site-web-medecin-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on intégrer Doctolib directement sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre le widget Doctolib directement sur votre site. Vos patients peuvent prendre rendez-vous sans quitter votre page, tout en conservant l'esthétique de votre site." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site doit-il respecter des normes d'accessibilité ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui. Un site de professionnel de santé doit être accessible à tous, y compris les personnes en situation de handicap. Je développe en respectant les critères RGAA/WCAG : contraste suffisant, navigation au clavier, compatibilité lecteurs d'écran." }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-il possible de publier des informations médicales sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, une section 'Informations patients' permet de publier des fiches pratiques, des conseils de prévention ou des FAQ santé. Cela améliore votre référencement et réduit les appels récurrents au cabinet." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site est-il conforme au RGPD pour les données de santé ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Aucune donnée médicale n'est collectée ni stockée sur le site. Les formulaires de contact sont sécurisés (HTTPS) et la politique de confidentialité est conforme au RGPD." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un cabinet médical ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour médecin avec intégration Doctolib et informations patients démarre autour de 800€. Le tarif varie selon le nombre de praticiens et les fonctionnalités souhaitées. Devis gratuit." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web médecin Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour médecin et professionnel de santé à Rennes. Intégration Doctolib, accessibilité, informations patients. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-medecin-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web medecin Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un site pour <em class="text-accent">professionnel de sante</em><br/>clair, accessible et rassurant
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Integration Doctolib, informations patients, accessibilite — un site web medical concu pour simplifier la vie de vos patients et allegor votre secretariat a Rennes.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos patients veulent trouver les <em class="text-accent">bonnes informations</em> sans vous appeler
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Horaires d'ouverture, modalites de consultation, documents a apporter, preparation a un examen — vos patients appellent votre secretariat pour des questions qui pourraient etre traitees par un site web clair et complet.</p>
+              <p>Un site web de professionnel de sante bien concu reduit les appels superflus, facilite la prise de rendez-vous via Doctolib, et offre un espace d'information fiable pour vos patients. C'est un prolongement numerique de votre accueil.</p>
+              <p>Je concois des sites pour medecins, dentistes, kinesitherapeutes et autres professionnels de sante a Rennes, en respectant les normes d'accessibilite (RGAA) et la reglementation sur les donnees de sante.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un medecin en ligne', value: '77%' },
+              { label: 'Prennent RDV via Doctolib', value: '65%' },
+              { label: 'Veulent des infos pratiques', value: '83%' },
+              { label: 'Consultent sur mobile', value: '70%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Les essentiels d'un site de <em class="text-accent">professionnel de sante</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Integration Doctolib', desc: "Widget de prise de rendez-vous Doctolib integre directement sur votre site. Vos patients reservent sans quitter votre page." },
+          { title: 'Informations patients', desc: "Fiches pratiques, conseils de prevention, preparation aux examens. Reduisez les appels au cabinet et informez vos patients en amont." },
+          { title: 'Accessibilite RGAA', desc: "Site accessible a tous : contraste suffisant, navigation clavier, compatibilite lecteurs d'ecran. Une obligation ethique et legale pour le medical." },
+          { title: 'Presentation du cabinet', desc: "Equipe soignante, specialisations, equipements, acces et parking. Tout ce qu'un patient a besoin de savoir avant sa premiere visite." },
+          { title: 'Teleconsultation', desc: "Lien vers votre solution de teleconsultation (Doctolib, Qare, etc.) directement accessible depuis le site pour les consultations a distance." },
+          { title: 'Conformite RGPD', desc: "Aucune donnee medicale collectee sur le site. Formulaires securises, politique de confidentialite claire, consentement cookies conforme." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites pensés pour le <em class="text-accent">secteur medical</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on integrer Doctolib directement sur le site ?',
+            a: 'Oui, j\'integre le widget Doctolib directement sur votre site. Vos patients peuvent prendre rendez-vous sans quitter votre page, tout en conservant l\'esthetique de votre site.'
+          },
+          {
+            q: 'Le site doit-il respecter des normes d\'accessibilite ?',
+            a: 'Oui. Un site de professionnel de sante doit etre accessible a tous. Je developpe en respectant les criteres RGAA/WCAG : contraste suffisant, navigation au clavier, compatibilite lecteurs d\'ecran.'
+          },
+          {
+            q: 'Est-il possible de publier des informations medicales sur le site ?',
+            a: 'Oui, une section Informations patients permet de publier des fiches pratiques, des conseils de prevention ou des FAQ sante. Cela ameliore votre referencement et reduit les appels recurrents au cabinet.'
+          },
+          {
+            q: 'Le site est-il conforme au RGPD pour les donnees de sante ?',
+            a: 'Absolument. Aucune donnee medicale n\'est collectee ni stockee sur le site. Les formulaires de contact sont securises (HTTPS) et la politique de confidentialite est conforme au RGPD.'
+          },
+          {
+            q: 'Combien coute un site web pour un cabinet medical ?',
+            a: 'Un site vitrine pour medecin avec integration Doctolib et informations patients demarre autour de 800 euros. Le tarif varie selon le nombre de praticiens et les fonctionnalites souhaitees. Devis gratuit.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a simplifier le quotidien de votre cabinet ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre cabinet et de vos besoins. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

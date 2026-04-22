@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour électricien à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour électriciens à Rennes : demande de devis, certifications, zone d'intervention, urgences électriques et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-electricien-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web électricien Rennes", "item": "https://evandavison.fr/services/site-web-electricien-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment un site web aide-t-il un électricien à se démarquer ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site web professionnel met en avant vos certifications (Qualifelec, RGE), vos réalisations et vos avis clients. Combiné au SEO local, il vous positionne en tête des recherches 'électricien Rennes' et inspire confiance aux prospects." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on mettre en avant les certifications et labels ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Les certifications Qualifelec, RGE, Consuel et labels sont affichés de manière visible sur le site pour rassurer les clients sur votre professionnalisme et votre conformité aux normes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il gérer les demandes d'urgence électrique ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée une section urgences avec numéro click-to-call, disponibilités et types de pannes prises en charge. Optimisée pour apparaître sur les recherches 'électricien urgence Rennes'." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on présenter les différents types d'interventions ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, chaque type d'intervention (installation, rénovation, mise aux normes, domotique, bornes de recharge) dispose de sa propre page détaillée, pour le SEO et pour informer clairement vos clients." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un électricien à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour électricien avec demande de devis et SEO local démarre autour de 700 euros. Le prix varie selon les fonctionnalités souhaitées (galerie chantiers, simulateur de devis, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web électricien Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour électricien à Rennes : demande de devis, urgences, certifications, SEO local. Un site qui génère des chantiers. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-electricien-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web electricien Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre activite d'<em class="text-accent">electricien</em> merite<br/>un site qui inspire confiance
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Demande de devis, certifications, urgences electriques — un site web concu pour rassurer vos clients et generer des demandes d'intervention a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients veulent un electricien <em class="text-accent">certifie et disponible</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Le secteur de l'electricite connait une demande croissante : renovation energetique, installation de bornes de recharge, domotique. Selon la FFB, 78% des particuliers recherchent un electricien en ligne et privilegient ceux qui affichent des certifications (RGE, Qualifelec).</p>
+              <p>Un site d'electricien performant, c'est la mise en avant de vos certifications et labels, une liste detaillee de vos prestations, un formulaire de devis rapide et une section urgences accessible en un clic. Le tout optimise pour le referencement local.</p>
+              <p>Je concois des sites adaptes aux artisans du batiment : design professionnel qui rassure, navigation mobile-first, bouton d'appel toujours visible et contenu optimise pour que Google vous positionne devant la concurrence sur votre zone.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un electricien en ligne', value: '78%' },
+              { label: 'Privilegient un artisan certifie', value: '86%' },
+              { label: 'Demandent un devis en ligne', value: '62%' },
+              { label: 'Croissance marche electrique', value: '+28%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site d'<em class="text-accent">electricien</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Certifications et labels', desc: "Mise en avant de vos certifications Qualifelec, RGE, Consuel et assurances. La preuve de votre professionnalisme affichee des la page d'accueil." },
+          { title: 'Formulaire de demande de devis', desc: "Formulaire detaille avec type de travaux, surface, urgence et possibilite de joindre des photos. Notification instantanee par email ou SMS." },
+          { title: 'Section urgences electriques', desc: "Page dediee avec numero click-to-call, disponibilites et pannes prises en charge. Optimisee pour les recherches 'electricien urgence Rennes'." },
+          { title: 'Presentation des prestations', desc: "Pages detaillees pour chaque domaine : installation, renovation, mise aux normes, domotique, bornes de recharge vehicule electrique. Chaque page referencee." },
+          { title: 'Zone d\'intervention', desc: "Carte interactive avec Rennes et les communes couvertes. Vos clients verifient en un coup d'oeil que vous intervenez dans leur secteur." },
+          { title: 'Galerie de chantiers', desc: "Photos avant/apres de vos realisations : tableaux electriques, installations domotiques, eclairages. La preuve visuelle de la qualite de votre travail." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui generent des <em class="text-accent">chantiers</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des artisans et professionnels du batiment.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Comment un site web aide-t-il un electricien a se demarquer ?',
+            a: 'Un site web professionnel met en avant vos certifications (Qualifelec, RGE), vos realisations et vos avis clients. Combine au SEO local, il vous positionne en tete des recherches "electricien Rennes" et inspire confiance aux prospects.'
+          },
+          {
+            q: 'Peut-on mettre en avant les certifications et labels ?',
+            a: 'Absolument. Les certifications Qualifelec, RGE, Consuel et labels sont affiches de maniere visible sur le site pour rassurer les clients sur votre professionnalisme et votre conformite aux normes.'
+          },
+          {
+            q: 'Le site peut-il gerer les demandes d\'urgence electrique ?',
+            a: 'Oui, je cree une section urgences avec numero click-to-call, disponibilites et types de pannes prises en charge. Optimisee pour apparaitre sur les recherches "electricien urgence Rennes".'
+          },
+          {
+            q: 'Peut-on presenter les differents types d\'interventions ?',
+            a: 'Oui, chaque type d\'intervention (installation, renovation, mise aux normes, domotique, bornes de recharge) dispose de sa propre page detaillee, pour le SEO et pour informer clairement vos clients.'
+          },
+          {
+            q: 'Combien coute un site web pour un electricien a Rennes ?',
+            a: 'Un site vitrine pour electricien avec demande de devis et SEO local demarre autour de 700 euros. Le prix varie selon les fonctionnalites souhaitees (galerie chantiers, simulateur de devis, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a decrocher plus de chantiers ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre activite et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

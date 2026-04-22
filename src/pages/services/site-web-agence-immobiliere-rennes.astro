@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour agence immobilière à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour agences immobilières à Rennes : catalogue de biens, moteur de recherche, estimation en ligne, visite virtuelle et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-agence-immobiliere-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web agence immobilière Rennes", "item": "https://evandavison.fr/services/site-web-agence-immobiliere-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le site peut-il se synchroniser avec les portails immobiliers ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place une synchronisation avec vos logiciels de gestion (Hektor, Apimo, Immofacile) et les portails comme SeLoger, LeBonCoin et Logic-Immo. Vos annonces sont diffusées partout sans double saisie." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on proposer un outil d'estimation en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je crée un formulaire d'estimation en ligne qui collecte les informations du bien et les coordonnées du propriétaire. Un excellent levier de génération de mandats pour votre agence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il intégrer des visites virtuelles ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des visites virtuelles 360° (Matterport, Nodalview) directement dans les fiches de biens. Les acheteurs visitent à distance, ce qui qualifie mieux les visites physiques." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se démarquer de SeLoger et LeBonCoin ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Votre site met en avant votre expertise locale, vos services exclusifs et votre connaissance du marché rennais. Vous captez des prospects en direct sans commission de portail et vous renforcez votre image de marque." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour une agence immobilière à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site pour agence immobilière avec catalogue de biens et moteur de recherche démarre autour de 1 500 euros. Le prix varie selon les fonctionnalités (estimation en ligne, espace client, synchronisation portails). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web agence immobilière Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour agence immobilière à Rennes : catalogue de biens, estimation en ligne, visite virtuelle, SEO local. Un site qui génère des mandats. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-agence-immobiliere-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web agence immobiliere Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre <em class="text-accent">agence immobiliere</em> merite<br/>un site qui vend
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Catalogue de biens, estimation en ligne, visites virtuelles — un site web concu pour generer des mandats et capter des acheteurs a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients commencent leur recherche <em class="text-accent">sur internet</em>, pas en agence
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Selon la FNAIM, 90% des acheteurs immobiliers commencent leur recherche en ligne. Les portails comme SeLoger et LeBonCoin captent une grande partie du trafic, mais votre propre site web reste indispensable pour vous demarquer et generer des contacts en direct.</p>
+              <p>Un site d'agence immobiliere performant, c'est un catalogue de biens avec moteur de recherche avance, des fiches detaillees avec photos et visites virtuelles, un outil d'estimation pour capter des mandats, et une presence SEO locale forte.</p>
+              <p>Je concois des sites qui vous liberent de la dependance aux portails : votre catalogue synchronise automatiquement, vos biens references directement sur Google, et des outils de generation de leads (estimation, alerte mail) pour alimenter votre portefeuille.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Commencent leur recherche en ligne', value: '90%' },
+              { label: 'Consultent sur mobile', value: '65%' },
+              { label: 'Utilisent les visites virtuelles', value: '54%' },
+              { label: 'Estiment en ligne avant de contacter', value: '47%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site d'<em class="text-accent">agence immobiliere</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Catalogue de biens et recherche', desc: "Liste de biens avec moteur de recherche avance : type, budget, surface, quartier. Fiches detaillees avec galerie photos, plan et caracteristiques." },
+          { title: 'Estimation en ligne', desc: "Formulaire d'estimation qui collecte les informations du bien et les coordonnees du proprietaire. Un levier puissant pour generer des mandats de vente." },
+          { title: 'Visites virtuelles 360', desc: "Integration Matterport ou Nodalview directement dans les fiches de biens. Les acheteurs visitent a distance, ce qui qualifie mieux les visites physiques." },
+          { title: 'Synchronisation portails', desc: "Connexion avec votre logiciel de gestion (Hektor, Apimo) et diffusion automatique sur SeLoger, LeBonCoin, Logic-Immo. Zero double saisie." },
+          { title: 'Alertes email acquireurs', desc: "Systeme d'alerte pour prevenir automatiquement les acquireurs quand un bien correspondant a leurs criteres est mis en vente. Fiderlisation et reactivite." },
+          { title: 'Presentation de l\'equipe et quartiers', desc: "Pages dediees a chaque agent et a chaque quartier de Rennes. Votre expertise locale mise en avant pour convaincre vendeurs et acheteurs." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui generent des <em class="text-accent">mandats</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de l'immobilier.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Le site peut-il se synchroniser avec les portails immobiliers ?',
+            a: 'Oui, je mets en place une synchronisation avec vos logiciels de gestion (Hektor, Apimo, Immofacile) et les portails comme SeLoger, LeBonCoin et Logic-Immo. Vos annonces sont diffusees partout sans double saisie.'
+          },
+          {
+            q: 'Peut-on proposer un outil d\'estimation en ligne ?',
+            a: 'Absolument. Je cree un formulaire d\'estimation en ligne qui collecte les informations du bien et les coordonnees du proprietaire. Un excellent levier de generation de mandats pour votre agence.'
+          },
+          {
+            q: 'Le site peut-il integrer des visites virtuelles ?',
+            a: 'Oui, j\'integre des visites virtuelles 360 (Matterport, Nodalview) directement dans les fiches de biens. Les acheteurs visitent a distance, ce qui qualifie mieux les visites physiques.'
+          },
+          {
+            q: 'Comment se demarquer de SeLoger et LeBonCoin ?',
+            a: 'Votre site met en avant votre expertise locale, vos services exclusifs et votre connaissance du marche rennais. Vous captez des prospects en direct sans commission de portail et vous renforcez votre image de marque.'
+          },
+          {
+            q: 'Combien coute un site web pour une agence immobiliere a Rennes ?',
+            a: 'Un site pour agence immobiliere avec catalogue de biens et moteur de recherche demarre autour de 1 500 euros. Le prix varie selon les fonctionnalites (estimation en ligne, espace client, synchronisation portails). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a generer plus de mandats en ligne ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre agence et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

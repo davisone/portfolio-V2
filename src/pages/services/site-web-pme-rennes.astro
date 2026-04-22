@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour PME à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web professionnels pour PME à Rennes : sites multi-pages, formulaires avancés, intégration CRM, outils métier et référencement local.",
+      "url": "https://evandavison.fr/services/site-web-pme-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web PME Rennes", "item": "https://evandavison.fr/services/site-web-pme-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le site peut-il être connecté à notre CRM ou nos outils internes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des connexions avec les principaux CRM (HubSpot, Salesforce, Pipedrive) et outils métier (ERP, facturation, mailing). Les leads captés sur le site remontent automatiquement dans vos outils." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on avoir un site multi-pages avec une structure avancée ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Un site de PME nécessite souvent plusieurs pages : accueil, services détaillés, équipe, références, actualités, contact. Je conçois une arborescence claire optimisée pour le SEO et l'expérience utilisateur." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site sera-t-il administrable par notre équipe ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je développe une interface d'administration intuitive pour que votre équipe puisse modifier les contenus, ajouter des actualités et gérer les pages sans compétence technique. Une formation est incluse à la livraison." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le budget pour un site de PME ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine multi-pages pour PME démarre autour de 1 500€. Avec intégration CRM, formulaires avancés et espace client, comptez 2 500€ et plus. Le budget est défini ensemble après analyse de vos besoins." }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous un contrat de maintenance ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, des forfaits de maintenance mensuelle sont disponibles : mises à jour techniques, sauvegardes, monitoring de performance, modifications mineures de contenu et support technique réactif." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web PME Rennes | Evan Davison — Développeur Web"
+  description="Création de site web professionnel pour PME à Rennes. Multi-pages, intégration CRM, formulaires avancés, SEO local. Un site à la hauteur de votre entreprise."
+  canonical="https://evandavison.fr/services/site-web-pme-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web PME Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un site web de <em class="text-accent">PME</em> qui structure<br/>votre croissance
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Site multi-pages, integration CRM, formulaires metier, espace client — un site web professionnel qui accompagne le developpement de votre PME a Rennes.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Votre site actuel freine votre <em class="text-accent">credibilite commerciale</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>En tant que PME, votre site web est souvent le premier contact avec vos prospects, partenaires et candidats. Un site obsolete, lent ou mal structure envoie un signal negatif sur votre professionnalisme, meme si votre entreprise est excellente.</p>
+              <p>Une PME a des besoins specifiques qu'un simple site une page ne peut pas couvrir : presentation detaillee des services, references clients, equipe, actualites, et souvent des outils connectes a votre CRM ou vos processus internes.</p>
+              <p>Je concois des sites web pour PME rennaises qui refletent la solidite de votre entreprise : architecture multi-pages pensee pour le SEO, integration avec vos outils metier, et administration autonome par votre equipe.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Verifient le site avant contact', value: '81%' },
+              { label: 'Jugent la credibilite via le site', value: '75%' },
+              { label: 'Comparent avec la concurrence', value: '69%' },
+              { label: 'Cherchent les references', value: '63%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Les fonctionnalites qui font la difference pour une <em class="text-accent">PME</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Architecture multi-pages', desc: "Arborescence structuree : accueil, services, equipe, references, actualites, contact. Chaque page optimisee SEO pour capter du trafic qualifie." },
+          { title: 'Integration CRM', desc: "Connexion avec HubSpot, Salesforce, Pipedrive ou tout CRM. Les formulaires du site alimentent directement votre pipeline commercial." },
+          { title: 'Formulaires avances', desc: "Formulaires multi-etapes, conditionnels, avec upload de fichiers. Adaptés a vos processus : demande de devis, candidature, contact fournisseur." },
+          { title: 'Espace references', desc: "Page dediee a vos clients et projets realises avec temoignages, logos et etudes de cas. La preuve sociale indispensable en B2B." },
+          { title: 'Blog et actualites', desc: "Section actualites pour partager vos nouveautes, recrutements, participations a des salons. Ameliore le SEO et montre le dynamisme de l'entreprise." },
+          { title: 'Administration autonome', desc: "Interface d'administration intuitive pour votre equipe. Modifiez les textes, ajoutez des actualites, gerez les pages sans intervention technique." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui <em class="text-accent">inspirent confiance</em> a vos prospects
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des PME et entreprises etablies.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Le site peut-il etre connecte a notre CRM ou nos outils internes ?',
+            a: 'Oui, j\'integre des connexions avec les principaux CRM (HubSpot, Salesforce, Pipedrive) et outils metier (ERP, facturation, mailing). Les leads captes sur le site remontent automatiquement dans vos outils.'
+          },
+          {
+            q: 'Peut-on avoir un site multi-pages avec une structure avancee ?',
+            a: 'Absolument. Un site de PME necessite souvent plusieurs pages : accueil, services detailles, equipe, references, actualites, contact. Je concois une arborescence claire optimisee pour le SEO et l\'experience utilisateur.'
+          },
+          {
+            q: 'Le site sera-t-il administrable par notre equipe ?',
+            a: 'Oui, je developpe une interface d\'administration intuitive pour que votre equipe puisse modifier les contenus, ajouter des actualites et gerer les pages sans competence technique. Une formation est incluse a la livraison.'
+          },
+          {
+            q: 'Quel est le budget pour un site de PME ?',
+            a: 'Un site vitrine multi-pages pour PME demarre autour de 1 500 euros. Avec integration CRM, formulaires avances et espace client, comptez 2 500 euros et plus. Le budget est defini ensemble apres analyse de vos besoins.'
+          },
+          {
+            q: 'Proposez-vous un contrat de maintenance ?',
+            a: 'Oui, des forfaits de maintenance mensuelle sont disponibles : mises a jour techniques, sauvegardes, monitoring de performance, modifications mineures de contenu et support technique reactif.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a doter votre PME d'un site a sa mesure ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre entreprise et de vos objectifs de croissance. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

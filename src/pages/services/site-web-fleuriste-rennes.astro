@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour fleuriste à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour fleuristes à Rennes : catalogue de compositions, commande en ligne, livraison à domicile et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-fleuriste-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web fleuriste Rennes", "item": "https://evandavison.fr/services/site-web-fleuriste-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on proposer la commande et la livraison de fleurs en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place un système de commande en ligne avec choix de la composition, date et créneau de livraison ou retrait en boutique. Paiement sécurisé et confirmation automatique par email." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il mettre en valeur les créations florales ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Je crée une galerie visuelle soignée de vos compositions, bouquets et événements. Les photos sont optimisées pour un rendu professionnel et un chargement rapide." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se démarquer des plateformes comme Interflora ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Votre site met en avant votre savoir-faire artisanal, vos créations uniques et votre ancrage local. Vous captez des clients en direct, sans commission de plateforme, et vous renforcez votre image de fleuriste de proximité." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on gérer les commandes pour des événements (mariages, deuil) ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée des pages dédiées par occasion (mariage, deuil, entreprise, anniversaire) avec formulaire de demande personnalisée. Chaque page est optimisée pour le SEO et pour convertir les visiteurs en clients." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un fleuriste à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour fleuriste avec catalogue et commande en ligne démarre autour de 800 euros. Le prix varie selon les fonctionnalités souhaitées (paiement en ligne, gestion des livraisons, abonnements floraux). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web fleuriste Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour fleuriste à Rennes : catalogue compositions, commande en ligne, livraison, SEO local. Un site qui fait fleurir votre activité. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-fleuriste-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web fleuriste Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre boutique de <em class="text-accent">fleurs</em> merite<br/>un site qui lui ressemble
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Catalogue de compositions, commande en ligne, livraison a domicile — un site web concu pour mettre en valeur vos creations et developper vos ventes a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients veulent commander des fleurs <em class="text-accent">en quelques clics</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Selon la Federation Francaise des Artisans Fleuristes, la vente de fleurs en ligne represente desormais plus de 20% du marche et continue de croitre. Les plateformes comme Interflora captent une grande partie de ce trafic, mais les clients privilegient de plus en plus les fleuristes locaux pour la qualite et la fraicheur.</p>
+              <p>Un site de fleuriste performant, c'est un catalogue de compositions qui met en valeur votre talent, un systeme de commande en ligne avec choix de livraison, des pages dediees par occasion (mariage, deuil, anniversaire) et un referencement local qui vous rend visible.</p>
+              <p>Je concois des sites qui subliment vos creations : design elegant adapte a votre univers, photos mises en valeur, parcours de commande fluide sur mobile et SEO local pour que vos clients rennais vous trouvent avant les grandes plateformes.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Vente de fleurs en ligne', value: '20%' },
+              { label: 'Preferent un fleuriste local', value: '72%' },
+              { label: 'Commandent sur mobile', value: '61%' },
+              { label: 'Achetent pour une occasion', value: '85%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">fleuriste</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Catalogue de compositions', desc: "Presentation visuelle de vos bouquets et compositions par categorie (occasion, saison, budget). Photos soignees et descriptions qui mettent en valeur votre creativite." },
+          { title: 'Commande en ligne et livraison', desc: "Systeme de commande avec choix de la composition, date et creneau de livraison ou retrait en boutique. Paiement securise et confirmation automatique." },
+          { title: 'Pages par occasion', desc: "Pages dediees mariage, deuil, anniversaire, Saint-Valentin, fete des meres. Chaque occasion est optimisee pour le SEO et guide le client dans son choix." },
+          { title: 'Galerie de realisations', desc: "Portfolio de vos plus belles creations : mariages, evenements, decorations florales. De quoi convaincre les clients de vous confier leurs evenements importants." },
+          { title: 'Abonnements floraux', desc: "Possibilite de proposer des abonnements (bouquet de la semaine, decoration de bureau). Un revenu recurrent pour votre boutique." },
+          { title: 'Horaires et livraison', desc: "Horaires d'ouverture, zones de livraison a Rennes et alentours, tarifs de livraison. Google Maps integre pour trouver votre boutique facilement." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui font <em class="text-accent">eclore</em> votre activite
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des commerces et artisans.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on proposer la commande et la livraison de fleurs en ligne ?',
+            a: 'Oui, je mets en place un systeme de commande en ligne avec choix de la composition, date et creneau de livraison ou retrait en boutique. Paiement securise et confirmation automatique par email.'
+          },
+          {
+            q: 'Le site peut-il mettre en valeur les creations florales ?',
+            a: 'Absolument. Je cree une galerie visuelle soignee de vos compositions, bouquets et evenements. Les photos sont optimisees pour un rendu professionnel et un chargement rapide.'
+          },
+          {
+            q: 'Comment se demarquer des plateformes comme Interflora ?',
+            a: 'Votre site met en avant votre savoir-faire artisanal, vos creations uniques et votre ancrage local. Vous captez des clients en direct, sans commission de plateforme, et vous renforcez votre image de fleuriste de proximite.'
+          },
+          {
+            q: 'Peut-on gerer les commandes pour des evenements (mariages, deuil) ?',
+            a: 'Oui, je cree des pages dediees par occasion (mariage, deuil, entreprise, anniversaire) avec formulaire de demande personnalisee. Chaque page est optimisee pour le SEO et pour convertir les visiteurs en clients.'
+          },
+          {
+            q: 'Combien coute un site web pour un fleuriste a Rennes ?',
+            a: 'Un site vitrine pour fleuriste avec catalogue et commande en ligne demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (paiement en ligne, gestion des livraisons, abonnements floraux). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a faire fleurir votre activite en ligne ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre boutique et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

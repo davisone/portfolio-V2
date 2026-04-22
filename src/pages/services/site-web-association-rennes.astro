@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour association à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour associations à Rennes : adhésion en ligne, gestion d'événements, collecte de dons, espace membres et communication digitale.",
+      "url": "https://evandavison.fr/services/site-web-association-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web association Rennes", "item": "https://evandavison.fr/services/site-web-association-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on gérer les adhésions directement depuis le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place un formulaire d'adhésion en ligne avec paiement sécurisé (HelloAsso, Stripe ou virement). Les nouveaux membres s'inscrivent en autonomie et vous recevez une notification." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site permet-il de collecter des dons en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. J'intègre une solution de collecte de dons sécurisée (HelloAsso, GoFundMe, ou module sur mesure) avec reçu fiscal automatique si besoin. Les donateurs peuvent contribuer en quelques clics." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on publier des événements et gérer les inscriptions ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, un calendrier d'événements avec inscription en ligne est intégré. Chaque événement a sa page dédiée avec date, lieu, description et nombre de places restantes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le budget d'une association est limité, quels sont les tarifs ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Je propose des tarifs adaptés aux associations : un site vitrine avec adhésion et événements démarre autour de 600€. Je privilégie des outils gratuits ou à faible coût (HelloAsso, hébergement économique) pour respecter votre budget." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web association Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour association à Rennes. Adhésion en ligne, événements, dons, espace membres. Un site au service de votre cause. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-association-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web association Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un site pour <em class="text-accent">association</em> qui<br/>federe et mobilise
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Adhesion en ligne, calendrier d'evenements, collecte de dons — un site web qui donne de la visibilite a votre association rennaise et facilite la vie de vos benevoles.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Votre association merite mieux qu'une <em class="text-accent">page Facebook</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Beaucoup d'associations rennaises s'appuient uniquement sur les reseaux sociaux pour communiquer. Le probleme : vous etes soumis aux algorithmes, vos publications ne touchent qu'une fraction de vos membres, et vous n'avez aucun controle sur la presentation de vos activites.</p>
+              <p>Un site web propre a votre association, c'est un point central ou tout est regroupe : vos missions, vos evenements, l'adhesion, les dons. Un espace que vous maitrisez entierement, independant des plateformes.</p>
+              <p>Je concois des sites accessibles et economiques pour les associations de Rennes et alentours, en utilisant des outils adaptes au monde associatif (HelloAsso, Google Workspace for Nonprofits) pour limiter les couts.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Associations en France', value: '1.5M' },
+              { label: 'N\'ont pas de site web', value: '65%' },
+              { label: 'Adherent en ligne si possible', value: '58%' },
+              { label: 'Dons en ligne en croissance', value: '+20%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Les outils essentiels d'un site <em class="text-accent">associatif</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Adhesion en ligne', desc: "Formulaire d'adhesion avec paiement securise via HelloAsso ou Stripe. Les nouveaux membres rejoignent votre association sans passer par le papier." },
+          { title: 'Calendrier d\'evenements', desc: "Agenda interactif avec inscription en ligne, rappels et compteur de places. Vos membres et le public voient tout d'un coup d'oeil." },
+          { title: 'Collecte de dons', desc: "Page de dons integree avec paiement securise et generation de recus fiscaux. Facilitez la generosite de vos soutiens." },
+          { title: 'Actualites et blog', desc: "Section actualites pour partager vos actions, comptes-rendus d'evenements et appels a benevoles. Vivant et regulierement mis a jour." },
+          { title: 'Presentation de l\'equipe', desc: "Page dediee au bureau, aux benevoles et aux partenaires. Humanisez votre association et montrez les visages derriere le projet." },
+          { title: 'Galerie photos', desc: "Albums photos de vos evenements et activites. Un moyen de montrer concretement ce que fait votre association au quotidien." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites au service de <em class="text-accent">causes qui comptent</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des associations et collectifs.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on gerer les adhesions directement depuis le site ?',
+            a: 'Oui, je mets en place un formulaire d\'adhesion en ligne avec paiement securise (HelloAsso, Stripe ou virement). Les nouveaux membres s\'inscrivent en autonomie et vous recevez une notification.'
+          },
+          {
+            q: 'Le site permet-il de collecter des dons en ligne ?',
+            a: 'Absolument. J\'integre une solution de collecte de dons securisee (HelloAsso, GoFundMe, ou module sur mesure) avec recu fiscal automatique si besoin. Les donateurs peuvent contribuer en quelques clics.'
+          },
+          {
+            q: 'Peut-on publier des evenements et gerer les inscriptions ?',
+            a: 'Oui, un calendrier d\'evenements avec inscription en ligne est integre. Chaque evenement a sa page dediee avec date, lieu, description et nombre de places restantes.'
+          },
+          {
+            q: 'Le budget d\'une association est limite, quels sont les tarifs ?',
+            a: 'Je propose des tarifs adaptes aux associations : un site vitrine avec adhesion et evenements demarre autour de 600 euros. Je privilegie des outils gratuits ou a faible cout (HelloAsso, hebergement economique) pour respecter votre budget.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a donner plus de visibilite a votre association ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre association et de vos besoins. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

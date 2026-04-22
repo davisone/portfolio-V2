@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour restaurant à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour restaurants à Rennes : carte en ligne, réservation, galerie de plats, intégration Google Maps et avis clients.",
+      "url": "https://evandavison.fr/services/site-web-restaurant-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web restaurant Rennes", "item": "https://evandavison.fr/services/site-web-restaurant-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on modifier la carte du restaurant directement depuis le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place une interface d'administration simple qui vous permet de modifier vos plats, prix et menus du jour en quelques clics, sans aucune compétence technique." }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-il possible d'intégrer un système de réservation en ligne ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. J'intègre des solutions de réservation en ligne (formulaire sur mesure ou outils comme TheFork/Zenchef) pour que vos clients puissent réserver une table 24h/24." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment apparaître en premier sur Google quand on cherche un restaurant à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le site est optimisé pour le SEO local : fiche Google Business Profile liée, données structurées Restaurant, mots-clés géolocalisés, et temps de chargement rapide. Combiné à de bons avis Google, votre visibilité locale sera maximisée." }
+        },
+        {
+          "@type": "Question",
+          "name": "Les photos de mes plats seront-elles bien mises en valeur ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée des galeries visuelles optimisées avec des images compressées pour un chargement rapide tout en conservant une qualité professionnelle. Le design met en avant l'expérience culinaire." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un restaurant à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour restaurant avec carte en ligne et réservation démarre autour de 900€. Le prix varie selon les fonctionnalités souhaitées (commande en ligne, click & collect, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web restaurant Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour restaurant à Rennes : carte en ligne, réservation, photos de plats, avis Google. Un site qui remplit vos tables. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-restaurant-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web restaurant Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre <em class="text-accent">restaurant</em> merite<br/>un site a la hauteur
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Carte en ligne, reservation, photos qui donnent faim — un site web concu pour remplir vos tables et fideliser vos clients a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients cherchent votre <em class="text-accent">carte en ligne</em> avant de pousser la porte
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Aujourd'hui, 80% des clients consultent le menu d'un restaurant sur internet avant de s'y rendre. Si votre carte est un PDF illisible sur mobile ou si votre site date de 2015, vous perdez des couverts chaque jour.</p>
+              <p>Un site web de restaurant performant, c'est une carte interactive mise a jour en temps reel, un systeme de reservation qui fonctionne a minuit comme a midi, et des photos de plats qui declenchent l'envie. Le tout visible en premiere page Google quand quelqu'un cherche "restaurant Rennes".</p>
+              <p>Je concois des sites specifiquement penses pour la restauration : navigation mobile-first (vos clients cherchent sur leur telephone), integration Google Maps pour etre trouve facilement, et affichage des avis Google pour rassurer les indecis.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Consultent le menu en ligne', value: '80%' },
+              { label: 'Recherchent sur mobile', value: '72%' },
+              { label: 'Lisent les avis avant', value: '90%' },
+              { label: 'Reservent en ligne', value: '45%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">restaurant</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Carte interactive', desc: "Menu consultable sur mobile avec categories, descriptions, prix et allergenes. Modifiable par vos soins en quelques clics." },
+          { title: 'Reservation en ligne', desc: "Formulaire de reservation integre ou connexion avec TheFork, Zenchef ou Google Reserve. Vos clients reservent 24h/24." },
+          { title: 'Galerie de plats', desc: "Photos optimisees haute qualite qui mettent en valeur votre cuisine. Chargement rapide garanti meme en 4G." },
+          { title: 'Google Maps et itineraire', desc: "Localisation integree avec itineraire en un clic. Vos clients vous trouvent sans effort depuis leur telephone." },
+          { title: 'Avis Google affiches', desc: "Vos meilleurs avis Google affiches directement sur le site pour rassurer les nouveaux visiteurs et augmenter la confiance." },
+          { title: 'Menu du jour et evenements', desc: "Section dediee pour le plat du jour, les soirees a theme ou les evenements speciaux. Mise a jour en autonomie." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui donnent <em class="text-accent">l'eau a la bouche</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de la restauration.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on modifier la carte du restaurant directement depuis le site ?',
+            a: 'Oui, je mets en place une interface d\'administration simple qui vous permet de modifier vos plats, prix et menus du jour en quelques clics, sans aucune competence technique.'
+          },
+          {
+            q: 'Est-il possible d\'integrer un systeme de reservation en ligne ?',
+            a: 'Absolument. J\'integre des solutions de reservation en ligne (formulaire sur mesure ou outils comme TheFork/Zenchef) pour que vos clients puissent reserver une table 24h/24.'
+          },
+          {
+            q: 'Comment apparaitre en premier sur Google quand on cherche un restaurant a Rennes ?',
+            a: 'Le site est optimise pour le SEO local : fiche Google Business Profile liee, donnees structurees Restaurant, mots-cles geolocalises, et temps de chargement rapide. Combine a de bons avis Google, votre visibilite locale sera maximisee.'
+          },
+          {
+            q: 'Les photos de mes plats seront-elles bien mises en valeur ?',
+            a: 'Oui, je cree des galeries visuelles optimisees avec des images compressees pour un chargement rapide tout en conservant une qualite professionnelle. Le design met en avant l\'experience culinaire.'
+          },
+          {
+            q: 'Combien coute un site web pour un restaurant a Rennes ?',
+            a: 'Un site vitrine pour restaurant avec carte en ligne et reservation demarre autour de 900 euros. Le prix varie selon les fonctionnalites souhaitees (commande en ligne, click and collect, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a remplir vos tables ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre restaurant et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour agence immobilière à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web pour agences immobilières à Rennes : annonces en ligne, visites virtuelles, estimation en ligne, intégration logiciels immobiliers.",
+      "url": "https://evandavison.fr/services/site-web-immobilier-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web immobilier Rennes", "item": "https://evandavison.fr/services/site-web-immobilier-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le site peut-il se synchroniser avec mon logiciel immobilier ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des passerelles avec les principaux logiciels de transaction immobilière (Hektor, Apimo, AC3, etc.). Vos annonces publiées dans le logiciel apparaissent automatiquement sur votre site." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on intégrer des visites virtuelles 360° ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. J'intègre des visites virtuelles Matterport, iStaging ou toute solution 360° directement dans les fiches de biens. Un vrai plus pour se démarquer des portails classiques." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site affiche-t-il les annonces avec filtres de recherche ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je développe un moteur de recherche avancé : filtres par type de bien, prix, surface, localisation, nombre de pièces. L'expérience de recherche est fluide et rapide." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour une agence immobilière ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site immobilier avec catalogue d'annonces, filtres et intégration logiciel démarre autour de 2 000€. Le prix varie selon les fonctionnalités (estimation en ligne, espace propriétaire, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web agence immobiliere Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour agence immobilière à Rennes. Annonces en ligne, visites virtuelles, estimation, synchronisation logiciel. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-immobilier-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web immobilier Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un site <em class="text-accent">immobilier</em> qui vend<br/>vos biens avant les portails
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Catalogue d'annonces, visites virtuelles, estimation en ligne — un site d'agence immobiliere qui capte les acheteurs et vendeurs a Rennes sans dependre uniquement de SeLoger ou LeBonCoin.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Arretez de payer des <em class="text-accent">commissions aux portails</em> pour vos propres mandats
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Les portails immobiliers (SeLoger, LeBonCoin, Bien'ici) captent une grosse part du trafic acheteur. Mais chaque lead genere via ces plateformes vous coute cher en abonnement et en concurrence directe avec d'autres agences.</p>
+              <p>Votre propre site web immobilier, c'est un canal d'acquisition que vous maitrisez : vos annonces, votre marque, vos leads exclusifs. Avec un bon referencement local sur "agence immobiliere Rennes", vous captez des prospects qui vous cherchent directement.</p>
+              <p>Je developpe des sites immobiliers synchronises avec votre logiciel de transaction, equipes de filtres de recherche avances et de visites virtuelles. Une vitrine numerique a la hauteur de votre agence rennaise.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Commencent leur recherche en ligne', value: '92%' },
+              { label: 'Veulent des photos de qualite', value: '87%' },
+              { label: 'Utilisent les filtres de recherche', value: '78%' },
+              { label: 'Demandent une estimation en ligne', value: '41%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Les fonctionnalites cles d'un site <em class="text-accent">d'agence immobiliere</em>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Catalogue d\'annonces', desc: "Toutes vos annonces en ligne avec photos, descriptions, plans et criteres detailles. Synchronisation automatique avec votre logiciel de transaction." },
+          { title: 'Moteur de recherche avance', desc: "Filtres par type de bien, prix, surface, localisation, nombre de pieces. Une recherche rapide et intuitive pour vos visiteurs." },
+          { title: 'Visites virtuelles 360', desc: "Integration Matterport ou solutions 360 directement dans les fiches de biens. Les acheteurs visitent a distance avant de se deplacer." },
+          { title: 'Estimation en ligne', desc: "Formulaire d'estimation permettant aux proprietaires d'obtenir une premiere evaluation. Un outil de captation de mandats redoutable." },
+          { title: 'Alertes personnalisees', desc: "Systeme d'alerte email pour les acheteurs : nouveau bien correspondant a leurs criteres. Fidelisation et reactivite garanties." },
+          { title: 'Pages quartiers', desc: "Pages dediees par quartier de Rennes (Centre, Sainte-Therese, Beaulieu, etc.) avec donnees locales. Excellent pour le SEO et l'expertise locale." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui <em class="text-accent">vendent des biens</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises dans le secteur immobilier.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Le site peut-il se synchroniser avec mon logiciel immobilier ?',
+            a: 'Oui, j\'integre des passerelles avec les principaux logiciels de transaction immobiliere (Hektor, Apimo, AC3, etc.). Vos annonces publiees dans le logiciel apparaissent automatiquement sur votre site.'
+          },
+          {
+            q: 'Peut-on integrer des visites virtuelles 360 ?',
+            a: 'Absolument. J\'integre des visites virtuelles Matterport, iStaging ou toute solution 360 directement dans les fiches de biens. Un vrai plus pour se demarquer des portails classiques.'
+          },
+          {
+            q: 'Le site affiche-t-il les annonces avec filtres de recherche ?',
+            a: 'Oui, je developpe un moteur de recherche avance : filtres par type de bien, prix, surface, localisation, nombre de pieces. L\'experience de recherche est fluide et rapide.'
+          },
+          {
+            q: 'Combien coute un site web pour une agence immobiliere ?',
+            a: 'Un site immobilier avec catalogue d\'annonces, filtres et integration logiciel demarre autour de 2 000 euros. Le prix varie selon les fonctionnalites (estimation en ligne, espace proprietaire, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a capter plus de mandats et d'acheteurs ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre agence et de vos objectifs de croissance. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

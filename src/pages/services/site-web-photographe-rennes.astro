@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour photographe à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de portfolios et sites web pour photographes à Rennes : galeries optimisées, chargement rapide, protection des images et mise en valeur de votre travail.",
+      "url": "https://evandavison.fr/services/site-web-photographe-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web photographe Rennes", "item": "https://evandavison.fr/services/site-web-photographe-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le site restera-t-il rapide malgré de nombreuses photos haute résolution ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui. J'utilise des techniques d'optimisation avancées : formats modernes (WebP/AVIF), lazy loading, redimensionnement automatique et CDN. Vos photos sont affichées en haute qualité avec un temps de chargement minimal." }
+        },
+        {
+          "@type": "Question",
+          "name": "Mes photos sont-elles protégées contre le vol ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Plusieurs niveaux de protection sont possibles : désactivation du clic droit, watermark automatique sur les images affichées, et métadonnées de copyright intégrées. Aucune protection n'est infaillible, mais ces mesures dissuadent efficacement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on organiser les photos en galeries thématiques ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée des galeries par catégorie (mariage, portrait, paysage, corporate, etc.) avec navigation fluide et lightbox plein écran. Chaque galerie peut avoir sa propre ambiance visuelle." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il servir de support commercial pour les clients ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. J'intègre une page de tarifs, un formulaire de demande de prestation avec choix du type de shooting, et éventuellement un espace client privé pour la livraison de photos." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site portfolio pour photographe ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un portfolio en ligne avec galeries optimisées et formulaire de contact démarre autour de 900€. Avec espace client et livraison de photos en ligne, comptez 1 500€ et plus. Devis gratuit." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web photographe Rennes | Evan Davison — Développeur Web"
+  description="Création de portfolio et site web pour photographe à Rennes. Galeries optimisées, chargement rapide, protection images. Sublimez votre travail. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-photographe-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web photographe Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Un <em class="text-accent">portfolio</em> en ligne<br/>a la hauteur de vos images
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Galeries optimisees, chargement instantane, protection de vos cliches — un site web de photographe qui laisse parler vos images et attire des clients a Rennes.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos photos meritent mieux qu'un <em class="text-accent">template generique</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>En tant que photographe, votre site web est votre vitrine principale. Si vos images se chargent lentement, si la navigation est confuse ou si le design detourne l'attention, vous perdez des clients potentiels qui ne verront jamais la qualite de votre travail.</p>
+              <p>Les plateformes comme Squarespace ou Wix offrent des templates corrects, mais ils limitent vos possibilites et ressemblent a des dizaines d'autres sites de photographes. Votre identite visuelle merite un traitement sur mesure.</p>
+              <p>Je concois des portfolios photographiques performants : images optimisees qui se chargent en un eclair, galeries fluides avec lightbox plein ecran, et un design epure qui met vos cliches au centre de l'attention. Le tout reference sur Google pour "photographe Rennes".</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Jugent la qualite sur le site', value: '94%' },
+              { label: 'Quittent si trop lent', value: '53%' },
+              { label: 'Comparent les portfolios', value: '82%' },
+              { label: 'Reservent via le site', value: '47%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce qu'un site de <em class="text-accent">photographe</em> doit offrir
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Galeries haute performance', desc: "Images optimisees en WebP/AVIF avec lazy loading et CDN. Vos photos s'affichent en qualite maximale sans ralentir le site." },
+          { title: 'Protection des images', desc: "Desactivation du clic droit, watermark automatique sur les images affichees, metadonnees copyright. Protegez votre travail efficacement." },
+          { title: 'Lightbox plein ecran', desc: "Navigation immersive entre les photos avec mode plein ecran, fleches et gestes tactiles. L'experience se rapproche d'un livre photo." },
+          { title: 'Categories et filtres', desc: "Organisation par type de shooting : mariage, portrait, corporate, paysage. Chaque client trouve rapidement ce qui l'interesse." },
+          { title: 'Formulaire de prestation', desc: "Demande de devis avec choix du type de shooting, date souhaitee, lieu. Vous recevez des demandes qualifiees et structurees." },
+          { title: 'Espace client prive', desc: "Galerie privee protegee par mot de passe pour livrer les photos a vos clients. Telechargement individuel ou par lot." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites ou <em class="text-accent">l'image parle d'elle-meme</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des photographes et createurs visuels.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Le site restera-t-il rapide malgre de nombreuses photos haute resolution ?',
+            a: 'Oui. J\'utilise des techniques d\'optimisation avancees : formats modernes (WebP/AVIF), lazy loading, redimensionnement automatique et CDN. Vos photos sont affichees en haute qualite avec un temps de chargement minimal.'
+          },
+          {
+            q: 'Mes photos sont-elles protegees contre le vol ?',
+            a: 'Plusieurs niveaux de protection sont possibles : desactivation du clic droit, watermark automatique sur les images affichees, et metadonnees de copyright integrees. Ces mesures dissuadent efficacement le vol d\'images.'
+          },
+          {
+            q: 'Peut-on organiser les photos en galeries thematiques ?',
+            a: 'Oui, je cree des galeries par categorie (mariage, portrait, paysage, corporate, etc.) avec navigation fluide et lightbox plein ecran. Chaque galerie peut avoir sa propre ambiance visuelle.'
+          },
+          {
+            q: 'Le site peut-il servir de support commercial ?',
+            a: 'Absolument. J\'integre une page de tarifs, un formulaire de demande de prestation avec choix du type de shooting, et eventuellement un espace client prive pour la livraison de photos.'
+          },
+          {
+            q: 'Combien coute un site portfolio pour photographe ?',
+            a: 'Un portfolio en ligne avec galeries optimisees et formulaire de contact demarre autour de 900 euros. Avec espace client et livraison de photos en ligne, comptez 1 500 euros et plus. Devis gratuit.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a sublimer votre presence en ligne ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Parlons de votre univers photographique et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

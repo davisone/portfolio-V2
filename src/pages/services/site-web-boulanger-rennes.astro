@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour boulangerie à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour boulangers et boulangeries à Rennes : catalogue de produits, commande en ligne, horaires et localisation, optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-boulanger-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web boulanger Rennes", "item": "https://evandavison.fr/services/site-web-boulanger-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on proposer la commande en ligne de pains et viennoiseries ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je mets en place un système de commande en ligne avec retrait en boutique (click & collect). Vos clients commandent la veille et récupèrent leurs produits frais le matin." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on mettre à jour les produits et prix facilement ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. L'interface d'administration vous permet de modifier votre catalogue, ajouter des produits saisonniers ou changer les prix en quelques clics, sans compétence technique." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment mettre en avant les produits artisanaux et le savoir-faire ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le site valorise votre savoir-faire artisanal : photos de fabrication, histoire de la boulangerie, labels qualité (MOF, boulanger de France), et descriptions des farines et méthodes utilisées." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site peut-il gérer les commandes spéciales (gâteaux, traiteur) ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je crée un formulaire de commande spéciale pour les gâteaux d'anniversaire, pièces montées, buffets et prestations traiteur avec choix des options et date de retrait." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour une boulangerie à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour boulangerie avec catalogue et click & collect démarre autour de 800 euros. Le prix varie selon les fonctionnalités souhaitées (paiement en ligne, programme fidélité, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web boulanger Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour boulangerie à Rennes : catalogue produits, commande en ligne, click & collect, SEO local. Un site qui fait venir les clients. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-boulanger-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web boulanger Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre <em class="text-accent">boulangerie</em> merite<br/>d'etre trouvee en ligne
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Catalogue de produits, commande en ligne, click and collect — un site web concu pour mettre en valeur votre savoir-faire artisanal et attirer de nouveaux clients a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos clients veulent commander <em class="text-accent">avant de se deplacer</em>
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>Depuis 2020, le click and collect a explose dans l'artisanat alimentaire. Selon la Confederation Nationale de la Boulangerie, les boulangeries proposant la commande en ligne constatent une hausse moyenne de 15 a 20% de leur chiffre d'affaires sur les commandes speciales.</p>
+              <p>Un site de boulangerie performant, c'est un catalogue de produits appetissant, un systeme de commande en ligne pour les pains speciaux et patisseries, des horaires et une localisation facilement accessibles, et surtout des photos qui donnent envie de pousser la porte.</p>
+              <p>Je concois des sites qui mettent en valeur l'artisanat : photos soignees de vos produits, mise en avant de votre savoir-faire et de vos matieres premieres, et un parcours de commande simple adapte a votre rythme de production.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Recherchent une boulangerie en ligne', value: '65%' },
+              { label: 'Hausse CA avec click and collect', value: '+20%' },
+              { label: 'Verifient les horaires en ligne', value: '88%' },
+              { label: 'Preferent commander a l\'avance', value: '42%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">boulangerie</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Catalogue de produits', desc: "Presentation visuelle de vos pains, viennoiseries, patisseries et produits traiteur. Categories, descriptions et prix mis a jour facilement." },
+          { title: 'Commande en ligne et click and collect', desc: "Systeme de commande avec choix des produits, date et heure de retrait. Vos clients commandent la veille et recuperent leurs produits frais." },
+          { title: 'Mise en valeur du savoir-faire', desc: "Page dediee a votre histoire, vos methodes de fabrication, vos farines et vos labels qualite. Ce qui fait la difference avec la grande distribution." },
+          { title: 'Horaires et localisation', desc: "Horaires d'ouverture bien visibles, jours de fermeture, Google Maps integre. Vos clients savent quand et ou vous trouver en un coup d'oeil." },
+          { title: 'Commandes speciales', desc: "Formulaire dedie pour les gateaux d'anniversaire, pieces montees, buffets et prestations traiteur. Choix des options, tailles et date de retrait." },
+          { title: 'Actualites et produits saisonniers', desc: "Section pour annoncer la galette des rois, les chocolats de Paques, les pains speciaux du moment. Gardez vos clients informes toute l'annee." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui donnent <em class="text-accent">envie de croquer</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des artisans et commerces de bouche.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on proposer la commande en ligne de pains et viennoiseries ?',
+            a: 'Oui, je mets en place un systeme de commande en ligne avec retrait en boutique (click and collect). Vos clients commandent la veille et recuperent leurs produits frais le matin.'
+          },
+          {
+            q: 'Peut-on mettre a jour les produits et prix facilement ?',
+            a: 'Absolument. L\'interface d\'administration vous permet de modifier votre catalogue, ajouter des produits saisonniers ou changer les prix en quelques clics, sans competence technique.'
+          },
+          {
+            q: 'Comment mettre en avant les produits artisanaux et le savoir-faire ?',
+            a: 'Le site valorise votre savoir-faire artisanal : photos de fabrication, histoire de la boulangerie, labels qualite (MOF, Boulanger de France), et descriptions des farines et methodes utilisees.'
+          },
+          {
+            q: 'Le site peut-il gerer les commandes speciales (gateaux, traiteur) ?',
+            a: 'Oui, je cree un formulaire de commande speciale pour les gateaux d\'anniversaire, pieces montees, buffets et prestations traiteur avec choix des options et date de retrait.'
+          },
+          {
+            q: 'Combien coute un site web pour une boulangerie a Rennes ?',
+            a: 'Un site vitrine pour boulangerie avec catalogue et click and collect demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (paiement en ligne, programme fidelite, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a faire connaitre votre boulangerie en ligne ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre boulangerie et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

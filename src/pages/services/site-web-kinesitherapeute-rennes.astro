@@ -1,0 +1,225 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Création site web pour kinésithérapeute à Rennes",
+      "provider": { "@id": "https://evandavison.fr/#person" },
+      "areaServed": { "@type": "City", "name": "Rennes" },
+      "serviceType": "Développement web",
+      "description": "Création de sites web sur mesure pour kinésithérapeutes à Rennes : prise de rendez-vous en ligne, présentation des soins, fiche praticien et optimisation SEO local.",
+      "url": "https://evandavison.fr/services/site-web-kinesitherapeute-rennes"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Site web kinésithérapeute Rennes", "item": "https://evandavison.fr/services/site-web-kinesitherapeute-rennes" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on intégrer la prise de rendez-vous en ligne sur le site ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, j'intègre des solutions comme Doctolib, Kiné Annuaire ou un formulaire de prise de rendez-vous sur mesure, pour que vos patients puissent réserver un créneau 24h/24 sans appeler le cabinet." }
+        },
+        {
+          "@type": "Question",
+          "name": "Le site sera-t-il conforme aux obligations déontologiques des kinésithérapeutes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Le site respecte les recommandations de l'Ordre des masseurs-kinésithérapeutes : pas de publicité comparative, pas de témoignages patients, informations claires sur les tarifs et les qualifications." }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment apparaître en premier sur Google quand on cherche un kiné à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Le site est optimisé pour le SEO local : fiche Google Business Profile liée, données structurées MedicalBusiness, mots-clés géolocalisés et temps de chargement rapide. Combiné à de bons avis Google, votre visibilité locale sera maximisée." }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on présenter les différentes spécialités du cabinet ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, chaque spécialité (kiné du sport, rééducation post-opératoire, kiné respiratoire, etc.) dispose de sa propre section avec description détaillée, pour rassurer les patients et améliorer le référencement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un site web pour un kinésithérapeute à Rennes ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine pour kinésithérapeute avec prise de rendez-vous et présentation des soins démarre autour de 800 euros. Le prix varie selon les fonctionnalités souhaitées (multi-praticiens, blog santé, etc.). Devis gratuit sur demande." }
+        }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Site web kinésithérapeute Rennes | Evan Davison — Développeur Web"
+  description="Création de site web pour kinésithérapeute à Rennes : prise de RDV en ligne, présentation des soins, SEO local. Un site qui remplit votre planning. Devis gratuit."
+  canonical="https://evandavison.fr/services/site-web-kinesitherapeute-rennes"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Site web kinesitherapeute Rennes</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-16 sm:py-24">
+      <div class="max-w-3xl">
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
+          Votre cabinet de <em class="text-accent">kinesitherapie</em> merite<br/>une vitrine professionnelle
+        </h1>
+        <p class="text-xl text-text-body mb-8 leading-relaxed">
+          Prise de rendez-vous en ligne, presentation de vos specialites, acces et horaires — un site web concu pour remplir votre planning et rassurer vos patients a Rennes et ses alentours.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
+          <a href="/#realisations" class="btn-secondary">Voir mes realisations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Probleme / Solution -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+              Vos patients vous cherchent sur <em class="text-accent">Google</em> avant de decrocher le telephone
+            </h2>
+            <div class="space-y-4 text-text-body">
+              <p>En France, 77% des patients utilisent internet pour rechercher un professionnel de sante. Si votre cabinet n'apparait pas dans les premiers resultats ou si votre seule presence en ligne est une fiche Pages Jaunes, vous laissez vos concurrents capter ces patients.</p>
+              <p>Un site web de kinesitherapeute performant, c'est une prise de rendez-vous accessible a toute heure, une presentation claire de vos specialites et de vos tarifs, et un plan d'acces qui facilite la premiere visite. Le tout optimise pour que Google vous affiche en tete quand quelqu'un cherche "kine Rennes".</p>
+              <p>Je concois des sites specifiquement penses pour les professionnels de sante : conformes aux obligations deontologiques, navigation mobile-first (vos patients cherchent depuis leur telephone), et integration Doctolib ou equivalent pour la prise de rendez-vous.</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            {[
+              { label: 'Cherchent un praticien en ligne', value: '77%' },
+              { label: 'Prennent RDV en ligne', value: '63%' },
+              { label: 'Consultent sur mobile', value: '68%' },
+              { label: 'Lisent les avis sante', value: '84%' },
+            ].map(stat => (
+              <div class="border border-border p-6 text-center">
+                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
+                <div class="text-muted text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fonctionnalites specifiques -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Ce que votre site de <em class="text-accent">kinesitherapeute</em> inclut
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { title: 'Prise de rendez-vous en ligne', desc: "Integration Doctolib, Kine Annuaire ou formulaire sur mesure. Vos patients reservent un creneau 24h/24 sans appeler le cabinet." },
+          { title: 'Presentation des specialites', desc: "Pages dediees pour chaque domaine : kine du sport, reeducation post-operatoire, kine respiratoire, pediatrique. Chaque specialite bien referencee." },
+          { title: 'Fiche praticien detaillee', desc: "Parcours, diplomes, formations complementaires et approche therapeutique. De quoi rassurer les patients avant leur premiere seance." },
+          { title: 'Plan d\'acces et informations pratiques', desc: "Google Maps integre, horaires d'ouverture, informations de stationnement et accessibilite PMR. Tout pour faciliter la venue au cabinet." },
+          { title: 'Tarifs et remboursements', desc: "Grille tarifaire claire avec informations sur les remboursements Securite sociale et mutuelles. Transparence totale pour vos patients." },
+          { title: 'Blog conseils sante', desc: "Section blog pour partager des exercices, conseils posturaux et informations sante. Ameliore le referencement et positionne votre expertise." },
+        ].map(item => (
+          <div class="border border-border p-6">
+            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Realisations CTA -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Des sites qui inspirent <em class="text-accent">confiance</em>
+        </h2>
+        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
+        <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-24">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {[
+          {
+            q: 'Peut-on integrer la prise de rendez-vous en ligne sur le site ?',
+            a: 'Oui, j\'integre des solutions comme Doctolib, Kine Annuaire ou un formulaire de prise de rendez-vous sur mesure, pour que vos patients puissent reserver un creneau 24h/24 sans appeler le cabinet.'
+          },
+          {
+            q: 'Le site sera-t-il conforme aux obligations deontologiques des kinesitherapeutes ?',
+            a: 'Absolument. Le site respecte les recommandations de l\'Ordre des masseurs-kinesitherapeutes : pas de publicite comparative, pas de temoignages patients, informations claires sur les tarifs et les qualifications.'
+          },
+          {
+            q: 'Comment apparaitre en premier sur Google quand on cherche un kine a Rennes ?',
+            a: 'Le site est optimise pour le SEO local : fiche Google Business Profile liee, donnees structurees MedicalBusiness, mots-cles geolocalises et temps de chargement rapide. Combine a de bons avis Google, votre visibilite locale sera maximisee.'
+          },
+          {
+            q: 'Peut-on presenter les differentes specialites du cabinet ?',
+            a: 'Oui, chaque specialite (kine du sport, reeducation post-operatoire, kine respiratoire, etc.) dispose de sa propre section avec description detaillee, pour rassurer les patients et ameliorer le referencement.'
+          },
+          {
+            q: 'Combien coute un site web pour un kinesitherapeute a Rennes ?',
+            a: 'Un site vitrine pour kinesitherapeute avec prise de rendez-vous et presentation des soins demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (multi-praticiens, blog sante, etc.). Devis gratuit sur demande.'
+          },
+        ].map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a remplir votre planning ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre cabinet et de vos objectifs. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>
