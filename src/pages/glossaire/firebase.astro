@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Firebase",
+  "description": "Firebase est une plateforme backend-as-a-service de Google qui fournit base de donnees temps reel, authentification, hebergement et analytics pour applications web et mobiles.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/firebase"
+}
+---
+
+<Layout
+  title="Firebase : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Firebase ? Definition de la plateforme BaaS de Google, ses services (Firestore, Auth, Hosting) et son utilisation en developpement web et mobile."
+  canonical="https://evandavison.fr/glossaire/firebase"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Firebase</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Firebase
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Firebase est une plateforme backend-as-a-service (BaaS) developpee par Google qui fournit un ensemble complet de services pour le developpement d'applications web et mobiles : base de donnees temps reel, authentification, hebergement, stockage de fichiers, notifications push et analytics.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Firebase ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Firebase propose deux bases de donnees cloud : Realtime Database et Firestore. Firestore, la plus recente, organise les donnees en collections et documents avec une synchronisation en temps reel entre tous les clients connectes. Les donnees sont automatiquement mises en cache localement, permettant un fonctionnement hors ligne.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Firebase Authentication gere l'inscription et la connexion des utilisateurs avec de multiples fournisseurs : email/mot de passe, Google, Apple, GitHub, numero de telephone. Le systeme de regles de securite permet de definir finement qui peut lire ou ecrire chaque donnee, directement dans la configuration.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les Cloud Functions de Firebase permettent d'executer du code serveur en reponse a des evenements (creation de document, inscription d'un utilisateur, requete HTTP) sans gerer d'infrastructure. Firebase Hosting offre un CDN mondial pour deployer des sites statiques et des applications web avec SSL automatique.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Firebase ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Mise en place rapide : backend complet sans gerer de serveur</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Synchronisation temps reel native entre tous les clients</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Authentification multi-fournisseurs cle en main</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Tier gratuit genereux (Spark plan) pour les projets en demarrage</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> SDKs natifs pour web, iOS, Android et <a href="/glossaire/flutter" class="text-accent hover:text-accent-hover transition-colors">Flutter</a></li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Infrastructure Google Cloud scalable automatiquement</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Firebase en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Firebase est particulierement adapte aux MVP, aux applications temps reel (chat, collaboration) et aux projets mobiles avec <a href="/glossaire/flutter" class="text-accent hover:text-accent-hover transition-colors">Flutter</a>. Pour les projets necessitant plus de controle sur le backend ou une base de donnees relationnelle, <a href="/glossaire/supabase" class="text-accent hover:text-accent-hover transition-colors">Supabase</a> (basee sur <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a>) est une alternative open source a considerer.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            J'utilise Firebase dans mes services de <a href="/services/developpement-application-mobile" class="text-accent hover:text-accent-hover transition-colors">developpement d'applications mobiles</a> et de <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">creation d'applications web</a> lorsque le projet necessite un backend rapide a mettre en place avec des fonctionnalites temps reel.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/supabase" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Supabase</a>
+          <a href="/glossaire/flutter" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Flutter</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/mongodb" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">MongoDB</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'un backend Firebase pour votre application ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

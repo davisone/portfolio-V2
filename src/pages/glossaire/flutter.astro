@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Flutter",
+  "description": "Flutter est un framework open source developpe par Google pour creer des applications mobiles, web et desktop a partir d'une seule base de code en Dart.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/flutter"
+}
+---
+
+<Layout
+  title="Flutter : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Flutter ? Definition du framework Google, avantages du developpement multiplateforme et utilisation pour creer des applications mobiles performantes."
+  canonical="https://evandavison.fr/glossaire/flutter"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Flutter</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Flutter
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Flutter est un framework open source cree par Google qui permet de developper des applications natives pour iOS, Android, le web et le desktop a partir d'une seule base de code ecrite en Dart. Son moteur de rendu propre garantit des performances natives et une experience utilisateur fluide.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Flutter ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Contrairement aux frameworks hybrides qui s'appuient sur des WebViews, Flutter utilise son propre moteur de rendu graphique (Skia, puis Impeller) pour dessiner chaque pixel de l'interface. Cette approche offre des performances comparables aux applications natives tout en partageant 100% du code entre les plateformes.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Flutter adopte une approche "tout est widget". L'interface est construite en composant des widgets, chacun responsable d'un element visuel ou structurel. Les widgets sont immutables et declaratifs : on decrit l'etat souhaite de l'interface, et Flutter calcule les mises a jour necessaires de maniere optimale.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Le hot reload est l'une des fonctionnalites les plus appreciees : les modifications de code sont visibles en moins d'une seconde sans perdre l'etat de l'application. Cela accelere considerablement le cycle de developpement et d'iteration sur le design.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir Flutter ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Une seule base de code pour iOS, Android, web et desktop</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances natives grace au moteur de rendu proprietaire</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Hot reload pour une iteration rapide sur le design et les fonctionnalites</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Bibliotheque riche de widgets Material Design et Cupertino</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Reduction significative du temps et du cout de developpement</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Soutenu par Google et utilise par BMW, Alibaba, eBay et de nombreuses startups</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Flutter en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Flutter est le choix ideal pour un <a href="/glossaire/mvp" class="text-accent hover:text-accent-hover transition-colors">MVP</a> mobile : au lieu de developper deux applications natives separees, une seule equipe produit une application pour les deux plateformes. Combine avec une <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">API REST</a> construite en <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, on obtient un ecosysteme complet.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Je propose un service complet de <a href="/services/developpement-flutter-dart" class="text-accent hover:text-accent-hover transition-colors">developpement Flutter / Dart</a> pour les entrepreneurs et PME qui souhaitent lancer une <a href="/services/developpement-application-mobile" class="text-accent hover:text-accent-hover transition-colors">application mobile</a> performante sans doubler leur budget de developpement. L'authentification via <a href="/glossaire/oauth" class="text-accent hover:text-accent-hover transition-colors">OAuth 2.0</a> et le deploiement automatise en <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a> completent le workflow.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/pwa" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PWA</a>
+          <a href="/glossaire/mvp" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">MVP</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+          <a href="/glossaire/ui-ux" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">UI/UX Design</a>
+          <a href="/glossaire/responsive-design" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Responsive Design</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec Flutter pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

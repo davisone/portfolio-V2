@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const comparatif = [
+  { critere: 'Performance', wordpress: 'Moyenne — dependant des plugins et du theme', surMesure: 'Excellente — code optimise, pas de surcharge' },
+  { critere: 'Securite', wordpress: 'Vulnerabilites frequentes (plugins, mises a jour)', surMesure: 'Tres elevee — surface d\'attaque reduite' },
+  { critere: 'Personnalisation', wordpress: 'Limitee par le theme et les plugins', surMesure: 'Totale — chaque detail est maitrise' },
+  { critere: 'SEO', wordpress: 'Correct avec plugins (Yoast, Rank Math)', surMesure: 'Optimal — structure pensee pour le SEO des la conception' },
+  { critere: 'Cout initial', wordpress: 'Bas a moyen (500-2 000EUR)', surMesure: 'Moyen a eleve (800-5 000EUR+)' },
+  { critere: 'Cout maintenance', wordpress: 'Eleve — mises a jour plugins, securite, compatibilite', surMesure: 'Faible — code stable, peu de dependances' },
+  { critere: 'Evolutivite', wordpress: 'Limitee — risque de conflit entre plugins', surMesure: 'Illimitee — architecture pensee pour evoluer' },
+  { critere: 'Temps de developpement', wordpress: 'Rapide (1-2 semaines)', surMesure: 'Moyen (2-6 semaines)' },
+]
+
+const faqItems = [
+  {
+    q: "WordPress est-il toujours un mauvais choix ?",
+    a: "Non, WordPress reste pertinent pour certains projets : un blog editorial, un site avec beaucoup de contributeurs non-techniques, ou un projet a budget tres limite. L'essentiel est de choisir en connaissance de cause."
+  },
+  {
+    q: "Le code sur mesure coute-t-il vraiment plus cher ?",
+    a: "A court terme, oui. Mais sur 3 ans, le cout total est souvent inferieur : moins de maintenance, pas de licences plugins premium, et pas de refonte necessaire quand les plugins deviennent incompatibles."
+  },
+  {
+    q: "Puis-je migrer mon site WordPress vers du sur mesure ?",
+    a: "Oui, c'est un projet que je realise regulierement. Le contenu est recupere et migre vers une solution moderne, avec generalement un gain significatif en performances et en securite. Consultez ma page <a href='/services/refonte-site-web' class='text-accent underline'>refonte de site web</a>."
+  },
+  {
+    q: "Qui gere le contenu sur un site sur mesure ?",
+    a: "Un CMS headless (comme Strapi, Sanity ou un panneau d'administration sur mesure) permet de gerer votre contenu facilement sans toucher au code. L'interface est souvent plus simple et intuitive que WordPress."
+  },
+  {
+    q: "Quelle solution recommandez-vous pour un site vitrine a Rennes ?",
+    a: "Pour la majorite des sites vitrines, le sur mesure avec Astro ou Next.js est ideal : performances maximales, SEO optimal, et un cout de maintenance quasi nul. Decouvrez mon offre de <a href='/services/creation-site-web-rennes' class='text-accent underline'>creation de site web a Rennes</a>."
+  }
+]
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "WordPress vs code sur mesure : comparatif complet 2026",
+      "description": "Comparatif detaille entre WordPress et le developpement sur mesure : performances, securite, SEO, cout et evolutivite pour choisir la meilleure solution.",
+      "author": { "@id": "https://evandavison.fr/#person" },
+      "publisher": { "@id": "https://evandavison.fr/#person" },
+      "url": "https://evandavison.fr/comparatifs/wordpress-vs-sur-mesure",
+      "datePublished": "2026-04-22",
+      "dateModified": "2026-04-22",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Comparatifs", "item": "https://evandavison.fr/comparatifs" },
+        { "@type": "ListItem", "position": 3, "name": "WordPress vs sur mesure", "item": "https://evandavison.fr/comparatifs/wordpress-vs-sur-mesure" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqItems.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a.replace(/<[^>]*>/g, '')
+        }
+      }))
+    }
+  ]
+}
+---
+
+<Layout
+  title="WordPress vs code sur mesure : comparatif complet 2026 | Evan Davison"
+  description="WordPress ou code sur mesure pour votre site web ? Comparatif detaille : performances, securite, SEO, cout, maintenance. Guide par un developpeur freelance a Rennes."
+  canonical="https://evandavison.fr/comparatifs/wordpress-vs-sur-mesure"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/comparatifs" class="hover:text-ink transition-colors">Comparatifs</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">WordPress vs sur mesure</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-12 sm:py-20">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        WordPress vs code <em class="text-accent">sur mesure</em>
+      </h1>
+      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+        Deux approches radicalement differentes pour creer un site web. Ce comparatif vous aide a choisir la solution la plus adaptee a votre projet, votre budget et vos ambitions.
+      </p>
+    </section>
+
+    <!-- Tableau comparatif -->
+    <section class="section-container pb-16">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+        Comparatif <em class="text-accent">point par point</em>
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full border border-border text-left">
+          <thead>
+            <tr class="bg-paper-alt">
+              <th class="p-4 font-semibold text-ink border-b border-border">Critere</th>
+              <th class="p-4 font-semibold text-ink border-b border-border">WordPress</th>
+              <th class="p-4 font-semibold text-accent border-b border-border">Code sur mesure</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparatif.map((row, i) => (
+              <tr class={i % 2 === 0 ? '' : 'bg-paper-alt/50'}>
+                <td class="p-4 font-medium text-ink border-b border-border">{row.critere}</td>
+                <td class="p-4 text-text-body border-b border-border">{row.wordpress}</td>
+                <td class="p-4 text-text-body border-b border-border">{row.surMesure}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Quand choisir WordPress -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+          Quand choisir <em class="text-accent">WordPress</em> ?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-ink font-semibold text-lg mb-4">Avantages</h3>
+            <ul class="space-y-3 text-text-body">
+              <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Mise en ligne rapide avec un theme existant</li>
+              <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Ecosysteme de plugins tres large</li>
+              <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Interface d'administration connue par beaucoup</li>
+              <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Cout initial reduit pour les petits budgets</li>
+              <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Large communaute pour trouver de l'aide</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-ink font-semibold text-lg mb-4">Inconvenients</h3>
+            <ul class="space-y-3 text-text-body">
+              <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Performances mediocres sans optimisation poussee</li>
+              <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Failles de securite frequentes (cible des hackers)</li>
+              <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Dependance aux plugins (compatibilite, mises a jour)</li>
+              <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Personnalisation limitee par le theme choisi</li>
+              <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Cout cache de maintenance sur le long terme</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-8 text-text-body">
+          <strong class="text-ink">Ideal pour :</strong> un blog editorial, un site temporaire, un projet a budget tres limite, ou si vous avez besoin de nombreux contributeurs non-techniques.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quand choisir le sur mesure -->
+    <section class="section-container py-16 sm:py-20">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+        Quand choisir le <em class="text-accent">sur mesure</em> ?
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-ink font-semibold text-lg mb-4">Avantages</h3>
+          <ul class="space-y-3 text-text-body">
+            <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Performances optimales (score Lighthouse 95+)</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Securite renforcee par conception</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> SEO integre dans l'architecture du site</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Liberte totale de personnalisation et design</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Maintenance reduite et cout total maitrise</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-ink font-semibold text-lg mb-4">Inconvenients</h3>
+          <ul class="space-y-3 text-text-body">
+            <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Cout initial plus eleve</li>
+            <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Delai de developpement plus long</li>
+            <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Necessite un developpeur pour les evolutions majeures</li>
+            <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Pas de marketplace de plugins pret-a-l'emploi</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-8 text-text-body">
+        <strong class="text-ink">Ideal pour :</strong> les sites vitrines professionnels, les <a href="/services/creation-application-web" class="text-accent underline">applications web</a>, les projets ou la performance et le SEO sont prioritaires, et les entreprises qui veulent se demarquer.
+      </p>
+    </section>
+
+    <!-- Verdict -->
+    <section class="py-16 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
+          Notre <em class="text-accent">verdict</em>
+        </h2>
+        <div class="max-w-3xl space-y-4 text-text-body leading-relaxed">
+          <p>
+            Pour la majorite des entrepreneurs et PME qui veulent un site performant, securise et bien reference, <strong class="text-ink">le code sur mesure est le meilleur investissement</strong>. Le surcout initial est largement compense par les economies de maintenance, les meilleures performances SEO et la liberte d'evolution.
+          </p>
+          <p>
+            WordPress reste un choix valable pour les projets a budget tres limite ou les plateformes editoriales avec de nombreux contributeurs. Mais si la performance, la securite et le <a href="/services/optimisation-seo" class="text-accent underline">referencement naturel</a> comptent pour vous, le sur mesure l'emporte clairement.
+          </p>
+          <p>
+            Mon conseil : <strong class="text-ink">investissez dans un site qui travaille pour vous</strong>. Un site rapide, bien concu et optimise SEO vous rapportera bien plus qu'un site WordPress generique, meme moins cher au depart. Consultez mes <a href="/services/creation-site-web-rennes" class="text-accent underline">offres de creation de site web</a> pour en savoir plus.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-container py-16 sm:py-20">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+        Questions <em class="text-accent">frequentes</em>
+      </h2>
+      <div class="max-w-3xl space-y-4">
+        {faqItems.map(item => (
+          <details class="border border-border p-6 group">
+            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+              {item.q}
+              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="text-text-body mt-4 leading-relaxed" set:html={item.a} />
+          </details>
+        ))}
+      </div>
+      <p class="mt-8 text-text-body">
+        D'autres questions ? Consultez la <a href="/faq" class="text-accent underline">FAQ complete</a> ou <a href="/#contact" class="text-accent underline">contactez-moi</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Pret a passer au sur mesure ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre projet. Je vous conseillerai honnement sur la meilleure approche pour votre situation.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/comparatifs" class="btn-secondary">Voir tous les comparatifs</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.jsx'
+import Footer from '../components/Footer.astro'
+
+const faqCategories = [
+  {
+    title: 'Generale',
+    items: [
+      {
+        q: "Qui etes-vous et quel est votre parcours ?",
+        a: "Je suis Evan Davison, developpeur web freelance base pres de Rennes. Etudiant et passione par le web, j'accompagne les entrepreneurs, TPE et PME dans la creation de leur presence en ligne avec des technologies modernes et performantes."
+      },
+      {
+        q: "Quels services proposez-vous ?",
+        a: "Je propose la creation de sites vitrines, de boutiques en ligne, d'applications web et mobiles, ainsi que l'optimisation SEO et la refonte de sites existants. Chaque projet est concu sur mesure selon vos besoins. Decouvrez mes services en detail sur la page <a href='/services/creation-site-web-rennes' class='text-accent underline'>creation de site web</a>."
+      },
+      {
+        q: "Travaillez-vous uniquement a Rennes ou partout en France ?",
+        a: "Bien que base pres de Rennes, je travaille avec des clients dans toute la France et meme a l'international. Les echanges se font en visioconference, par telephone ou en personne pour les clients bretons. Consultez mes pages locales : <a href='/services/creation-site-web-nantes' class='text-accent underline'>Nantes</a>, <a href='/services/creation-site-web-saint-malo' class='text-accent underline'>Saint-Malo</a>, <a href='/services/creation-site-web-brest' class='text-accent underline'>Brest</a>."
+      },
+      {
+        q: "Comment puis-je vous contacter ?",
+        a: "Vous pouvez me contacter directement via le <a href='/#contact' class='text-accent underline'>formulaire de contact</a> sur mon site, par email ou par telephone. Le premier echange est gratuit et sans engagement."
+      },
+      {
+        q: "Quels sont vos delais de reponse ?",
+        a: "Je reponds generalement sous 24 heures en jour ouvre. Pour les projets urgents, n'hesitez pas a le preciser dans votre message et je m'adapterai au mieux."
+      }
+    ]
+  },
+  {
+    title: 'Tarifs',
+    items: [
+      {
+        q: "Combien coute un site vitrine ?",
+        a: "Un site vitrine demarre autour de 800EUR. Le prix varie selon le nombre de pages, les fonctionnalites souhaitees et le niveau de personnalisation. Un devis detaille et gratuit est fourni apres analyse de vos besoins."
+      },
+      {
+        q: "Combien coute une boutique en ligne ?",
+        a: "Une boutique en ligne demarre a partir de 1 500EUR. Le tarif depend du nombre de produits, des modes de paiement, des integrations logistiques et du niveau de personnalisation. Voir ma page <a href='/services/creation-boutique-en-ligne' class='text-accent underline'>creation de boutique en ligne</a> pour plus de details."
+      },
+      {
+        q: "Combien coute une application mobile ?",
+        a: "Le cout d'une application mobile varie entre 3 000EUR et 15 000EUR+ selon la complexite, les fonctionnalites et les plateformes ciblees (iOS, Android ou les deux). Consultez ma page <a href='/services/developpement-application-mobile' class='text-accent underline'>developpement d'application mobile</a>."
+      },
+      {
+        q: "Comment se deroule le paiement ?",
+        a: "Le paiement se fait generalement en plusieurs fois : un acompte de 30% a la signature du devis, 40% a la validation de la maquette, et le solde de 30% a la livraison. Des facilites de paiement peuvent etre mises en place selon le projet."
+      },
+      {
+        q: "Y a-t-il des frais caches ?",
+        a: "Non, jamais. Le devis detaille l'ensemble des couts : developpement, hebergement, nom de domaine, et maintenance si souhaitee. Tout est transparent des le depart. Les seuls frais recurrents possibles sont l'hebergement et la maintenance mensuelle, clairement indiques."
+      }
+    ]
+  },
+  {
+    title: 'Technique',
+    items: [
+      {
+        q: "Quelles technologies utilisez-vous ?",
+        a: "J'utilise des technologies modernes adaptees a chaque projet : Astro ou Next.js pour les sites vitrine, Next.js avec base de donnees pour les applications web, Flutter pour le mobile, et Tailwind CSS pour le design. Consultez le <a href='/glossaire' class='text-accent underline'>glossaire technique</a> pour en savoir plus."
+      },
+      {
+        q: "Le site sera-t-il responsive (adapte mobile) ?",
+        a: "Oui, absolument. Tous mes sites sont concus en mobile-first, c'est-a-dire d'abord optimises pour les smartphones, puis adaptes aux tablettes et ordinateurs. C'est essentiel pour le SEO et l'experience utilisateur. En savoir plus sur le <a href='/glossaire/responsive-design' class='text-accent underline'>responsive design</a>."
+      },
+      {
+        q: "Qu'est-ce que le SEO et pourquoi est-ce important ?",
+        a: "Le SEO (Search Engine Optimization) est l'ensemble des techniques pour bien positionner votre site sur Google. Un bon SEO signifie plus de visibilite, plus de visiteurs et plus de clients. Il est integre des la conception de chaque site. Voir ma page <a href='/services/optimisation-seo' class='text-accent underline'>optimisation SEO</a>."
+      },
+      {
+        q: "Pourquoi ne pas utiliser WordPress ?",
+        a: "WordPress convient a certains projets, mais le code sur mesure offre de meilleures performances, plus de securite et une liberte totale de personnalisation. Pour un comparatif detaille, consultez ma page <a href='/comparatifs/wordpress-vs-sur-mesure' class='text-accent underline'>WordPress vs code sur mesure</a>."
+      },
+      {
+        q: "Comment se passe la maintenance du site ?",
+        a: "Je propose des forfaits de maintenance mensuelle incluant les mises a jour de securite, les sauvegardes regulieres, le monitoring des performances et les petites modifications de contenu. Votre site reste performant et securise dans le temps."
+      }
+    ]
+  },
+  {
+    title: 'Processus',
+    items: [
+      {
+        q: "Comment se deroule un projet de A a Z ?",
+        a: "Un projet suit 4 etapes : 1) Echange initial pour definir vos besoins, 2) Conception de la maquette et validation, 3) Developpement avec points d'etape reguliers, 4) Livraison, mise en ligne et formation. Chaque etape est validee ensemble avant de passer a la suivante."
+      },
+      {
+        q: "Combien de temps prend la creation d'un site ?",
+        a: "Un site vitrine est livre en 2 a 4 semaines, une boutique en ligne en 3 a 6 semaines, et une application web en 4 a 8 semaines. Les delais dependent de la complexite du projet et de votre reactivite pour fournir les contenus."
+      },
+      {
+        q: "Que dois-je fournir pour demarrer le projet ?",
+        a: "Pour demarrer, il me faut : vos textes et contenus (ou un brief pour les rediger), votre logo et charte graphique si existante, vos photos ou acces a une banque d'images, et vos acces au nom de domaine et hebergement si vous en avez deja."
+      },
+      {
+        q: "Comment se passent les retours et modifications ?",
+        a: "Des points d'etape reguliers sont prevus a chaque phase du projet. Vous pouvez faire vos retours par email, visio ou via un outil collaboratif. Deux tours de revision sont inclus dans chaque etape pour affiner le resultat."
+      },
+      {
+        q: "Que se passe-t-il apres la livraison du site ?",
+        a: "Apres la livraison, je vous forme a l'utilisation de votre site et reste disponible pour repondre a vos questions. Un forfait de maintenance est propose pour le suivi technique. Vous restez proprietaire de l'integralite du code et des contenus."
+      }
+    ]
+  }
+]
+
+const allQuestions = faqCategories.flatMap(cat => cat.items)
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": allQuestions.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a.replace(/<[^>]*>/g, '')
+        }
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://evandavison.fr/faq" }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Questions frequentes | Evan Davison -- Developpeur Web Rennes"
+  description="Retrouvez les reponses a toutes vos questions sur la creation de sites web, les tarifs, les delais et le processus de travail avec Evan Davison."
+  canonical="https://evandavison.fr/faq"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">FAQ</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-12 sm:py-20">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink mb-6 leading-tight">
+        Questions <em class="text-accent">frequentes</em>
+      </h1>
+      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+        Tout ce que vous devez savoir avant de lancer votre projet web. Si votre question n'est pas ici, <a href="/#contact" class="text-accent underline">contactez-moi directement</a>.
+      </p>
+    </section>
+
+    <!-- FAQ par categorie -->
+    {faqCategories.map(category => (
+      <section class="section-container pb-12">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+          {category.title}
+        </h2>
+        <div class="max-w-3xl space-y-4">
+          {category.items.map(item => (
+            <details class="border border-border p-6 group">
+              <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+                {item.q}
+                <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p class="text-text-body mt-4 leading-relaxed" set:html={item.a} />
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- CTA Contact -->
+    <section class="py-16 bg-paper-alt border-t border-border">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Vous avez d'autres questions ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          N'hesitez pas a me contacter. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  details[open] summary span {
+    transform: rotate(45deg);
+  }
+</style>

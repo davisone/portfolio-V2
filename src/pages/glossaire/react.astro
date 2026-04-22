@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "React",
+  "description": "React est une bibliotheque JavaScript open source creee par Meta pour construire des interfaces utilisateur interactives a base de composants.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/react"
+}
+---
+
+<Layout
+  title="React : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que React ? Definition de la bibliotheque JavaScript, ses principes (composants, virtual DOM, hooks) et son utilisation en developpement web."
+  canonical="https://evandavison.fr/glossaire/react"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">React</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        React
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          React est une bibliotheque JavaScript open source creee par Meta (anciennement Facebook) pour construire des interfaces utilisateur. Son approche par composants reutilisables et son systeme de rendu declaratif en font l'outil le plus populaire pour le developpement frontend.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne React ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            React decoupe l'interface utilisateur en composants independants et reutilisables. Chaque composant gere sa propre logique et son propre rendu, puis peut etre compose avec d'autres pour former des interfaces complexes. Cette approche modulaire facilite le developpement, les tests et la maintenance.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le Virtual DOM est l'une des innovations cles de React. Plutot que de manipuler directement le DOM du navigateur (operation couteuse), React maintient une representation virtuelle en memoire. Lorsqu'un etat change, React calcule la difference minimale entre l'ancien et le nouveau Virtual DOM, puis applique uniquement les modifications necessaires au DOM reel.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les Hooks, introduits en 2019, ont revolutionne l'ecriture des composants React. useState, useEffect, useContext et les hooks personnalises permettent de gerer l'etat, les effets de bord et la logique metier de maniere elegante dans des composants fonctionnels, sans avoir recours aux classes.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir React ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ecosysteme le plus vaste : des milliers de librairies et d'outils compatibles</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Communaute immense et documentation de reference</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances elevees grace au Virtual DOM et au rendu selectif</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Composants reutilisables qui accelerent le developpement</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Soutenu par Meta et utilise par Netflix, Airbnb, Spotify et des milliers d'entreprises</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Compatible avec <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> pour un code type et robuste</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">React en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            React seul est une bibliotheque de rendu. Pour construire une application complete, on l'associe a un framework comme <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> qui ajoute le routage, le <a href="/glossaire/ssr" class="text-accent hover:text-accent-hover transition-colors">SSR</a>, le <a href="/glossaire/ssg" class="text-accent hover:text-accent-hover transition-colors">SSG</a> et l'optimisation des performances. Cote style, <a href="/glossaire/tailwind-css" class="text-accent hover:text-accent-hover transition-colors">Tailwind CSS</a> s'integre parfaitement avec l'approche composants de React.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            React est au coeur de mon service de <a href="/services/developpement-react-nextjs" class="text-accent hover:text-accent-hover transition-colors">developpement React / Next.js</a>. Que ce soit pour une <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">application web</a> metier, un tableau de bord ou un site e-commerce, React offre la flexibilite et la robustesse necessaires pour des projets de toute envergure.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/tailwind-css" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Tailwind CSS</a>
+          <a href="/glossaire/ssr" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSR</a>
+          <a href="/glossaire/ui-ux" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">UI/UX Design</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec React pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

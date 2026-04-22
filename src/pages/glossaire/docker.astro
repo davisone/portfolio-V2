@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Docker",
+  "description": "Docker est une plateforme de conteneurisation qui permet d'empaqueter une application et ses dependances dans un conteneur isole et portable.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/docker"
+}
+---
+
+<Layout
+  title="Docker : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Docker ? Definition de la conteneurisation, ses avantages pour le deploiement d'applications et son role dans le developpement web moderne."
+  canonical="https://evandavison.fr/glossaire/docker"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Docker</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Docker
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Docker est une plateforme open source de conteneurisation qui permet d'empaqueter une application avec l'ensemble de ses dependances dans un conteneur leger et portable. Chaque conteneur fonctionne de maniere isolee, garantissant un comportement identique en developpement, en test et en production.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Docker ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Docker utilise la technologie de conteneurisation du noyau Linux pour creer des environnements isoles sans la lourdeur des machines virtuelles. Un Dockerfile definit les instructions pour construire une image : systeme de base, dependances, code source et commandes de demarrage. Cette image devient un conteneur lorsqu'elle est executee.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Docker Compose permet d'orchestrer plusieurs conteneurs ensemble. Par exemple, une application web typique peut combiner un conteneur pour le frontend, un pour l'API, un pour la base de donnees et un pour le cache. Chaque service est defini dans un fichier YAML et demarre en une seule commande.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Docker Hub et les registres prives permettent de stocker et partager des images. L'ecosysteme propose des milliers d'images officielles (Node.js, PostgreSQL, Redis, Nginx) qui servent de base pour construire des environnements personnalises de maniere reproductible.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Docker ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Environnements reproductibles : fini le "ca marche sur ma machine"</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Isolation complete entre les services et leurs dependances</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Deploiement rapide et coherent sur n'importe quelle infrastructure</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Conteneurs legers qui demarrent en quelques secondes</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Scalabilite horizontale facilitee par l'orchestration (Kubernetes, Docker Swarm)</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Integration naturelle avec les pipelines <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Docker en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Docker est devenu un standard dans le developpement web moderne. Il permet de conteneuriser des applications <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, des API <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">REST</a> ou <a href="/glossaire/graphql" class="text-accent hover:text-accent-hover transition-colors">GraphQL</a>, et des bases de donnees comme <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a> ou <a href="/glossaire/mongodb" class="text-accent hover:text-accent-hover transition-colors">MongoDB</a> dans un environnement unifie.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Dans mes services de <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">creation d'applications web</a>, Docker garantit que chaque projet dispose d'un environnement de developpement identique a la production, reduisant les bugs lies a la configuration et accelerant les mises en production.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/ci-cd" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CI/CD</a>
+          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
+          <a href="/glossaire/postgresql" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PostgreSQL</a>
+          <a href="/glossaire/git" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Git</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin de conteneuriser votre application ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

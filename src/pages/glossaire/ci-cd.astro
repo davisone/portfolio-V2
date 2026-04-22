@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "CI/CD",
+  "description": "CI/CD designe l'integration continue et le deploiement continu, un ensemble de pratiques DevOps qui automatisent les tests, la construction et la mise en production du code.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/ci-cd"
+}
+---
+
+<Layout
+  title="CI/CD : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que le CI/CD ? Definition de l'integration continue et du deploiement continu, leurs avantages et leur mise en oeuvre dans le developpement web."
+  canonical="https://evandavison.fr/glossaire/ci-cd"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">CI/CD</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        CI/CD
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          CI/CD designe l'integration continue (Continuous Integration) et le deploiement continu (Continuous Deployment). C'est un ensemble de pratiques DevOps qui automatisent les etapes entre l'ecriture du code et sa mise en production : tests automatiques, construction de l'application et deploiement. L'objectif est de livrer des mises a jour fiables plus rapidement et plus frequemment.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne le CI/CD ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            L'integration continue (CI) se declenche automatiquement a chaque push de code sur le depot <a href="/glossaire/git" class="text-accent hover:text-accent-hover transition-colors">Git</a>. Le pipeline CI execute les tests unitaires, les tests d'integration, l'analyse de code statique et la construction de l'application. Si une etape echoue, l'equipe est immediatement notifiee.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le deploiement continu (CD) prend le relais apres la CI. Une fois les tests passes et le code fusionne dans la branche principale, le CD deploie automatiquement l'application en production (ou en staging pour le Continuous Delivery, qui necessite une validation manuelle avant la production).
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les outils de CI/CD les plus utilises incluent GitHub Actions, GitLab CI, Jenkins et CircleCI. Des plateformes comme <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a> integrent nativement le CD : chaque push sur la branche principale declenche automatiquement un deploiement en production, et chaque pull request genere un environnement de preview.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi mettre en place du CI/CD ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Detection precoce des bugs grace aux tests automatises a chaque commit</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Livraisons plus frequentes et plus fiables en production</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Reduction du risque de regression grace aux suites de tests</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Deploiements reproductibles qui eliminent les erreurs manuelles</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Feedback rapide pour les developpeurs sur la qualite du code</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Environnements de preview automatiques pour chaque pull request</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">CI/CD en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le CI/CD est integre dans tous mes projets de developpement. Avec <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a>, chaque push declenche un deploiement automatique. Les pipelines GitHub Actions executent les linters, les tests <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> et les verifications de build avant chaque merge. Les conteneurs <a href="/glossaire/docker" class="text-accent hover:text-accent-hover transition-colors">Docker</a> garantissent la reproductibilite des builds.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Que ce soit pour une <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">application web</a> ou un <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">site web</a>, la mise en place de pipelines CI/CD assure des livraisons rapides, fiables et sans stress.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/git" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Git</a>
+          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
+          <a href="/glossaire/docker" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Docker</a>
+          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/jamstack" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Jamstack</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'automatiser vos deploiements ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

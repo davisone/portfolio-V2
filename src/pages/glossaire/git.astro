@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Git",
+  "description": "Git est un systeme de controle de version distribue open source qui permet de suivre les modifications du code source et de collaborer efficacement.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/git"
+}
+---
+
+<Layout
+  title="Git : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Git ? Definition du systeme de controle de version distribue, ses concepts fondamentaux (branches, commits, merge) et son role dans le developpement web."
+  canonical="https://evandavison.fr/glossaire/git"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Git</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Git
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Git est un systeme de controle de version distribue cree par Linus Torvalds en 2005. Il permet de suivre chaque modification du code source, de travailler en parallele sur plusieurs fonctionnalites grace aux branches, et de collaborer efficacement en equipe. Git est aujourd'hui l'outil de versionning standard dans l'industrie du developpement logiciel.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Git ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Git enregistre des instantanes (snapshots) de l'etat complet du projet a chaque commit. Chaque commit contient un identifiant unique, les modifications apportees, l'auteur et une reference au commit precedent, formant ainsi un historique complet et immutable du projet.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le systeme de branches est au coeur de Git. Une branche est simplement un pointeur vers un commit, ce qui rend la creation et la fusion de branches extremement rapides. Le workflow standard consiste a creer une branche pour chaque fonctionnalite ou correction, travailler de maniere isolee, puis fusionner les modifications dans la branche principale apres relecture.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Git etant distribue, chaque developpeur dispose d'une copie complete du depot sur sa machine. Les plateformes comme GitHub, GitLab ou Bitbucket ajoutent une couche collaborative avec les pull requests, les revues de code et l'integration avec les outils de <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Git ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Historique complet de chaque modification avec possibilite de revenir en arriere</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Branches legeres pour travailler sur plusieurs fonctionnalites en parallele</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Collaboration fluide grace aux pull requests et aux revues de code</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Fonctionne hors ligne : chaque copie locale est un depot complet</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Standard de l'industrie, indispensable pour tout developpeur</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Base des workflows de deploiement automatise avec <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Git en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Git est un outil fondamental dans tous mes projets de developpement. Chaque projet suit des conventions strictes : commits structures (type, scope, message), branches nommees par fonctionnalite, et deploiement automatique sur <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a> a chaque push sur la branche principale.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Que ce soit pour un <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">site web</a>, une <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">application web</a> ou une <a href="/services/developpement-application-mobile" class="text-accent hover:text-accent-hover transition-colors">application mobile</a>, Git garantit la tracabilite, la securite et la collaboration sur chaque projet livre.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/ci-cd" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CI/CD</a>
+          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
+          <a href="/glossaire/docker" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Docker</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'un developpeur avec un workflow Git rigoureux ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

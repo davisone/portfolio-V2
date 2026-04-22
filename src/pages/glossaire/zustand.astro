@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Zustand",
+  "description": "Zustand est un gestionnaire d'etat leger et minimaliste pour React, offrant une API simple basee sur des hooks sans boilerplate.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/zustand"
+}
+---
+
+<Layout
+  title="Zustand : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Zustand ? Definition du gestionnaire d'etat leger pour React, ses avantages par rapport a Redux et son utilisation dans les applications modernes."
+  canonical="https://evandavison.fr/glossaire/zustand"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Zustand</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Zustand
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Zustand (mot allemand pour "etat") est un gestionnaire d'etat leger et minimaliste pour <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a>. Avec une API basee sur des hooks et sans boilerplate, Zustand offre une alternative elegante a Redux pour gerer l'etat global des applications. Sa taille de 1 Ko et sa simplicite en font un choix de plus en plus populaire.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Zustand ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Zustand cree un store avec la fonction create(). Le store contient l'etat et les actions pour le modifier. Les composants React accedent a l'etat via un hook genere automatiquement. Pas besoin de Provider, de reducers, de dispatch ou d'actions typees : l'API est directe et intuitive.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le systeme de selecteurs de Zustand optimise les performances automatiquement. Chaque composant ne se re-rend que lorsque la portion d'etat qu'il utilise change, sans memo ou useMemo explicite. Cette granularite evite les re-rendus inutiles qui peuvent ralentir les applications React complexes.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Zustand est extensible via un systeme de middlewares. Le middleware persist sauvegarde l'etat dans le localStorage ou le sessionStorage. Le middleware devtools connecte le store aux Redux DevTools pour le debug. Le middleware immer permet de modifier l'etat de maniere mutable tout en preservant l'immutabilite sous le capot.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir Zustand ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> API minimale : un store se cree en quelques lignes, sans boilerplate</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ultra-leger : environ 1 Ko minifie et gzippe</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Pas de Provider : le store est accessible depuis n'importe quel composant</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Selecteurs automatiques qui evitent les re-rendus inutiles</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Compatible <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> avec inference de types native</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Fonctionne en dehors de React (vanilla JS) pour les cas edge</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Zustand en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Zustand fait partie de ma stack par defaut avec <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> et <a href="/glossaire/tailwind-css" class="text-accent hover:text-accent-hover transition-colors">Tailwind CSS</a>. Il gere l'etat global (theme, authentification, panier, filtres) tandis que TanStack Query prend en charge l'etat serveur (donnees API, cache, synchronisation). Cette separation est claire et performante.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Dans mes services de <a href="/services/developpement-react-nextjs" class="text-accent hover:text-accent-hover transition-colors">developpement React / Next.js</a> et de <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">creation d'applications web</a>, Zustand apporte une gestion d'etat lisible, maintenable et performante, essentielle pour des applications qui evoluent dans le temps.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/tailwind-css" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Tailwind CSS</a>
+          <a href="/glossaire/ssr" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSR</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'une application React avec une gestion d'etat robuste ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

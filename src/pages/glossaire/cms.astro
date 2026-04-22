@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "CMS",
+  "description": "Un CMS (Content Management System) est un systeme de gestion de contenu qui permet de creer, modifier et publier du contenu web sans connaissances techniques.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/cms"
+}
+---
+
+<Layout
+  title="CMS : definition et guide complet | Evan Davison"
+  description="Qu'est-ce qu'un CMS ? Definition du systeme de gestion de contenu, comparaison des CMS traditionnels et headless, et leur role dans la creation de sites web."
+  canonical="https://evandavison.fr/glossaire/cms"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">CMS</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        CMS (Content Management System)
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Un CMS (Content Management System) ou systeme de gestion de contenu est un logiciel qui permet de creer, organiser, modifier et publier du contenu sur un site web sans ecrire de code. Il separe le contenu de sa presentation, permettant a des non-developpeurs de gerer un site web de maniere autonome.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne un CMS ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Un CMS traditionnel (WordPress, Drupal, Joomla) couple le backend (gestion du contenu) et le frontend (affichage). L'utilisateur se connecte a une interface d'administration, cree ou modifie des pages via un editeur visuel, et le CMS genere les pages HTML correspondantes. Cette approche est simple mais peut limiter les performances et la flexibilite du frontend.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Les CMS headless (Strapi, Contentful, Sanity, Payload) separent completement le backend du frontend. Le contenu est accessible via une <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">API REST</a> ou <a href="/glossaire/graphql" class="text-accent hover:text-accent-hover transition-colors">GraphQL</a>, ce qui permet de l'afficher sur n'importe quel support : site web, application mobile, totem en magasin. Le frontend est libre d'utiliser la technologie de son choix.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            L'approche <a href="/glossaire/jamstack" class="text-accent hover:text-accent-hover transition-colors">Jamstack</a> combine un CMS headless avec un generateur de sites statiques. Le contenu est recupere au moment du build (<a href="/glossaire/ssg" class="text-accent hover:text-accent-hover transition-colors">SSG</a>), produisant des pages HTML statiques ultra-rapides. Les modifications de contenu declenchent automatiquement un nouveau build.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser un CMS ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Autonomie : le client gere son contenu sans intervention technique</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Editeur visuel intuitif pour la creation et la modification de contenu</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Gestion des medias (images, documents, videos) centralisee</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Roles et permissions pour le travail collaboratif</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> CMS headless : liberte totale sur le frontend et multi-canal</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Compatible avec les bonnes pratiques <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> (meta, sitemap, structure)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">CMS en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Pour mes clients, je privilegie les CMS headless associes a un frontend <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> ou <a href="/glossaire/astro" class="text-accent hover:text-accent-hover transition-colors">Astro</a>. Cette approche offre les meilleures performances, un <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> optimal et une experience d'edition agreable pour le client, tout en gardant une liberte totale sur le design.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            La mise en place d'un CMS headless fait partie de mes services de <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">creation de sites web</a> et de <a href="/services/creation-boutique-en-ligne" class="text-accent hover:text-accent-hover transition-colors">creation de boutiques en ligne</a>. Le client recoit un site performant avec une interface d'administration pour gerer son contenu en toute autonomie.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/jamstack" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Jamstack</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+          <a href="/glossaire/ssg" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSG</a>
+          <a href="/glossaire/seo" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SEO</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'un site web avec CMS pour gerer votre contenu ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

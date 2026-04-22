@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Responsive Design",
+  "description": "Le responsive design est une approche de conception web qui permet a un site de s'adapter automatiquement a toutes les tailles d'ecran.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/responsive-design"
+}
+---
+
+<Layout
+  title="Responsive Design : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que le responsive design ? Definition, principes et bonnes pratiques pour creer des sites web adaptatifs sur mobile, tablette et desktop."
+  canonical="https://evandavison.fr/glossaire/responsive-design"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Responsive Design</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Responsive Design
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Le responsive design (ou design adaptatif) est une approche de conception web qui garantit qu'un site s'affiche correctement et offre une experience optimale sur tous les types d'ecrans : smartphones, tablettes, ordinateurs portables et ecrans larges.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne le responsive design ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le responsive design repose sur trois piliers techniques : les grilles fluides, les images flexibles et les media queries CSS. Les grilles fluides utilisent des unites relatives (pourcentages, vw, rem) plutot que des pixels fixes, permettant au contenu de s'adapter proportionnellement a la largeur de l'ecran.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Les media queries CSS permettent d'appliquer des styles differents selon les caracteristiques de l'appareil : largeur d'ecran, orientation, resolution. On definit des points de rupture (breakpoints) a partir desquels la mise en page se reorganise. L'approche mobile-first consiste a designer d'abord pour les petits ecrans, puis a enrichir progressivement pour les ecrans plus larges.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les outils modernes comme <a href="/glossaire/tailwind-css" class="text-accent hover:text-accent-hover transition-colors">Tailwind CSS</a> simplifient enormement la mise en oeuvre du responsive design grace a des classes utilitaires prefixees (sm:, md:, lg:) qui appliquent des styles conditionnels de maniere declarative et lisible.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi le responsive est indispensable ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Plus de 60% du trafic web mondial provient des appareils mobiles</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Google utilise le mobile-first indexing : la version mobile est celle qui est indexee</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Impact direct sur le <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> et les <a href="/glossaire/core-web-vitals" class="text-accent hover:text-accent-hover transition-colors">Core Web Vitals</a></li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Taux de conversion superieurs avec une experience utilisateur fluide</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Un seul code source a maintenir au lieu de versions separees mobile/desktop</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Responsive design en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Chaque <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">site web que je cree</a> est concu en mobile-first avec Tailwind CSS. Cette approche garantit que le site est fonctionnel et agreable sur mobile avant d'etre enrichi pour les ecrans plus larges. Le test sur differents appareils et navigateurs fait partie integrante du processus de developpement.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Pour les applications mobiles natives, <a href="/glossaire/flutter" class="text-accent hover:text-accent-hover transition-colors">Flutter</a> offre une approche complementaire en s'adaptant nativement aux conventions de chaque plateforme. Quant aux <a href="/glossaire/pwa" class="text-accent hover:text-accent-hover transition-colors">Progressive Web Apps</a>, elles combinent le responsive design web avec des fonctionnalites natives pour offrir le meilleur des deux mondes.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/tailwind-css" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Tailwind CSS</a>
+          <a href="/glossaire/ui-ux" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">UI/UX Design</a>
+          <a href="/glossaire/pwa" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PWA</a>
+          <a href="/glossaire/core-web-vitals" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Core Web Vitals</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'un site responsive pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

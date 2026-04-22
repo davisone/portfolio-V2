@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Prisma ORM",
+  "description": "Prisma est un ORM (Object-Relational Mapping) moderne pour Node.js et TypeScript qui simplifie l'acces aux bases de donnees avec un typage complet et des migrations automatisees.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/prisma"
+}
+---
+
+<Layout
+  title="Prisma ORM : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Prisma ? Definition de l'ORM TypeScript, avantages du schema declaratif et utilisation avec Next.js et PostgreSQL pour vos projets web."
+  canonical="https://evandavison.fr/glossaire/prisma"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Prisma ORM</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Prisma ORM
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Prisma est un ORM (Object-Relational Mapping) de nouvelle generation pour Node.js et <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a>. Il remplace les requetes SQL brutes par un client type et auto-complete, tout en offrant un systeme de migration de schema declaratif et intuitif.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Prisma ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Prisma s'articule autour de trois composants. Le Prisma Schema est un fichier declaratif ou l'on definit les modeles de donnees, leurs relations et la source de donnees. A partir de ce schema, Prisma genere automatiquement un client TypeScript type et les fichiers de migration SQL.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le Prisma Client est une API fluide et type qui permet d'effectuer des requetes sur la base de donnees avec une autocompletion complete. Chaque requete est verifiee a la compilation : si un champ n'existe pas ou si un type ne correspond pas, TypeScript signale l'erreur immediatement. Cela elimine toute une categorie de bugs lies aux acces base de donnees.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Prisma Migrate gere les evolutions du schema de base de donnees. Lorsqu'on modifie le schema Prisma, l'outil genere automatiquement les instructions SQL de migration correspondantes. L'historique des migrations est versionne avec <a href="/glossaire/git" class="text-accent hover:text-accent-hover transition-colors">Git</a>, garantissant la reproductibilite des environnements.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Prisma ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Typage complet de bout en bout : du schema a l'application</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Autocompletion intelligente pour toutes les requetes</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Migrations automatisees et versionnees</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Compatible avec <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a>, MySQL, SQLite, SQL Server et MongoDB</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Prisma Studio : interface graphique pour explorer et modifier les donnees</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Integration native avec <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> et les API Routes</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Prisma en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Dans une stack Next.js + PostgreSQL, Prisma est la couche d'acces aux donnees ideale. Le schema Prisma sert de source de verite : il definit la structure de la base, genere les types TypeScript et les migrations SQL. Les Server Components de Next.js peuvent directement appeler Prisma Client sans <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">API REST</a> intermediaire.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Pour les projets <a href="/glossaire/saas" class="text-accent hover:text-accent-hover transition-colors">SaaS</a> ou les <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">applications web</a> metier, Prisma simplifie enormement la gestion des donnees relationnelles. Les relations complexes (one-to-many, many-to-many) sont declarees dans le schema et accessibles via des requetes imbriquees intuitives.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/postgresql" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PostgreSQL</a>
+          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec Prisma pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

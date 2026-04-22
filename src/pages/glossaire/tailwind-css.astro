@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Tailwind CSS",
+  "description": "Tailwind CSS est un framework CSS utilitaire qui permet de construire des interfaces personnalisees directement dans le HTML grace a des classes atomiques.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/tailwind-css"
+}
+---
+
+<Layout
+  title="Tailwind CSS : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que Tailwind CSS ? Definition du framework CSS utilitaire, ses avantages et son utilisation pour creer des interfaces web modernes et performantes."
+  canonical="https://evandavison.fr/glossaire/tailwind-css"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Tailwind CSS</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Tailwind CSS
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Tailwind CSS est un framework CSS "utility-first" qui fournit des classes atomiques de bas niveau pour construire n'importe quel design directement dans le markup HTML. Au lieu d'ecrire du CSS personnalise, on compose des classes utilitaires predefinies pour creer des interfaces uniques.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Tailwind CSS ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Tailwind fournit des milliers de classes CSS atomiques qui correspondent chacune a une propriete CSS : text-lg pour la taille du texte, mb-4 pour la marge basse, flex pour le display flex, etc. En combinant ces classes directement dans le HTML, on construit des interfaces sans ecrire une seule ligne de CSS personnalise.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le systeme de configuration de Tailwind permet de definir un design system complet : couleurs, typographies, espacements, breakpoints. Tout est personnalisable dans le fichier tailwind.config. Le <a href="/glossaire/responsive-design" class="text-accent hover:text-accent-hover transition-colors">responsive design</a> est integre nativement grace aux prefixes sm:, md:, lg: qui appliquent des styles conditionnels selon la taille d'ecran.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            En production, Tailwind analyse les fichiers du projet et ne genere que les classes CSS effectivement utilisees. Le fichier CSS final pese generalement moins de 10 Ko compresses, bien en-dessous des frameworks CSS traditionnels. Cette optimisation automatique contribue directement aux bonnes performances et aux <a href="/glossaire/core-web-vitals" class="text-accent hover:text-accent-hover transition-colors">Core Web Vitals</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Tailwind CSS ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Developpement rapide : pas besoin d'inventer des noms de classes ou de changer de fichier</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Design system coherent avec une configuration centralisee</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> CSS minimal en production grace au purge automatique</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Responsive et dark mode integres nativement</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Parfaitement adapte a l'approche composants de <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a></li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Communaute active et ecosysteme de plugins riche</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Tailwind CSS en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Tailwind CSS s'integre naturellement dans une stack <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> + <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> + <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a>. Les composants React encapsulent le markup et les classes Tailwind, formant des blocs reutilisables avec un style colocalize. Ce portfolio meme est construit avec Tailwind et un design system personnalise.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Pour chaque <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">creation de site web</a>, je configure un theme Tailwind sur mesure qui traduit l'identite visuelle du client en tokens de design. Couleurs, typographies, espacements : tout est centralise et coherent, ce qui facilite les evolutions futures et garantit un <a href="/glossaire/ui-ux" class="text-accent hover:text-accent-hover transition-colors">design UI/UX</a> homogene.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/responsive-design" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Responsive Design</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/ui-ux" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">UI/UX Design</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec Tailwind CSS pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

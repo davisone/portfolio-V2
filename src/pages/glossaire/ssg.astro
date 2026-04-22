@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Static Site Generation (SSG)",
+  "description": "Le Static Site Generation est une methode de creation de sites web ou toutes les pages HTML sont generees au moment du build, avant le deploiement.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/ssg"
+}
+---
+
+<Layout
+  title="Static Site Generation (SSG) : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que le SSG ? Definition du Static Site Generation, avantages en performance et SEO, et comparaison avec le SSR pour vos projets web."
+  canonical="https://evandavison.fr/glossaire/ssg"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">SSG</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        Static Site Generation (SSG)
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Le Static Site Generation (SSG) est une approche de developpement web ou toutes les pages HTML sont pre-generees au moment de la compilation (build), puis servies directement sous forme de fichiers statiques. Resultat : des performances maximales et une securite renforcee.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne le SSG ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Lors de la phase de build, le generateur de site statique compile l'ensemble des pages en fichiers HTML, CSS et JavaScript. Ces fichiers sont ensuite deployes sur un CDN (Content Delivery Network) et servis directement aux visiteurs sans aucun traitement serveur a chaque requete.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Contrairement au <a href="/glossaire/ssr" class="text-accent hover:text-accent-hover transition-colors">Server-Side Rendering (SSR)</a>, il n'y a pas de generation dynamique a chaque visite. Les donnees sont recuperees une seule fois au moment du build, ce qui elimine la latence liee aux requetes serveur et aux acces base de donnees.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Des frameworks comme <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, Astro ou Gatsby permettent de generer des sites statiques tout en conservant la puissance des composants <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a>. L'approche <a href="/glossaire/jamstack" class="text-accent hover:text-accent-hover transition-colors">JAMstack</a> s'appuie largement sur le SSG pour offrir des sites rapides et fiables.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Avantages du SSG</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances optimales : les fichiers statiques sont servis depuis un CDN mondial</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Securite renforcee : aucune base de donnees ou serveur dynamique expose</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> excellent grace au HTML pre-rendu et aux temps de chargement rapides</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Couts d'hebergement reduits : pas de serveur a maintenir</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Fiabilite maximale : pas de panne serveur possible sur du contenu statique</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Scalabilite naturelle : un CDN gere sans effort les pics de trafic</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">SSG en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le SSG est le choix ideal pour les sites vitrines, blogs, portfolios et documentations. Si votre contenu ne change pas a chaque visite, le SSG offre le meilleur rapport performance/cout. Ce portfolio meme est construit avec Astro, un framework SSG moderne.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Pour une <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">creation de site vitrine</a>, le SSG combine avec un <a href="/glossaire/cms" class="text-accent hover:text-accent-hover transition-colors">CMS headless</a> permet de proposer une interface d'administration simple pour le client tout en conservant des performances exceptionnelles. Le deploiement sur <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a> avec rebuild automatique garantit un site toujours a jour.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/ssr" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSR</a>
+          <a href="/glossaire/jamstack" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">JAMstack</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
+          <a href="/glossaire/cms" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CMS</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec le SSG pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

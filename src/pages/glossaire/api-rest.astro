@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "API REST",
+  "description": "Une API REST est une interface de programmation qui permet a des applications de communiquer entre elles via le protocole HTTP en suivant les principes de l'architecture REST.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/api-rest"
+}
+---
+
+<Layout
+  title="API REST : definition et guide complet | Evan Davison"
+  description="Qu'est-ce qu'une API REST ? Definition, fonctionnement et utilisation en developpement web. Guide complet par Evan Davison, developpeur fullstack a Rennes."
+  canonical="https://evandavison.fr/glossaire/api-rest"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">API REST</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        API REST
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          Une API REST (Representational State Transfer) est une interface de programmation qui permet a differentes applications de communiquer entre elles via le protocole HTTP, en respectant un ensemble de contraintes architecturales standardisees.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne une API REST ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Une API REST repose sur le protocole HTTP et utilise ses methodes standard pour effectuer des operations sur des ressources. Chaque ressource est identifiee par une URL unique, et les operations sont realisees a l'aide des verbes HTTP : GET pour lire, POST pour creer, PUT ou PATCH pour mettre a jour, et DELETE pour supprimer.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le principe fondamental de REST est le caractere stateless (sans etat) : chaque requete du client contient toutes les informations necessaires a son traitement. Le serveur ne conserve aucune information de session entre deux requetes, ce qui simplifie grandement l'architecture et la montee en charge.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les donnees sont generalement echangees au format JSON, bien que XML soit aussi supporte. Cette standardisation permet a n'importe quelle application, quel que soit son langage de programmation, de consommer une API REST de maniere uniforme.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser une API REST ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Interoperabilite entre differents systemes et langages de programmation</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Scalabilite facilitee grace a l'absence d'etat cote serveur</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Separation claire entre le frontend et le backend</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Cache HTTP natif pour ameliorer les performances</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Standard largement adopte avec une documentation abondante</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">API REST en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Dans un projet web moderne, l'API REST est la colonne vertebrale de la communication entre le frontend et le backend. Par exemple, une <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">application web</a> construite avec <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> ou <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> consomme des endpoints REST pour afficher des donnees dynamiques.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Avec des outils comme <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma</a> et <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a>, on peut construire des APIs REST robustes et typees. La securisation passe souvent par <a href="/glossaire/oauth" class="text-accent hover:text-accent-hover transition-colors">OAuth 2.0</a> ou des tokens JWT, tandis que le deploiement sur <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a> permet de mettre en production rapidement des API Routes Next.js.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/oauth" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">OAuth 2.0</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma ORM</a>
+          <a href="/glossaire/postgresql" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PostgreSQL</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec une API REST pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

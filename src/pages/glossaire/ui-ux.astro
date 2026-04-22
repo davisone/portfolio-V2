@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "UI/UX Design",
+  "description": "UI/UX Design designe la conception d'interfaces utilisateur (UI) et l'optimisation de l'experience utilisateur (UX) pour les produits numeriques.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/ui-ux"
+}
+---
+
+<Layout
+  title="UI/UX Design : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que l'UI/UX Design ? Definition de la conception d'interfaces et de l'experience utilisateur, leur importance et leur impact sur les projets web."
+  canonical="https://evandavison.fr/glossaire/ui-ux"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">UI/UX Design</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        UI/UX Design
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          L'UI Design (User Interface) concerne la conception visuelle des interfaces : typographie, couleurs, mise en page, boutons et interactions. L'UX Design (User Experience) englobe l'ensemble du parcours utilisateur : architecture de l'information, ergonomie, accessibilite et satisfaction globale. Les deux disciplines sont complementaires et essentielles a la reussite d'un produit numerique.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne l'UI/UX Design ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le processus UX commence par la recherche utilisateur : comprendre les besoins, les comportements et les frustrations des utilisateurs cibles. Cette phase produit des personas, des parcours utilisateurs et une architecture de l'information qui structurent le produit. Les wireframes (maquettes fil de fer) definissent la disposition des elements sans se soucier du visuel.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            L'UI Design intervient ensuite pour donner vie aux wireframes. Le designer choisit une typographie, une palette de couleurs, un systeme d'espacement et des composants visuels coherents qui forment un design system. Chaque element visuel est pense pour guider l'utilisateur, hierarchiser l'information et renforcer l'identite de marque.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Les tests utilisateurs valident les choix de design. Des sessions de test avec des utilisateurs reels revelent les points de friction, les incomprehensions et les opportunites d'amelioration. Ce cycle iteratif (concevoir, tester, ameliorer) est au coeur d'un design centre sur l'utilisateur.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi investir dans l'UI/UX ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Premiere impression : un design soigne inspire confiance en quelques secondes</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Taux de conversion : une UX fluide guide l'utilisateur vers l'action souhaitee</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Retention : les utilisateurs reviennent sur les produits agreable a utiliser</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Accessibilite : un bon design est utilisable par tous, y compris les personnes en situation de handicap</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> : Google favorise les sites avec une bonne experience utilisateur (Core Web Vitals)</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Reduction des couts : corriger un probleme de design en amont est bien moins couteux qu'apres le developpement</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">UI/UX en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le design est indissociable du developpement dans mon approche. Chaque projet demarre par une phase de conception qui definit l'experience utilisateur avant la premiere ligne de code. L'implementation avec <a href="/glossaire/tailwind-css" class="text-accent hover:text-accent-hover transition-colors">Tailwind CSS</a> et <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> garantit un <a href="/glossaire/responsive-design" class="text-accent hover:text-accent-hover transition-colors">responsive design</a> fidele aux maquettes sur tous les appareils.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            L'UI/UX est integre dans tous mes services : <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">creation de sites web</a>, <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">applications web</a> et <a href="/services/refonte-site-web" class="text-accent hover:text-accent-hover transition-colors">refonte de sites existants</a>. Un design intentionnel et unique, jamais generique, est la base de chaque projet.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/responsive-design" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Responsive Design</a>
+          <a href="/glossaire/tailwind-css" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Tailwind CSS</a>
+          <a href="/glossaire/seo" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SEO</a>
+          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/pwa" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PWA</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'un design sur mesure pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

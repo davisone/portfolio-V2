@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "MongoDB",
+  "description": "MongoDB est une base de donnees NoSQL orientee documents qui stocke les donnees sous forme de documents JSON flexibles.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/mongodb"
+}
+---
+
+<Layout
+  title="MongoDB : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que MongoDB ? Definition de la base de donnees NoSQL orientee documents, ses avantages et son utilisation dans le developpement web moderne."
+  canonical="https://evandavison.fr/glossaire/mongodb"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">MongoDB</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        MongoDB
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          MongoDB est une base de donnees NoSQL open source orientee documents. Contrairement aux bases relationnelles comme PostgreSQL, MongoDB stocke les donnees sous forme de documents BSON (JSON binaire), offrant une flexibilite de schema ideale pour les applications modernes aux modeles de donnees evolutifs.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne MongoDB ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            MongoDB organise les donnees en collections de documents. Chaque document est un objet JSON qui peut contenir des champs de types varies, des sous-documents imbriques et des tableaux. Contrairement aux tables SQL, les documents d'une meme collection n'ont pas besoin de suivre un schema identique, ce qui facilite l'evolution du modele de donnees.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le systeme de requetes de MongoDB est expressif et puissant. Il supporte les filtres complexes, l'aggregation pipeline pour les transformations de donnees, la recherche full-text, les requetes geospatiales et les index pour optimiser les performances. MongoDB Atlas, le service cloud managee, ajoute la recherche vectorielle et la synchronisation en temps reel.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            MongoDB propose la replication automatique via les replica sets pour la haute disponibilite, et le sharding pour distribuer les donnees horizontalement sur plusieurs serveurs. Cette architecture permet de gerer des volumes de donnees massifs tout en maintenant des temps de reponse rapides.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser MongoDB ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Schema flexible qui s'adapte a l'evolution des besoins sans migration complexe</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Documents JSON natifs, parfaitement compatibles avec JavaScript et <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a></li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Scalabilite horizontale native via le sharding</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances elevees en lecture et en ecriture</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> MongoDB Atlas offre un service cloud managee avec tier gratuit</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ideal pour les prototypes rapides, les applications temps reel et les catalogues produits</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">MongoDB en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            MongoDB est un choix pertinent pour les applications dont le modele de donnees est flexible ou hierarchique. Combine avec <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> et <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma</a> (qui supporte MongoDB), il permet de construire des applications full-stack modernes avec un typage de bout en bout grace a <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a>.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Pour les projets necessitant une base de donnees flexible et performante, j'integre MongoDB dans mes services de <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">creation d'applications web</a>. Pour les projets qui necessitent davantage de relations structurees, <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a> reste une alternative solide.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/postgresql" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PostgreSQL</a>
+          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma</a>
+          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
+          <a href="/glossaire/firebase" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Firebase</a>
+          <a href="/glossaire/supabase" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Supabase</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'une base de donnees MongoDB pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>

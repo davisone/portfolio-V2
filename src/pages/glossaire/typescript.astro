@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "TypeScript",
+  "description": "TypeScript est un sur-ensemble de JavaScript developpe par Microsoft qui ajoute un systeme de types statiques au langage.",
+  "inDefinedTermSet": "https://evandavison.fr/glossaire",
+  "url": "https://evandavison.fr/glossaire/typescript"
+}
+---
+
+<Layout
+  title="TypeScript : definition et guide complet | Evan Davison"
+  description="Qu'est-ce que TypeScript ? Definition, avantages du typage statique et utilisation en developpement web moderne avec React et Next.js."
+  canonical="https://evandavison.fr/glossaire/typescript"
+  schema={schema}
+>
+  <Header client:load />
+  <main id="main-content" class="pt-20">
+
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">TypeScript</li>
+      </ol>
+    </nav>
+
+    <article class="section-container py-12 sm:py-16 max-w-3xl">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+        TypeScript
+      </h1>
+
+      <div class="border-l-2 border-accent pl-6 mb-8">
+        <p class="text-lg text-text-body leading-relaxed italic">
+          TypeScript est un langage de programmation open source developpe par Microsoft. C'est un sur-ensemble de JavaScript qui ajoute un systeme de types statiques optionnel, permettant de detecter les erreurs avant l'execution du code.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne TypeScript ?</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            TypeScript etend JavaScript en ajoutant des annotations de types : on peut declarer le type attendu pour les variables, les parametres de fonctions, les retours et les structures de donnees. Le compilateur TypeScript (tsc) verifie ensuite la coherence de ces types a la compilation et signale les erreurs avant que le code ne soit execute.
+          </p>
+          <p class="text-text-body leading-relaxed mb-4">
+            Le code TypeScript est transpile en JavaScript standard, compatible avec tous les navigateurs et environnements d'execution. Cela signifie que TypeScript n'a aucun impact sur les performances a l'execution : tout le travail de verification se fait au moment du developpement.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Le systeme de types de TypeScript est progressif : on peut l'adopter incrementalement dans un projet existant. Les types generiques, les types utilitaires (Partial, Omit, Pick), les types conditionnels et les types d'inference automatique offrent une expressivite remarquable pour modeliser des structures de donnees complexes.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser TypeScript ?</h2>
+          <ul class="space-y-2">
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Detection des bugs au moment du developpement, pas en production</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Autocompletion et documentation intelligente dans l'editeur de code</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Refactoring securise : le compilateur signale toutes les references cassees</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Code plus lisible et maintenable grace aux types explicites</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ecosysteme mature avec des definitions de types pour la quasi-totalite des librairies</li>
+            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Standard de l'industrie : adopte par la majorite des projets professionnels</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-serif text-2xl font-bold text-ink mb-4">TypeScript en pratique</h2>
+          <p class="text-text-body leading-relaxed mb-4">
+            TypeScript est le langage par defaut dans l'ecosysteme <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> et <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>. Combine avec <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma</a>, il offre un typage de bout en bout : du schema de base de donnees jusqu'au composant frontend, chaque couche de l'application beneficie de la verification de types.
+          </p>
+          <p class="text-text-body leading-relaxed">
+            Dans mes projets de <a href="/services/developpement-react-nextjs" class="text-accent hover:text-accent-hover transition-colors">developpement React / Next.js</a>, j'utilise TypeScript en mode strict. Cette rigueur reduit drastiquement les bugs en production et facilite la collaboration sur les projets d'equipe. Associe a des outils de <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a>, la verification de types fait partie du pipeline de validation automatique.
+          </p>
+        </section>
+      </div>
+
+      <div class="border-t border-border mt-12 pt-8">
+        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+        <div class="flex flex-wrap gap-2">
+          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma ORM</a>
+          <a href="/glossaire/ci-cd" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CI/CD</a>
+        </div>
+      </div>
+
+      <div class="border-t border-border mt-8 pt-8">
+        <p class="text-text-body mb-4">Besoin d'aide avec TypeScript pour votre projet ?</p>
+        <a href="/#contact" class="btn-primary">Me contacter</a>
+      </div>
+    </article>
+
+  </main>
+  <Footer />
+</Layout>
