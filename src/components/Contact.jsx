@@ -238,7 +238,7 @@ export default function Contact() {
                 <p
                   role={status.type === 'error' ? 'alert' : 'status'}
                   className={`text-sm mt-4 text-center ${
-                    status.type === 'success' ? 'text-green-700' : 'text-red-700'
+                    status.type === 'success' ? 'text-ink' : 'text-accent'
                   }`}
                 >
                   {status.message}

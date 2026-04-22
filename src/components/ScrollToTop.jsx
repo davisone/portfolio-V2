@@ -31,7 +31,7 @@ export default function ScrollToTop() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 p-3 bg-ink hover:bg-accent text-white rounded-full shadow-lg shadow-ink/25 transition-colors"
+          className="fixed bottom-6 right-6 z-50 p-3 bg-ink hover:bg-accent text-paper shadow-lg shadow-ink/25 transition-colors"
           aria-label="Retour en haut"
         >
           <HiArrowUp size={24} />

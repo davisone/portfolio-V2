@@ -5,12 +5,35 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-ink: 26 17 8;
+    --color-paper: 245 240 232;
+    --color-paper-alt: 237 232 223;
+    --color-accent: 192 57 43;
+    --color-accent-hover: 231 76 60;
+    --color-muted: 138 127 114;
+    --color-border: 212 203 191;
+    --color-text-body: 74 64 53;
+  }
+
+  .dark {
+    --color-ink: 240 235 225;
+    --color-paper: 18 16 14;
+    --color-paper-alt: 28 26 23;
+    --color-accent: 205 72 58;
+    --color-accent-hover: 231 76 60;
+    --color-muted: 140 133 125;
+    --color-border: 50 45 40;
+    --color-text-body: 180 172 162;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
     @apply font-sans antialiased bg-paper text-ink font-light;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
@@ -37,7 +60,7 @@
   }
 
   .section-title em {
-    @apply italic text-accent not-italic;
+    @apply text-accent;
     font-style: italic;
   }
 
@@ -64,14 +87,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f0e8;
+  background: rgb(var(--color-paper));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d4cbbf;
+  background: rgb(var(--color-border));
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a7f72;
+  background: rgb(var(--color-muted));
 }

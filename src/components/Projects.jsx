@@ -10,7 +10,7 @@ function ImageSkeleton() {
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/30 to-transparent animate-shimmer" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-12 h-12 border-2 border-accent/30 border-t-accent rounded-full animate-spin" />
+          <div className="w-8 h-0.5 bg-accent/50 animate-shimmer" />
           <span className="text-muted text-sm font-mono">Chargement...</span>
         </div>
       </div>
@@ -44,7 +44,9 @@ function ProjectImage({ project, className }) {
       <img
         ref={imgRef}
         src={project.image}
-        alt={project.title}
+        alt={`${project.title} — ${project.tags.slice(0, 3).join(', ')}`}
+        loading="lazy"
+        decoding="async"
         className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
         onLoad={handleLoad}
       />
@@ -106,12 +108,12 @@ const projects = [
     ],
   },
   {
-    title: 'QRaft',
+    title: 'UseQRaft',
     description:
       'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
     image: '/projets/3.png',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
-    liveUrl: 'https://qr-aft.vercel.app',
+    liveUrl: 'https://useqraft.com',
     githubUrl: null,
     features: [
       'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
@@ -148,7 +150,7 @@ function ProjectModal({ project, onClose }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/90"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}

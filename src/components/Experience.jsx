@@ -67,9 +67,9 @@ export default function Experience() {
                 transition={{ duration: 0.5, delay: index * 0.12 }}
                 className="border-b border-border py-8 grid grid-cols-1 lg:grid-cols-[100px_1fr_1fr] gap-4 lg:gap-8 hover:pl-2 transition-all duration-300"
               >
-                <div className="font-mono text-xs text-muted uppercase tracking-wide">
+                <time className="font-mono text-xs text-muted uppercase tracking-wide block">
                   {exp.period}
-                </div>
+                </time>
 
                 <div>
                   <span className="font-mono text-[0.65rem] text-muted uppercase tracking-wide">

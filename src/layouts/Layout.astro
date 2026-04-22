@@ -7,6 +7,7 @@ interface Props {
   canonical?: string
   ogImage?: string
   schema?: object
+  noindex?: boolean
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   canonical = 'https://evandavison.fr',
   ogImage = 'https://evandavison.fr/og-image.png',
   schema,
+  noindex = false,
 } = Astro.props
 
 const today = new Date().toISOString().split('T')[0]
@@ -28,12 +30,22 @@ const today = new Date().toISOString().split('T')[0]
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Preconnect & DNS Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <!-- SEO Primary -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content="Evan Davison, développeur fullstack, portfolio développeur Rennes, développeur web Rennes, alternance chef de projet IT, alternance gestion de projet informatique Rennes, React, Next.js, TypeScript, Flutter, Node.js, DVS Web" />
     <meta name="author" content="Evan Davison" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
     <link rel="canonical" href={canonical} />
 
     <!-- Geo Meta Tags -->
@@ -48,6 +60,8 @@ const today = new Date().toISOString().split('T')[0]
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="Evan Davison - Portfolio" />
     <meta property="profile:first_name" content="Evan" />
@@ -150,9 +164,17 @@ const today = new Date().toISOString().split('T')[0]
       gtag('js', new Date());
       gtag('config', 'G-ZS8DC81PH4');
     </script>
+    <!-- Theme detection (avant le body pour eviter le flash) -->
+    <script is:inline>
+      (function() {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:outline-none">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-ink focus:text-paper focus:outline-none">
       Aller au contenu principal
     </a>
     <slot />

@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { name: 'Accueil', href: '#accueil' },
   { name: 'A propos', href: '#apropos' },
   { name: 'Realisations', href: '#realisations' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '#contact' },
 ]
 
 export default function Header() {
@@ -63,17 +64,20 @@ export default function Header() {
           ))}
         </motion.ul>
 
-        {/* CTA */}
-        <motion.a
-          href="https://dvs-web.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="hidden md:inline-flex font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent hover:opacity-80 transition-opacity duration-300"
-        >
-          DVS Web &#8599;
-        </motion.a>
+        {/* CTA + Theme Toggle */}
+        <div className="hidden md:flex items-center gap-4">
+          <motion.a
+            href="https://dvs-web.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent hover:opacity-80 transition-opacity duration-300"
+          >
+            DVS Web &#8599;
+          </motion.a>
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -106,7 +110,7 @@ export default function Header() {
                   </a>
                 </li>
               ))}
-              <li className="pt-2">
+              <li className="pt-2 flex items-center justify-between">
                 <a
                   href="https://dvs-web.fr"
                   target="_blank"
@@ -115,6 +119,7 @@ export default function Header() {
                 >
                   DVS Web &#8599;
                 </a>
+                <ThemeToggle />
               </li>
             </ul>
           </motion.div>

@@ -68,6 +68,8 @@ export default function Services() {
               <motion.a
                 key={service.title}
                 href={service.href}
+                itemScope
+                itemType="https://schema.org/Service"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -76,10 +78,10 @@ export default function Services() {
                 <span className="font-serif text-5xl font-black text-border/30 mb-6 block group-hover:text-paper/10 transition-colors duration-300">
                   {service.num}
                 </span>
-                <h3 className="font-medium text-ink text-base mb-2 group-hover:text-paper transition-colors duration-300">
+                <h3 itemProp="name" className="font-medium text-ink text-base mb-2 group-hover:text-paper transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed group-hover:text-paper/60 transition-colors duration-300">
+                <p itemProp="description" className="text-sm text-muted leading-relaxed group-hover:text-paper/60 transition-colors duration-300">
                   {service.description}
                 </p>
                 <span className="text-xs text-accent hover:text-accent-hover uppercase tracking-wide mt-4 inline-block group-hover:text-accent-hover transition-colors duration-300">

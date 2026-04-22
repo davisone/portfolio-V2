@@ -3,17 +3,18 @@ export default {
   content: [
     "./src/**/*.{astro,html,js,jsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        ink: '#1a1108',
-        paper: '#f5f0e8',
-        'paper-alt': '#ede8df',
-        accent: '#c0392b',
-        'accent-hover': '#e74c3c',
-        muted: '#8a7f72',
-        border: '#d4cbbf',
-        'text-body': '#4a4035',
+        ink: 'rgb(var(--color-ink) / <alpha-value>)',
+        paper: 'rgb(var(--color-paper) / <alpha-value>)',
+        'paper-alt': 'rgb(var(--color-paper-alt) / <alpha-value>)',
+        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        'accent-hover': 'rgb(var(--color-accent-hover) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        'text-body': 'rgb(var(--color-text-body) / <alpha-value>)',
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],
