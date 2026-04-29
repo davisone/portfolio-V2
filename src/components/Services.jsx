@@ -21,14 +21,14 @@ const services = [
     title: 'Refonte de site',
     description:
       'Modernisation de votre site existant : design, performance, accessibilité et expérience utilisateur.',
-    href: '/services/creation-site-web-rennes',
+    href: '/services/refonte-site-web',
   },
   {
     num: '04',
     title: 'SEO & Performance',
     description:
       'Optimisation du référencement naturel et des performances pour une meilleure visibilité Google.',
-    href: '/services/creation-site-web-rennes',
+    href: '/services/optimisation-seo',
   },
 ]
 
