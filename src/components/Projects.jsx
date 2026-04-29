@@ -1,7 +1,8 @@
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
-import { HiExternalLink, HiCode, HiX } from 'react-icons/hi'
-import { FaGithub } from 'react-icons/fa'
+import useReveal from '../hooks/useReveal'
+
+// framer-motion est garde uniquement pour AnimatePresence (modale)
 
 // Skeleton loader pour l'animation de chargement
 function ImageSkeleton() {
@@ -35,7 +36,7 @@ function ProjectImage({ project, className }) {
   }
 
   if (!project.image) {
-    return <HiCode size={48} className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300" />
+    return <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
   }
 
   return (
@@ -212,7 +213,7 @@ function ProjectModal({ project, onClose }) {
           aria-label="Fermer la modale"
           className="absolute top-4 right-4 p-2 text-muted hover:text-ink hover:bg-paper-alt transition-colors z-10"
         >
-          <HiX size={20} />
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
         </button>
 
         {/* Header image */}
@@ -223,7 +224,7 @@ function ProjectModal({ project, onClose }) {
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
-            <HiCode size={64} className="text-muted/30" />
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted/30"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
           )}
         </div>
 
@@ -272,7 +273,7 @@ function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="btn-primary text-sm"
               >
-                <HiExternalLink size={16} />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
                 Voir le site
               </a>
             )}
@@ -283,7 +284,7 @@ function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="btn-secondary text-sm"
               >
-                <FaGithub size={16} />
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
                 Code source
               </a>
             )}
@@ -298,19 +299,13 @@ function ProjectModal({ project, onClose }) {
 }
 
 export default function Projects() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [revealRef, isInView] = useReveal()
   const [selectedProject, setSelectedProject] = useState(null)
 
   return (
     <section id="realisations" className="border-t border-border py-20 relative">
       <div className="section-container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div ref={revealRef} className={`reveal ${isInView ? 'visible' : ''}`}>
           {/* Big number */}
           <span className="section-num">04</span>
 
@@ -325,19 +320,17 @@ export default function Projects() {
           {/* Projects grid */}
           <div className="border border-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
-              <motion.article
+              <article
                 key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => setSelectedProject(project)}
-                className={`group cursor-pointer p-8 border-b border-border transition-colors duration-300 hover:bg-paper-alt ${
+                className={`reveal group cursor-pointer p-8 border-b border-border transition-colors duration-300 hover:bg-paper-alt ${isInView ? 'visible' : ''} ${
                   (index + 1) % 3 !== 0 ? 'lg:border-r' : ''
                 } ${
                   (index + 1) % 2 !== 0 ? 'md:border-r lg:border-r-0' : 'md:border-r-0'
                 } ${
                   (index + 1) % 3 !== 0 ? 'lg:border-r' : 'lg:border-r-0'
                 }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Project image */}
                 <div className="relative aspect-[16/10] overflow-hidden mb-4 bg-paper-alt">
@@ -348,10 +341,7 @@ export default function Projects() {
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <HiCode
-                        size={48}
-                        className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300"
-                      />
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted/50 group-hover:text-accent/50 transition-colors duration-300"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
                     </div>
                   )}
                 </div>
@@ -375,26 +365,24 @@ export default function Projects() {
                 <span className="inline-block text-ink mt-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5">
                   &#8599;
                 </span>
-              </motion.article>
+              </article>
             ))}
 
             {/* Ghost card — voir plus sur GitHub */}
-            <motion.a
+            <a
               href="https://github.com/davisone"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: projects.length * 0.1 }}
-              className="group flex flex-col items-center justify-center p-8 border-b border-border text-center transition-colors duration-300 hover:bg-paper-alt md:border-r-0 lg:border-r-0"
+              className={`reveal group flex flex-col items-center justify-center p-8 border-b border-border text-center transition-colors duration-300 hover:bg-paper-alt md:border-r-0 lg:border-r-0 ${isInView ? 'visible' : ''}`}
+              style={{ transitionDelay: `${projects.length * 100}ms` }}
             >
-              <FaGithub size={32} className="text-muted/40 mb-4 group-hover:text-ink transition-colors duration-300" />
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-muted/40 mb-4 group-hover:text-ink transition-colors duration-300"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
               <span className="font-mono text-sm text-muted group-hover:text-ink transition-colors duration-300">
                 Voir plus sur GitHub &rarr;
               </span>
-            </motion.a>
+            </a>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Modal */}

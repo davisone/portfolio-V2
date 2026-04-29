@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import useReveal from '../hooks/useReveal'
 
 const services = [
   {
@@ -42,18 +41,12 @@ const techNames = [
 ]
 
 export default function Services() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [ref, isVisible] = useReveal()
 
   return (
     <section id="services" className="border-t border-border py-20 relative">
       <div className="section-container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div ref={ref} className={`reveal ${isVisible ? 'visible' : ''}`}>
           <span className="section-num">02</span>
 
           <div className="mb-16">
@@ -65,15 +58,13 @@ export default function Services() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
-              <motion.a
+              <a
                 key={service.title}
                 href={service.href}
                 itemScope
                 itemType="https://schema.org/Service"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group border-r border-border last:border-r-0 py-8 px-6 transition-colors duration-300 hover:bg-ink"
+                className={`reveal group border-r border-border last:border-r-0 py-8 px-6 transition-colors duration-300 hover:bg-ink ${isVisible ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <span className="font-serif text-5xl font-black text-border/30 mb-6 block group-hover:text-paper/10 transition-colors duration-300">
                   {service.num}
@@ -87,7 +78,7 @@ export default function Services() {
                 <span className="text-xs text-accent hover:text-accent-hover uppercase tracking-wide mt-4 inline-block group-hover:text-accent-hover transition-colors duration-300">
                   En savoir plus &rarr;
                 </span>
-              </motion.a>
+              </a>
             ))}
           </div>
 
@@ -103,7 +94,7 @@ export default function Services() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

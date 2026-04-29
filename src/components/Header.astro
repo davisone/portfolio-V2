@@ -1,0 +1,135 @@
+---
+import ThemeToggle from './ThemeToggle.astro'
+
+const navLinks = [
+  { name: 'Accueil', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Contact', href: '/#contact' },
+]
+---
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+  <nav aria-label="Navigation principale" class="section-container flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="text-xl font-serif text-ink animate-fade-in">
+      Evan<span class="text-accent">.</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden md:flex items-center gap-8 animate-fade-in">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="font-sans text-xs tracking-[0.12em] uppercase text-muted hover:text-ink transition-colors duration-300"
+          >
+            {link.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA + Theme Toggle -->
+    <div class="hidden md:flex items-center gap-4 animate-fade-in">
+      <a
+        href="https://dvs-web.fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent hover:opacity-80 transition-opacity duration-300"
+      >
+        DVS Web &#8599;
+      </a>
+      <ThemeToggle />
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden text-muted hover:text-ink p-2 transition-colors"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      <!-- Hamburger icon -->
+      <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+      <!-- Close icon -->
+      <svg id="icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden bg-paper border-b border-border hidden">
+    <ul class="section-container py-4 space-y-4">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="mobile-nav-link block font-sans text-xs tracking-[0.12em] uppercase text-muted hover:text-ink transition-colors py-2"
+          >
+            {link.name}
+          </a>
+        </li>
+      ))}
+      <li class="pt-2 flex items-center justify-between">
+        <a
+          href="https://dvs-web.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent"
+        >
+          DVS Web &#8599;
+        </a>
+        <ThemeToggle />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script is:inline>
+  (function() {
+    var header = document.getElementById('site-header');
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var iconMenu = document.getElementById('icon-menu');
+    var iconClose = document.getElementById('icon-close');
+    var isOpen = false;
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        header.classList.add('bg-paper', 'border-b', 'border-border', 'py-3');
+        header.classList.remove('bg-transparent', 'py-5');
+      } else {
+        header.classList.remove('bg-paper', 'border-b', 'border-border', 'py-3');
+        header.classList.add('bg-transparent', 'py-5');
+      }
+    });
+
+    menuBtn.addEventListener('click', function() {
+      isOpen = !isOpen;
+      mobileMenu.classList.toggle('hidden', !isOpen);
+      iconMenu.classList.toggle('hidden', isOpen);
+      iconClose.classList.toggle('hidden', !isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      menuBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+
+    var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        isOpen = false;
+        mobileMenu.classList.add('hidden');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>

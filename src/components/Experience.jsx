@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import useReveal from '../hooks/useReveal'
 
 const experiences = [
   {
@@ -37,18 +36,12 @@ const experiences = [
 ]
 
 export default function Experience() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [ref, isVisible] = useReveal()
 
   return (
     <section id="experiences" className="relative border-t border-border py-20 bg-paper-alt">
       <div className="section-container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div ref={ref} className={`reveal ${isVisible ? 'visible' : ''}`}>
           <span className="section-num">03</span>
 
           <div className="mb-16">
@@ -60,12 +53,10 @@ export default function Experience() {
 
           <div>
             {experiences.map((exp, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.12 }}
-                className="border-b border-border py-8 grid grid-cols-1 lg:grid-cols-[100px_1fr_1fr] gap-4 lg:gap-8 hover:pl-2 transition-all duration-300"
+                className={`reveal border-b border-border py-8 grid grid-cols-1 lg:grid-cols-[100px_1fr_1fr] gap-4 lg:gap-8 hover:pl-2 transition-all duration-300 ${isVisible ? 'visible' : ''}`}
+                style={{ transitionDelay: `${index * 120}ms` }}
               >
                 <time className="font-mono text-xs text-muted uppercase tracking-wide block">
                   {exp.period}
@@ -82,10 +73,10 @@ export default function Experience() {
                 <div>
                   <p className="text-sm text-text-body leading-relaxed">{exp.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

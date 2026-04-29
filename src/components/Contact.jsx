@@ -1,5 +1,5 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
+import useReveal from '../hooks/useReveal'
 import emailjs from '@emailjs/browser'
 
 const contactLinks = [
@@ -26,8 +26,7 @@ const contactLinks = [
 ]
 
 export default function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [ref, isInView] = useReveal()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -77,12 +76,7 @@ export default function Contact() {
     <section id="contact" className="border-t border-border relative" ref={ref}>
       <span className="section-num">05</span>
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
-        className="grid lg:grid-cols-2"
-      >
+      <div className={`reveal grid lg:grid-cols-2 ${isInView ? 'visible' : ''}`}>
         {/* Colonne gauche — infos */}
         <div className="bg-accent text-paper p-12 sm:p-16">
           <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-paper/60 mb-6 block">
@@ -247,7 +241,7 @@ export default function Contact() {
             </div>
           </form>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

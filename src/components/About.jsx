@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import useReveal from '../hooks/useReveal'
 
 const values = [
   {
@@ -20,8 +19,7 @@ const values = [
 ]
 
 export default function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [ref, isVisible] = useReveal()
 
   return (
     <section id="apropos" className="relative border-t border-border py-20">
@@ -29,12 +27,7 @@ export default function About() {
         {/* Big faded number */}
         <span className="section-num">01</span>
 
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div ref={ref} className={`reveal ${isVisible ? 'visible' : ''}`}>
           {/* Section header */}
           <div className="mb-16">
             <span className="section-label">Qui suis-je</span>
@@ -83,12 +76,10 @@ export default function About() {
             {/* Values */}
             <div className="space-y-0">
               {values.map((value, index) => (
-                <motion.div
+                <div
                   key={value.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="border-t border-border pt-6 pb-6"
+                  className={`reveal-right ${isVisible ? 'visible' : ''} border-t border-border pt-6 pb-6`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="flex items-start gap-4">
                     <span className="font-serif text-accent text-lg">{value.num}</span>
@@ -97,11 +88,11 @@ export default function About() {
                       <p className="text-sm text-muted mt-1">{value.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
