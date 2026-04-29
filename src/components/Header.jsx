@@ -4,10 +4,11 @@ import { HiMenu, HiX } from 'react-icons/hi'
 import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
-  { name: 'Accueil', href: '#accueil' },
-  { name: 'A propos', href: '#apropos' },
-  { name: 'Realisations', href: '#realisations' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Accueil', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Contact', href: '/#contact' },
 ]
 
 export default function Header() {

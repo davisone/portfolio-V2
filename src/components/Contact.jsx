@@ -63,11 +63,11 @@ export default function Contact() {
         import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
       )
 
-      setStatus({ type: 'success', message: 'Message envoye avec succes !' })
+      setStatus({ type: 'success', message: 'Message envoy\u00e9 avec succ\u00e8s !' })
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('EmailJS error:', error)
-      setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez reessayer.' })
+      setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez r\u00e9essayer.' })
     } finally {
       setIsSubmitting(false)
     }
@@ -91,12 +91,12 @@ export default function Contact() {
 
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-paper leading-none mb-6">
             Un projet<br />
-            en <em>tete</em> ?
+            en <em>t\u00eate</em> ?
           </h2>
 
           <p className="text-paper/80 text-base leading-relaxed mb-8">
             Que ce soit pour un site vitrine, une application web ou mobile,
-            une refonte ou une optimisation SEO, je suis a votre ecoute.
+            une refonte ou une optimisation SEO, je suis \u00e0 votre \u00e9coute.
           </p>
 
           <div className="flex flex-col gap-4 mb-10">
@@ -202,7 +202,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
-                placeholder="Creation d'un site web"
+                placeholder="Cr\u00e9ation d'un site web"
               />
             </div>
 
@@ -221,7 +221,7 @@ export default function Contact() {
                 required
                 rows={5}
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors resize-y min-h-[100px]"
-                placeholder="Decrivez votre projet..."
+                placeholder="D\u00e9crivez votre projet..."
               />
             </div>
 

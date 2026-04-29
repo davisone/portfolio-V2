@@ -1,0 +1,258 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Header from '../../components/Header.jsx'
+import Footer from '../../components/Footer.astro'
+
+const mainServices = [
+  {
+    title: 'Creation de site web',
+    description: 'Sites vitrines modernes, rapides et optimises SEO. Concus sur mesure pour votre activite.',
+    href: '/services/creation-site-web-rennes',
+  },
+  {
+    title: 'Boutique en ligne',
+    description: 'E-commerce performant avec paiement securise, gestion de produits et suivi de commandes.',
+    href: '/services/creation-boutique-en-ligne',
+  },
+  {
+    title: 'Application mobile',
+    description: 'Applications iOS et Android avec Flutter. Une seule codebase pour toutes les plateformes.',
+    href: '/services/developpement-application-mobile',
+  },
+  {
+    title: 'Application web',
+    description: 'Applications web sur mesure : dashboards, SaaS, outils internes. Architecture moderne et scalable.',
+    href: '/services/creation-application-web',
+  },
+  {
+    title: 'Refonte de site',
+    description: 'Modernisation de votre site existant : design, performance, accessibilite et experience utilisateur.',
+    href: '/services/refonte-site-web',
+  },
+  {
+    title: 'Optimisation SEO',
+    description: 'Amelioration de votre visibilite Google : audit technique, contenu, performances et donnees structurees.',
+    href: '/services/optimisation-seo',
+  },
+  {
+    title: 'Maintenance web',
+    description: 'Mises a jour de securite, sauvegardes, monitoring et petites modifications pour garder votre site performant.',
+    href: '/services/maintenance-web',
+  },
+  {
+    title: 'Hebergement web',
+    description: 'Solutions d\'hebergement adaptees a votre projet avec certificat SSL, CDN et support technique.',
+    href: '/services/hebergement-web',
+  },
+  {
+    title: 'Identite visuelle',
+    description: 'Creation de logo, charte graphique et identite de marque coherente pour votre entreprise.',
+    href: '/services/identite-visuelle',
+  },
+]
+
+const techServices = [
+  { title: 'React / Next.js', href: '/services/developpement-react-nextjs' },
+  { title: 'Flutter / Dart', href: '/services/developpement-flutter-dart' },
+]
+
+const cityServices = [
+  { title: 'Rennes', href: '/services/creation-site-web-rennes' },
+  { title: 'Nantes', href: '/services/creation-site-web-nantes' },
+  { title: 'Saint-Malo', href: '/services/creation-site-web-saint-malo' },
+  { title: 'Brest', href: '/services/creation-site-web-brest' },
+  { title: 'Vannes', href: '/services/creation-site-web-vannes' },
+  { title: 'Saint-Brieuc', href: '/services/creation-site-web-saint-brieuc' },
+  { title: 'Lorient', href: '/services/creation-site-web-lorient' },
+  { title: 'Quimper', href: '/services/creation-site-web-quimper' },
+  { title: 'Saint-Nazaire', href: '/services/creation-site-web-saint-nazaire' },
+  { title: 'Laval', href: '/services/creation-site-web-laval' },
+  { title: 'Angers', href: '/services/creation-site-web-angers' },
+  { title: 'Le Mans', href: '/services/creation-site-web-le-mans' },
+  { title: 'Caen', href: '/services/creation-site-web-caen' },
+  { title: 'Fougeres', href: '/services/creation-site-web-fougeres' },
+  { title: 'Vitre', href: '/services/creation-site-web-vitre' },
+  { title: 'Redon', href: '/services/creation-site-web-redon' },
+  { title: 'Dinard', href: '/services/creation-site-web-dinard' },
+  { title: 'Cesson-Sevigne', href: '/services/creation-site-web-cesson-sevigne' },
+  { title: 'Bruz', href: '/services/creation-site-web-bruz' },
+  { title: 'Betton', href: '/services/creation-site-web-betton' },
+  { title: 'Chantepie', href: '/services/creation-site-web-chantepie' },
+]
+
+const proServices = [
+  { title: 'Restaurant', href: '/services/site-web-restaurant-rennes' },
+  { title: 'Artisan', href: '/services/site-web-artisan-rennes' },
+  { title: 'Avocat', href: '/services/site-web-avocat-rennes' },
+  { title: 'Medecin', href: '/services/site-web-medecin-rennes' },
+  { title: 'Immobilier', href: '/services/site-web-immobilier-rennes' },
+  { title: 'Association', href: '/services/site-web-association-rennes' },
+  { title: 'Coach', href: '/services/site-web-coach-rennes' },
+  { title: 'Photographe', href: '/services/site-web-photographe-rennes' },
+  { title: 'PME', href: '/services/site-web-pme-rennes' },
+  { title: 'Startup', href: '/services/site-web-startup-rennes' },
+  { title: 'Kinesitherapeute', href: '/services/site-web-kinesitherapeute-rennes' },
+  { title: 'Dentiste', href: '/services/site-web-dentiste-rennes' },
+  { title: 'Boulanger', href: '/services/site-web-boulanger-rennes' },
+  { title: 'Coiffure', href: '/services/site-web-coiffure-rennes' },
+  { title: 'Consultant', href: '/services/site-web-consultant-rennes' },
+  { title: 'Plombier', href: '/services/site-web-plombier-rennes' },
+  { title: 'Electricien', href: '/services/site-web-electricien-rennes' },
+  { title: 'Agence immobiliere', href: '/services/site-web-agence-immobiliere-rennes' },
+  { title: 'Garage auto', href: '/services/site-web-garage-auto-rennes' },
+  { title: 'Fleuriste', href: '/services/site-web-fleuriste-rennes' },
+]
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "Services de developpement web — Evan Davison",
+      "description": "Tous les services proposes par Evan Davison, developpeur web freelance a Rennes.",
+      "url": "https://evandavison.fr/services",
+      "numberOfItems": mainServices.length,
+      "itemListElement": mainServices.map((s, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": s.title,
+        "url": `https://evandavison.fr${s.href}`
+      }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/services" }
+      ]
+    }
+  ]
+}
+---
+
+<Layout
+  title="Services | Evan Davison — Developpeur Web Freelance Rennes"
+  description="Decouvrez tous les services proposes par Evan Davison : creation de sites web, boutiques en ligne, applications mobiles, SEO, maintenance et plus. Devis gratuit."
+  canonical="https://evandavison.fr/services"
+  schema={schema}
+>
+  <Header client:load />
+
+  <main id="main-content" class="pt-20">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Fil d'ariane" class="section-container py-4">
+      <ol class="flex items-center gap-2 text-sm text-muted">
+        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
+        <li class="text-border">/</li>
+        <li class="text-ink">Services</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section-container py-12 sm:py-20">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink mb-6 leading-tight">
+        Mes <em class="text-accent">services</em>
+      </h1>
+      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+        Du site vitrine a l'application mobile, je vous accompagne a chaque etape de votre projet digital. Solutions sur mesure, modernes et performantes.
+      </p>
+    </section>
+
+    <!-- Services principaux -->
+    <section class="section-container pb-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {mainServices.map(service => (
+          <a
+            href={service.href}
+            class="border border-border p-8 flex flex-col gap-3 hover:bg-paper-alt transition-colors duration-300 group"
+          >
+            <h2 class="text-ink font-semibold text-lg group-hover:text-accent transition-colors">
+              {service.title}
+            </h2>
+            <p class="text-text-body text-sm leading-relaxed flex-1">
+              {service.description}
+            </p>
+            <span class="text-accent text-xs uppercase tracking-wide mt-2">
+              En savoir plus &rarr;
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="py-12 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+          Par <em class="text-accent">technologie</em>
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {techServices.map(tech => (
+            <a
+              href={tech.href}
+              class="border border-border px-5 py-3 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+            >
+              {tech.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Par ville -->
+    <section class="section-container py-12">
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+        Par <em class="text-accent">ville</em>
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        {cityServices.map(city => (
+          <a
+            href={city.href}
+            class="border border-border px-4 py-2 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+          >
+            {city.title}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Par metier -->
+    <section class="py-12 bg-paper-alt border-t border-b border-border">
+      <div class="section-container">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
+          Par <em class="text-accent">metier</em>
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          {proServices.map(pro => (
+            <a
+              href={pro.href}
+              class="border border-border px-4 py-2 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+            >
+              {pro.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16">
+      <div class="section-container text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+          Un projet en tete ?
+        </h2>
+        <p class="text-text-body mb-8 max-w-xl mx-auto">
+          Discutons de votre besoin. Premier echange gratuit, sans engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="/#contact" class="btn-primary">Me contacter</a>
+          <a href="/" class="btn-secondary">Retour a l'accueil</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
