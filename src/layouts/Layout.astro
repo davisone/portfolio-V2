@@ -14,7 +14,7 @@ const {
   title = 'Evan Davison | Développeur Fullstack Rennes - Portfolio',
   description = "Portfolio d'Evan Davison, développeur fullstack à Rennes. Découvrez mes projets, compétences (React, Next.js, Flutter, Node.js) et mon parcours. Fondateur de DVS Web.",
   canonical = 'https://evandavison.fr',
-  ogImage = 'https://evandavison.fr/og-image.png',
+  ogImage = 'https://evandavison.fr/og-image.jpg',
   schema,
   noindex = false,
 } = Astro.props
@@ -30,11 +30,8 @@ const today = new Date().toISOString().split('T')[0]
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preconnect & DNS Prefetch -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Sitemap -->
@@ -88,7 +85,7 @@ const today = new Date().toISOString().split('T')[0]
           "url": "https://evandavison.fr",
           "email": "contact@evandavison.fr",
           "telephone": "+33651019506",
-          "image": "https://evandavison.fr/og-image.png",
+          "image": "https://evandavison.fr/og-image.jpg",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Rennes",
@@ -155,13 +152,26 @@ const today = new Date().toISOString().split('T')[0]
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     )}
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZS8DC81PH4"></script>
+    <!-- Google Analytics (differe apres le premier paint) -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZS8DC81PH4');
+      (function() {
+        function loadGA() {
+          var s = document.createElement('script');
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZS8DC81PH4';
+          s.async = true;
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-ZS8DC81PH4');
+        }
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGA);
+        } else {
+          setTimeout(loadGA, 2000);
+        }
+      })();
     </script>
     <!-- Theme detection (avant le body pour eviter le flash) -->
     <script is:inline>

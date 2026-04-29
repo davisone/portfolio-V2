@@ -59,7 +59,7 @@ const projects = [
     title: 'DVS Web',
     description:
       'Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.',
-    image: '/projets/2.png',
+    image: '/projets/2.webp',
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
     githubUrl: null,
@@ -76,7 +76,7 @@ const projects = [
     title: 'CV Builder',
     description:
       'Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
-    image: '/projets/cv-builder.png',
+    image: '/projets/cv-builder.webp',
     tags: ['Next.js 16', 'TypeScript', 'OpenAI API', 'Stripe', 'Prisma', 'Supabase', 'NextAuth', 'Nodemailer'],
     liveUrl: 'https://cv-builder.fr',
     githubUrl: null,
@@ -94,7 +94,7 @@ const projects = [
     title: 'Carnet de Santé Animal',
     description:
       'Application multiplateforme pour éleveurs et propriétaires d\'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.',
-    image: '/projets/carnet-de-sante.png',
+    image: '/projets/carnet-de-sante.webp',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore', 'FL Chart'],
     liveUrl: null,
     githubUrl: null,
@@ -111,7 +111,7 @@ const projects = [
     title: 'UseQRaft',
     description:
       'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
-    image: '/projets/3.png',
+    image: '/projets/3.webp',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
     liveUrl: 'https://useqraft.com',
     githubUrl: null,
@@ -128,7 +128,7 @@ const projects = [
     title: 'Haut en Couleur',
     description:
       'Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.',
-    image: '/projets/haut-en-couleur.png',
+    image: '/projets/haut-en-couleur.webp',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
     liveUrl: 'https://haut-en-couleur.fr',
     githubUrl: null,
