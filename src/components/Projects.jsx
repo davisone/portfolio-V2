@@ -144,6 +144,49 @@ const projects = [
 ]
 
 function ProjectModal({ project, onClose }) {
+  const modalRef = useRef(null)
+
+  useEffect(() => {
+    const modal = modalRef.current
+    if (!modal) return
+
+    const focusableElements = modal.querySelectorAll(
+      'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )
+    const firstFocusable = focusableElements[0]
+    const lastFocusable = focusableElements[focusableElements.length - 1]
+
+    firstFocusable?.focus()
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (e.key !== 'Tab') return
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault()
+          lastFocusable?.focus()
+        }
+      } else {
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault()
+          firstFocusable?.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -153,6 +196,10 @@ function ProjectModal({ project, onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/90"
     >
       <motion.div
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Projet ${project.title}`}
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -162,6 +209,7 @@ function ProjectModal({ project, onClose }) {
         {/* Close button */}
         <button
           onClick={onClose}
+          aria-label="Fermer la modale"
           className="absolute top-4 right-4 p-2 text-muted hover:text-ink hover:bg-paper-alt transition-colors z-10"
         >
           <HiX size={20} />

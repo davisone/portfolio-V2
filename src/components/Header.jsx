@@ -31,7 +31,7 @@ export default function Header() {
           : 'bg-transparent py-5'
       }`}
     >
-      <nav className="section-container flex items-center justify-between">
+      <nav aria-label="Navigation principale" className="section-container flex items-center justify-between">
         {/* Logo */}
         <motion.a
           href="#accueil"
