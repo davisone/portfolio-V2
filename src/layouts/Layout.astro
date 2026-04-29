@@ -176,7 +176,8 @@ const today = new Date().toISOString().split('T')[0]
     <!-- Theme detection (avant le body pour eviter le flash) -->
     <script is:inline>
       (function() {
-        if (localStorage.getItem('theme') === 'dark') {
+        var stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
         }
       })();
