@@ -85,12 +85,12 @@ export default function Contact() {
 
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-paper leading-none mb-6">
             Un projet<br />
-            en <em>t\u00eate</em> ?
+            en <em>tête</em> ?
           </h2>
 
           <p className="text-paper/80 text-base leading-relaxed mb-8">
             Que ce soit pour un site vitrine, une application web ou mobile,
-            une refonte ou une optimisation SEO, je suis \u00e0 votre \u00e9coute.
+            une refonte ou une optimisation SEO, je suis à votre écoute.
           </p>
 
           <div className="flex flex-col gap-4 mb-10">
@@ -196,7 +196,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
-                placeholder="Cr\u00e9ation d'un site web"
+                placeholder="Création d'un site web"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function Contact() {
                 required
                 rows={5}
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors resize-y min-h-[100px]"
-                placeholder="D\u00e9crivez votre projet..."
+                placeholder="Décrivez votre projet..."
               />
             </div>
 

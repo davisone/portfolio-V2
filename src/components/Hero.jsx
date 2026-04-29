@@ -18,7 +18,7 @@ export default function Hero() {
 
           {/* Sous-titre */}
           <p className="font-sans text-lg sm:text-xl text-muted mt-4 mb-0">
-            D\u00e9veloppeur Fullstack — Rennes, Fondateur de{' '}
+            Développeur Fullstack — Rennes, Fondateur de{' '}
             <a
               href="https://dvs-web.fr"
               target="_blank"
@@ -34,12 +34,12 @@ export default function Hero() {
         <div className="animate-fade-in border-t border-border mt-10 sm:mt-14 pt-8 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16" style={{ animationDelay: '0.3s', animationFillMode: 'backwards' }}>
           {/* Colonne gauche — description */}
           <p className="font-sans text-base leading-relaxed text-body max-w-lg">
-            Passionn\u00e9 par le d\u00e9veloppement web et mobile, je cr\u00e9e des{' '}
+            Passionné par le développement web et mobile, je crée des{' '}
             <strong className="text-ink font-medium">applications modernes</strong> avec React,
-            Next.js et Flutter. En parall\u00e8le, j'accompagne les entreprises via mon activit\u00e9{' '}
+            Next.js et Flutter. En parallèle, j'accompagne les entreprises via mon activité{' '}
             <strong className="text-ink font-medium">freelance</strong>. Je recherche une{' '}
             <strong className="text-ink font-medium">alternance en gestion de projet IT</strong>{' '}
-            pour allier ma vision technique \u00e0 une approche strat\u00e9gique et organisationnelle.
+            pour allier ma vision technique à une approche stratégique et organisationnelle.
           </p>
 
           {/* Colonne droite — badge + CTA */}
@@ -63,7 +63,7 @@ export default function Hero() {
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 14v3h14v-3M10 3v10M6 9l4 4 4-4" />
                 </svg>
-                T\u00e9l\u00e9charger mon CV
+                Télécharger mon CV
               </a>
             </div>
           </div>
