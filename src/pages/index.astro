@@ -15,18 +15,19 @@ import Footer from '../components/Footer.astro'
   title="Evan Davison | Développeur Fullstack & Alternance Chef de projet IT — Rennes"
   description="Portfolio d'Evan Davison, développeur fullstack à Rennes et fondateur de DVS Web. En recherche d'alternance en gestion de projet IT. Spécialisé React, Next.js, TypeScript, Flutter."
   canonical="https://evandavison.fr"
+  locale="fr"
 >
   <div class="min-h-screen">
-    <Header />
+    <Header locale="fr" />
     <main id="main-content">
-      <Hero />
-      <About client:visible />
-      <Services client:visible />
-      <Experience client:visible />
-      <Projects client:visible />
-      <Contact client:visible />
+      <Hero locale="fr" />
+      <About locale="fr" client:visible />
+      <Services locale="fr" client:visible />
+      <Experience locale="fr" client:visible />
+      <Projects locale="fr" client:visible />
+      <Contact locale="fr" client:visible />
     </main>
-    <Footer />
+    <Footer locale="fr" />
     <ScrollToTop client:load />
   </div>
 </Layout>
