@@ -78,24 +78,28 @@
     },
     "items": [
       {
+        "type": "work",
         "title": "Fondateur & D\u00e9veloppeur Freelance",
         "company": "DVS Web - Rennes",
         "period": "2026 - Pr\u00e9sent",
         "description": "Cr\u00e9ation et d\u00e9veloppement de sites web et applications pour des clients vari\u00e9s. Gestion de projet, relation client, d\u00e9veloppement fullstack."
       },
       {
+        "type": "work",
         "title": "D\u00e9veloppeur Web (Alternance)",
         "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
         "period": "septembre 2025 - septembre 2026",
         "description": "Cr\u00e9ation de block liquid et int\u00e9gration dans un cms. Int\u00e9gration d'un formulaire tally et de son api dans le CMS de l'entreprise en passant par firebase."
       },
       {
+        "type": "education",
         "title": "Bachelor D\u00e9veloppement Web",
         "company": "Sup de Vinci - Chantepie",
         "period": "2025 - 2026",
         "description": "Formation compl\u00e8te en d\u00e9veloppement web, mobile, bases de donn\u00e9es, et gestion de projet. Bac+3."
       },
       {
+        "type": "education",
         "title": "BTS SIO (SLAM)",
         "company": "Lyc\u00e9e Saint Sauveur - Redon",
         "period": "2022 - 2025",

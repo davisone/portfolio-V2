@@ -1,18 +1,19 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import useReveal from '../hooks/useReveal'
+import { useTranslations } from '../i18n/useTranslations'
 
 // framer-motion est garde uniquement pour AnimatePresence (modale)
 
 // Skeleton loader pour l'animation de chargement
-function ImageSkeleton() {
+function ImageSkeleton({ loadingText }) {
   return (
     <div className="absolute inset-0 bg-paper-alt">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-border/30 to-transparent animate-shimmer" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <div className="w-8 h-0.5 bg-accent/50 animate-shimmer" />
-          <span className="text-muted text-sm font-mono">Chargement...</span>
+          <span className="text-muted text-sm font-mono">{loadingText}</span>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@ function ImageSkeleton() {
 }
 
 // Composant pour afficher l'image avec chargement optimise
-function ProjectImage({ project, className }) {
+function ProjectImage({ project, className, loadingText }) {
   const [isLoading, setIsLoading] = useState(true)
   const imgRef = useRef(null)
 
@@ -41,7 +42,7 @@ function ProjectImage({ project, className }) {
 
   return (
     <>
-      {isLoading && <ImageSkeleton />}
+      {isLoading && <ImageSkeleton loadingText={loadingText} />}
       <img
         ref={imgRef}
         src={project.image}
@@ -58,93 +59,42 @@ function ProjectImage({ project, className }) {
 const projects = [
   {
     title: 'DVS Web',
-    description:
-      'Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.',
     image: '/projets/2.webp',
     tags: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     liveUrl: 'https://dvs-web.fr',
     githubUrl: null,
-    features: [
-      'Design responsive mobile-first avec navigation adaptative',
-      'Animations au scroll et micro-interactions',
-      'Formulaire de contact sécurisé avec double envoi d\'email',
-      'Sitemap et robots.txt dynamiques générés côté serveur',
-      'Métadonnées SEO complètes (Open Graph, Twitter Cards, Schema.org)',
-      'Bannière cookies conforme RGPD',
-    ],
   },
   {
     title: 'CV Builder',
-    description:
-      'Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l\'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.',
     image: '/projets/cv-builder.webp',
     tags: ['Next.js 16', 'TypeScript', 'OpenAI API', 'Stripe', 'Prisma', 'Supabase', 'NextAuth', 'Nodemailer'],
     liveUrl: 'https://cv-builder.fr',
     githubUrl: null,
-    features: [
-      '5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)',
-      'Analyse ATS : Score 0-100 avec recommandations',
-      'Suggestions IA pour amélioration du contenu',
-      'Authentification OAuth (Google, GitHub) + 2FA avec QR code',
-      'Paiement Stripe (1 template gratuit, premium à 4.99€)',
-      'Export PDF haute qualité',
-      'Emails transactionnels (bienvenue, reset password, confirmation paiement)',
-    ],
   },
   {
-    title: 'Carnet de Santé Animal',
-    description:
-      'Application multiplateforme pour éleveurs et propriétaires d\'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.',
+    title: 'Carnet de Sante Animal',
     image: '/projets/carnet-de-sante.webp',
     tags: ['Flutter', 'Dart', 'Firebase', 'Firestore', 'FL Chart'],
     liveUrl: null,
     githubUrl: null,
-    features: [
-      'Fiche complète par animal avec photo et identification',
-      'Suivi vaccins avec rappels automatiques',
-      'Historique des traitements et consultations vétérinaires',
-      'Graphique d\'évolution du poids',
-      'Arbre généalogique interactif',
-      'Export PDF du carnet de santé complet',
-    ],
   },
   {
     title: 'UseQRaft',
-    description:
-      'Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.',
     image: '/projets/3.webp',
     tags: ['Next.js 16', 'React 19', 'TypeScript', 'PostgreSQL', 'Prisma 7', 'NextAuth.js'],
     liveUrl: 'https://useqraft.com',
     githubUrl: null,
-    features: [
-      'Génération de QR codes à partir d\'URLs ou texte avec prévisualisation temps réel',
-      'Personnalisation avancée : couleurs, taille, correction d\'erreur, logo centré, templates (Ocean, Forest, Sunset…)',
-      'Dashboard avec recherche, filtres (type, favoris) et sélection multiple',
-      'Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports groupés',
-      'Partage public via liens uniques avec tokens',
-      'Authentification complète avec hashage bcrypt',
-    ],
   },
   {
     title: 'Haut en Couleur',
-    description:
-      'Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.',
     image: '/projets/haut-en-couleur.webp',
     tags: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Vercel KV', 'Leaflet'],
     liveUrl: 'https://haut-en-couleur.fr',
     githubUrl: null,
-    features: [
-      'Internationalisation complète (FR/EN) avec next-intl',
-      'Dark mode avec persistance des préférences',
-      'Galerie avant/après interactive avec slider tactile',
-      'Avis Google dynamiques via API',
-      'Carte interactive avec zone d\'intervention',
-      'Formulaire sécurisé avec rate limiting et hCaptcha',
-    ],
   },
 ]
 
-function ProjectModal({ project, onClose }) {
+function ProjectModal({ project, onClose, t }) {
   const modalRef = useRef(null)
 
   useEffect(() => {
@@ -210,7 +160,7 @@ function ProjectModal({ project, onClose }) {
         {/* Close button */}
         <button
           onClick={onClose}
-          aria-label="Fermer la modale"
+          aria-label={t.projects.closeModal}
           className="absolute top-4 right-4 p-2 text-muted hover:text-ink hover:bg-paper-alt transition-colors z-10"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
@@ -222,6 +172,7 @@ function ProjectModal({ project, onClose }) {
             <ProjectImage
               project={project}
               className="absolute inset-0 w-full h-full object-cover"
+              loadingText={t.projects.loading}
             />
           ) : (
             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-muted/30"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
@@ -252,7 +203,7 @@ function ProjectModal({ project, onClose }) {
           {/* Features */}
           {project.features && (
             <div className="mb-6">
-              <h4 className="text-ink font-medium mb-3">Fonctionnalites cles</h4>
+              <h4 className="text-ink font-medium mb-3">{t.projects.featuresTitle}</h4>
               <ul className="space-y-2">
                 {project.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2 text-text-body text-sm">
@@ -274,7 +225,7 @@ function ProjectModal({ project, onClose }) {
                 className="btn-primary text-sm"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
-                Voir le site
+                {t.projects.viewSite}
               </a>
             )}
             {project.githubUrl && (
@@ -285,11 +236,11 @@ function ProjectModal({ project, onClose }) {
                 className="btn-secondary text-sm"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
-                Code source
+                {t.projects.sourceCode}
               </a>
             )}
             {!project.liveUrl && !project.githubUrl && (
-              <span className="text-muted text-sm">Projet prive / en developpement</span>
+              <span className="text-muted text-sm">{t.projects.privateProject}</span>
             )}
           </div>
         </div>
@@ -298,9 +249,17 @@ function ProjectModal({ project, onClose }) {
   )
 }
 
-export default function Projects() {
+export default function Projects({ locale = 'fr' }) {
   const [revealRef, isInView] = useReveal()
   const [selectedProject, setSelectedProject] = useState(null)
+  const t = useTranslations(locale)
+
+  // Merge hardcoded project data with translated descriptions/features
+  const localizedProjects = projects.map((project, index) => ({
+    ...project,
+    description: t.projects.items[index].description,
+    features: t.projects.items[index].features,
+  }))
 
   return (
     <section id="realisations" className="border-t border-border py-20 relative">
@@ -311,15 +270,15 @@ export default function Projects() {
 
           {/* Section header */}
           <div className="mb-16">
-            <span className="section-label">Mes travaux</span>
+            <span className="section-label">{t.projects.label}</span>
             <h2 className="section-title">
-              Reali<em>sations</em>
+              {t.projects.title}
             </h2>
           </div>
 
           {/* Projects grid */}
           <div className="border border-border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {localizedProjects.map((project, index) => (
               <article
                 key={project.title}
                 onClick={() => setSelectedProject(project)}
@@ -338,6 +297,7 @@ export default function Projects() {
                     <ProjectImage
                       project={project}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      loadingText={t.projects.loading}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -374,11 +334,11 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               className={`reveal group flex flex-col items-center justify-center p-8 border-b border-border text-center transition-colors duration-300 hover:bg-paper-alt md:border-r-0 lg:border-r-0 ${isInView ? 'visible' : ''}`}
-              style={{ transitionDelay: `${projects.length * 100}ms` }}
+              style={{ transitionDelay: `${localizedProjects.length * 100}ms` }}
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-muted/40 mb-4 group-hover:text-ink transition-colors duration-300"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
               <span className="font-mono text-sm text-muted group-hover:text-ink transition-colors duration-300">
-                Voir plus sur GitHub &rarr;
+                {t.projects.viewMoreGithub} &rarr;
               </span>
             </a>
           </div>
@@ -391,6 +351,7 @@ export default function Projects() {
           <ProjectModal
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
+            t={t}
           />
         )}
       </AnimatePresence>

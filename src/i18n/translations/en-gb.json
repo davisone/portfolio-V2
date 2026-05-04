@@ -33,24 +33,28 @@
   "experience": {
     "items": [
       {
+        "type": "work",
         "title": "Founder & Freelance Developer",
         "company": "DVS Web - Rennes",
         "period": "2026 - Present",
         "description": "Design and development of websites and applications for various clients. Project management, client relations, fullstack development."
       },
       {
+        "type": "work",
         "title": "Web Developer (Work-Study)",
         "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
         "period": "September 2025 - September 2026",
         "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
       },
       {
+        "type": "education",
         "title": "Bachelor's in Web Development",
         "company": "Sup de Vinci - Chantepie",
         "period": "2025 - 2026",
         "description": "Comprehensive training in web and mobile development, databases, and project management. Bachelor's degree."
       },
       {
+        "type": "education",
         "title": "BTS SIO (SLAM)",
         "company": "Lyc\u00e9e Saint Sauveur - Redon",
         "period": "2022 - 2025",
