@@ -1,19 +1,28 @@
 ---
 import ThemeToggle from './ThemeToggle.astro'
+import LanguageSwitcher from './LanguageSwitcher.astro'
+import { getTranslations, getLocalizedPath, type Locale } from '../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
 
 const navLinks = [
-  { name: 'Accueil', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Contact', href: '/#contact' },
+  { name: t.nav.links.home, href: getLocalizedPath('/', locale) },
+  { name: t.nav.links.services, href: '/services' },
+  { name: t.nav.links.blog, href: '/blog' },
+  { name: t.nav.links.faq, href: '/faq' },
+  { name: t.nav.links.contact, href: getLocalizedPath('/', locale) + '#contact' },
 ]
 ---
 
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
-  <nav aria-label="Navigation principale" class="section-container flex items-center justify-between">
+  <nav aria-label={t.nav.ariaLabel} class="section-container flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="text-xl font-serif text-ink animate-fade-in">
+    <a href={getLocalizedPath('/', locale)} class="text-xl font-serif text-ink animate-fade-in">
       Evan<span class="text-accent">.</span>
     </a>
 
@@ -31,7 +40,7 @@ const navLinks = [
       ))}
     </ul>
 
-    <!-- CTA + Theme Toggle -->
+    <!-- CTA + Theme Toggle + Language Switcher -->
     <div class="hidden md:flex items-center gap-4 animate-fade-in">
       <a
         href="https://dvs-web.fr"
@@ -41,6 +50,7 @@ const navLinks = [
       >
         DVS Web &#8599;
       </a>
+      <LanguageSwitcher locale={locale} currentPath={Astro.url.pathname} />
       <ThemeToggle />
     </div>
 
@@ -48,8 +58,10 @@ const navLinks = [
     <button
       id="mobile-menu-btn"
       class="md:hidden text-muted hover:text-ink p-2 transition-colors"
-      aria-label="Ouvrir le menu"
+      aria-label={t.nav.openMenu}
       aria-expanded="false"
+      data-label-open={t.nav.openMenu}
+      data-label-close={t.nav.closeMenu}
     >
       <!-- Hamburger icon -->
       <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -87,7 +99,10 @@ const navLinks = [
         >
           DVS Web &#8599;
         </a>
-        <ThemeToggle />
+        <div class="flex items-center gap-3">
+          <LanguageSwitcher locale={locale} currentPath={Astro.url.pathname} />
+          <ThemeToggle />
+        </div>
       </li>
     </ul>
   </div>
@@ -118,7 +133,7 @@ const navLinks = [
       iconMenu.classList.toggle('hidden', isOpen);
       iconClose.classList.toggle('hidden', !isOpen);
       menuBtn.setAttribute('aria-expanded', isOpen);
-      menuBtn.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      menuBtn.setAttribute('aria-label', isOpen ? menuBtn.dataset.labelClose : menuBtn.dataset.labelOpen);
     });
 
     var mobileLinks = document.querySelectorAll('.mobile-nav-link');

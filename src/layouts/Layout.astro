@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { type Locale } from '../i18n'
 
 interface Props {
   title?: string
@@ -8,6 +9,7 @@ interface Props {
   ogImage?: string
   schema?: object
   noindex?: boolean
+  locale?: Locale
 }
 
 const {
@@ -17,13 +19,14 @@ const {
   ogImage = 'https://evandavison.fr/og-image.jpg',
   schema,
   noindex = false,
+  locale = 'fr',
 } = Astro.props
 
 const today = new Date().toISOString().split('T')[0]
 ---
 
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang={locale === 'en-gb' || locale === 'en-us' ? 'en' : locale} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -33,6 +36,12 @@ const today = new Date().toISOString().split('T')[0]
     <!-- Preconnect -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href={`https://evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="en-GB" href={`https://evandavison.fr/en-gb${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="en-US" href={`https://evandavison.fr/en-us${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />

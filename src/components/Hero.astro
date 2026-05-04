@@ -1,4 +1,12 @@
 ---
+import { getTranslations, type Locale } from '../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
 ---
 
 <section id="accueil" class="min-h-screen flex flex-col justify-between py-12 sm:py-16 lg:py-20">
@@ -6,7 +14,7 @@
     <div class="animate-fade-in">
       <!-- Label -->
       <div class="section-label mb-10 sm:mb-14">
-        En recherche d'alternance — Chef de projet IT
+        {t.hero.label}
       </div>
 
       <!-- Titre geant -->
@@ -19,7 +27,7 @@
 
       <!-- Sous-titre -->
       <p class="font-sans text-lg sm:text-xl text-muted mt-4 mb-0">
-        Développeur Fullstack — Rennes, Fondateur de
+        {t.hero.subtitle}
         <a
           href="https://dvs-web.fr"
           target="_blank"
@@ -34,30 +42,23 @@
     <!-- Grille editoriale -->
     <div class="animate-fade-in border-t border-border mt-10 sm:mt-14 pt-8 sm:pt-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16" style="animation-delay: 0.3s; animation-fill-mode: backwards;">
       <!-- Colonne gauche — description -->
-      <p class="font-sans text-base leading-relaxed text-body max-w-lg">
-        Passionné par le développement web et mobile, je crée des
-        <strong class="text-ink font-medium">applications modernes</strong> avec React,
-        Next.js et Flutter. En parallèle, j'accompagne les entreprises via mon activité
-        <strong class="text-ink font-medium">freelance</strong>. Je recherche une
-        <strong class="text-ink font-medium">alternance en gestion de projet IT</strong>
-        pour allier ma vision technique à une approche stratégique et organisationnelle.
-      </p>
+      <p class="font-sans text-base leading-relaxed text-body max-w-lg" set:html={t.hero.description} />
 
       <!-- Colonne droite — badge + CTA -->
       <div class="flex flex-col items-start md:items-end justify-end gap-6">
         <span class="font-mono text-xs border border-border px-4 py-2 text-muted tracking-wide">
-          Disponible — Bac+3 Sup de Vinci
+          {t.hero.badge}
         </span>
 
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <a href="#contact" class="btn-primary">
-            Me contacter &rarr;
+            {t.hero.cta} &rarr;
           </a>
           <a href="/cv/Evan_Davison_cv.pdf" download class="btn-secondary">
             <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 14v3h14v-3M10 3v10M6 9l4 4 4-4" />
             </svg>
-            Télécharger mon CV
+            {t.hero.downloadCv}
           </a>
         </div>
       </div>
