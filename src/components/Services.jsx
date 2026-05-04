@@ -1,34 +1,11 @@
 import useReveal from '../hooks/useReveal'
+import { useTranslations } from '../i18n/useTranslations'
 
-const services = [
-  {
-    num: '01',
-    title: 'Développement Web',
-    description:
-      'Sites vitrines, applications web, e-commerce. Des solutions modernes et performantes adaptées à vos besoins.',
-    href: '/services/creation-site-web-rennes',
-  },
-  {
-    num: '02',
-    title: 'Applications Mobiles',
-    description:
-      'Applications iOS et Android avec Flutter. Une seule codebase pour toutes les plateformes.',
-    href: '/services/developpement-application-mobile',
-  },
-  {
-    num: '03',
-    title: 'Refonte de site',
-    description:
-      'Modernisation de votre site existant : design, performance, accessibilité et expérience utilisateur.',
-    href: '/services/refonte-site-web',
-  },
-  {
-    num: '04',
-    title: 'SEO & Performance',
-    description:
-      'Optimisation du référencement naturel et des performances pour une meilleure visibilité Google.',
-    href: '/services/optimisation-seo',
-  },
+const serviceHrefs = [
+  '/services/creation-site-web-rennes',
+  '/services/developpement-application-mobile',
+  '/services/refonte-site-web',
+  '/services/optimisation-seo',
 ]
 
 const techNames = [
@@ -40,8 +17,9 @@ const techNames = [
   'Postman', 'Figma', 'Canva',
 ]
 
-export default function Services() {
+export default function Services({ locale = 'fr' }) {
   const [ref, isVisible] = useReveal()
+  const t = useTranslations(locale)
 
   return (
     <section id="services" className="border-t border-border py-20 relative">
@@ -50,24 +28,24 @@ export default function Services() {
           <span className="section-num">02</span>
 
           <div className="mb-16">
-            <span className="section-label">Expertise</span>
+            <span className="section-label">{t.services.label}</span>
             <h2 className="section-title">
-              Mes <em>services</em>
+              {t.services.title} <em>{t.services.titleEmphasis}</em>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service, index) => (
+            {t.services.items.map((service, index) => (
               <a
                 key={service.title}
-                href={service.href}
+                href={serviceHrefs[index]}
                 itemScope
                 itemType="https://schema.org/Service"
                 className={`reveal group border-r border-border last:border-r-0 py-8 px-6 transition-colors duration-300 hover:bg-ink ${isVisible ? 'visible' : ''}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <span className="font-serif text-5xl font-black text-border/30 mb-6 block group-hover:text-paper/10 transition-colors duration-300">
-                  {service.num}
+                  {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 itemProp="name" className="font-medium text-ink text-base mb-2 group-hover:text-paper transition-colors duration-300">
                   {service.title}
@@ -76,7 +54,7 @@ export default function Services() {
                   {service.description}
                 </p>
                 <span className="text-xs text-accent hover:text-accent-hover uppercase tracking-wide mt-4 inline-block group-hover:text-accent-hover transition-colors duration-300">
-                  En savoir plus &rarr;
+                  {t.services.learnMore} &rarr;
                 </span>
               </a>
             ))}

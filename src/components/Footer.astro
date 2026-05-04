@@ -1,4 +1,12 @@
 ---
+import { getTranslations, getLocalizedPath, type Locale } from '../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
 const currentYear = new Date().getFullYear()
 ---
 
@@ -7,42 +15,42 @@ const currentYear = new Date().getFullYear()
     <!-- Liens internes pour crawlability -->
     <nav aria-label="Pied de page" class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">Navigation</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.navigation}</h3>
         <ul class="space-y-2">
-          <li><a href="/#accueil" class="text-sm text-text-body hover:text-ink transition-colors">Accueil</a></li>
-          <li><a href="/#apropos" class="text-sm text-text-body hover:text-ink transition-colors">A propos</a></li>
-          <li><a href="/#realisations" class="text-sm text-text-body hover:text-ink transition-colors">Realisations</a></li>
-          <li><a href="/#contact" class="text-sm text-text-body hover:text-ink transition-colors">Contact</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#accueil'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.home}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#apropos'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.about}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#realisations'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.projects}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#contact'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.contact}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">Services</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.services}</h3>
         <ul class="space-y-2">
-          <li><a href="/services/creation-site-web-rennes" class="text-sm text-text-body hover:text-ink transition-colors">Creation site web</a></li>
-          <li><a href="/services/creation-boutique-en-ligne" class="text-sm text-text-body hover:text-ink transition-colors">Boutique en ligne</a></li>
-          <li><a href="/services/developpement-application-mobile" class="text-sm text-text-body hover:text-ink transition-colors">Application mobile</a></li>
-          <li><a href="/services/developpement-react-nextjs" class="text-sm text-text-body hover:text-ink transition-colors">React / Next.js</a></li>
-          <li><a href="/services/developpement-flutter-dart" class="text-sm text-text-body hover:text-ink transition-colors">Flutter / Dart</a></li>
-          <li><a href="/services/refonte-site-web" class="text-sm text-text-body hover:text-ink transition-colors">Refonte site web</a></li>
-          <li><a href="/services/optimisation-seo" class="text-sm text-text-body hover:text-ink transition-colors">Optimisation SEO</a></li>
-          <li><a href="/services/creation-application-web" class="text-sm text-text-body hover:text-ink transition-colors">Application web</a></li>
-          <li><a href="/services/maintenance-web" class="text-sm text-text-body hover:text-ink transition-colors">Maintenance web</a></li>
-          <li><a href="/services/hebergement-web" class="text-sm text-text-body hover:text-ink transition-colors">Hebergement web</a></li>
-          <li><a href="/services/identite-visuelle" class="text-sm text-text-body hover:text-ink transition-colors">Identite visuelle</a></li>
+          <li><a href="/services/creation-site-web-rennes" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.webCreation}</a></li>
+          <li><a href="/services/creation-boutique-en-ligne" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.ecommerce}</a></li>
+          <li><a href="/services/developpement-application-mobile" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.mobileApp}</a></li>
+          <li><a href="/services/developpement-react-nextjs" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.reactNextjs}</a></li>
+          <li><a href="/services/developpement-flutter-dart" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.flutterDart}</a></li>
+          <li><a href="/services/refonte-site-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.redesign}</a></li>
+          <li><a href="/services/optimisation-seo" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.seo}</a></li>
+          <li><a href="/services/creation-application-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.webApp}</a></li>
+          <li><a href="/services/maintenance-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.maintenance}</a></li>
+          <li><a href="/services/hebergement-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.hosting}</a></li>
+          <li><a href="/services/identite-visuelle" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.branding}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">Ressources</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.resources}</h3>
         <ul class="space-y-2">
-          <li><a href="/blog" class="text-sm text-text-body hover:text-ink transition-colors">Blog</a></li>
-          <li><a href="/glossaire" class="text-sm text-text-body hover:text-ink transition-colors">Glossaire</a></li>
-          <li><a href="/faq" class="text-sm text-text-body hover:text-ink transition-colors">FAQ</a></li>
-          <li><a href="/comparatifs" class="text-sm text-text-body hover:text-ink transition-colors">Comparatifs</a></li>
-          <li><a href="/cv/Evan_Davison_cv.pdf" class="text-sm text-text-body hover:text-ink transition-colors">Mon CV</a></li>
+          <li><a href="/blog" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.blog}</a></li>
+          <li><a href="/glossaire" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.glossary}</a></li>
+          <li><a href="/faq" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.faq}</a></li>
+          <li><a href="/comparatifs" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.comparisons}</a></li>
+          <li><a href="/cv/Evan_Davison_cv.pdf" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.cv}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">Liens</h3>
+        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.links}</h3>
         <ul class="space-y-2">
           <li><a href="https://github.com/davisone" target="_blank" rel="noopener noreferrer" class="text-sm text-text-body hover:text-ink transition-colors">GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/evan-d-766478247" target="_blank" rel="noopener noreferrer" class="text-sm text-text-body hover:text-ink transition-colors">LinkedIn</a></li>

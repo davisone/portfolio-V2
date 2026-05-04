@@ -1,42 +1,9 @@
 import useReveal from '../hooks/useReveal'
+import { useTranslations } from '../i18n/useTranslations'
 
-const experiences = [
-  {
-    type: 'work',
-    title: 'Fondateur & Développeur Freelance',
-    company: 'DVS Web - Rennes',
-    period: '2026 - Présent',
-    description:
-      'Création et développement de sites web et applications pour des clients variés. Gestion de projet, relation client, développement fullstack.',
-  },
-  {
-    type: 'work',
-    title: 'Développeur Web (Alternance)',
-    company: 'Le Reférencement Professionnel - Cesson-Sévigné',
-    period: 'septembre 2025 - septembre 2026',
-    description:
-      "Création de block liquid et intégration dans un cms. Intégration d'un formulaire tally et de son api dans le CMS de l'entreprise en passant par firebase.",
-  },
-  {
-    type: 'education',
-    title: 'Bachelor Développement Web',
-    company: 'Sup de Vinci - Chantepie',
-    period: '2025 - 2026',
-    description:
-      'Formation complète en développement web, mobile, bases de données, et gestion de projet. Bac+3.',
-  },
-  {
-    type: 'education',
-    title: 'BTS SIO (SLAM)',
-    company: 'Lycée Saint Sauveur - Redon',
-    period: '2022 - 2025',
-    description:
-      'Solutions Logicielles et Applications Métiers. Apprentissage des fondamentaux du développement.',
-  },
-]
-
-export default function Experience() {
+export default function Experience({ locale = 'fr' }) {
   const [ref, isVisible] = useReveal()
+  const t = useTranslations(locale)
 
   return (
     <section id="experiences" className="relative border-t border-border py-20 bg-paper-alt">
@@ -45,14 +12,14 @@ export default function Experience() {
           <span className="section-num">03</span>
 
           <div className="mb-16">
-            <p className="section-label">Parcours</p>
+            <p className="section-label">{t.experience.label}</p>
             <h2 className="section-title">
-              Mon <em>parcours</em>
+              {t.experience.title} <em>{t.experience.titleEmphasis}</em>
             </h2>
           </div>
 
           <div>
-            {experiences.map((exp, index) => (
+            {t.experience.items.map((exp, index) => (
               <div
                 key={index}
                 className={`reveal border-b border-border py-8 grid grid-cols-1 lg:grid-cols-[100px_1fr_1fr] gap-4 lg:gap-8 hover:pl-2 transition-all duration-300 ${isVisible ? 'visible' : ''}`}
@@ -64,7 +31,7 @@ export default function Experience() {
 
                 <div>
                   <span className="font-mono text-[0.65rem] text-muted uppercase tracking-wide">
-                    {exp.type === 'education' ? 'Formation' : 'Experience'}
+                    {exp.type === 'education' ? t.experience.typeLabels.education : t.experience.typeLabels.work}
                   </span>
                   <h3 className="font-medium text-ink text-base">{exp.title}</h3>
                   <p className="text-sm text-accent mt-1">{exp.company}</p>

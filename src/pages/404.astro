@@ -1,20 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { getTranslations, getLocaleFromUrl, type Locale } from '../i18n'
+
+const locale = getLocaleFromUrl(Astro.url)
+const t = getTranslations(locale)
 ---
 
 <Layout
-  title="Page introuvable | Evan Davison"
-  description="La page que vous recherchez n'existe pas ou a été déplacée."
+  title={`${t.notFound.title} | Evan Davison`}
+  description={t.notFound.description}
   noindex={true}
+  locale={locale}
 >
   <div class="min-h-screen flex items-center justify-center px-4">
     <div class="text-center">
       <h1 class="font-serif text-8xl font-bold text-accent mb-4">404</h1>
       <p class="text-xl text-text-body mb-8">
-        Cette page n'existe pas ou a été déplacée.
+        {t.notFound.message}
       </p>
-      <a href="/" class="btn-primary">
-        Retour à l'accueil
+      <a href={locale === 'fr' ? '/' : `/${locale}/`} class="btn-primary">
+        {t.notFound.backHome}
       </a>
     </div>
   </div>

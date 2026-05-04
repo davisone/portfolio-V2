@@ -1,0 +1,249 @@
+{
+  "nav": {
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "ariaLabel": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "label": "Looking for a work-study program \u2014 IT Project Manager",
+    "subtitle": "Fullstack Developer \u2014 Rennes, Founder of",
+    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. Alongside, I support businesses through my <strong>freelance</strong> activity. I am looking for a <strong>work-study program in IT project management</strong> to combine my technical vision with a strategic and organizational approach.",
+    "badge": "Available \u2014 Bachelor's Degree Sup de Vinci",
+    "cta": "Contact me",
+    "downloadCv": "Download my resume"
+  },
+  "about": {
+    "label": "Who am I",
+    "title": "About",
+    "titleEmphasis": "me",
+    "paragraphs": [
+      "Fullstack developer based in <strong>Rennes</strong>, I am completing my <strong>Bachelor's degree</strong> in software development. My education has allowed me to master web and mobile development, from frontend to backend.",
+      "Alongside my studies, I founded <a>DVS Web</a>, my freelance activity where I help businesses create their digital projects: showcase websites, web applications, e-commerce and SEO optimization.",
+      "This dual role as <strong>student</strong> and <strong>entrepreneur</strong> allows me to combine technical rigor with hands-on experience, delivering concrete and high-performing solutions.",
+      "I am currently looking for a <strong>work-study program in IT project management</strong>. My background as a developer gives me a deep understanding of technical challenges, which I want to complement with training in <strong>project leadership</strong>, team coordination and delivery management."
+    ],
+    "values": [
+      {
+        "title": "Project management",
+        "description": "Planning, coordination and follow-up \u2014 turning an idea into a concrete deliverable."
+      },
+      {
+        "title": "Efficiency",
+        "description": "On-time delivery with transparent communication."
+      },
+      {
+        "title": "Collaboration",
+        "description": "Listening to your needs for tailor-made solutions."
+      }
+    ]
+  },
+  "services": {
+    "label": "Expertise",
+    "title": "My",
+    "titleEmphasis": "services",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Showcase websites, web applications, e-commerce. Modern and high-performing solutions tailored to your needs."
+      },
+      {
+        "title": "Mobile Applications",
+        "description": "iOS and Android applications with Flutter. A single codebase for all platforms."
+      },
+      {
+        "title": "Website Redesign",
+        "description": "Modernization of your existing website: design, performance, accessibility and user experience."
+      },
+      {
+        "title": "SEO & Performance",
+        "description": "Search engine optimization and performance improvements for better Google visibility."
+      }
+    ],
+    "learnMore": "Learn more"
+  },
+  "experience": {
+    "label": "Background",
+    "title": "My",
+    "titleEmphasis": "background",
+    "typeLabels": {
+      "work": "Experience",
+      "education": "Education"
+    },
+    "items": [
+      {
+        "type": "work",
+        "title": "Founder & Freelance Developer",
+        "company": "DVS Web - Rennes",
+        "period": "2026 - Present",
+        "description": "Design and development of websites and applications for various clients. Project management, client relations, fullstack development."
+      },
+      {
+        "type": "work",
+        "title": "Web Developer (Work-Study)",
+        "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
+        "period": "September 2025 - September 2026",
+        "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
+      },
+      {
+        "type": "education",
+        "title": "Bachelor's in Web Development",
+        "company": "Sup de Vinci - Chantepie",
+        "period": "2025 - 2026",
+        "description": "Comprehensive training in web and mobile development, databases, and project management. Bachelor's degree."
+      },
+      {
+        "type": "education",
+        "title": "BTS SIO (SLAM)",
+        "company": "Lyc\u00e9e Saint Sauveur - Redon",
+        "period": "2022 - 2025",
+        "description": "Software Solutions and Business Applications. Learning the fundamentals of software development."
+      }
+    ]
+  },
+  "projects": {
+    "label": "My work",
+    "title": "Projects",
+    "featuresTitle": "Key features",
+    "viewSite": "View website",
+    "sourceCode": "Source code",
+    "privateProject": "Private project / in development",
+    "closeModal": "Close modal",
+    "viewMoreGithub": "View more on GitHub",
+    "loading": "Loading...",
+    "items": [
+      {
+        "description": "Professional showcase website for my freelance developer activity. Responsive black/gold design, smooth animations, contact form with Resend API, optimized SEO (dynamic sitemap, Schema.org) and GDPR compliance.",
+        "features": [
+          "Mobile-first responsive design with adaptive navigation",
+          "Scroll animations and micro-interactions",
+          "Secure contact form with dual email sending",
+          "Server-side generated dynamic sitemap and robots.txt",
+          "Complete SEO metadata (Open Graph, Twitter Cards, Schema.org)",
+          "GDPR-compliant cookie banner"
+        ]
+      },
+      {
+        "description": "SaaS application for AI-powered resume generation. Integrates OpenAI (GPT-4o-mini) for content optimization, Stripe for payments, and NextAuth with 2FA. 5 templates, ATS analysis and PDF export.",
+        "features": [
+          "5 resume templates (Modern, Classic, ATS-Friendly, Minimal, Creative)",
+          "ATS analysis: Score 0-100 with recommendations",
+          "AI suggestions for content improvement",
+          "OAuth authentication (Google, GitHub) + 2FA with QR code",
+          "Stripe payment (1 free template, premium at $4.99)",
+          "High-quality PDF export",
+          "Transactional emails (welcome, password reset, payment confirmation)"
+        ]
+      },
+      {
+        "description": "Cross-platform application for breeders and pet owners. Complete medical tracking, vaccines with automatic reminders, family tree, weight evolution and PDF export.",
+        "features": [
+          "Complete profile per animal with photo and identification",
+          "Vaccine tracking with automatic reminders",
+          "Treatment and veterinary consultation history",
+          "Weight evolution chart",
+          "Interactive family tree",
+          "Complete health record PDF export"
+        ]
+      },
+      {
+        "description": "Full-stack web application for generating, customizing and managing QR codes. Real-time preview, style templates, dashboard with filters, multi-format export and public sharing via unique links.",
+        "features": [
+          "QR code generation from URLs or text with real-time preview",
+          "Advanced customization: colors, size, error correction, centered logo, templates (Ocean, Forest, Sunset...)",
+          "Dashboard with search, filters (type, favorites) and multiple selection",
+          "Multi-format export: PNG, JPEG, PDF (A4) and ZIP for batch exports",
+          "Public sharing via unique links with tokens",
+          "Complete authentication with bcrypt hashing"
+        ]
+      },
+      {
+        "description": "Showcase website for a building painting company. FR/EN internationalization, interactive before/after gallery, dynamic Google reviews, Leaflet map and secure form.",
+        "features": [
+          "Complete internationalization (FR/EN) with next-intl",
+          "Dark mode with preference persistence",
+          "Interactive before/after gallery with touch slider",
+          "Dynamic Google reviews via API",
+          "Interactive map with service area",
+          "Secure form with rate limiting and hCaptcha"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Got a project",
+    "titleEmphasis": "mind",
+    "subtitle": "Whether it's a showcase website, a web or mobile application, a redesign or SEO optimization, I'm all ears.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "subjectPlaceholder": "Website creation",
+      "messagePlaceholder": "Describe your project...",
+      "submit": "Send message",
+      "submitting": "Sending..."
+    },
+    "status": {
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "proSite": "Need a professional website?"
+  },
+  "footer": {
+    "columns": {
+      "navigation": "Navigation",
+      "services": "Services",
+      "resources": "Resources",
+      "links": "Links"
+    },
+    "navLinks": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "serviceLinks": {
+      "webCreation": "Website creation",
+      "ecommerce": "Online store",
+      "mobileApp": "Mobile application",
+      "reactNextjs": "React / Next.js",
+      "flutterDart": "Flutter / Dart",
+      "redesign": "Website redesign",
+      "seo": "SEO optimization",
+      "webApp": "Web application",
+      "maintenance": "Web maintenance",
+      "hosting": "Web hosting",
+      "branding": "Visual identity"
+    },
+    "resourceLinks": {
+      "blog": "Blog",
+      "glossary": "Glossary",
+      "faq": "FAQ",
+      "comparisons": "Comparisons",
+      "cv": "My resume"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "pageTitle": "Page not found | Evan Davison",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "message": "This page does not exist or has been moved.",
+    "backHome": "Back to home"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "fr": "Fran\u00e7ais",
+    "en-gb": "English (UK)",
+    "en-us": "English (US)"
+  }
+}
