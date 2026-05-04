@@ -1,0 +1,124 @@
+{
+  "hero": {
+    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. Alongside, I support businesses through my <strong>freelance</strong> activity. I am looking for a <strong>work-study programme in IT project management</strong> to combine my technical vision with a strategic and organisational approach."
+  },
+  "about": {
+    "paragraphs": [
+      "Fullstack developer based in <strong>Rennes</strong>, I am completing my <strong>Bachelor's degree</strong> in software development. My education has allowed me to master web and mobile development, from frontend to backend.",
+      "Alongside my studies, I founded <a>DVS Web</a>, my freelance activity where I help businesses create their digital projects: showcase websites, web applications, e-commerce and SEO optimisation.",
+      "This dual role as <strong>student</strong> and <strong>entrepreneur</strong> allows me to combine technical rigour with hands-on experience, delivering concrete and high-performing solutions.",
+      "I am currently looking for a <strong>work-study programme in IT project management</strong>. My background as a developer gives me a deep understanding of technical challenges, which I want to complement with training in <strong>project leadership</strong>, team coordination and delivery management."
+    ]
+  },
+  "services": {
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Showcase websites, web applications, e-commerce. Modern and high-performing solutions tailored to your needs."
+      },
+      {
+        "title": "Mobile Applications",
+        "description": "iOS and Android applications with Flutter. A single codebase for all platforms."
+      },
+      {
+        "title": "Website Redesign",
+        "description": "Modernisation of your existing website: design, performance, accessibility and user experience."
+      },
+      {
+        "title": "SEO & Performance",
+        "description": "Search engine optimisation and performance improvements for better Google visibility."
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "title": "Founder & Freelance Developer",
+        "company": "DVS Web - Rennes",
+        "period": "2026 - Present",
+        "description": "Design and development of websites and applications for various clients. Project management, client relations, fullstack development."
+      },
+      {
+        "title": "Web Developer (Work-Study)",
+        "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
+        "period": "September 2025 - September 2026",
+        "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
+      },
+      {
+        "title": "Bachelor's in Web Development",
+        "company": "Sup de Vinci - Chantepie",
+        "period": "2025 - 2026",
+        "description": "Comprehensive training in web and mobile development, databases, and project management. Bachelor's degree."
+      },
+      {
+        "title": "BTS SIO (SLAM)",
+        "company": "Lyc\u00e9e Saint Sauveur - Redon",
+        "period": "2022 - 2025",
+        "description": "Software Solutions and Business Applications. Learning the fundamentals of software development."
+      }
+    ]
+  },
+  "projects": {
+    "items": [
+      {
+        "description": "Professional showcase website for my freelance developer activity. Responsive black/gold design, smooth animations, contact form with Resend API, optimised SEO (dynamic sitemap, Schema.org) and GDPR compliance.",
+        "features": [
+          "Mobile-first responsive design with adaptive navigation",
+          "Scroll animations and micro-interactions",
+          "Secure contact form with dual email sending",
+          "Server-side generated dynamic sitemap and robots.txt",
+          "Complete SEO metadata (Open Graph, Twitter Cards, Schema.org)",
+          "GDPR-compliant cookie banner"
+        ]
+      },
+      {
+        "description": "SaaS application for AI-powered CV generation. Integrates OpenAI (GPT-4o-mini) for content optimisation, Stripe for payments, and NextAuth with 2FA. 5 templates, ATS analysis and PDF export.",
+        "features": [
+          "5 CV templates (Modern, Classic, ATS-Friendly, Minimal, Creative)",
+          "ATS analysis: Score 0-100 with recommendations",
+          "AI suggestions for content improvement",
+          "OAuth authentication (Google, GitHub) + 2FA with QR code",
+          "Stripe payment (1 free template, premium at \u00a34.99)",
+          "High-quality PDF export",
+          "Transactional emails (welcome, password reset, payment confirmation)"
+        ]
+      },
+      {
+        "description": "Cross-platform application for breeders and pet owners. Complete medical tracking, vaccines with automatic reminders, family tree, weight evolution and PDF export.",
+        "features": [
+          "Complete profile per animal with photo and identification",
+          "Vaccine tracking with automatic reminders",
+          "Treatment and veterinary consultation history",
+          "Weight evolution chart",
+          "Interactive family tree",
+          "Complete health record PDF export"
+        ]
+      },
+      {
+        "description": "Full-stack web application for generating, customising and managing QR codes. Real-time preview, style templates, dashboard with filters, multi-format export and public sharing via unique links.",
+        "features": [
+          "QR code generation from URLs or text with real-time preview",
+          "Advanced customisation: colours, size, error correction, centred logo, templates (Ocean, Forest, Sunset...)",
+          "Dashboard with search, filters (type, favourites) and multiple selection",
+          "Multi-format export: PNG, JPEG, PDF (A4) and ZIP for batch exports",
+          "Public sharing via unique links with tokens",
+          "Complete authentication with bcrypt hashing"
+        ]
+      },
+      {
+        "description": "Showcase website for a building painting company. FR/EN internationalisation, interactive before/after gallery, dynamic Google reviews, Leaflet map and secure form.",
+        "features": [
+          "Complete internationalisation (FR/EN) with next-intl",
+          "Dark mode with preference persistence",
+          "Interactive before/after gallery with touch slider",
+          "Dynamic Google reviews via API",
+          "Interactive map with service area",
+          "Secure form with rate limiting and hCaptcha"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "subtitle": "Whether it's a showcase website, a web or mobile application, a redesign or SEO optimisation, I'm all ears."
+  }
+}
