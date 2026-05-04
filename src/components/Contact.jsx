@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import useReveal from '../hooks/useReveal'
 import emailjs from '@emailjs/browser'
+import { useTranslations } from '../i18n/useTranslations'
 
 const contactLinks = [
   {
@@ -25,8 +26,9 @@ const contactLinks = [
   },
 ]
 
-export default function Contact() {
+export default function Contact({ locale = 'fr' }) {
   const [ref, isInView] = useReveal()
+  const t = useTranslations(locale)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,11 +64,11 @@ export default function Contact() {
         import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
       )
 
-      setStatus({ type: 'success', message: 'Message envoy\u00e9 avec succ\u00e8s !' })
+      setStatus({ type: 'success', message: t.contact.status.success })
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('EmailJS error:', error)
-      setStatus({ type: 'error', message: 'Une erreur est survenue. Veuillez r\u00e9essayer.' })
+      setStatus({ type: 'error', message: t.contact.status.error })
     } finally {
       setIsSubmitting(false)
     }
@@ -80,17 +82,16 @@ export default function Contact() {
         {/* Colonne gauche — infos */}
         <div className="bg-accent text-paper p-12 sm:p-16">
           <span className="font-mono text-[0.7rem] tracking-[0.2em] uppercase text-paper/60 mb-6 block">
-            Contact
+            {t.contact.label}
           </span>
 
           <h2 className="font-serif text-4xl sm:text-5xl font-bold text-paper leading-none mb-6">
-            Un projet<br />
-            en <em>tête</em> ?
+            {t.contact.title}<br />
+            en <em>{t.contact.titleEmphasis}</em> ?
           </h2>
 
           <p className="text-paper/80 text-base leading-relaxed mb-8">
-            Que ce soit pour un site vitrine, une application web ou mobile,
-            une refonte ou une optimisation SEO, je suis à votre écoute.
+            {t.contact.subtitle}
           </p>
 
           <div className="flex flex-col gap-4 mb-10">
@@ -124,7 +125,7 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="text-paper/50 hover:text-paper text-xs font-sans transition-colors"
           >
-            Besoin d'un site pro ? &rarr; dvs-web.fr
+            {t.contact.proSite} &rarr; dvs-web.fr
           </a>
         </div>
 
@@ -148,7 +149,7 @@ export default function Contact() {
                 htmlFor="name"
                 className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
               >
-                Nom complet
+                {t.contact.form.name}
               </label>
               <input
                 type="text"
@@ -158,7 +159,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
-                placeholder="John Doe"
+                placeholder={t.contact.form.namePlaceholder}
               />
             </div>
 
@@ -167,7 +168,7 @@ export default function Contact() {
                 htmlFor="email"
                 className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
               >
-                Email
+                {t.contact.form.email}
               </label>
               <input
                 type="email"
@@ -177,7 +178,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
-                placeholder="john@exemple.com"
+                placeholder={t.contact.form.emailPlaceholder}
               />
             </div>
 
@@ -186,7 +187,7 @@ export default function Contact() {
                 htmlFor="subject"
                 className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
               >
-                Sujet
+                {t.contact.form.subject}
               </label>
               <input
                 type="text"
@@ -196,7 +197,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors"
-                placeholder="Création d'un site web"
+                placeholder={t.contact.form.subjectPlaceholder}
               />
             </div>
 
@@ -205,7 +206,7 @@ export default function Contact() {
                 htmlFor="message"
                 className="font-mono text-[0.7rem] tracking-[0.1em] uppercase text-muted mb-2 block"
               >
-                Message
+                {t.contact.form.message}
               </label>
               <textarea
                 id="message"
@@ -215,7 +216,7 @@ export default function Contact() {
                 required
                 rows={5}
                 className="w-full py-3 border-b border-border bg-transparent font-sans text-ink text-base outline-none focus:border-accent transition-colors resize-y min-h-[100px]"
-                placeholder="Décrivez votre projet..."
+                placeholder={t.contact.form.messagePlaceholder}
               />
             </div>
 
@@ -224,7 +225,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="btn-primary w-full justify-center mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+              {isSubmitting ? t.contact.form.submitting : t.contact.form.submit}
             </button>
 
             <div aria-live="polite" aria-atomic="true">
