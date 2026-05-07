@@ -5,7 +5,7 @@ Disallow: /.astro/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://evandavison.fr/sitemap-index.xml
+Sitemap: https://www.evandavison.fr/sitemap-index.xml
 
 # Crawl-delay
 Crawl-delay: 1

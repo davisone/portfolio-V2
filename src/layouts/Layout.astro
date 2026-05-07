@@ -15,8 +15,8 @@ interface Props {
 const {
   title = 'Evan Davison | Développeur Fullstack Rennes - Portfolio',
   description = "Portfolio d'Evan Davison, développeur fullstack à Rennes. Découvrez mes projets, compétences (React, Next.js, Flutter, Node.js) et mon parcours. Fondateur de DVS Web.",
-  canonical = 'https://evandavison.fr',
-  ogImage = 'https://evandavison.fr/og-image.jpg',
+  canonical = 'https://www.evandavison.fr',
+  ogImage = 'https://www.evandavison.fr/og-image.jpg',
   schema,
   noindex = false,
   locale = 'fr',
@@ -38,10 +38,10 @@ const today = new Date().toISOString().split('T')[0]
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Hreflang -->
-    <link rel="alternate" hreflang="fr" href={`https://evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
-    <link rel="alternate" hreflang="en-GB" href={`https://evandavison.fr/en-gb${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
-    <link rel="alternate" hreflang="en-US" href={`https://evandavison.fr/en-us${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
-    <link rel="alternate" hreflang="x-default" href={`https://evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="fr" href={`https://www.evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="en-GB" href={`https://www.evandavison.fr/en-gb${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="en-US" href={`https://www.evandavison.fr/en-us${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://www.evandavison.fr${Astro.url.pathname.replace(/^\/(en-gb|en-us)/, '')}`} />
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -85,16 +85,16 @@ const today = new Date().toISOString().split('T')[0]
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://evandavison.fr/#person",
+          "@id": "https://www.evandavison.fr/#person",
           "name": "Evan Davison",
           "givenName": "Evan",
           "familyName": "Davison",
           "jobTitle": "Développeur Fullstack & Chef de projet IT (alternance)",
           "description": "Développeur fullstack basé à Rennes, spécialisé en React, Next.js, TypeScript, Node.js et Flutter. Fondateur de DVS Web. En recherche d'alternance en gestion de projet IT.",
-          "url": "https://evandavison.fr",
+          "url": "https://www.evandavison.fr",
           "email": "contact@evandavison.fr",
           "telephone": "+33651019506",
-          "image": "https://evandavison.fr/og-image.jpg",
+          "image": "https://www.evandavison.fr/og-image.jpg",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Rennes",
@@ -129,28 +129,28 @@ const today = new Date().toISOString().split('T')[0]
         },
         {
           "@type": "WebSite",
-          "@id": "https://evandavison.fr/#website",
-          "url": "https://evandavison.fr",
+          "@id": "https://www.evandavison.fr/#website",
+          "url": "https://www.evandavison.fr",
           "name": "Evan Davison - Portfolio Développeur Fullstack",
           "description": "Portfolio et CV en ligne d'Evan Davison, développeur fullstack à Rennes",
-          "publisher": { "@id": "https://evandavison.fr/#person" },
+          "publisher": { "@id": "https://www.evandavison.fr/#person" },
           "inLanguage": "fr-FR"
         },
         {
           "@type": "ProfilePage",
-          "@id": "https://evandavison.fr/#profilepage",
-          "url": "https://evandavison.fr",
+          "@id": "https://www.evandavison.fr/#profilepage",
+          "url": "https://www.evandavison.fr",
           "name": "Portfolio d'Evan Davison",
-          "mainEntity": { "@id": "https://evandavison.fr/#person" },
+          "mainEntity": { "@id": "https://www.evandavison.fr/#person" },
           "dateCreated": "2026-01-28",
           "dateModified": today,
           "inLanguage": "fr-FR"
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://evandavison.fr/#breadcrumb",
+          "@id": "https://www.evandavison.fr/#breadcrumb",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://evandavison.fr" }
+            { "@type": "ListItem", "position": 1, "name": "Portfolio", "item": "https://www.evandavison.fr" }
           ]
         }
       ]
