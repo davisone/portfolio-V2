@@ -16,6 +16,30 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind(),
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        const url = item.url
+
+        if (url === 'https://www.evandavison.fr/') {
+          item.priority = 1.0
+          item.changefreq = 'weekly'
+        } else if (/\/(services|blog)\//.test(url)) {
+          item.priority = 0.8
+          item.changefreq = 'weekly'
+        } else if (/\/(glossaire|comparatifs|faq)/.test(url)) {
+          item.priority = 0.6
+          item.changefreq = 'monthly'
+        } else if (/\/(en-gb|en-us)\//.test(url)) {
+          item.priority = 0.5
+          item.changefreq = 'monthly'
+        } else {
+          item.priority = 0.5
+          item.changefreq = 'monthly'
+        }
+
+        item.lastmod = new Date().toISOString()
+        return item
+      },
+    }),
   ],
 })
