@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 
 export default defineConfig({
-  site: 'https://evandavison.fr',
+  site: 'https://www.evandavison.fr',
   output: 'static',
   i18n: {
     defaultLocale: 'fr',

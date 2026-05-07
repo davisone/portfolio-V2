@@ -36,11 +36,11 @@ const schema = {
   "@type": "DefinedTermSet",
   "name": "Glossaire du developpement web",
   "description": "Glossaire des termes techniques du developpement web : definitions, explications et guides pratiques par Evan Davison, developpeur fullstack a Rennes.",
-  "url": "https://evandavison.fr/glossaire",
+  "url": "https://www.evandavison.fr/glossaire",
   "hasDefinedTerm": terms.map((t) => ({
     "@type": "DefinedTerm",
     "name": t.name,
-    "url": `https://evandavison.fr/glossaire/${t.slug}`
+    "url": `https://www.evandavison.fr/glossaire/${t.slug}`
   }))
 }
 ---
@@ -48,7 +48,7 @@ const schema = {
 <Layout
   title="Glossaire du developpement web | Evan Davison"
   description="Glossaire complet du developpement web : API REST, SSR, SSG, SEO, React, Next.js, Flutter, TypeScript et plus. Definitions claires par un developpeur fullstack."
-  canonical="https://evandavison.fr/glossaire"
+  canonical="https://www.evandavison.fr/glossaire"
   schema={schema}
 >
   <Header />

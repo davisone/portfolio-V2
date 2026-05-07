@@ -110,20 +110,20 @@ const schema = {
       "@type": "ItemList",
       "name": "Services de developpement web — Evan Davison",
       "description": "Tous les services proposes par Evan Davison, developpeur web freelance a Rennes.",
-      "url": "https://evandavison.fr/services",
+      "url": "https://www.evandavison.fr/services",
       "numberOfItems": mainServices.length,
       "itemListElement": mainServices.map((s, i) => ({
         "@type": "ListItem",
         "position": i + 1,
         "name": s.title,
-        "url": `https://evandavison.fr${s.href}`
+        "url": `https://www.evandavison.fr${s.href}`
       }))
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://evandavison.fr" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://evandavison.fr/services" }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.evandavison.fr" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.evandavison.fr/services" }
       ]
     }
   ]
@@ -133,7 +133,7 @@ const schema = {
 <Layout
   title="Services | Evan Davison — Developpeur Web Freelance Rennes"
   description="Decouvrez tous les services proposes par Evan Davison : creation de sites web, boutiques en ligne, applications mobiles, SEO, maintenance et plus. Devis gratuit."
-  canonical="https://evandavison.fr/services"
+  canonical="https://www.evandavison.fr/services"
   schema={schema}
 >
   <Header />

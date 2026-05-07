@@ -23,7 +23,7 @@ const formattedDate = post.data.pubDate.toLocaleDateString('fr-FR', {
 
 const dateModified = post.data.dateModified || post.data.pubDate
 
-const articleImage = post.data.image || 'https://evandavison.fr/og-image.png'
+const articleImage = post.data.image || 'https://www.evandavison.fr/og-image.png'
 
 const schema = {
   "@context": "https://schema.org",
@@ -31,15 +31,15 @@ const schema = {
   "headline": post.data.title,
   "description": post.data.description,
   "image": articleImage,
-  "author": { "@id": "https://evandavison.fr/#person" },
+  "author": { "@id": "https://www.evandavison.fr/#person" },
   "datePublished": post.data.pubDate.toISOString(),
   "dateModified": dateModified.toISOString(),
-  "url": `https://evandavison.fr/blog/${post.slug}`,
-  "publisher": { "@id": "https://evandavison.fr/#person" },
+  "url": `https://www.evandavison.fr/blog/${post.slug}`,
+  "publisher": { "@id": "https://www.evandavison.fr/#person" },
   "inLanguage": "fr-FR",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://evandavison.fr/blog/${post.slug}`
+    "@id": `https://www.evandavison.fr/blog/${post.slug}`
   }
 }
 ---
@@ -47,7 +47,7 @@ const schema = {
 <Layout
   title={`${post.data.title} | Blog Evan Davison`}
   description={post.data.description}
-  canonical={`https://evandavison.fr/blog/${post.slug}`}
+  canonical={`https://www.evandavison.fr/blog/${post.slug}`}
   schema={schema}
 >
   <Header />
