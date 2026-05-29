@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap'
 export default defineConfig({
   site: 'https://www.evandavison.fr',
   output: 'static',
+  trailingSlash: 'always',
   i18n: {
     defaultLocale: 'fr',
     locales: ['fr', 'en-gb', 'en-us'],
@@ -17,6 +18,7 @@ export default defineConfig({
     react(),
     tailwind(),
     sitemap({
+      filter: (page) => !page.includes('/404'),
       serialize(item) {
         const url = item.url
 
@@ -37,7 +39,6 @@ export default defineConfig({
           item.changefreq = 'monthly'
         }
 
-        item.lastmod = new Date().toISOString()
         return item
       },
     }),
