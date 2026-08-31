@@ -143,6 +143,23 @@
   height: 100vh;
   height: 100dvh;
   will-change: transform;
+  background: rgb(var(--color-cimaise));
+}
+
+/* Fil de visite : trait qui serpente entre les salles et se dessine au scroll */
+.fil-visite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fil-visite path {
+  fill: none;
+  stroke: rgb(var(--color-point) / 0.45);
+  stroke-width: 1.5;
+  stroke-linecap: round;
 }
 
 .galerie-active .salle {
@@ -156,6 +173,13 @@
   background: rgb(var(--color-cimaise));
   display: flex;
   flex-direction: column;
+}
+
+/* Desktop : salles transparentes pour laisser vivre le fil de visite sous le contenu */
+@media (min-width: 768px) {
+  .galerie-active .salle {
+    background: transparent;
+  }
 }
 
 /* Centrage sûr : centré quand ça tient, aligné en haut (scrollable) sinon */

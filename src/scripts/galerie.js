@@ -28,6 +28,64 @@ const construireParcours = (salles, facteurX, travels) => {
   return { waypoints, segments, total }
 }
 
+// Fil de visite : trait serpentant entre les salles, dessiné avec le scroll (desktop)
+const construireFil = (waypoints, vw, vh) => {
+  // Dans les salles traversantes, le fil passe sous les œuvres
+  const traversants = new Set(
+    waypoints.filter((w) => w.id.endsWith('-fin')).map((w) => w.id.slice(0, -4))
+  )
+  const pts = waypoints.map((w, i) => {
+    const sousOeuvres = traversants.has(w.id) || w.id.endsWith('-fin')
+    return {
+      x: w.x * vw + vw / 2,
+      y: w.y * vh + vh * (sousOeuvres ? 0.9 : 0.5 + (i % 2 ? 0.09 : -0.09)),
+    }
+  })
+
+  // Courbes quadratiques avec ondulation perpendiculaire alternée
+  // et longueur cumulée du fil à chaque waypoint (pour synchroniser le dessin avec la caméra)
+  let d = `M ${pts[0].x} ${pts[0].y}`
+  const cumule = [0]
+  for (let i = 1; i < pts.length; i++) {
+    const a = pts[i - 1]
+    const b = pts[i]
+    const dx = b.x - a.x
+    const dy = b.y - a.y
+    const longueur = Math.hypot(dx, dy) || 1
+    const amplitude = Math.min(70, longueur * 0.14) * (i % 2 ? 1 : -1)
+    const cx = (a.x + b.x) / 2 - (dy / longueur) * amplitude
+    const cy = (a.y + b.y) / 2 + (dx / longueur) * amplitude
+    d += ` Q ${Math.round(cx)} ${Math.round(cy)} ${Math.round(b.x)} ${Math.round(b.y)}`
+    // Longueur de la courbe par échantillonnage
+    let lc = 0
+    let px = a.x
+    let py = a.y
+    for (let k = 1; k <= 16; k++) {
+      const t = k / 16
+      const qx = (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * cx + t * t * b.x
+      const qy = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * cy + t * t * b.y
+      lc += Math.hypot(qx - px, qy - py)
+      px = qx
+      py = qy
+    }
+    cumule.push(cumule[i - 1] + lc)
+  }
+
+  const svgNS = 'http://www.w3.org/2000/svg'
+  const svg = document.createElementNS(svgNS, 'svg')
+  const maxX = Math.max(...pts.map((p) => p.x)) + vw / 2
+  const maxY = Math.max(...pts.map((p) => p.y)) + vh / 2
+  svg.classList.add('fil-visite')
+  svg.setAttribute('width', String(maxX))
+  svg.setAttribute('height', String(maxY))
+  svg.setAttribute('viewBox', `0 0 ${maxX} ${maxY}`)
+  svg.setAttribute('aria-hidden', 'true')
+  const path = document.createElementNS(svgNS, 'path')
+  path.setAttribute('d', d)
+  svg.appendChild(path)
+  return { svg, path, cumule }
+}
+
 const initChoregraphie = () => {
   const monde = document.querySelector('.galerie-monde')
   const salles = [...document.querySelectorAll('.salle')]
@@ -70,6 +128,26 @@ const initChoregraphie = () => {
     tl.to(monde, { x: -w.x * vw, y: -w.y * vh, duration: segments[i] })
   })
 
+  // Fil de visite dessiné en parallèle du voyage, pointe synchronisée avec la caméra (desktop)
+  let fil = null
+  if (!estMobile) {
+    fil = construireFil(waypoints, vw, vh)
+    monde.prepend(fil.svg)
+    const longueurFil = fil.path.getTotalLength()
+    const echelle = longueurFil / fil.cumule[fil.cumule.length - 1]
+    gsap.set(fil.path, { strokeDasharray: longueurFil, strokeDashoffset: longueurFil })
+    let position = 0
+    waypoints.forEach((w, i) => {
+      if (i === 0) return
+      tl.to(
+        fil.path,
+        { strokeDashoffset: longueurFil - fil.cumule[i] * echelle, duration: segments[i], ease: 'none' },
+        position
+      )
+      position += segments[i]
+    })
+  }
+
   const progressions = (() => {
     let cumul = 0
     return waypoints.map((_, i) => {
@@ -109,13 +187,14 @@ const initChoregraphie = () => {
   }
   window.__galerie = { allerA, st, tl, waypoints, progressions }
 
-  return { st, tl, salles, monde }
+  return { st, tl, salles, monde, fil }
 }
 
 const detruireChoregraphie = (instance) => {
   if (!instance) return
   instance.st.kill()
   instance.tl.kill()
+  instance.fil?.svg.remove()
   gsap.set([instance.monde, ...instance.salles], { clearProps: 'all' })
   document.documentElement.classList.remove('galerie-active')
 }
