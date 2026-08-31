@@ -12,10 +12,10 @@
     "closeMenu": "Close menu"
   },
   "hero": {
-    "label": "Looking for a work-study program \u2014 IT Project Manager",
-    "subtitle": "Fullstack Developer \u2014 Rennes, Founder of",
+    "label": "Looking for a work-study program — IT Project Manager",
+    "subtitle": "Fullstack Developer — Rennes, Founder of",
     "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. Alongside, I support businesses through my <strong>freelance</strong> activity. I am looking for a <strong>work-study program in IT project management</strong> to combine my technical vision with a strategic and organizational approach.",
-    "badge": "Available \u2014 Bachelor's Degree Sup de Vinci",
+    "badge": "Available — Bachelor's Degree Sup de Vinci",
     "cta": "Contact me",
     "downloadCv": "Download my resume"
   },
@@ -32,7 +32,7 @@
     "values": [
       {
         "title": "Project management",
-        "description": "Planning, coordination and follow-up \u2014 turning an idea into a concrete deliverable."
+        "description": "Planning, coordination and follow-up — turning an idea into a concrete deliverable."
       },
       {
         "title": "Efficiency",
@@ -87,7 +87,7 @@
       {
         "type": "work",
         "title": "Web Developer (Work-Study)",
-        "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
+        "company": "Le Reférencement Professionnel - Cesson-Sévigné",
         "period": "September 2025 - September 2026",
         "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
       },
@@ -101,7 +101,7 @@
       {
         "type": "education",
         "title": "BTS SIO (SLAM)",
-        "company": "Lyc\u00e9e Saint Sauveur - Redon",
+        "company": "Lycée Saint Sauveur - Redon",
         "period": "2022 - 2025",
         "description": "Software Solutions and Business Applications. Learning the fundamentals of software development."
       }
@@ -242,8 +242,18 @@
   },
   "languageSwitcher": {
     "label": "Language",
-    "fr": "Fran\u00e7ais",
+    "fr": "Français",
     "en-gb": "English (UK)",
     "en-us": "English (US)"
+  },
+  "galerie": {
+    "hall": "Hall",
+    "salle": "Room",
+    "grandeSalle": "Main gallery",
+    "sortie": "Exit",
+    "planLabel": "Visitor map",
+    "allerSalle": "Go to room",
+    "delivered": "Delivered",
+    "suite": "Continue the visit"
   }
 }

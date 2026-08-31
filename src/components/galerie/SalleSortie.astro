@@ -1,0 +1,190 @@
+---
+import { getTranslations, type Locale } from '../../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+
+const contactLinks = [
+  { label: 'contact@evandavison.fr', href: 'mailto:contact@evandavison.fr' },
+  { label: '+33 6 51 01 95 06', href: 'tel:+33651019506' },
+  { label: 'Rennes, France', href: null },
+  { label: 'GitHub', href: 'https://github.com/davisone' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/evan-d-766478247' },
+]
+---
+
+<section
+  id="contact"
+  class="salle min-h-screen flex items-center py-24"
+  data-salle-x="2.5" data-salle-y="3"
+>
+  <div class="salle-contenu section-container w-full">
+    <div class="cartel-box grid lg:grid-cols-2">
+      <!-- Colonne gauche : le comptoir -->
+      <div class="bg-encre text-cimaise p-8 sm:p-12">
+        <p class="font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cimaise/60 mb-5">
+          {t.galerie.sortie} — {t.contact.label}
+        </p>
+
+        <h2 class="font-display text-3xl sm:text-4xl text-cimaise leading-tight mb-5">
+          {t.contact.title} en <span class="text-point">{t.contact.titleEmphasis}</span> ?
+        </h2>
+
+        <p class="font-lecture text-cimaise/80 text-[15px] leading-relaxed mb-7">
+          {t.contact.subtitle}
+        </p>
+
+        <div class="flex flex-col gap-3 mb-8">
+          {contactLinks.map((link) =>
+            link.href ? (
+              <a
+                href={link.href}
+                target={link.href.startsWith('http') ? '_blank' : undefined}
+                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                class="flex items-center gap-3 text-cimaise/80 hover:text-cimaise font-lecture text-sm transition-colors"
+              >
+                <span class="w-4 h-px bg-cimaise/60 shrink-0"></span>
+                {link.label}
+              </a>
+            ) : (
+              <span class="flex items-center gap-3 text-cimaise/80 font-lecture text-sm">
+                <span class="w-4 h-px bg-cimaise/60 shrink-0"></span>
+                {link.label}
+              </span>
+            )
+          )}
+        </div>
+
+        <a
+          href="https://dvs-web.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-cimaise/50 hover:text-cimaise text-xs font-signal transition-colors"
+        >
+          {t.contact.proSite} &rarr; dvs-web.fr
+        </a>
+      </div>
+
+      <!-- Colonne droite : le formulaire -->
+      <div class="bg-oeuvre p-8 sm:p-12">
+        <form
+          id="contact-form"
+          data-success-message={t.contact.status.success}
+          data-error-message={t.contact.status.error}
+        >
+          <!-- Honeypot anti-spam -->
+          <input
+            type="text"
+            name="website"
+            class="absolute opacity-0 pointer-events-none"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+
+          <div class="mb-5">
+            <label for="name" class="signal-label mb-2 block">{t.contact.form.name}</label>
+            <input
+              type="text"
+              id="name"
+              name="from_name"
+              required
+              autocomplete="name"
+              class="w-full py-2.5 border-b border-filet bg-transparent font-lecture text-encre text-base outline-none focus:border-point transition-colors"
+              placeholder={t.contact.form.namePlaceholder}
+            />
+          </div>
+
+          <div class="mb-5">
+            <label for="email" class="signal-label mb-2 block">{t.contact.form.email}</label>
+            <input
+              type="email"
+              id="email"
+              name="from_email"
+              required
+              autocomplete="email"
+              class="w-full py-2.5 border-b border-filet bg-transparent font-lecture text-encre text-base outline-none focus:border-point transition-colors"
+              placeholder={t.contact.form.emailPlaceholder}
+            />
+          </div>
+
+          <div class="mb-5">
+            <label for="subject" class="signal-label mb-2 block">{t.contact.form.subject}</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              class="w-full py-2.5 border-b border-filet bg-transparent font-lecture text-encre text-base outline-none focus:border-point transition-colors"
+              placeholder={t.contact.form.subjectPlaceholder}
+            />
+          </div>
+
+          <div class="mb-5">
+            <label for="message" class="signal-label mb-2 block">{t.contact.form.message}</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="4"
+              class="w-full py-2.5 border-b border-filet bg-transparent font-lecture text-encre text-base outline-none focus:border-point transition-colors resize-y min-h-[90px]"
+              placeholder={t.contact.form.messagePlaceholder}></textarea>
+          </div>
+
+          <button
+            type="submit"
+            data-label={t.contact.form.submit}
+            data-label-submitting={t.contact.form.submitting}
+            class="btn-galerie w-full justify-center mt-1 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {t.contact.form.submit}
+          </button>
+
+          <div aria-live="polite" aria-atomic="true">
+            <p id="contact-status" class="font-lecture text-sm mt-4 text-center text-encre"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import emailjs from '@emailjs/browser'
+
+  const form = document.getElementById('contact-form') as HTMLFormElement | null
+  const statut = document.getElementById('contact-status')
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    // Honeypot : abandon silencieux si rempli
+    const honeypot = form.querySelector('input[name="website"]') as HTMLInputElement
+    if (honeypot?.value) return
+
+    const bouton = form.querySelector('button[type="submit"]') as HTMLButtonElement
+    bouton.disabled = true
+    bouton.textContent = bouton.dataset.labelSubmitting ?? ''
+    if (statut) statut.textContent = ''
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+        form,
+        { publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY }
+      )
+      if (statut) statut.textContent = form.dataset.successMessage ?? ''
+      form.reset()
+    } catch {
+      if (statut) statut.textContent = form.dataset.errorMessage ?? ''
+    } finally {
+      bouton.disabled = false
+      bouton.textContent = bouton.dataset.label ?? ''
+    }
+  })
+</script>

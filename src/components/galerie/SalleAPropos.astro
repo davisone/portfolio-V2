@@ -1,0 +1,54 @@
+---
+import { getTranslations, type Locale } from '../../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+
+const dvsWebLink = 'https://dvs-web.fr'
+const paragrapheDvs = t.about.paragraphs[1].replace(
+  '<a>DVS Web</a>',
+  `<a href="${dvsWebLink}" target="_blank" rel="noopener noreferrer" class="text-encre hover:text-point transition-colors font-semibold underline underline-offset-4 decoration-filet">DVS Web</a>`
+)
+---
+
+<section
+  id="apropos"
+  class="salle min-h-screen flex items-center py-24"
+  data-salle-x="0" data-salle-y="1"
+>
+  <div class="salle-contenu section-container w-full">
+    <p class="signal-label mb-3">{t.galerie.salle} 1 — {t.about.label}</p>
+    <h2 class="font-display text-4xl sm:text-5xl text-encre mb-10 sm:mb-14">
+      {t.about.title} de <span class="text-point">{t.about.titleEmphasis}</span>
+    </h2>
+
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <!-- Texte -->
+      <div class="space-y-4 sm:space-y-5">
+        <p class="font-lecture text-[15px] sm:text-base leading-relaxed text-encre" set:html={t.about.paragraphs[0]} />
+        <p class="font-lecture text-[15px] sm:text-base leading-relaxed text-encre" set:html={paragrapheDvs} />
+        <p class="font-lecture text-[15px] sm:text-base leading-relaxed text-encre" set:html={t.about.paragraphs[2]} />
+        <p class="font-lecture text-[15px] sm:text-base leading-relaxed text-encre" set:html={t.about.paragraphs[3]} />
+      </div>
+
+      <!-- Valeurs accrochées comme une liste d'œuvres -->
+      <div>
+        {t.about.values.map((value, index) => (
+          <div class="border-t border-filet pt-5 pb-5">
+            <div class="flex items-start gap-4">
+              <span class="font-display text-point text-lg">{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 class="font-signal font-semibold text-sm uppercase tracking-[0.08em] text-encre">{value.title}</h3>
+                <p class="font-lecture text-sm text-cartel mt-1 leading-relaxed">{value.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
