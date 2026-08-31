@@ -237,14 +237,7 @@ const initChoregraphie = () => {
       ease: 'power1.inOut',
       delay: 0.1,
     },
-    onUpdate: (self) => {
-      // Progression de la visite pour le plan (interpolation côté plan)
-      document.dispatchEvent(new CustomEvent('galerie:progress', { detail: { progress: self.progress } }))
-    },
   })
-
-  // Position initiale pour le plan de la visite
-  document.dispatchEvent(new CustomEvent('galerie:progress', { detail: { progress: st.progress } }))
 
   // Navigation : ancre de salle -> position de scroll correspondante
   const allerA = (id) => {
