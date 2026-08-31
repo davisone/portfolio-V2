@@ -7,15 +7,15 @@ gsap.registerPlugin(ScrollTrigger)
 const AMPLITUDE_MOBILE = 0.4
 const MOBILE_MAX = 767
 
-const construireParcours = (salles, facteurX) => {
-  // Un waypoint par salle + un second en sortie de salle large (travelling interne)
+const construireParcours = (salles, facteurX, travels) => {
+  // Un waypoint par salle + un second en sortie de salle traversante (travelling interne)
   const waypoints = []
   salles.forEach((salle) => {
     const x = parseFloat(salle.dataset.salleX) * facteurX
     const y = parseFloat(salle.dataset.salleY)
-    const largeur = parseFloat(salle.dataset.salleLargeur || '1')
     waypoints.push({ id: salle.id, x, y })
-    if (largeur > 1) waypoints.push({ id: `${salle.id}-fin`, x: x + (largeur - 1) * facteurX, y })
+    const travel = travels.get(salle.id)
+    if (travel) waypoints.push({ id: `${salle.id}-fin`, x: x + travel, y })
   })
   // Distances cumulées pour une vitesse de déplacement constante
   let total = 0
@@ -42,16 +42,26 @@ const initChoregraphie = () => {
 
   // Placement des salles dans le monde
   salles.forEach((salle, i) => {
-    const largeur = parseFloat(salle.dataset.salleLargeur || '1')
     gsap.set(salle, {
       x: parseFloat(salle.dataset.salleX) * facteurX * vw,
       y: parseFloat(salle.dataset.salleY) * vh,
-      width: largeur > 1 ? largeur * vw : vw,
+      width: vw,
       zIndex: i + 1,
     })
   })
 
-  const { waypoints, segments, total } = construireParcours(salles, facteurX)
+  // Salles traversantes : largeur ajustée au contenu réel, travelling en unités viewport
+  const travels = new Map()
+  salles.forEach((salle) => {
+    if (parseFloat(salle.dataset.salleLargeur || '1') > 1) {
+      const contenu = salle.scrollWidth + 32
+      const largeurPx = Math.max(vw, contenu)
+      gsap.set(salle, { width: largeurPx })
+      travels.set(salle.id, (largeurPx - vw) / vw)
+    }
+  })
+
+  const { waypoints, segments, total } = construireParcours(salles, facteurX, travels)
 
   // Timeline caméra : translation du monde, vitesse constante
   const tl = gsap.timeline({ defaults: { ease: 'none' } })
@@ -81,11 +91,9 @@ const initChoregraphie = () => {
       ease: 'power1.inOut',
       delay: 0.1,
     },
-    onUpdate: () => {
-      // Position caméra courante (unités salle, x non réduit) pour le plan de la visite
-      const x = -gsap.getProperty(monde, 'x') / vw / facteurX
-      const y = -gsap.getProperty(monde, 'y') / vh
-      document.dispatchEvent(new CustomEvent('galerie:progress', { detail: { x, y } }))
+    onUpdate: (self) => {
+      // Progression de la visite pour le plan (interpolation côté plan)
+      document.dispatchEvent(new CustomEvent('galerie:progress', { detail: { progress: self.progress } }))
     },
   })
 
@@ -110,7 +118,17 @@ const detruireChoregraphie = (instance) => {
 }
 
 export const initGalerie = () => {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Chorégraphie désactivée : simple apparition des contenus au défilement
+    const contenus = document.querySelectorAll('.salle .salle-contenu')
+    contenus.forEach((c) => c.classList.add('fondu'))
+    const io = new IntersectionObserver(
+      (entrees) => entrees.forEach((e) => e.isIntersecting && e.target.classList.add('visible')),
+      { threshold: 0.15 }
+    )
+    contenus.forEach((c) => io.observe(c))
+    return
+  }
 
   let instance = initChoregraphie()
   if (!instance) return

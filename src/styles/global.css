@@ -154,6 +154,14 @@
   height: 100dvh;
   overflow-y: auto;
   background: rgb(var(--color-cimaise));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centrage sûr : centré quand ça tient, aligné en haut (scrollable) sinon */
+.galerie-active .salle > .salle-contenu {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .galerie-active .salle-rangee {
@@ -170,6 +178,25 @@
 .galerie-active .grande-entete {
   width: 22rem;
   flex: none;
+}
+
+@media (max-width: 767px) {
+  /* Dégagement sous le header fixe */
+  .galerie-active .salle > .salle-contenu {
+    padding-top: 3.5rem;
+  }
+
+  .galerie-active .grande-entete {
+    width: 70vw;
+  }
+
+  .galerie-active .oeuvre {
+    width: 85vw;
+  }
+
+  .galerie-active .salle-rangee {
+    gap: 1.5rem;
+  }
 }
 
 /* Fondus reduced-motion : opacité seule, jamais de translation */
