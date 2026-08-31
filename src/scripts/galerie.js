@@ -97,6 +97,9 @@ const initChoregraphie = () => {
     },
   })
 
+  // Position initiale pour le plan de la visite
+  document.dispatchEvent(new CustomEvent('galerie:progress', { detail: { progress: st.progress } }))
+
   // Navigation : ancre de salle -> position de scroll correspondante
   const allerA = (id) => {
     const index = waypoints.findIndex((w) => w.id === id)

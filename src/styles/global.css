@@ -215,6 +215,55 @@
   }
 }
 
+/* Plan de la visite */
+.plan-visite {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 40;
+  background: rgb(var(--color-oeuvre) / 0.92);
+  border: 1px solid rgb(var(--color-filet));
+  padding: 8px;
+}
+
+.plan-visite rect {
+  fill: transparent;
+  stroke: rgb(var(--color-encre));
+  stroke-width: 1.2;
+}
+
+.plan-visite text {
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  fill: rgb(var(--color-cartel));
+  pointer-events: none;
+}
+
+.plan-visite .plan-salle {
+  cursor: pointer;
+}
+
+.plan-visite .plan-salle:hover rect,
+.plan-visite .plan-salle:focus-visible rect {
+  stroke: rgb(var(--color-point));
+  stroke-width: 1.6;
+}
+
+.plan-visite #plan-visiteur {
+  fill: rgb(var(--color-point));
+  transition: cx 0.1s linear, cy 0.1s linear;
+}
+
+@media (max-width: 767px) {
+  .plan-visite {
+    transform: scale(0.68);
+    transform-origin: bottom left;
+    left: 8px;
+    bottom: 8px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
