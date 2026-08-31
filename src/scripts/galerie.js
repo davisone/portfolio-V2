@@ -28,6 +28,18 @@ const construireParcours = (salles, facteurX, travels) => {
   return { waypoints, segments, total }
 }
 
+// Signature cursive « Evan » d'un seul trait avec paraphe (boîte locale 260x80, base 64)
+const SIGNATURE = [
+  [52, 16], [38, 6], [22, 10], [18, 22], [30, 26],
+  [14, 32], [8, 46], [16, 60], [34, 63], [48, 54],
+  [62, 40], [66, 60], [74, 42], [78, 38], [82, 46],
+  [93, 38], [85, 40], [82, 49], [87, 57], [95, 55], [98, 46], [96, 40],
+  [99, 52], [103, 61], [109, 56],
+  [114, 46], [117, 38], [119, 52], [121, 60],
+  [126, 40], [132, 36], [137, 46], [139, 58],
+  [150, 46], [160, 38], [166, 46], [156, 58], [128, 66], [100, 68], [76, 64],
+]
+
 // Fil de visite : trait baladeur qui ondule et fait des loopings entre les salles (desktop)
 const construireFil = (waypoints, vw, vh) => {
   // Dans les salles traversantes, le fil passe sous les œuvres
@@ -35,6 +47,10 @@ const construireFil = (waypoints, vw, vh) => {
     waypoints.filter((w) => w.id.endsWith('-fin')).map((w) => w.id.slice(0, -4))
   )
   const ancres = waypoints.map((w, i) => {
+    // Dernière salle : le fil arrive dans la bande basse, prêt à signer
+    if (i === waypoints.length - 1) {
+      return { x: w.x * vw + vw * 0.42, y: w.y * vh + vh - 96 }
+    }
     const sousOeuvres = traversants.has(w.id) || w.id.endsWith('-fin')
     return {
       x: w.x * vw + vw / 2,
@@ -57,8 +73,8 @@ const construireFil = (waypoints, vw, vh) => {
     const perpY = ux
     const sens = i % 2 ? 1 : -1
 
-    if (waypoints[i].id.endsWith('-fin')) {
-      // Travelling sous les œuvres : vagues douces, pas de boucle
+    if (waypoints[i].id.endsWith('-fin') || i === ancres.length - 1) {
+      // Travelling sous les œuvres ou approche finale : vagues douces, pas de boucle
       for (let k = 1; k <= 4; k++) {
         const t = k / 5
         const s = k % 2 ? 1 : -1
@@ -82,6 +98,16 @@ const construireFil = (waypoints, vw, vh) => {
     pts.push({ x: b.x, y: b.y })
     indexAncres.push(pts.length - 1)
   }
+
+  // Finale : le fil signe l'exposition dans la bande basse de la dernière salle
+  const dernier = waypoints[waypoints.length - 1]
+  const echelleSig = Math.min((vw * 0.15) / 260, 64 / 80)
+  const sigX = dernier.x * vw + vw * 0.58
+  const sigY = dernier.y * vh + vh - 24 - 80 * echelleSig
+  SIGNATURE.forEach(([x, y]) => {
+    pts.push({ x: sigX + x * echelleSig, y: sigY + y * echelleSig })
+  })
+  indexAncres[indexAncres.length - 1] = pts.length - 1
 
   // Spline Catmull-Rom convertie en courbes cubiques, avec longueur cumulée par point
   let d = `M ${Math.round(pts[0].x)} ${Math.round(pts[0].y)}`
