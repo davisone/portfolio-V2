@@ -28,48 +28,90 @@ const construireParcours = (salles, facteurX, travels) => {
   return { waypoints, segments, total }
 }
 
-// Fil de visite : trait serpentant entre les salles, dessiné avec le scroll (desktop)
+// Fil de visite : trait baladeur qui ondule et fait des loopings entre les salles (desktop)
 const construireFil = (waypoints, vw, vh) => {
   // Dans les salles traversantes, le fil passe sous les œuvres
   const traversants = new Set(
     waypoints.filter((w) => w.id.endsWith('-fin')).map((w) => w.id.slice(0, -4))
   )
-  const pts = waypoints.map((w, i) => {
+  const ancres = waypoints.map((w, i) => {
     const sousOeuvres = traversants.has(w.id) || w.id.endsWith('-fin')
     return {
       x: w.x * vw + vw / 2,
-      y: w.y * vh + vh * (sousOeuvres ? 0.9 : 0.5 + (i % 2 ? 0.09 : -0.09)),
+      y: w.y * vh + vh * (sousOeuvres ? 0.88 : 0.5 + (i % 2 ? 0.09 : -0.09)),
     }
   })
 
-  // Courbes quadratiques avec ondulation perpendiculaire alternée
-  // et longueur cumulée du fil à chaque waypoint (pour synchroniser le dessin avec la caméra)
-  let d = `M ${pts[0].x} ${pts[0].y}`
-  const cumule = [0]
-  for (let i = 1; i < pts.length; i++) {
-    const a = pts[i - 1]
-    const b = pts[i]
+  // Points de passage : ondulations et boucle complète au milieu de chaque transition
+  const pts = [ancres[0]]
+  const indexAncres = [0]
+  for (let i = 1; i < ancres.length; i++) {
+    const a = ancres[i - 1]
+    const b = ancres[i]
     const dx = b.x - a.x
     const dy = b.y - a.y
     const longueur = Math.hypot(dx, dy) || 1
-    const amplitude = Math.min(70, longueur * 0.14) * (i % 2 ? 1 : -1)
-    const cx = (a.x + b.x) / 2 - (dy / longueur) * amplitude
-    const cy = (a.y + b.y) / 2 + (dx / longueur) * amplitude
-    d += ` Q ${Math.round(cx)} ${Math.round(cy)} ${Math.round(b.x)} ${Math.round(b.y)}`
-    // Longueur de la courbe par échantillonnage
+    const ux = dx / longueur
+    const uy = dy / longueur
+    const perpX = -uy
+    const perpY = ux
+    const sens = i % 2 ? 1 : -1
+
+    if (waypoints[i].id.endsWith('-fin')) {
+      // Travelling sous les œuvres : vagues douces, pas de boucle
+      for (let k = 1; k <= 4; k++) {
+        const t = k / 5
+        const s = k % 2 ? 1 : -1
+        pts.push({ x: a.x + dx * t + perpX * 30 * s, y: a.y + dy * t + perpY * 30 * s })
+      }
+    } else {
+      // Vadrouille avant la boucle
+      pts.push({ x: a.x + dx * 0.22 + perpX * 46 * sens, y: a.y + dy * 0.22 + perpY * 46 * sens })
+      // Looping au milieu du trajet
+      const rayon = Math.min(88, longueur * 0.16)
+      const cx = a.x + dx * 0.5
+      const cy = a.y + dy * 0.5
+      const theta0 = Math.atan2(-uy, -ux)
+      for (let k = 0; k < 8; k++) {
+        const theta = theta0 + sens * (k / 8) * Math.PI * 2
+        pts.push({ x: cx + Math.cos(theta) * rayon, y: cy + Math.sin(theta) * rayon })
+      }
+      // Vadrouille après la boucle, de l'autre côté
+      pts.push({ x: a.x + dx * 0.8 - perpX * 46 * sens, y: a.y + dy * 0.8 - perpY * 46 * sens })
+    }
+    pts.push({ x: b.x, y: b.y })
+    indexAncres.push(pts.length - 1)
+  }
+
+  // Spline Catmull-Rom convertie en courbes cubiques, avec longueur cumulée par point
+  let d = `M ${Math.round(pts[0].x)} ${Math.round(pts[0].y)}`
+  const longueurAuPoint = [0]
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i]
+    const p1 = pts[i]
+    const p2 = pts[i + 1]
+    const p3 = pts[i + 2] || p2
+    const c1x = p1.x + (p2.x - p0.x) / 6
+    const c1y = p1.y + (p2.y - p0.y) / 6
+    const c2x = p2.x - (p3.x - p1.x) / 6
+    const c2y = p2.y - (p3.y - p1.y) / 6
+    d += ` C ${Math.round(c1x)} ${Math.round(c1y)} ${Math.round(c2x)} ${Math.round(c2y)} ${Math.round(p2.x)} ${Math.round(p2.y)}`
+    // Longueur de la cubique par échantillonnage
     let lc = 0
-    let px = a.x
-    let py = a.y
-    for (let k = 1; k <= 16; k++) {
-      const t = k / 16
-      const qx = (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * cx + t * t * b.x
-      const qy = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * cy + t * t * b.y
+    let px = p1.x
+    let py = p1.y
+    for (let k = 1; k <= 8; k++) {
+      const t = k / 8
+      const u = 1 - t
+      const qx = u * u * u * p1.x + 3 * u * u * t * c1x + 3 * u * t * t * c2x + t * t * t * p2.x
+      const qy = u * u * u * p1.y + 3 * u * u * t * c1y + 3 * u * t * t * c2y + t * t * t * p2.y
       lc += Math.hypot(qx - px, qy - py)
       px = qx
       py = qy
     }
-    cumule.push(cumule[i - 1] + lc)
+    longueurAuPoint.push(longueurAuPoint[i] + lc)
   }
+  const cumule = indexAncres.map((idx) => longueurAuPoint[idx])
 
   const svgNS = 'http://www.w3.org/2000/svg'
   const svg = document.createElementNS(svgNS, 'svg')

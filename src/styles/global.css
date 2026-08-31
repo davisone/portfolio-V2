@@ -157,8 +157,8 @@
 
 .fil-visite path {
   fill: none;
-  stroke: rgb(var(--color-point) / 0.45);
-  stroke-width: 1.5;
+  stroke: rgb(var(--color-point) / 0.55);
+  stroke-width: 2;
   stroke-linecap: round;
 }
 
