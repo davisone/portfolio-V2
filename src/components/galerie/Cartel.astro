@@ -14,7 +14,7 @@ const { titre, medium, technologies, livre = false, livreLabel = 'Livré', lien 
 <div class="cartel-box p-6 sm:p-7">
   <h3 class="font-display text-2xl text-encre mb-1">
     {lien ? (
-      <a href={lien} target="_blank" rel="noopener noreferrer" class="hover:text-point transition-colors" aria-label={lienLabel ? `${titre} — ${lienLabel}` : titre}>
+      <a href={lien} target="_blank" rel="noopener noreferrer" class="hover:text-point transition-colors" aria-label={lienLabel ? `${titre} · ${lienLabel}` : titre}>
         {titre}
       </a>
     ) : titre}

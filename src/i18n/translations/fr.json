@@ -12,10 +12,10 @@
     "closeMenu": "Fermer le menu"
   },
   "hero": {
-    "label": "En recherche d'alternance — Chef de projet IT",
-    "subtitle": "Développeur Fullstack — Rennes, Fondateur de",
-    "description": "Passionné par le développement web et mobile, je crée des <strong>applications modernes</strong> avec React, Next.js et Flutter. En parallèle, j'accompagne les entreprises via mon activité <strong>freelance</strong>. Je recherche une <strong>alternance en gestion de projet IT</strong> pour allier ma vision technique à une approche stratégique et organisationnelle.",
-    "badge": "Disponible — Bac+3 Sup de Vinci",
+    "label": "Développeur fullstack en alternance",
+    "subtitle": "Développeur fullstack à Rennes, fondateur de",
+    "description": "Passionné par le développement web et mobile, je crée des <strong>applications modernes</strong> avec React, Next.js et Flutter. En <strong>master développement web</strong>, j'occupe un poste de <strong>développeur fullstack en alternance</strong> et j'accompagne les entreprises via mon activité <strong>freelance</strong>.",
+    "badge": "Master Développement Web · Sup de Vinci",
     "cta": "Me contacter",
     "downloadCv": "Télécharger mon CV"
   },
@@ -24,15 +24,15 @@
     "title": "À propos",
     "titleEmphasis": "moi",
     "paragraphs": [
-      "Développeur fullstack basé à <strong>Rennes</strong>, je suis en fin de cursus <strong>Bac+3</strong> en développement informatique. Ma formation m'a permis de maîtriser le développement web et mobile, du frontend au backend.",
+      "Développeur fullstack basé à <strong>Rennes</strong>, je poursuis un <strong>master développement web</strong> tout en occupant un poste de <strong>développeur fullstack en alternance</strong>. Ma formation m'a permis de maîtriser le développement web et mobile, du frontend au backend.",
       "En parallèle de mes études, j'ai fondé <a>DVS Web</a>, mon activité freelance où j'accompagne les entreprises dans la création de leurs projets digitaux : sites vitrines, applications web, e-commerce et optimisation SEO.",
-      "Cette double casquette <strong>étudiant</strong> et <strong>entrepreneur</strong> me permet d'allier rigueur technique et expérience terrain, pour livrer des solutions concrètes et performantes.",
-      "Je suis actuellement à la recherche d'une <strong>alternance en gestion de projet IT</strong>. Mon parcours de développeur me donne une compréhension fine des enjeux techniques, que je souhaite compléter par une formation en <strong>pilotage de projets</strong>, coordination d'équipes et suivi de livraisons."
+      "Cette double casquette <strong>alternant</strong> et <strong>entrepreneur</strong> me permet d'allier rigueur technique et expérience terrain, pour livrer des solutions concrètes et performantes.",
+      "En entreprise comme en freelance, mon parcours de développeur me donne une compréhension fine des enjeux techniques, que je complète chaque jour par la pratique du <strong>pilotage de projets</strong>, de la coordination et du suivi de livraisons."
     ],
     "values": [
       {
         "title": "Gestion de projet",
-        "description": "Planification, coordination et suivi — transformer une idée en livrable concret."
+        "description": "Planification, coordination et suivi : transformer une idée en livrable concret."
       },
       {
         "title": "Efficacité",
@@ -86,10 +86,17 @@
       },
       {
         "type": "work",
-        "title": "Développeur Web (Alternance)",
+        "title": "Développeur Fullstack (Alternance)",
         "company": "Le Reférencement Professionnel - Cesson-Sévigné",
-        "period": "septembre 2025 - septembre 2026",
+        "period": "septembre 2025 - Présent",
         "description": "Création de block liquid et intégration dans un cms. Intégration d'un formulaire tally et de son api dans le CMS de l'entreprise en passant par firebase."
+      },
+      {
+        "type": "education",
+        "title": "Master Développement Web",
+        "company": "Sup de Vinci - Chantepie",
+        "period": "2026 - 2028",
+        "description": "Formation approfondie en développement web : architecture, technologies avancées et gestion de projet. Bac+5."
       },
       {
         "type": "education",

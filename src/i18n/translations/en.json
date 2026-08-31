@@ -12,10 +12,10 @@
     "closeMenu": "Close menu"
   },
   "hero": {
-    "label": "Looking for a work-study program — IT Project Manager",
-    "subtitle": "Fullstack Developer — Rennes, Founder of",
-    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. Alongside, I support businesses through my <strong>freelance</strong> activity. I am looking for a <strong>work-study program in IT project management</strong> to combine my technical vision with a strategic and organizational approach.",
-    "badge": "Available — Bachelor's Degree Sup de Vinci",
+    "label": "Fullstack developer apprentice",
+    "subtitle": "Fullstack developer in Rennes, founder of",
+    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. While pursuing a <strong>master's degree in web development</strong>, I work as a <strong>fullstack developer apprentice</strong> and support businesses through my <strong>freelance</strong> activity.",
+    "badge": "Master's in Web Development · Sup de Vinci",
     "cta": "Contact me",
     "downloadCv": "Download my resume"
   },
@@ -24,15 +24,15 @@
     "title": "About",
     "titleEmphasis": "me",
     "paragraphs": [
-      "Fullstack developer based in <strong>Rennes</strong>, I am completing my <strong>Bachelor's degree</strong> in software development. My education has allowed me to master web and mobile development, from frontend to backend.",
+      "Fullstack developer based in <strong>Rennes</strong>, I am pursuing a <strong>master's degree in web development</strong> while working as a <strong>fullstack developer apprentice</strong>. My training has given me a strong command of web and mobile development, from frontend to backend.",
       "Alongside my studies, I founded <a>DVS Web</a>, my freelance activity where I help businesses create their digital projects: showcase websites, web applications, e-commerce and SEO optimization.",
-      "This dual role as <strong>student</strong> and <strong>entrepreneur</strong> allows me to combine technical rigor with hands-on experience, delivering concrete and high-performing solutions.",
-      "I am currently looking for a <strong>work-study program in IT project management</strong>. My background as a developer gives me a deep understanding of technical challenges, which I want to complement with training in <strong>project leadership</strong>, team coordination and delivery management."
+      "Wearing both the <strong>apprentice</strong> and <strong>entrepreneur</strong> hats allows me to combine technical rigour with hands-on experience, delivering concrete, high-performing solutions.",
+      "In the workplace as in freelancing, my developer background gives me a fine understanding of technical challenges, which I sharpen daily through <strong>project management</strong>, coordination and delivery follow-up."
     ],
     "values": [
       {
         "title": "Project management",
-        "description": "Planning, coordination and follow-up — turning an idea into a concrete deliverable."
+        "description": "Planning, coordination and follow-up: turning an idea into a concrete deliverable."
       },
       {
         "title": "Efficiency",
@@ -86,10 +86,17 @@
       },
       {
         "type": "work",
-        "title": "Web Developer (Work-Study)",
+        "title": "Fullstack Developer (Apprenticeship)",
         "company": "Le Reférencement Professionnel - Cesson-Sévigné",
-        "period": "September 2025 - September 2026",
+        "period": "September 2025 - Present",
         "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
+      },
+      {
+        "type": "education",
+        "title": "Master's in Web Development",
+        "company": "Sup de Vinci - Chantepie",
+        "period": "2026 - 2028",
+        "description": "Advanced training in web development: architecture, advanced technologies and project management."
       },
       {
         "type": "education",

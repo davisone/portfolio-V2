@@ -53,7 +53,7 @@ const projets = [
     <!-- Le mur des œuvres : colonne en fallback, rangée en mode galerie -->
     <div class="salle-rangee flex flex-col gap-12 lg:gap-16">
       <header class="grande-entete w-full max-w-6xl mx-auto">
-        <p class="signal-label mb-3">{t.galerie.grandeSalle} — {t.projects.label}</p>
+        <p class="signal-label mb-3">{t.galerie.grandeSalle} · {t.projects.label}</p>
         <h2 class="font-display text-4xl sm:text-5xl text-encre">
           {t.projects.title}
         </h2>
@@ -63,7 +63,7 @@ const projets = [
           <div class="relative aspect-[16/10] overflow-hidden bg-oeuvre border border-filet mb-0">
             <img
               src={projet.image}
-              alt={`${projet.titre} — ${projet.technologies.slice(0, 3).join(', ')}`}
+              alt={`${projet.titre} · ${projet.technologies.slice(0, 3).join(', ')}`}
               loading="lazy"
               decoding="async"
               width="1280"
