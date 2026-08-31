@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web kinesitherapeute Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web kinesitherapeute Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre cabinet de <em class="text-accent">kinesitherapie</em> merite<br/>une vitrine professionnelle
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre cabinet de <em class="text-point">kinesitherapie</em> merite<br/>une vitrine professionnelle
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Prise de rendez-vous en ligne, presentation de vos specialites, acces et horaires — un site web concu pour remplir votre planning et rassurer vos patients a Rennes et ses alentours.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos patients vous cherchent sur <em class="text-accent">Google</em> avant de decrocher le telephone
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos patients vous cherchent sur <em class="text-point">Google</em> avant de decrocher le telephone
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>En France, 77% des patients utilisent internet pour rechercher un professionnel de sante. Si votre cabinet n'apparait pas dans les premiers resultats ou si votre seule presence en ligne est une fiche Pages Jaunes, vous laissez vos concurrents capter ces patients.</p>
               <p>Un site web de kinesitherapeute performant, c'est une prise de rendez-vous accessible a toute heure, une presentation claire de vos specialites et de vos tarifs, et un plan d'acces qui facilite la premiere visite. Le tout optimise pour que Google vous affiche en tete quand quelqu'un cherche "kine Rennes".</p>
               <p>Je concois des sites specifiquement penses pour les professionnels de sante : conformes aux obligations deontologiques, navigation mobile-first (vos patients cherchent depuis leur telephone), et integration Doctolib ou equivalent pour la prise de rendez-vous.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Consultent sur mobile', value: '68%' },
               { label: 'Lisent les avis sante', value: '84%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site de <em class="text-accent">kinesitherapeute</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site de <em class="text-point">kinesitherapeute</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Tarifs et remboursements', desc: "Grille tarifaire claire avec informations sur les remboursements Securite sociale et mutuelles. Transparence totale pour vos patients." },
           { title: 'Blog conseils sante', desc: "Section blog pour partager des exercices, conseils posturaux et informations sante. Ameliore le referencement et positionne votre expertise." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui inspirent <em class="text-accent">confiance</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui inspirent <em class="text-point">confiance</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour kinesitherapeute avec prise de rendez-vous et presentation des soins demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (multi-praticiens, blog sante, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a remplir votre planning ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre cabinet et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

@@ -23,76 +23,76 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">GraphQL</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">GraphQL</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         GraphQL
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
           GraphQL est un langage de requete pour API et un environnement d'execution developpe par Meta en 2012 et rendu open source en 2015. Contrairement aux API REST classiques, GraphQL permet au client de specifier exactement les donnees qu'il souhaite recevoir, eliminant le sur-fetching et le sous-fetching.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne GraphQL ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne GraphQL ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
             GraphQL repose sur un schema type qui definit l'ensemble des donnees disponibles et leurs relations. Le client envoie une requete decrivant la structure exacte des donnees souhaitees, et le serveur repond avec un objet JSON qui correspond precisement a cette structure. Un seul endpoint suffit pour toutes les operations.
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
+          <p class="text-cartel leading-relaxed mb-4">
             Le systeme de types de GraphQL garantit la coherence entre le client et le serveur. Chaque champ a un type defini, et le schema sert de contrat entre les deux parties. Les outils d'introspection permettent d'explorer l'API directement et de generer automatiquement de la documentation.
           </p>
-          <p class="text-text-body leading-relaxed">
+          <p class="text-cartel leading-relaxed">
             GraphQL supporte trois types d'operations : les queries (lecture), les mutations (ecriture) et les subscriptions (temps reel). Cette approche unifiee simplifie considerablement l'architecture des applications qui consomment des donnees complexes et interconnectees.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser GraphQL ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi utiliser GraphQL ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Requetes precises : le client recoit exactement ce qu'il demande, ni plus ni moins</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Un seul endpoint pour toutes les operations, simplifiant l'architecture</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Schema type qui sert de documentation vivante de l'API</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ideal pour les applications mobiles ou la bande passante est limitee</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Agnostique au langage : compatible avec <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a>, Python, Go et bien d'autres</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Utilise par GitHub, Shopify, Stripe et de nombreuses entreprises tech</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Requetes precises : le client recoit exactement ce qu'il demande, ni plus ni moins</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Un seul endpoint pour toutes les operations, simplifiant l'architecture</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Schema type qui sert de documentation vivante de l'API</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Ideal pour les applications mobiles ou la bande passante est limitee</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Agnostique au langage : compatible avec <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a>, Python, Go et bien d'autres</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Utilise par GitHub, Shopify, Stripe et de nombreuses entreprises tech</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">GraphQL en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            GraphQL est une alternative puissante aux <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">API REST</a> traditionnelles, particulierement adaptee aux applications avec des modeles de donnees complexes. Combine avec <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> et <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a>, il permet de construire des interfaces performantes qui chargent uniquement les donnees necessaires.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">GraphQL en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            GraphQL est une alternative puissante aux <a href="/glossaire/api-rest" class="text-point hover:text-point transition-colors">API REST</a> traditionnelles, particulierement adaptee aux applications avec des modeles de donnees complexes. Combine avec <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a> et <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a>, il permet de construire des interfaces performantes qui chargent uniquement les donnees necessaires.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Dans le cadre de mes services de <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">creation d'applications web</a> et de <a href="/services/developpement-react-nextjs" class="text-accent hover:text-accent-hover transition-colors">developpement React / Next.js</a>, j'utilise GraphQL lorsque le projet implique des donnees relationnelles complexes ou des besoins de performance specifiques sur mobile.
+          <p class="text-cartel leading-relaxed">
+            Dans le cadre de mes services de <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">creation d'applications web</a> et de <a href="/services/developpement-react-nextjs" class="text-point hover:text-point transition-colors">developpement React / Next.js</a>, j'utilise GraphQL lorsque le projet implique des donnees relationnelles complexes ou des besoins de performance specifiques sur mobile.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
-          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
-          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
-          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma</a>
-          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
+          <a href="/glossaire/api-rest" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">API REST</a>
+          <a href="/glossaire/typescript" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">TypeScript</a>
+          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
+          <a href="/glossaire/prisma" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Prisma</a>
+          <a href="/glossaire/react" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'une API GraphQL pour votre projet ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'une API GraphQL pour votre projet ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

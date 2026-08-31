@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Création site web Betton</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Création site web Betton</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Création <em class="text-accent">site web</em><br/>à Betton
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Création <em class="text-point">site web</em><br/>à Betton
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Commune dynamique au nord de Rennes, Betton connait une croissance demographique soutenue depuis plusieurs annees. Nouveaux habitants, nouveaux besoins, nouvelles habitudes de consommation — les professionnels bettonnais qui ne sont pas visibles en ligne passent a cote d'une clientele grandissante qui cherche ses commerces et services sur Google.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -99,14 +99,14 @@ const schema = {
     </section>
 
     <!-- Problème / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Accompagner la <em class="text-accent">croissance</em> de Betton
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Accompagner la <em class="text-point">croissance</em> de Betton
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Betton accueille chaque annee de nouvelles familles et de nouveaux actifs attires par sa qualite de vie, sa proximite avec Rennes et ses equipements. Ces nouveaux arrivants ont un reflexe : chercher en ligne les commerces, artisans et services de proximite. Si vous n'avez pas de site, c'est votre concurrent qui apparait en premier.</p>
               <p>Je cree des sites web qui vous placent devant cette clientele en mouvement : referencement local sur "Betton" et les communes voisines, design professionnel qui inspire confiance, et experience mobile irremprochable pour les recherches en deplacement.</p>
               <p>Base pres de Rennes, Betton est a quelques minutes au nord. Je connais la commune, son centre-ville dynamique et son tissu de commerces de proximite qui fait sa force.</p>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Score Lighthouse', value: '95+' },
               { label: 'Satisfaction client', value: '100%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Process -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Comment ça <em class="text-accent">se passe</em> ?
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Comment ça <em class="text-point">se passe</em> ?
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
@@ -141,22 +141,22 @@ const schema = {
           { step: '03', title: 'Developpement', desc: "Code performant, mobile-first, optimise pour le referencement local sur Betton et les communes du nord de Rennes." },
           { step: '04', title: 'Lancement', desc: "Mise en ligne, fiche Google Business, referencement local et formation pour que vous soyez autonome sur votre site." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Réalisations liées -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Quelques <em class="text-accent">realisations</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Quelques <em class="text-point">realisations</em>
         </h2>
-        <p class="text-text-body mb-8">Des projets realises pour des professionnels de la metropole rennaise et de toute la Bretagne.</p>
+        <p class="text-cartel mb-8">Des projets realises pour des professionnels de la metropole rennaise et de toute la Bretagne.</p>
         <a href="/#realisations" class="btn-primary">
           Voir toutes mes réalisations
         </a>
@@ -165,8 +165,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -191,24 +191,24 @@ const schema = {
             a: 'Oui, base pres de Rennes, Betton est a quelques minutes au nord. Je me deplace facilement pour les rendez-vous en personne.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Un projet web a Betton ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Rencontrons-nous au centre-ville ou en visio. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

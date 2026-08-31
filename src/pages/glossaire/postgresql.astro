@@ -23,75 +23,75 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">PostgreSQL</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">PostgreSQL</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         PostgreSQL
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
           PostgreSQL (souvent abrege Postgres) est un systeme de gestion de base de donnees relationnelle-objet open source. Developpe depuis plus de 35 ans, il est reconnu comme l'une des bases de donnees les plus fiables, performantes et riches en fonctionnalites.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne PostgreSQL ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne PostgreSQL ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
             PostgreSQL stocke les donnees dans des tables structurees avec des colonnes typees et des relations entre tables (cles etrangeres). Il respecte les proprietes ACID (Atomicite, Coherence, Isolation, Durabilite) qui garantissent l'integrite des donnees meme en cas de panne ou d'acces concurrent.
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
+          <p class="text-cartel leading-relaxed mb-4">
             Au-dela du SQL standard, PostgreSQL offre des fonctionnalites avancees : types JSON et JSONB pour les donnees semi-structurees, recherche plein texte, extensions geospatiales (PostGIS), types personnalises, vues materialisees et triggers. Ces capacites en font bien plus qu'une simple base relationnelle.
           </p>
-          <p class="text-text-body leading-relaxed">
+          <p class="text-cartel leading-relaxed">
             Le systeme de MVCC (Multi-Version Concurrency Control) de PostgreSQL permet a de multiples transactions de s'executer en parallele sans se bloquer mutuellement. Les lectures ne bloquent jamais les ecritures et vice versa, ce qui est essentiel pour les applications web a fort trafic.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir PostgreSQL ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi choisir PostgreSQL ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Open source, gratuit et sans limitation de licence</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Conformite SQL stricte et fonctionnalites avancees</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Support natif du JSON pour les donnees flexibles</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances excellentes en lecture et en ecriture concurrentes</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Extensibilite : des centaines d'extensions disponibles</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Utilise par Apple, Instagram, Spotify et la majorite des startups tech</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Open source, gratuit et sans limitation de licence</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Conformite SQL stricte et fonctionnalites avancees</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Support natif du JSON pour les donnees flexibles</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Performances excellentes en lecture et en ecriture concurrentes</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Extensibilite : des centaines d'extensions disponibles</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Utilise par Apple, Instagram, Spotify et la majorite des startups tech</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">PostgreSQL en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Dans une stack <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, PostgreSQL est la base de donnees de reference. Associe a <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma ORM</a>, il offre un acces aux donnees type et securise. Le schema Prisma genere automatiquement les types <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> correspondants aux tables, eliminant les erreurs de type a l'execution.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">PostgreSQL en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Dans une stack <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a>, PostgreSQL est la base de donnees de reference. Associe a <a href="/glossaire/prisma" class="text-point hover:text-point transition-colors">Prisma ORM</a>, il offre un acces aux donnees type et securise. Le schema Prisma genere automatiquement les types <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a> correspondants aux tables, eliminant les erreurs de type a l'execution.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Pour les projets <a href="/glossaire/saas" class="text-accent hover:text-accent-hover transition-colors">SaaS</a> et les <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">applications web</a>, des services comme Supabase, Neon ou Railway proposent des instances PostgreSQL managees avec backup automatique, replicas en lecture et connexion pooling. Combine avec un deploiement <a href="/glossaire/docker" class="text-accent hover:text-accent-hover transition-colors">Docker</a>, PostgreSQL est aussi facile a configurer en local qu'en production.
+          <p class="text-cartel leading-relaxed">
+            Pour les projets <a href="/glossaire/saas" class="text-point hover:text-point transition-colors">SaaS</a> et les <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">applications web</a>, des services comme Supabase, Neon ou Railway proposent des instances PostgreSQL managees avec backup automatique, replicas en lecture et connexion pooling. Combine avec un deploiement <a href="/glossaire/docker" class="text-point hover:text-point transition-colors">Docker</a>, PostgreSQL est aussi facile a configurer en local qu'en production.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma ORM</a>
-          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
-          <a href="/glossaire/docker" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Docker</a>
-          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/prisma" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Prisma ORM</a>
+          <a href="/glossaire/api-rest" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">API REST</a>
+          <a href="/glossaire/docker" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Docker</a>
+          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'aide avec PostgreSQL pour votre projet ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'aide avec PostgreSQL pour votre projet ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

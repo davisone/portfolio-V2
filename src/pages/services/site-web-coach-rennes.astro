@@ -64,22 +64,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web coach Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web coach Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site de <em class="text-accent">coach</em> qui convertit<br/>les visiteurs en clients
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site de <em class="text-point">coach</em> qui convertit<br/>les visiteurs en clients
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Reservation de seances, presentation de vos programmes, temoignages clients — un site web qui reflete votre energie et remplit votre agenda a Rennes.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -90,14 +90,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Instagram ne remplace pas un vrai <em class="text-accent">site professionnel</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Instagram ne remplace pas un vrai <em class="text-point">site professionnel</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>En tant que coach sportif ou bien-etre, votre presence sur Instagram est essentielle. Mais un profil Instagram ne permet pas de presenter clairement vos tarifs, vos programmes, ni de prendre des reservations sans echanges de DM interminables.</p>
               <p>Un site web professionnel centralise tout : vos offres, votre planning, vos temoignages, et un systeme de reservation qui fait gagner du temps a tout le monde. C'est la difference entre un amateur et un professionnel etabli.</p>
               <p>Je concois des sites pour coachs sportifs, preparateurs physiques, coachs en nutrition et bien-etre a Rennes. Des sites qui reflètent votre dynamisme tout en structurant votre activite.</p>
@@ -110,9 +110,9 @@ const schema = {
               { label: 'Lisent les temoignages', value: '88%' },
               { label: 'Comparent les programmes', value: '71%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -122,8 +122,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les fonctionnalites cles d'un site de <em class="text-accent">coaching</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les fonctionnalites cles d'un site de <em class="text-point">coaching</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -134,29 +134,29 @@ const schema = {
           { title: 'Grille tarifaire claire', desc: "Presentation transparente de vos tarifs par formule : seance unique, pack, abonnement. Les prospects savent a quoi s'attendre." },
           { title: 'Lien reseaux sociaux', desc: "Integration de votre feed Instagram et liens vers vos reseaux. Votre site et vos reseaux se renforcent mutuellement." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui <em class="text-accent">motivent a passer a l'action</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui <em class="text-point">motivent a passer a l'action</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels du coaching et du sport.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des professionnels du coaching et du sport.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -177,24 +177,24 @@ const schema = {
             a: 'Un site vitrine pour coach avec reservation et presentation des programmes demarre autour de 800 euros. Le prix varie selon les fonctionnalites (paiement en ligne, espace client, blog). Devis gratuit.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a remplir votre agenda de coaching ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre activite et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

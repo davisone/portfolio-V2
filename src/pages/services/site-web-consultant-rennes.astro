@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web consultant Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web consultant Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre <em class="text-accent">expertise</em> merite<br/>une vitrine a la hauteur
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre <em class="text-point">expertise</em> merite<br/>une vitrine a la hauteur
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Portfolio de missions, blog expertise, prise de rendez-vous — un site web concu pour credibiliser votre activite de consultant et generer des leads qualifies a Rennes et au-dela.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos prospects vous recherchent sur <em class="text-accent">Google</em> avant de vous contacter
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos prospects vous recherchent sur <em class="text-point">Google</em> avant de vous contacter
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Selon une etude BPI France, 85% des decideurs B2B recherchent un prestataire en ligne avant de le contacter. Un profil LinkedIn seul ne suffit plus : sans site web professionnel, vous passez a cote de prospects qui comparent et verifient avant de decrocher leur telephone.</p>
               <p>Un site de consultant performant, c'est une presentation claire de votre offre, des etudes de cas qui demontrent vos resultats, un blog qui positionne votre expertise sur les moteurs de recherche, et un parcours de prise de contact fluide.</p>
               <p>Je concois des sites qui transforment vos visiteurs en prospects : design professionnel qui inspire confiance, contenu structure pour le SEO, et appels a l'action strategiquement places pour maximiser les prises de contact.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Leads via le site vs bouche-a-oreille', value: '+40%' },
               { label: 'Lisent le blog avant d\'acheter', value: '60%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site de <em class="text-accent">consultant</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site de <em class="text-point">consultant</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Temoignages et references', desc: "Section dediee aux temoignages clients et logos des entreprises accompagnees. La preuve sociale qui fait la difference face a la concurrence." },
           { title: 'Ressources telechargables', desc: "Livres blancs, guides et check-lists a telecharger en echange d'un email. Un levier de generation de leads pour alimenter votre prospection." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui generent des <em class="text-accent">opportunites</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui generent des <em class="text-point">opportunites</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des consultants et independants.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des consultants et independants.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour consultant avec blog et prise de rendez-vous demarre autour de 700 euros. Le prix varie selon les fonctionnalites souhaitees (espace client, formations en ligne, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a developper votre activite en ligne ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre activite et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

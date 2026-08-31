@@ -111,6 +111,19 @@
            transition-colors duration-200 hover:bg-point cursor-pointer;
   }
 
+  /* Alias historiques : utilisés par les pages services/blog */
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-encre text-cimaise
+           font-signal text-xs font-medium tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:bg-point cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-encre text-encre
+           font-signal text-xs tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:border-point hover:text-point cursor-pointer;
+  }
+
   .btn-galerie-secondaire {
     @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-encre text-encre
            font-signal text-xs tracking-[0.1em] uppercase

@@ -23,75 +23,75 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">JAMstack</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">JAMstack</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         JAMstack
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
           JAMstack est une architecture web moderne dont l'acronyme signifie JavaScript, APIs et Markup. Elle repose sur le pre-rendu des pages au moment du build et la separation complete entre le frontend et le backend, privilegiant les performances, la securite et la scalabilite.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne la JAMstack ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Le principe de la JAMstack est de pre-generer le maximum de contenu au moment du build (<a href="/glossaire/ssg" class="text-accent hover:text-accent-hover transition-colors">Static Site Generation</a>) et de deleguer les fonctionnalites dynamiques a des APIs et microservices. Le Markup (HTML) est servi depuis un CDN, le JavaScript enrichit l'experience cote client, et les APIs gerent les donnees dynamiques (formulaires, paiements, authentification).
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne la JAMstack ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Le principe de la JAMstack est de pre-generer le maximum de contenu au moment du build (<a href="/glossaire/ssg" class="text-point hover:text-point transition-colors">Static Site Generation</a>) et de deleguer les fonctionnalites dynamiques a des APIs et microservices. Le Markup (HTML) est servi depuis un CDN, le JavaScript enrichit l'experience cote client, et les APIs gerent les donnees dynamiques (formulaires, paiements, authentification).
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
-            Cette separation permet de decouple le frontend du backend. Le site statique est independant de la base de donnees ou du serveur. Les contenus sont souvent geres par un <a href="/glossaire/cms" class="text-accent hover:text-accent-hover transition-colors">CMS headless</a> qui fournit les donnees via une <a href="/glossaire/api-rest" class="text-accent hover:text-accent-hover transition-colors">API REST</a>, tandis que le frontend les consomme au moment du build.
+          <p class="text-cartel leading-relaxed mb-4">
+            Cette separation permet de decouple le frontend du backend. Le site statique est independant de la base de donnees ou du serveur. Les contenus sont souvent geres par un <a href="/glossaire/cms" class="text-point hover:text-point transition-colors">CMS headless</a> qui fournit les donnees via une <a href="/glossaire/api-rest" class="text-point hover:text-point transition-colors">API REST</a>, tandis que le frontend les consomme au moment du build.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Les frameworks JAMstack populaires incluent <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, Astro, Gatsby et Eleventy. Chacun a ses specificites, mais tous partagent cette philosophie de pre-rendu et de deploiement sur CDN. Le deploiement se fait generalement sur <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a> ou Netlify.
+          <p class="text-cartel leading-relaxed">
+            Les frameworks JAMstack populaires incluent <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a>, Astro, Gatsby et Eleventy. Chacun a ses specificites, mais tous partagent cette philosophie de pre-rendu et de deploiement sur CDN. Le deploiement se fait generalement sur <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a> ou Netlify.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi adopter la JAMstack ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi adopter la JAMstack ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances maximales : fichiers statiques servis depuis un CDN mondial</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Securite renforcee : pas de serveur ou de base de donnees expose</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> optimal grace au HTML pre-rendu</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Scalabilite naturelle : un CDN gere n'importe quel volume de trafic</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Couts reduits : hebergement statique peu couteux voire gratuit</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Performances maximales : fichiers statiques servis depuis un CDN mondial</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Securite renforcee : pas de serveur ou de base de donnees expose</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> optimal grace au HTML pre-rendu</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Scalabilite naturelle : un CDN gere n'importe quel volume de trafic</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Couts reduits : hebergement statique peu couteux voire gratuit</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">JAMstack en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Ce portfolio est un exemple concret de site JAMstack : construit avec Astro, deploye sur Vercel, il offre des temps de chargement rapides et un <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> optimal sans necessiter de serveur dynamique.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">JAMstack en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Ce portfolio est un exemple concret de site JAMstack : construit avec Astro, deploye sur Vercel, il offre des temps de chargement rapides et un <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> optimal sans necessiter de serveur dynamique.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Pour une <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">creation de site vitrine</a> ou un blog d'entreprise, la JAMstack est souvent le choix le plus pertinent. Le client gere ses contenus via un CMS headless, et chaque modification declenche un rebuild automatique qui met a jour le site en quelques secondes.
+          <p class="text-cartel leading-relaxed">
+            Pour une <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">creation de site vitrine</a> ou un blog d'entreprise, la JAMstack est souvent le choix le plus pertinent. Le client gere ses contenus via un CMS headless, et chaque modification declenche un rebuild automatique qui met a jour le site en quelques secondes.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/ssg" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSG</a>
-          <a href="/glossaire/cms" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CMS</a>
-          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
-          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
-          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
+          <a href="/glossaire/ssg" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
+          <a href="/glossaire/cms" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">CMS</a>
+          <a href="/glossaire/vercel" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
+          <a href="/glossaire/api-rest" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">API REST</a>
+          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'aide avec un projet JAMstack ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'aide avec un projet JAMstack ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

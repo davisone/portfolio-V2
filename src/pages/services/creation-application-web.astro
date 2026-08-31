@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Application web sur mesure</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Application web sur mesure</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          <em class="text-accent">Application web</em><br/>sur mesure
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          <em class="text-point">Application web</em><br/>sur mesure
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Vous avez besoin d'un outil metier, d'un tableau de bord ou d'une plateforme SaaS ? Je developpe des applications web sur mesure — pensees pour vos utilisateurs, construites pour durer.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -99,14 +99,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Votre metier merite un <em class="text-accent">outil dedie</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Votre metier merite un <em class="text-point">outil dedie</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Vous gerez votre activite avec des fichiers Excel, des outils generiques empiles les uns sur les autres, ou un logiciel qui ne correspond plus a vos besoins ? Chaque jour perdu en contournements, c'est de l'efficacite en moins.</p>
               <p>Une application web sur mesure s'adapte a vos processus — pas l'inverse. Elle centralise vos donnees, automatise les taches repetitives et offre a vos equipes (ou vos clients) une interface claire et intuitive.</p>
               <p>Du MVP pour valider une idee a la plateforme SaaS complete, je concois des applications qui repondent precisement a votre besoin metier.</p>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Stack', value: 'Fullstack' },
               { label: 'Approche', value: 'MVP first' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-2xl sm:text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-2xl sm:text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Types d'applications -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Types d'applications <em class="text-accent">que je developpe</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Types d'applications <em class="text-point">que je developpe</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -143,19 +143,19 @@ const schema = {
           { title: 'Marketplace', desc: "Plateforme de mise en relation, catalogue, systeme de reservation ou d'achat. Gestion des vendeurs et des acheteurs." },
           { title: 'API et back-end', desc: "API REST ou GraphQL pour connecter vos applications. Authentification, base de donnees, webhooks, integrations tierces." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Process -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          De l'idee au <em class="text-accent">produit</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          De l'idee au <em class="text-point">produit</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -164,10 +164,10 @@ const schema = {
             { step: '03', title: 'Sprints', desc: "Developpement iteratif en cycles courts. Livraisons regulieres, demos, ajustements. Vous voyez le produit avancer chaque semaine." },
             { step: '04', title: 'Deploiement', desc: "Mise en production, monitoring, documentation technique. Formation de votre equipe et accompagnement post-lancement." },
           ].map(item => (
-            <div class="border border-border p-6">
-              <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-              <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+            <div class="border border-filet p-6">
+              <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+              <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -176,8 +176,8 @@ const schema = {
 
     <!-- Stack technique -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Stack <em class="text-accent">technique</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Stack <em class="text-point">technique</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
@@ -186,21 +186,21 @@ const schema = {
           { title: 'Base de donnees', desc: "PostgreSQL, MongoDB, Firebase, Redis" },
           { title: 'Infrastructure', desc: "Vercel, AWS, Docker, CI/CD GitHub Actions" },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations liees -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Applications web <em class="text-accent">realisees</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Applications web <em class="text-point">realisees</em>
         </h2>
-        <p class="text-text-body mb-8">Des applications concretes livrees et utilisees au quotidien.</p>
+        <p class="text-cartel mb-8">Des applications concretes livrees et utilisees au quotidien.</p>
         <a href="/#realisations" class="btn-primary">
           Voir toutes mes realisations
         </a>
@@ -209,8 +209,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -235,24 +235,24 @@ const schema = {
             a: "La securite est integree des la conception : authentification robuste (OAuth, JWT), chiffrement des donnees sensibles, protection contre les injections SQL et XSS, HTTPS obligatoire, gestion des roles et permissions. Les bonnes pratiques OWASP sont appliquees."
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Une application web en tete ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre projet. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

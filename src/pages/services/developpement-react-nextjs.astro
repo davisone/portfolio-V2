@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Developpement React / Next.js</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Developpement React / Next.js</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Developpeur <em class="text-accent">React</em> et <em class="text-accent">Next.js</em><br/>a Rennes
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Developpeur <em class="text-point">React</em> et <em class="text-point">Next.js</em><br/>a Rennes
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Vous cherchez un developpeur React pour construire une application web rapide, maintenable et bien referencee ? Je concois des interfaces modernes avec Next.js, TypeScript et les meilleures pratiques du web.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -99,14 +99,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Des applications web qui <em class="text-accent">tiennent la route</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Des applications web qui <em class="text-point">tiennent la route</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Votre application front-end est lente, difficile a maintenir ou mal referencee ? Un code React mal structure aujourd'hui, c'est une dette technique demain.</p>
               <p>Je developpe des applications React et Next.js pensees pour durer : architecture en composants reutilisables, rendu serveur pour le SEO, typage strict avec TypeScript, et performances optimisees pour les Core Web Vitals.</p>
               <p>App Router, Server Components, Incremental Static Regeneration — j'utilise les fonctionnalites de Next.js qui font vraiment la difference pour votre projet, pas celles qui sont a la mode.</p>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'TypeScript strict', value: '100%' },
               { label: 'Temps de build moyen', value: '<30s' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Technologies -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Stack <em class="text-accent">technique</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Stack <em class="text-point">technique</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -143,19 +143,19 @@ const schema = {
           { title: 'Zustand + TanStack Query', desc: "Gestion d'etat legere et cache serveur intelligent. Performant sans la complexite de Redux." },
           { title: 'Vercel / Node.js', desc: "Deploiement optimise, edge functions, analytics integres. Infrastructure pensee pour Next.js." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Process -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Comment je <em class="text-accent">travaille</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Comment je <em class="text-point">travaille</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -164,10 +164,10 @@ const schema = {
             { step: '03', title: 'Developpement', desc: "Code React/Next.js en TypeScript strict. Tests, revues de code, deploiement continu." },
             { step: '04', title: 'Livraison', desc: "Deploiement sur Vercel ou votre infra, documentation technique, formation si necessaire." },
           ].map(item => (
-            <div class="border border-border p-6">
-              <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-              <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+            <div class="border border-filet p-6">
+              <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+              <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -176,20 +176,20 @@ const schema = {
 
     <!-- Realisations liees -->
     <section class="section-container py-16 sm:py-24 text-center">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-        Projets <em class="text-accent">React / Next.js</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+        Projets <em class="text-point">React / Next.js</em>
       </h2>
-      <p class="text-text-body mb-8">Des applications web concretes construites avec React et Next.js.</p>
+      <p class="text-cartel mb-8">Des applications web concretes construites avec React et Next.js.</p>
       <a href="/#realisations" class="btn-primary">
         Voir toutes mes realisations
       </a>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Questions <em class="text-accent">frequentes</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Questions <em class="text-point">frequentes</em>
         </h2>
         <div class="max-w-3xl mx-auto space-y-4">
           {[
@@ -214,12 +214,12 @@ const schema = {
               a: "Oui, TypeScript est systematiquement utilise sur tous mes projets React et Next.js. Le typage statique reduit les bugs, ameliore l'autocompletion et rend le code plus fiable et maintenable, surtout sur les projets qui grandissent."
             },
           ].map(item => (
-            <details class="border border-border p-6 group">
-              <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+            <details class="border border-filet p-6 group">
+              <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
                 {item.q}
-                <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+                <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+              <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>
@@ -227,12 +227,12 @@ const schema = {
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 border-t border-border">
+    <section class="py-16 border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Un projet React ou Next.js en tete ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre application. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

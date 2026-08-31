@@ -64,22 +64,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web association Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web association Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site pour <em class="text-accent">association</em> qui<br/>federe et mobilise
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site pour <em class="text-point">association</em> qui<br/>federe et mobilise
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Adhesion en ligne, calendrier d'evenements, collecte de dons — un site web qui donne de la visibilite a votre association rennaise et facilite la vie de vos benevoles.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -90,14 +90,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Votre association merite mieux qu'une <em class="text-accent">page Facebook</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Votre association merite mieux qu'une <em class="text-point">page Facebook</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Beaucoup d'associations rennaises s'appuient uniquement sur les reseaux sociaux pour communiquer. Le probleme : vous etes soumis aux algorithmes, vos publications ne touchent qu'une fraction de vos membres, et vous n'avez aucun controle sur la presentation de vos activites.</p>
               <p>Un site web propre a votre association, c'est un point central ou tout est regroupe : vos missions, vos evenements, l'adhesion, les dons. Un espace que vous maitrisez entierement, independant des plateformes.</p>
               <p>Je concois des sites accessibles et economiques pour les associations de Rennes et alentours, en utilisant des outils adaptes au monde associatif (HelloAsso, Google Workspace for Nonprofits) pour limiter les couts.</p>
@@ -110,9 +110,9 @@ const schema = {
               { label: 'Adherent en ligne si possible', value: '58%' },
               { label: 'Dons en ligne en croissance', value: '+20%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -122,8 +122,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les outils essentiels d'un site <em class="text-accent">associatif</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les outils essentiels d'un site <em class="text-point">associatif</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -134,29 +134,29 @@ const schema = {
           { title: 'Presentation de l\'equipe', desc: "Page dediee au bureau, aux benevoles et aux partenaires. Humanisez votre association et montrez les visages derriere le projet." },
           { title: 'Galerie photos', desc: "Albums photos de vos evenements et activites. Un moyen de montrer concretement ce que fait votre association au quotidien." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites au service de <em class="text-accent">causes qui comptent</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites au service de <em class="text-point">causes qui comptent</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des associations et collectifs.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des associations et collectifs.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -177,24 +177,24 @@ const schema = {
             a: 'Je propose des tarifs adaptes aux associations : un site vitrine avec adhesion et evenements demarre autour de 600 euros. Je privilegie des outils gratuits ou a faible cout (HelloAsso, hebergement economique) pour respecter votre budget.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a donner plus de visibilite a votre association ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre association et de vos besoins. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

@@ -23,76 +23,76 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Supabase</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Supabase</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         Supabase
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
-          Supabase est une plateforme backend-as-a-service open source qui se positionne comme alternative a <a href="/glossaire/firebase" class="text-accent hover:text-accent-hover transition-colors">Firebase</a>. Construite autour de <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a>, elle offre une base de donnees relationnelle, l'authentification, le stockage de fichiers, les fonctions serverless et la synchronisation en temps reel, le tout avec une approche open source et sans vendor lock-in.
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
+          Supabase est une plateforme backend-as-a-service open source qui se positionne comme alternative a <a href="/glossaire/firebase" class="text-point hover:text-point transition-colors">Firebase</a>. Construite autour de <a href="/glossaire/postgresql" class="text-point hover:text-point transition-colors">PostgreSQL</a>, elle offre une base de donnees relationnelle, l'authentification, le stockage de fichiers, les fonctions serverless et la synchronisation en temps reel, le tout avec une approche open source et sans vendor lock-in.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Supabase ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Au coeur de Supabase se trouve une base de donnees <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a> complete. Contrairement a Firebase qui utilise une base NoSQL, Supabase offre toute la puissance du SQL : jointures, transactions, contraintes d'integrite, vues materialisees et extensions (PostGIS, pgvector). L'API REST et temps reel sont generees automatiquement a partir du schema de la base.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne Supabase ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Au coeur de Supabase se trouve une base de donnees <a href="/glossaire/postgresql" class="text-point hover:text-point transition-colors">PostgreSQL</a> complete. Contrairement a Firebase qui utilise une base NoSQL, Supabase offre toute la puissance du SQL : jointures, transactions, contraintes d'integrite, vues materialisees et extensions (PostGIS, pgvector). L'API REST et temps reel sont generees automatiquement a partir du schema de la base.
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
+          <p class="text-cartel leading-relaxed mb-4">
             Supabase Auth gere l'authentification avec plus de 20 fournisseurs (Google, GitHub, Apple, email, telephone). Les Row Level Security (RLS) policies de PostgreSQL permettent de definir des regles d'acces directement dans la base de donnees, offrant une securite granulaire sans code serveur supplementaire.
           </p>
-          <p class="text-text-body leading-relaxed">
+          <p class="text-cartel leading-relaxed">
             Le stockage de fichiers de Supabase s'appuie sur des buckets S3-compatible avec gestion des permissions. Les Edge Functions (Deno) permettent d'executer du code serveur a la peripherie du reseau. Etant open source, Supabase peut etre self-hosted pour un controle total sur les donnees et l'infrastructure.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir Supabase ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi choisir Supabase ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> PostgreSQL : base de donnees relationnelle puissante et eprouvee</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Open source : pas de vendor lock-in, possibilite de self-hosting</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> API REST et temps reel generees automatiquement depuis le schema</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Tier gratuit genereux pour les projets en demarrage</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Compatible avec <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma</a> pour un ORM type avec <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a></li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Dashboard intuitif pour explorer et modifier les donnees</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> PostgreSQL : base de donnees relationnelle puissante et eprouvee</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Open source : pas de vendor lock-in, possibilite de self-hosting</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> API REST et temps reel generees automatiquement depuis le schema</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Tier gratuit genereux pour les projets en demarrage</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Compatible avec <a href="/glossaire/prisma" class="text-point hover:text-point transition-colors">Prisma</a> pour un ORM type avec <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a></li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Dashboard intuitif pour explorer et modifier les donnees</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Supabase en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Supabase s'integre parfaitement avec <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a> et <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> pour construire des applications full-stack. Le SDK JavaScript offre une experience developpeur fluide avec du typage automatique genere depuis le schema PostgreSQL, rendant le code plus sur avec <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a>.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Supabase en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Supabase s'integre parfaitement avec <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a> et <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a> pour construire des applications full-stack. Le SDK JavaScript offre une experience developpeur fluide avec du typage automatique genere depuis le schema PostgreSQL, rendant le code plus sur avec <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a>.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Supabase est mon choix privilegie pour le backend des <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">applications web</a>. Sa base PostgreSQL, combinee a l'authentification integree et au temps reel, permet de livrer rapidement des projets robustes sans gerer d'infrastructure serveur complexe.
+          <p class="text-cartel leading-relaxed">
+            Supabase est mon choix privilegie pour le backend des <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">applications web</a>. Sa base PostgreSQL, combinee a l'authentification integree et au temps reel, permet de livrer rapidement des projets robustes sans gerer d'infrastructure serveur complexe.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/postgresql" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">PostgreSQL</a>
-          <a href="/glossaire/firebase" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Firebase</a>
-          <a href="/glossaire/prisma" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Prisma</a>
-          <a href="/glossaire/api-rest" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">API REST</a>
-          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/postgresql" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">PostgreSQL</a>
+          <a href="/glossaire/firebase" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Firebase</a>
+          <a href="/glossaire/prisma" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Prisma</a>
+          <a href="/glossaire/api-rest" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">API REST</a>
+          <a href="/glossaire/typescript" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">TypeScript</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'un backend Supabase pour votre application ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'un backend Supabase pour votre application ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

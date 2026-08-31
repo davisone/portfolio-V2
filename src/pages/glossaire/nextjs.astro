@@ -23,76 +23,76 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Next.js</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Next.js</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         Next.js
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
-          Next.js est un framework <a href="/glossaire/react" class="text-accent hover:text-accent-hover transition-colors">React</a> open source cree et maintenu par <a href="/glossaire/vercel" class="text-accent hover:text-accent-hover transition-colors">Vercel</a>. Il fournit une architecture complete pour construire des applications web performantes avec le rendu serveur, la generation statique, le routage et de nombreuses optimisations integrees.
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
+          Next.js est un framework <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a> open source cree et maintenu par <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a>. Il fournit une architecture complete pour construire des applications web performantes avec le rendu serveur, la generation statique, le routage et de nombreuses optimisations integrees.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Next.js ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Next.js etend React en ajoutant tout ce qui manque pour une application en production : un systeme de routage base sur le systeme de fichiers, le <a href="/glossaire/ssr" class="text-accent hover:text-accent-hover transition-colors">rendu serveur (SSR)</a>, la <a href="/glossaire/ssg" class="text-accent hover:text-accent-hover transition-colors">generation statique (SSG)</a>, l'Incremental Static Regeneration (ISR), les API Routes et l'optimisation automatique des images et des polices.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne Next.js ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Next.js etend React en ajoutant tout ce qui manque pour une application en production : un systeme de routage base sur le systeme de fichiers, le <a href="/glossaire/ssr" class="text-point hover:text-point transition-colors">rendu serveur (SSR)</a>, la <a href="/glossaire/ssg" class="text-point hover:text-point transition-colors">generation statique (SSG)</a>, l'Incremental Static Regeneration (ISR), les API Routes et l'optimisation automatique des images et des polices.
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
-            L'App Router, introduit dans Next.js 13, apporte les React Server Components qui permettent de rendre des composants exclusivement cote serveur. Cela reduit drastiquement la quantite de JavaScript envoye au navigateur, ameliorant les performances et les <a href="/glossaire/core-web-vitals" class="text-accent hover:text-accent-hover transition-colors">Core Web Vitals</a>.
+          <p class="text-cartel leading-relaxed mb-4">
+            L'App Router, introduit dans Next.js 13, apporte les React Server Components qui permettent de rendre des composants exclusivement cote serveur. Cela reduit drastiquement la quantite de JavaScript envoye au navigateur, ameliorant les performances et les <a href="/glossaire/core-web-vitals" class="text-point hover:text-point transition-colors">Core Web Vitals</a>.
           </p>
-          <p class="text-text-body leading-relaxed">
+          <p class="text-cartel leading-relaxed">
             Next.js offre un systeme de rendu hybride : chaque page peut choisir independamment sa strategie de rendu (statique, dynamique ou streaming). Les layouts partages, le chargement parallele des routes et le cache intelligent completent l'architecture pour des performances optimales.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi choisir Next.js ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi choisir Next.js ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Framework fullstack : frontend et backend dans un seul projet</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> <a href="/glossaire/seo" class="text-accent hover:text-accent-hover transition-colors">SEO</a> optimal grace au rendu serveur et aux meta tags automatiques</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Performances de pointe avec le code splitting automatique et le prefetching</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Developer Experience excellente : hot reload, messages d'erreur clairs, TypeScript natif</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Deploiement en un clic sur Vercel avec CDN mondial et edge functions</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Ecosysteme React complet avec <a href="/glossaire/typescript" class="text-accent hover:text-accent-hover transition-colors">TypeScript</a> et <a href="/glossaire/tailwind-css" class="text-accent hover:text-accent-hover transition-colors">Tailwind CSS</a> integres</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Framework fullstack : frontend et backend dans un seul projet</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> optimal grace au rendu serveur et aux meta tags automatiques</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Performances de pointe avec le code splitting automatique et le prefetching</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Developer Experience excellente : hot reload, messages d'erreur clairs, TypeScript natif</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Deploiement en un clic sur Vercel avec CDN mondial et edge functions</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Ecosysteme React complet avec <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a> et <a href="/glossaire/tailwind-css" class="text-point hover:text-point transition-colors">Tailwind CSS</a> integres</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Next.js en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Next.js est mon framework de reference pour les <a href="/services/creation-application-web" class="text-accent hover:text-accent-hover transition-colors">applications web</a> et les <a href="/services/creation-site-web-rennes" class="text-accent hover:text-accent-hover transition-colors">sites web</a>. Combine avec <a href="/glossaire/prisma" class="text-accent hover:text-accent-hover transition-colors">Prisma</a> pour l'acces aux donnees et <a href="/glossaire/postgresql" class="text-accent hover:text-accent-hover transition-colors">PostgreSQL</a> comme base de donnees, il forme une stack complete et type de bout en bout.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Next.js en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Next.js est mon framework de reference pour les <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">applications web</a> et les <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">sites web</a>. Combine avec <a href="/glossaire/prisma" class="text-point hover:text-point transition-colors">Prisma</a> pour l'acces aux donnees et <a href="/glossaire/postgresql" class="text-point hover:text-point transition-colors">PostgreSQL</a> comme base de donnees, il forme une stack complete et type de bout en bout.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Pour un <a href="/glossaire/saas" class="text-accent hover:text-accent-hover transition-colors">SaaS</a> ou un <a href="/glossaire/mvp" class="text-accent hover:text-accent-hover transition-colors">MVP</a>, Next.js permet d'iterer rapidement grace a ses conventions et son ecosysteme mature. L'authentification via <a href="/glossaire/oauth" class="text-accent hover:text-accent-hover transition-colors">OAuth 2.0</a>, le deploiement continu avec <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a> et l'hebergement sur Vercel forment un workflow de production complet et fiable.
+          <p class="text-cartel leading-relaxed">
+            Pour un <a href="/glossaire/saas" class="text-point hover:text-point transition-colors">SaaS</a> ou un <a href="/glossaire/mvp" class="text-point hover:text-point transition-colors">MVP</a>, Next.js permet d'iterer rapidement grace a ses conventions et son ecosysteme mature. L'authentification via <a href="/glossaire/oauth" class="text-point hover:text-point transition-colors">OAuth 2.0</a>, le deploiement continu avec <a href="/glossaire/ci-cd" class="text-point hover:text-point transition-colors">CI/CD</a> et l'hebergement sur Vercel forment un workflow de production complet et fiable.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/react" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">React</a>
-          <a href="/glossaire/vercel" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Vercel</a>
-          <a href="/glossaire/ssr" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSR</a>
-          <a href="/glossaire/ssg" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSG</a>
-          <a href="/glossaire/typescript" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">TypeScript</a>
+          <a href="/glossaire/react" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
+          <a href="/glossaire/vercel" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
+          <a href="/glossaire/ssr" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSR</a>
+          <a href="/glossaire/ssg" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
+          <a href="/glossaire/typescript" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">TypeScript</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'aide avec Next.js pour votre projet ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'aide avec Next.js pour votre projet ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

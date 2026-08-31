@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web coiffure Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web coiffure Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre salon de <em class="text-accent">coiffure</em> merite<br/>un site a son image
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre salon de <em class="text-point">coiffure</em> merite<br/>un site a son image
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Reservation en ligne, galerie avant/apres, tarifs clairs — un site web concu pour remplir votre carnet de rendez-vous et refeter l'identite de votre salon a Rennes et ses alentours.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos futurs clients veulent voir votre <em class="text-accent">travail</em> avant de prendre rendez-vous
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos futurs clients veulent voir votre <em class="text-point">travail</em> avant de prendre rendez-vous
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Selon une etude de la Federation Nationale de la Coiffure, 74% des clients de moins de 45 ans recherchent un salon de coiffure en ligne avant de s'y rendre. Ils veulent voir vos realisations, connaitre vos tarifs et pouvoir reserver facilement.</p>
               <p>Un site de salon de coiffure efficace, c'est une galerie de realisations qui inspire confiance, un systeme de reservation en ligne qui evite les appels manques, une grille tarifaire claire et une presentation de votre equipe et de votre univers.</p>
               <p>Je concois des sites qui refletent l'identite de votre salon : design sur mesure, galerie avant/apres percutante, integration des reseaux sociaux et un parcours de reservation fluide qui fonctionne sur mobile comme sur ordinateur.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Consultent les photos avant', value: '82%' },
               { label: 'Decouvrent via Instagram ou Google', value: '69%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site de <em class="text-accent">salon de coiffure</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site de <em class="text-point">salon de coiffure</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Integration reseaux sociaux', desc: "Feed Instagram integre pour afficher vos dernieres realisations. Lien vers vos profils sociaux pour developper votre communaute en ligne." },
           { title: 'Produits et soins', desc: "Presentation des gammes de produits utilises et vendus au salon. Possibilite d'ajouter un e-shop pour la vente en ligne de produits capillaires." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui ont du <em class="text-accent">style</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui ont du <em class="text-point">style</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de la beaute et du bien-etre.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des professionnels de la beaute et du bien-etre.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour salon de coiffure avec reservation en ligne et galerie demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (e-shop produits, programme fidelite, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a remplir votre carnet de rendez-vous ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre salon et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
