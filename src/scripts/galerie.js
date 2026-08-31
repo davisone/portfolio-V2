@@ -232,7 +232,24 @@ const initChoregraphie = () => {
     pin: true,
     scrub: 1,
     snap: {
-      snapTo: progressions,
+      // Pas de snap à l'intérieur des salles traversantes : lecture libre des œuvres
+      snapTo: (valeur, self) => {
+        const courant = self ? self.progress : valeur
+        for (let i = 1; i < progressions.length; i++) {
+          if (courant <= progressions[i]) {
+            if (waypoints[i].id.endsWith('-fin')) return courant
+            break
+          }
+        }
+        for (let i = 1; i < progressions.length; i++) {
+          if (valeur <= progressions[i]) {
+            if (waypoints[i].id.endsWith('-fin')) return valeur
+            const avant = progressions[i - 1]
+            return valeur - avant < progressions[i] - valeur ? avant : progressions[i]
+          }
+        }
+        return 1
+      },
       duration: { min: 0.15, max: 0.4 },
       ease: 'power1.inOut',
       delay: 0.1,
