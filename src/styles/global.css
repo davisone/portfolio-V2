@@ -131,6 +131,63 @@
   }
 }
 
+/* Mode galerie : activé par JS quand la chorégraphie démarre */
+.galerie-active .galerie-viewport {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.galerie-active .galerie-monde {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  will-change: transform;
+}
+
+.galerie-active .salle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  background: rgb(var(--color-cimaise));
+}
+
+.galerie-active .salle-rangee {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* En mode galerie, le flux horizontal part de l'entrée de la salle */
+.galerie-active .salle-rangee > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.galerie-active .grande-entete {
+  width: 22rem;
+  flex: none;
+}
+
+/* Fondus reduced-motion : opacité seule, jamais de translation */
+.fondu {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.fondu.visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fondu {
+    transition-duration: 0.01ms;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
