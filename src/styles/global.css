@@ -162,6 +162,7 @@
   stroke-linecap: round;
 }
 
+/* Salles transparentes pour laisser vivre le fil de visite sous le contenu */
 .galerie-active .salle {
   position: absolute;
   top: 0;
@@ -170,29 +171,15 @@
   height: 100vh;
   height: 100dvh;
   overflow-y: auto;
-  background: rgb(var(--color-cimaise));
+  background: transparent;
   display: flex;
   flex-direction: column;
-}
-
-/* Desktop : salles transparentes pour laisser vivre le fil de visite sous le contenu */
-@media (min-width: 768px) {
-  .galerie-active .salle {
-    background: transparent;
-  }
 }
 
 /* Centrage sûr : centré quand ça tient, aligné en haut (scrollable) sinon */
 .galerie-active .salle > .salle-contenu {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-@media (max-width: 767px) {
-  /* Dégagement sous le header fixe */
-  .galerie-active .salle > .salle-contenu {
-    padding-top: 3.5rem;
-  }
 }
 
 /* Fondus reduced-motion : opacité seule, jamais de translation */
