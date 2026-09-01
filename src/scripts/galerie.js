@@ -225,7 +225,8 @@ const initChoregraphie = () => {
     pin: true,
     scrub: 1,
     snap: {
-      // Pas de snap à l'intérieur des salles traversantes : lecture libre des œuvres
+      // Aimantation de proximité seulement : on se cale sur une salle quand on
+      // s'arrête tout près, on ne happe jamais l'utilisateur entre deux salles
       snapTo: (valeur, self) => {
         const courant = self ? self.progress : valeur
         for (let i = 1; i < progressions.length; i++) {
@@ -238,7 +239,10 @@ const initChoregraphie = () => {
           if (valeur <= progressions[i]) {
             if (waypoints[i].id.endsWith('-fin')) return valeur
             const avant = progressions[i - 1]
-            return valeur - avant < progressions[i] - valeur ? avant : progressions[i]
+            const seuil = (progressions[i] - avant) * 0.12
+            if (valeur - avant <= seuil) return avant
+            if (progressions[i] - valeur <= seuil) return progressions[i]
+            return valeur
           }
         }
         return 1
