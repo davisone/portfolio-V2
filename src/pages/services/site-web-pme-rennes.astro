@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web PME Rennes | Evan Davison — Développeur Web"
+  title="Site web PME Rennes | Evan Davison · Développeur Web"
   description="Création de site web professionnel pour PME à Rennes. Multi-pages, intégration CRM, formulaires avancés, SEO local. Un site à la hauteur de votre entreprise."
   canonical="https://www.evandavison.fr/services/site-web-pme-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web PME Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web PME Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site web de <em class="text-accent">PME</em> qui structure<br/>votre croissance
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site web de <em class="text-point">PME</em> qui structure<br/>votre croissance
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Site multi-pages, integration CRM, formulaires metier, espace client — un site web professionnel qui accompagne le developpement de votre PME a Rennes.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Site multi-pages, integration CRM, formulaires metier, espace client : un site web professionnel qui accompagne le developpement de votre PME a Rennes.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Votre site actuel freine votre <em class="text-accent">credibilite commerciale</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Votre site actuel freine votre <em class="text-point">credibilite commerciale</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>En tant que PME, votre site web est souvent le premier contact avec vos prospects, partenaires et candidats. Un site obsolete, lent ou mal structure envoie un signal negatif sur votre professionnalisme, meme si votre entreprise est excellente.</p>
               <p>Une PME a des besoins specifiques qu'un simple site une page ne peut pas couvrir : presentation detaillee des services, references clients, equipe, actualites, et souvent des outils connectes a votre CRM ou vos processus internes.</p>
               <p>Je concois des sites web pour PME rennaises qui refletent la solidite de votre entreprise : architecture multi-pages pensee pour le SEO, integration avec vos outils metier, et administration autonome par votre equipe.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Comparent avec la concurrence', value: '69%' },
               { label: 'Cherchent les references', value: '63%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les fonctionnalites qui font la difference pour une <em class="text-accent">PME</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les fonctionnalites qui font la difference pour une <em class="text-point">PME</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Blog et actualites', desc: "Section actualites pour partager vos nouveautes, recrutements, participations a des salons. Ameliore le SEO et montre le dynamisme de l'entreprise." },
           { title: 'Administration autonome', desc: "Interface d'administration intuitive pour votre equipe. Modifiez les textes, ajoutez des actualites, gerez les pages sans intervention technique." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui <em class="text-accent">inspirent confiance</em> a vos prospects
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui <em class="text-point">inspirent confiance</em> a vos prospects
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des PME et entreprises etablies.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des PME et entreprises etablies.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Oui, des forfaits de maintenance mensuelle sont disponibles : mises a jour techniques, sauvegardes, monitoring de performance, modifications mineures de contenu et support technique reactif.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a doter votre PME d'un site a sa mesure ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre entreprise et de vos objectifs de croissance. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

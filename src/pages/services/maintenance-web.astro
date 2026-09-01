@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Maintenance web | Evan Davison — Developpeur Web Freelance"
+  title="Maintenance web | Evan Davison · Developpeur Web Freelance"
   description="Maintenance web mensuelle : mises a jour, sauvegardes, monitoring, corrections de bugs et support technique. Gardez votre site performant et securise. A partir de 49 euros/mois."
   canonical="https://www.evandavison.fr/services/maintenance-web/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Maintenance web</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Maintenance web</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Maintenance <em class="text-accent">web</em><br/>mensuelle
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Maintenance <em class="text-point">web</em><br/>mensuelle
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Un site web n'est pas un produit fini — c'est un outil vivant qui necessite un suivi regulier. Mises a jour, securite, performances, sauvegardes : je m'occupe de tout pour que vous puissiez vous concentrer sur votre activite.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Un site web n'est pas un produit fini : c'est un outil vivant qui necessite un suivi regulier. Mises a jour, securite, performances, sauvegardes : je m'occupe de tout pour que vous puissiez vous concentrer sur votre activite.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">
@@ -99,15 +99,15 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Un site sans maintenance, c'est un <em class="text-accent">risque permanent</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Un site sans maintenance, c'est un <em class="text-point">risque permanent</em>
             </h2>
-            <div class="space-y-4 text-text-body">
-              <p>Les failles de securite, les plugins obsoletes, les temps de chargement qui se degradent — un site non maintenu accumule les problemes invisibles jusqu'au jour ou tout casse. Et a ce moment-la, le cout de reparation est bien plus eleve qu'un forfait mensuel.</p>
+            <div class="space-y-4 text-cartel">
+              <p>Les failles de securite, les plugins obsoletes, les temps de chargement qui se degradent : un site non maintenu accumule les problemes invisibles jusqu'au jour ou tout casse. Et a ce moment-la, le cout de reparation est bien plus eleve qu'un forfait mensuel.</p>
               <p>Avec un contrat de maintenance, votre site reste a jour, securise et performant. Je surveille les indicateurs cles en permanence et j'interviens avant que les problemes ne deviennent critiques.</p>
               <p>Chaque mois, vous recevez un rapport detaille : interventions effectuees, temps de disponibilite, performances et recommandations d'amelioration.</p>
             </div>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Sites maintenus', value: '15+' },
               { label: 'Incidents resolus', value: '100%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Fonctionnalites -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que la maintenance <em class="text-accent">inclut</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que la maintenance <em class="text-point">inclut</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -143,19 +143,19 @@ const schema = {
           { title: 'Optimisation performances', desc: "Audit regulier des temps de chargement, compression des images, nettoyage du cache et optimisation du code." },
           { title: 'Support technique', desc: "Un interlocuteur unique et reactif pour toutes vos questions techniques. Assistance par email, telephone ou visio." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Tarifs -->
-    <section id="tarifs" class="py-16 bg-paper-alt border-t border-b border-border">
+    <section id="tarifs" class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Nos <em class="text-accent">formules</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Nos <em class="text-point">formules</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -199,16 +199,16 @@ const schema = {
               ]
             },
           ].map(plan => (
-            <div class="border border-border p-8 flex flex-col">
-              <h3 class="text-ink font-semibold text-xl mb-2">{plan.name}</h3>
+            <div class="border border-filet p-8 flex flex-col">
+              <h3 class="text-encre font-semibold text-xl mb-2">{plan.name}</h3>
               <div class="mb-6">
-                <span class="text-3xl font-serif font-bold text-accent">{plan.price}</span>
-                <span class="text-muted text-sm"> euros{plan.unit}</span>
+                <span class="text-3xl font-display font-bold text-point">{plan.price}</span>
+                <span class="text-cartel text-sm"> euros{plan.unit}</span>
               </div>
-              <ul class="space-y-3 text-text-body text-sm mb-8 flex-1">
+              <ul class="space-y-3 text-cartel text-sm mb-8 flex-1">
                 {plan.features.map(f => (
                   <li class="flex items-start gap-2">
-                    <span class="text-accent mt-0.5 shrink-0">-</span>
+                    <span class="text-point mt-0.5 shrink-0">-</span>
                     {f}
                   </li>
                 ))}
@@ -224,8 +224,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -250,24 +250,24 @@ const schema = {
             a: 'Je maintiens des sites developpes avec les technologies modernes (Next.js, Astro, React) comme des sites WordPress ou autres CMS. Chaque forfait est adapte a la complexite technique de votre projet.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Besoin d'un suivi <em class="text-accent">fiable</em> pour votre site ?
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Besoin d'un suivi <em class="text-point">fiable</em> pour votre site ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Echangeons sur vos besoins de maintenance. Premier diagnostic gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

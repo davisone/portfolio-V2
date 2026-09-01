@@ -23,11 +23,11 @@ const faqItems = [
   },
   {
     q: "Puis-je migrer de Shopify ou WooCommerce vers du sur mesure ?",
-    a: "Oui, la migration est tout a fait possible. Les produits, categories, clients et commandes peuvent etre recuperes et importes dans une solution sur mesure. C'est un projet que je realise regulierement. Consultez ma page <a href='/services/creation-boutique-en-ligne' class='text-accent underline'>creation de boutique en ligne</a>."
+    a: "Oui, la migration est tout a fait possible. Les produits, categories, clients et commandes peuvent etre recuperes et importes dans une solution sur mesure. C'est un projet que je realise regulierement. Consultez ma page <a href='/services/creation-boutique-en-ligne' class='text-point underline'>creation de boutique en ligne</a>."
   },
   {
     q: "Quel est le meilleur choix pour le SEO e-commerce ?",
-    a: "Le sur mesure offre le meilleur SEO car l'architecture, les URL, le balisage Schema.org et les performances sont entierement maitrises. WooCommerce avec de bons plugins SEO arrive en deuxieme position. Shopify est plus limite a cause de sa structure d'URL imposee. Voir ma page <a href='/services/optimisation-seo' class='text-accent underline'>optimisation SEO</a>."
+    a: "Le sur mesure offre le meilleur SEO car l'architecture, les URL, le balisage Schema.org et les performances sont entierement maitrises. WooCommerce avec de bons plugins SEO arrive en deuxieme position. Shopify est plus limite a cause de sa structure d'URL imposee. Voir ma page <a href='/services/optimisation-seo' class='text-point underline'>optimisation SEO</a>."
   },
   {
     q: "Combien coute reellement un e-commerce sur mesure ?",
@@ -88,47 +88,47 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/comparatifs" class="hover:text-ink transition-colors">Comparatifs</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Shopify vs WooCommerce vs sur mesure</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/comparatifs" class="hover:text-encre transition-colors">Comparatifs</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Shopify vs WooCommerce vs sur mesure</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-12 sm:py-20">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
-        Shopify vs WooCommerce vs <em class="text-accent">sur mesure</em>
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
+        Shopify vs WooCommerce vs <em class="text-point">sur mesure</em>
       </h1>
-      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+      <p class="text-xl text-cartel max-w-2xl leading-relaxed">
         Trois solutions populaires pour creer une boutique en ligne. Ce comparatif vous aide a choisir celle qui correspond le mieux a votre activite, votre budget et vos objectifs de croissance.
       </p>
     </section>
 
     <!-- Tableau comparatif -->
     <section class="section-container pb-16">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-        Comparatif <em class="text-accent">detaille</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+        Comparatif <em class="text-point">detaille</em>
       </h2>
       <div class="overflow-x-auto">
-        <table class="w-full border border-border text-left text-sm sm:text-base">
+        <table class="w-full border border-filet text-left text-sm sm:text-base">
           <thead>
-            <tr class="bg-paper-alt">
-              <th class="p-3 sm:p-4 font-semibold text-ink border-b border-border">Critere</th>
-              <th class="p-3 sm:p-4 font-semibold text-ink border-b border-border">Shopify</th>
-              <th class="p-3 sm:p-4 font-semibold text-ink border-b border-border">WooCommerce</th>
-              <th class="p-3 sm:p-4 font-semibold text-accent border-b border-border">Sur mesure</th>
+            <tr class="bg-oeuvre">
+              <th class="p-3 sm:p-4 font-semibold text-encre border-b border-filet">Critere</th>
+              <th class="p-3 sm:p-4 font-semibold text-encre border-b border-filet">Shopify</th>
+              <th class="p-3 sm:p-4 font-semibold text-encre border-b border-filet">WooCommerce</th>
+              <th class="p-3 sm:p-4 font-semibold text-point border-b border-filet">Sur mesure</th>
             </tr>
           </thead>
           <tbody>
             {comparatif.map((row, i) => (
-              <tr class={i % 2 === 0 ? '' : 'bg-paper-alt/50'}>
-                <td class="p-3 sm:p-4 font-medium text-ink border-b border-border">{row.critere}</td>
-                <td class="p-3 sm:p-4 text-text-body border-b border-border">{row.shopify}</td>
-                <td class="p-3 sm:p-4 text-text-body border-b border-border">{row.woocommerce}</td>
-                <td class="p-3 sm:p-4 text-text-body border-b border-border">{row.surMesure}</td>
+              <tr class={i % 2 === 0 ? '' : 'bg-oeuvre/50'}>
+                <td class="p-3 sm:p-4 font-medium text-encre border-b border-filet">{row.critere}</td>
+                <td class="p-3 sm:p-4 text-cartel border-b border-filet">{row.shopify}</td>
+                <td class="p-3 sm:p-4 text-cartel border-b border-filet">{row.woocommerce}</td>
+                <td class="p-3 sm:p-4 text-cartel border-b border-filet">{row.surMesure}</td>
               </tr>
             ))}
           </tbody>
@@ -137,18 +137,18 @@ const schema = {
     </section>
 
     <!-- Shopify en detail -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-          <em class="text-accent">Shopify</em> en detail
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+          <em class="text-point">Shopify</em> en detail
         </h2>
-        <p class="text-text-body mb-6 max-w-3xl leading-relaxed">
+        <p class="text-cartel mb-6 max-w-3xl leading-relaxed">
           Shopify est une plateforme SaaS (logiciel en tant que service) qui heberge et gere votre boutique en ligne. Tout est inclus : hebergement, securite, mises a jour. Vous payez un abonnement mensuel et des commissions sur chaque vente.
         </p>
         <div class="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-ink font-semibold text-lg mb-4">Avantages</h3>
-            <ul class="space-y-3 text-text-body">
+            <h3 class="text-encre font-semibold text-lg mb-4">Avantages</h3>
+            <ul class="space-y-3 text-cartel">
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Mise en ligne tres rapide (quelques jours)</li>
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Interface d'administration intuitive</li>
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Hebergement et securite geres automatiquement</li>
@@ -157,8 +157,8 @@ const schema = {
             </ul>
           </div>
           <div>
-            <h3 class="text-ink font-semibold text-lg mb-4">Inconvenients</h3>
-            <ul class="space-y-3 text-text-body">
+            <h3 class="text-encre font-semibold text-lg mb-4">Inconvenients</h3>
+            <ul class="space-y-3 text-cartel">
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Commissions sur chaque vente (0,5 a 2%)</li>
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Abonnement mensuel obligatoire (29-299EUR)</li>
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Personnalisation limitee (langage Liquid)</li>
@@ -172,16 +172,16 @@ const schema = {
 
     <!-- WooCommerce en detail -->
     <section class="section-container py-16 sm:py-20">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-        <em class="text-accent">WooCommerce</em> en detail
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+        <em class="text-point">WooCommerce</em> en detail
       </h2>
-      <p class="text-text-body mb-6 max-w-3xl leading-relaxed">
+      <p class="text-cartel mb-6 max-w-3xl leading-relaxed">
         WooCommerce est un plugin gratuit pour WordPress qui transforme votre site en boutique en ligne. Open source et auto-heberge, il offre plus de flexibilite que Shopify mais necessite plus de gestion technique.
       </p>
       <div class="grid md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-ink font-semibold text-lg mb-4">Avantages</h3>
-          <ul class="space-y-3 text-text-body">
+          <h3 class="text-encre font-semibold text-lg mb-4">Avantages</h3>
+          <ul class="space-y-3 text-cartel">
             <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Gratuit et open source</li>
             <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Aucune commission sur les ventes</li>
             <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Propriete complete des donnees</li>
@@ -190,8 +190,8 @@ const schema = {
           </ul>
         </div>
         <div>
-          <h3 class="text-ink font-semibold text-lg mb-4">Inconvenients</h3>
-          <ul class="space-y-3 text-text-body">
+          <h3 class="text-encre font-semibold text-lg mb-4">Inconvenients</h3>
+          <ul class="space-y-3 text-cartel">
             <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Performances mediocres sans optimisation</li>
             <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Securite a gerer soi-meme (failles WordPress)</li>
             <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Mises a jour frequentes et parfois incompatibles</li>
@@ -200,24 +200,24 @@ const schema = {
           </ul>
         </div>
       </div>
-      <p class="mt-8 text-text-body">
-        Pour en savoir plus sur les limites de WordPress, consultez notre comparatif <a href="/comparatifs/wordpress-vs-sur-mesure" class="text-accent underline">WordPress vs code sur mesure</a>.
+      <p class="mt-8 text-cartel">
+        Pour en savoir plus sur les limites de WordPress, consultez notre comparatif <a href="/comparatifs/wordpress-vs-sur-mesure" class="text-point underline">WordPress vs code sur mesure</a>.
       </p>
     </section>
 
     <!-- Sur mesure en detail -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-          E-commerce <em class="text-accent">sur mesure</em> en detail
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+          E-commerce <em class="text-point">sur mesure</em> en detail
         </h2>
-        <p class="text-text-body mb-6 max-w-3xl leading-relaxed">
+        <p class="text-cartel mb-6 max-w-3xl leading-relaxed">
           Un e-commerce sur mesure est developpe specifiquement pour votre activite avec des technologies modernes (Next.js, Stripe, base de donnees dediee). Aucune limite technique, performances maximales, et propriete totale du code.
         </p>
         <div class="grid md:grid-cols-2 gap-8">
           <div>
-            <h3 class="text-ink font-semibold text-lg mb-4">Avantages</h3>
-            <ul class="space-y-3 text-text-body">
+            <h3 class="text-encre font-semibold text-lg mb-4">Avantages</h3>
+            <ul class="space-y-3 text-cartel">
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Performances optimales (chargement ultra-rapide)</li>
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> SEO maitrise de A a Z</li>
               <li class="flex gap-3"><span class="text-green-600 font-bold shrink-0">+</span> Aucune commission ni abonnement</li>
@@ -226,72 +226,72 @@ const schema = {
             </ul>
           </div>
           <div>
-            <h3 class="text-ink font-semibold text-lg mb-4">Inconvenients</h3>
-            <ul class="space-y-3 text-text-body">
+            <h3 class="text-encre font-semibold text-lg mb-4">Inconvenients</h3>
+            <ul class="space-y-3 text-cartel">
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Investissement initial plus important</li>
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Delai de mise en ligne plus long (4-8 semaines)</li>
               <li class="flex gap-3"><span class="text-red-600 font-bold shrink-0">-</span> Necessite un developpeur pour les evolutions</li>
             </ul>
           </div>
         </div>
-        <p class="mt-8 text-text-body">
-          Decouvrez mon offre de <a href="/services/creation-boutique-en-ligne" class="text-accent underline">creation de boutique en ligne</a> sur mesure.
+        <p class="mt-8 text-cartel">
+          Decouvrez mon offre de <a href="/services/creation-boutique-en-ligne" class="text-point underline">creation de boutique en ligne</a> sur mesure.
         </p>
       </div>
     </section>
 
     <!-- Verdict selon profil -->
     <section class="section-container py-16 sm:py-20">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-        Quel choix selon votre <em class="text-accent">profil</em> ?
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+        Quel choix selon votre <em class="text-point">profil</em> ?
       </h2>
       <div class="grid sm:grid-cols-3 gap-6">
-        <div class="border border-border p-6">
-          <h3 class="font-serif text-xl font-bold text-ink mb-3">Petit commerce</h3>
-          <p class="text-text-body text-sm mb-4">Moins de 50 produits, budget limite, besoin de lancer rapidement.</p>
-          <div class="border-t border-border pt-4">
-            <p class="text-ink font-semibold mb-2">Recommandation : Shopify</p>
-            <p class="text-text-body text-sm">La rapidite de mise en ligne et la simplicite d'utilisation compensent les commissions sur un petit volume de ventes. Alternative : WooCommerce si vous avez deja un site WordPress.</p>
+        <div class="border border-filet p-6">
+          <h3 class="font-display text-xl font-bold text-encre mb-3">Petit commerce</h3>
+          <p class="text-cartel text-sm mb-4">Moins de 50 produits, budget limite, besoin de lancer rapidement.</p>
+          <div class="border-t border-filet pt-4">
+            <p class="text-encre font-semibold mb-2">Recommandation : Shopify</p>
+            <p class="text-cartel text-sm">La rapidite de mise en ligne et la simplicite d'utilisation compensent les commissions sur un petit volume de ventes. Alternative : WooCommerce si vous avez deja un site WordPress.</p>
           </div>
         </div>
-        <div class="border border-border p-6">
-          <h3 class="font-serif text-xl font-bold text-ink mb-3">PME en croissance</h3>
-          <p class="text-text-body text-sm mb-4">Catalogue moyen, besoin de personnalisation, SEO important.</p>
-          <div class="border-t border-border pt-4">
-            <p class="text-accent font-semibold mb-2">Recommandation : Sur mesure</p>
-            <p class="text-text-body text-sm">Le meilleur investissement long terme. Pas de commissions, SEO optimal, et une boutique qui evolue avec votre entreprise sans contrainte technique.</p>
+        <div class="border border-filet p-6">
+          <h3 class="font-display text-xl font-bold text-encre mb-3">PME en croissance</h3>
+          <p class="text-cartel text-sm mb-4">Catalogue moyen, besoin de personnalisation, SEO important.</p>
+          <div class="border-t border-filet pt-4">
+            <p class="text-point font-semibold mb-2">Recommandation : Sur mesure</p>
+            <p class="text-cartel text-sm">Le meilleur investissement long terme. Pas de commissions, SEO optimal, et une boutique qui evolue avec votre entreprise sans contrainte technique.</p>
           </div>
         </div>
-        <div class="border border-border p-6">
-          <h3 class="font-serif text-xl font-bold text-ink mb-3">Grande enseigne</h3>
-          <p class="text-text-body text-sm mb-4">Large catalogue, multi-devises, logistique complexe, fort trafic.</p>
-          <div class="border-t border-border pt-4">
-            <p class="text-accent font-semibold mb-2">Recommandation : Sur mesure</p>
-            <p class="text-text-body text-sm">Indispensable pour gerer un gros volume, integrer des systemes tiers (ERP, CRM, logistique) et offrir une experience client sur mesure a fort trafic.</p>
+        <div class="border border-filet p-6">
+          <h3 class="font-display text-xl font-bold text-encre mb-3">Grande enseigne</h3>
+          <p class="text-cartel text-sm mb-4">Large catalogue, multi-devises, logistique complexe, fort trafic.</p>
+          <div class="border-t border-filet pt-4">
+            <p class="text-point font-semibold mb-2">Recommandation : Sur mesure</p>
+            <p class="text-cartel text-sm">Indispensable pour gerer un gros volume, integrer des systemes tiers (ERP, CRM, logistique) et offrir une experience client sur mesure a fort trafic.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-          Questions <em class="text-accent">frequentes</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+          Questions <em class="text-point">frequentes</em>
         </h2>
         <div class="max-w-3xl space-y-4">
           {faqItems.map(item => (
-            <details class="border border-border p-6 group">
-              <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+            <details class="border border-filet p-6 group">
+              <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
                 {item.q}
-                <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+                <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p class="text-text-body mt-4 leading-relaxed" set:html={item.a} />
+              <p class="text-cartel mt-4 leading-relaxed" set:html={item.a} />
             </details>
           ))}
         </div>
-        <p class="mt-8 text-text-body">
-          D'autres questions ? Consultez la <a href="/faq" class="text-accent underline">FAQ complete</a> ou <a href="/#contact" class="text-accent underline">contactez-moi</a>.
+        <p class="mt-8 text-cartel">
+          D'autres questions ? Consultez la <a href="/faq" class="text-point underline">FAQ complete</a> ou <a href="/#contact" class="text-point underline">contactez-moi</a>.
         </p>
       </div>
     </section>
@@ -299,10 +299,10 @@ const schema = {
     <!-- CTA -->
     <section class="py-16">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a lancer votre boutique en ligne ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre projet e-commerce. Je vous conseillerai sur la solution la plus adaptee a votre activite.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web boulanger Rennes | Evan Davison — Développeur Web"
+  title="Site web boulanger Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour boulangerie à Rennes : catalogue produits, commande en ligne, click & collect, SEO local. Un site qui fait venir les clients. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-boulanger-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web boulanger Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web boulanger Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre <em class="text-accent">boulangerie</em> merite<br/>d'etre trouvee en ligne
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre <em class="text-point">boulangerie</em> merite<br/>d'etre trouvee en ligne
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Catalogue de produits, commande en ligne, click and collect — un site web concu pour mettre en valeur votre savoir-faire artisanal et attirer de nouveaux clients a Rennes et ses alentours.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Catalogue de produits, commande en ligne, click and collect : un site web concu pour mettre en valeur votre savoir-faire artisanal et attirer de nouveaux clients a Rennes et ses alentours.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos clients veulent commander <em class="text-accent">avant de se deplacer</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos clients veulent commander <em class="text-point">avant de se deplacer</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Depuis 2020, le click and collect a explose dans l'artisanat alimentaire. Selon la Confederation Nationale de la Boulangerie, les boulangeries proposant la commande en ligne constatent une hausse moyenne de 15 a 20% de leur chiffre d'affaires sur les commandes speciales.</p>
               <p>Un site de boulangerie performant, c'est un catalogue de produits appetissant, un systeme de commande en ligne pour les pains speciaux et patisseries, des horaires et une localisation facilement accessibles, et surtout des photos qui donnent envie de pousser la porte.</p>
               <p>Je concois des sites qui mettent en valeur l'artisanat : photos soignees de vos produits, mise en avant de votre savoir-faire et de vos matieres premieres, et un parcours de commande simple adapte a votre rythme de production.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Verifient les horaires en ligne', value: '88%' },
               { label: 'Preferent commander a l\'avance', value: '42%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site de <em class="text-accent">boulangerie</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site de <em class="text-point">boulangerie</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Commandes speciales', desc: "Formulaire dedie pour les gateaux d'anniversaire, pieces montees, buffets et prestations traiteur. Choix des options, tailles et date de retrait." },
           { title: 'Actualites et produits saisonniers', desc: "Section pour annoncer la galette des rois, les chocolats de Paques, les pains speciaux du moment. Gardez vos clients informes toute l'annee." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui donnent <em class="text-accent">envie de croquer</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui donnent <em class="text-point">envie de croquer</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des artisans et commerces de bouche.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des artisans et commerces de bouche.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour boulangerie avec catalogue et click and collect demarre autour de 800 euros. Le prix varie selon les fonctionnalites souhaitees (paiement en ligne, programme fidelite, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a faire connaitre votre boulangerie en ligne ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre boulangerie et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

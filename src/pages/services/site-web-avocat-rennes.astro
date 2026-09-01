@@ -53,7 +53,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web avocat Rennes | Evan Davison — Développeur Web"
+  title="Site web avocat Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour avocat et cabinet juridique à Rennes. Design sobre, prise de RDV, domaines de compétence, conformité déontologique. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-avocat-rennes/"
   schema={schema}
@@ -64,23 +64,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web avocat Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web avocat Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site pour <em class="text-accent">avocat</em> qui inspire<br/>confiance des le premier clic
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site pour <em class="text-point">avocat</em> qui inspire<br/>confiance des le premier clic
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Design sobre et professionnel, prise de rendez-vous en ligne, presentation claire de vos domaines de competence — un site conforme a la deontologie qui attire les bons clients a Rennes.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Design sobre et professionnel, prise de rendez-vous en ligne, presentation claire de vos domaines de competence : un site conforme a la deontologie qui attire les bons clients a Rennes.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -90,14 +90,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos futurs clients comparent les <em class="text-accent">cabinets en ligne</em> avant de vous appeler
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos futurs clients comparent les <em class="text-point">cabinets en ligne</em> avant de vous appeler
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Un justiciable qui cherche un avocat en droit de la famille ou en droit du travail a Rennes commence toujours par Google. Il compare les sites, lit les domaines de competence, et choisit le cabinet qui inspire le plus confiance en ligne.</p>
               <p>Un site d'avocat ne doit pas ressembler a n'importe quel site vitrine. Il doit vehiculer la rigueur, la confidentialite et le professionnalisme. Chaque element de design, chaque mot, chaque interaction doit renforcer votre credibilite.</p>
               <p>Je concois des sites pour avocats et cabinets juridiques en respectant les obligations deontologiques du RIN, tout en maximisant votre visibilite sur les recherches locales a Rennes et en Ille-et-Vilaine.</p>
@@ -110,9 +110,9 @@ const schema = {
               { label: 'Veulent prendre RDV en ligne', value: '52%' },
               { label: 'Verifient les specialites', value: '89%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -122,8 +122,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les indispensables d'un site de <em class="text-accent">cabinet d'avocats</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les indispensables d'un site de <em class="text-point">cabinet d'avocats</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -134,29 +134,29 @@ const schema = {
           { title: 'Securite et confidentialite', desc: "HTTPS obligatoire, formulaires securises, aucune donnee sensible stockee. Conformite RGPD et respect du secret professionnel." },
           { title: 'Honoraires transparents', desc: "Section claire sur vos modes de facturation : consultation, forfait, aide juridictionnelle. La transparence rassure et filtre les demandes." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui <em class="text-accent">incarnent votre rigueur</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui <em class="text-point">incarnent votre rigueur</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets au design sobre et professionnel.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets au design sobre et professionnel.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -177,24 +177,24 @@ const schema = {
             a: 'Un site vitrine pour avocat est livre en 2 a 3 semaines. Pour un cabinet avec plusieurs associes et de nombreux domaines de competence, comptez 3 a 5 semaines. Le planning est defini ensemble des le depart.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a renforcer la presence en ligne de votre cabinet ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre cabinet et de vos objectifs de visibilite. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

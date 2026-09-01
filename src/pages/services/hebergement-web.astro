@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Hebergement web | Evan Davison — Developpeur Web Freelance"
+  title="Hebergement web | Evan Davison · Developpeur Web Freelance"
   description="Hebergement web performant et securise : serveurs rapides, CDN, SSL, sauvegardes et monitoring. Infrastructure fiable pour votre site. A partir de 19 euros/mois."
   canonical="https://www.evandavison.fr/services/hebergement-web/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Hebergement web</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Hebergement web</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Hebergement <em class="text-accent">web</em><br/>performant
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Hebergement <em class="text-point">web</em><br/>performant
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          La vitesse de votre site influence directement votre taux de conversion et votre referencement. Je vous propose un hebergement optimise, securise et surveille en permanence — pour que votre site soit toujours disponible et rapide.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          La vitesse de votre site influence directement votre taux de conversion et votre referencement. Je vous propose un hebergement optimise, securise et surveille en permanence : pour que votre site soit toujours disponible et rapide.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">
@@ -99,17 +99,17 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Un hebergement mediocre <em class="text-accent">coute cher</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Un hebergement mediocre <em class="text-point">coute cher</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Chaque seconde de chargement supplementaire fait fuir 7% de vos visiteurs. Un hebergement mutualise bas de gamme, c'est un site lent, des pannes frequentes et un referencement penalise par Google.</p>
               <p>Je selectionne et configure une infrastructure adaptee a votre projet : serveurs performants, CDN pour la distribution mondiale du contenu, certificats SSL pour la securite et sauvegardes automatiques pour la tranquillite.</p>
-              <p>Pas besoin de gerer les aspects techniques — je m'occupe de la configuration, de la surveillance et des mises a jour de l'infrastructure.</p>
+              <p>Pas besoin de gerer les aspects techniques : je m'occupe de la configuration, de la surveillance et des mises a jour de l'infrastructure.</p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Sites heberges', value: '20+' },
               { label: 'Datacenters EU', value: '3' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Fonctionnalites -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce qui est <em class="text-accent">inclus</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce qui est <em class="text-point">inclus</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -143,19 +143,19 @@ const schema = {
           { title: 'Monitoring uptime', desc: "Surveillance 24/7 de la disponibilite de votre site. Alerte en temps reel et intervention rapide en cas de panne ou de degradation des performances." },
           { title: 'Migration gratuite', desc: "Transfert de votre site existant vers la nouvelle infrastructure sans interruption de service. Configuration DNS, fichiers et bases de donnees inclus." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Tarifs -->
-    <section id="tarifs" class="py-16 bg-paper-alt border-t border-b border-border">
+    <section id="tarifs" class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Nos <em class="text-accent">formules</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Nos <em class="text-point">formules</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -199,16 +199,16 @@ const schema = {
               ]
             },
           ].map(plan => (
-            <div class="border border-border p-8 flex flex-col">
-              <h3 class="text-ink font-semibold text-xl mb-2">{plan.name}</h3>
+            <div class="border border-filet p-8 flex flex-col">
+              <h3 class="text-encre font-semibold text-xl mb-2">{plan.name}</h3>
               <div class="mb-6">
-                <span class="text-3xl font-serif font-bold text-accent">{plan.price}</span>
-                <span class="text-muted text-sm"> euros{plan.unit}</span>
+                <span class="text-3xl font-display font-bold text-point">{plan.price}</span>
+                <span class="text-cartel text-sm"> euros{plan.unit}</span>
               </div>
-              <ul class="space-y-3 text-text-body text-sm mb-8 flex-1">
+              <ul class="space-y-3 text-cartel text-sm mb-8 flex-1">
                 {plan.features.map(f => (
                   <li class="flex items-start gap-2">
-                    <span class="text-accent mt-0.5 shrink-0">-</span>
+                    <span class="text-point mt-0.5 shrink-0">-</span>
                     {f}
                   </li>
                 ))}
@@ -224,8 +224,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -250,24 +250,24 @@ const schema = {
             a: 'Je garantis un taux de disponibilite de 99.9% sur toutes les formules. Le monitoring permanent detecte les incidents en temps reel et permet une intervention rapide.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Pret a passer a un hebergement <em class="text-accent">fiable</em> ?
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Pret a passer a un hebergement <em class="text-point">fiable</em> ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Echangeons sur votre projet. Je vous recommande la formule la plus adaptee a vos besoins et votre budget.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

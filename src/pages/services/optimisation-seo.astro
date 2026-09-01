@@ -34,7 +34,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Quelle est la difference entre SEO technique et SEO de contenu ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le SEO technique concerne l'infrastructure du site : vitesse de chargement, structure HTML, donnees structurees, indexation, accessibilite. Le SEO de contenu concerne la qualite et la pertinence des textes. Les deux sont complementaires — un bon contenu sur un site lent ne performe pas." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Le SEO technique concerne l'infrastructure du site : vitesse de chargement, structure HTML, donnees structurees, indexation, accessibilite. Le SEO de contenu concerne la qualite et la pertinence des textes. Les deux sont complementaires : un bon contenu sur un site lent ne performe pas." }
         },
         {
           "@type": "Question",
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Optimisation SEO</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Optimisation SEO</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          <em class="text-accent">Optimisation SEO</em><br/>et referencement naturel
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          <em class="text-point">Optimisation SEO</em><br/>et referencement naturel
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Votre site n'apparait pas sur Google ? Je mets en place un SEO technique solide — Core Web Vitals, donnees structurees, structure semantique — pour que votre site soit visible la ou vos clients cherchent.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Votre site n'apparait pas sur Google ? Je mets en place un SEO technique solide : Core Web Vitals, donnees structurees, structure semantique : pour que votre site soit visible la ou vos clients cherchent.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">
@@ -99,17 +99,17 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Le SEO technique, <em class="text-accent">fondation invisible</em> de votre visibilite
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Le SEO technique, <em class="text-point">fondation invisible</em> de votre visibilite
             </h2>
-            <div class="space-y-4 text-text-body">
-              <p>Vous pouvez avoir le meilleur contenu du monde — si votre site est lent, mal structure ou incomprehensible pour Google, personne ne le trouvera.</p>
+            <div class="space-y-4 text-cartel">
+              <p>Vous pouvez avoir le meilleur contenu du monde : si votre site est lent, mal structure ou incomprehensible pour Google, personne ne le trouvera.</p>
               <p>Le SEO technique, c'est ce qui se passe sous le capot : la vitesse de chargement mesurable par les Core Web Vitals (LCP, INP, CLS), la structure HTML semantique que Google sait lire, les donnees structurees Schema.org qui enrichissent vos resultats de recherche.</p>
-              <p>En tant que developpeur web, j'interviens la ou les agences SEO classiques atteignent leurs limites : directement dans le code. Pas de plugin miracle, pas de promesse vague — des optimisations techniques concretes et mesurables.</p>
+              <p>En tant que developpeur web, j'interviens la ou les agences SEO classiques atteignent leurs limites : directement dans le code. Pas de plugin miracle, pas de promesse vague : des optimisations techniques concretes et mesurables.</p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
@@ -119,9 +119,9 @@ const schema = {
               { label: 'CLS moyen', value: '<0.05' },
               { label: 'Sites audites', value: '30+' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Piliers SEO -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les piliers du <em class="text-accent">SEO technique</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les piliers du <em class="text-point">SEO technique</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -143,19 +143,19 @@ const schema = {
           { title: 'Indexation', desc: "Sitemap XML, robots.txt, balises canoniques, redirections 301, gestion du contenu duplique. Google crawle et indexe efficacement votre site." },
           { title: 'SEO local', desc: "Optimisation pour les recherches geolocalisees : balises geo, donnees structurees LocalBusiness, coherence NAP (nom, adresse, telephone) sur le web." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Process -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Ma methode <em class="text-accent">SEO</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Ma methode <em class="text-point">SEO</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -164,10 +164,10 @@ const schema = {
             { step: '03', title: 'Implementation', desc: "Corrections dans le code : optimisation des performances, balises meta, donnees structurees, redirections, sitemap." },
             { step: '04', title: 'Suivi', desc: "Monitoring des positions et des Core Web Vitals. Rapport mensuel avec les metriques qui comptent." },
           ].map(item => (
-            <div class="border border-border p-6">
-              <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-              <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+            <div class="border border-filet p-6">
+              <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+              <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -176,20 +176,20 @@ const schema = {
 
     <!-- Realisations liees -->
     <section class="section-container py-16 sm:py-24 text-center">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-        Resultats <em class="text-accent">SEO</em> concrets
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+        Resultats <em class="text-point">SEO</em> concrets
       </h2>
-      <p class="text-text-body mb-8">Des sites optimises avec des gains de positionnement mesurables.</p>
+      <p class="text-cartel mb-8">Des sites optimises avec des gains de positionnement mesurables.</p>
       <a href="/#realisations" class="btn-primary">
         Voir toutes mes realisations
       </a>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Questions <em class="text-accent">frequentes</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Questions <em class="text-point">frequentes</em>
         </h2>
         <div class="max-w-3xl mx-auto space-y-4">
           {[
@@ -199,7 +199,7 @@ const schema = {
             },
             {
               q: 'Quelle est la difference entre SEO technique et SEO de contenu ?',
-              a: "Le SEO technique concerne l'infrastructure du site : vitesse, structure HTML, donnees structurees, indexation. Le SEO de contenu concerne la qualite des textes. Les deux sont complementaires — un bon contenu sur un site lent ne performe pas."
+              a: "Le SEO technique concerne l'infrastructure du site : vitesse, structure HTML, donnees structurees, indexation. Le SEO de contenu concerne la qualite des textes. Les deux sont complementaires : un bon contenu sur un site lent ne performe pas."
             },
             {
               q: 'Que sont les Core Web Vitals et pourquoi sont-ils importants ?',
@@ -214,12 +214,12 @@ const schema = {
               a: "Oui, le SEO technique est integre dans chaque site que je developpe. La prestation d'optimisation SEO s'adresse aux sites existants qui ont besoin d'un audit et d'ameliorations specifiques."
             },
           ].map(item => (
-            <details class="border border-border p-6 group">
-              <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+            <details class="border border-filet p-6 group">
+              <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
                 {item.q}
-                <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+                <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+              <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>
@@ -227,12 +227,12 @@ const schema = {
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 border-t border-border">
+    <section class="py-16 border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Votre site merite d'etre trouve
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Demandez un audit SEO gratuit. On identifie ensemble les optimisations prioritaires.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

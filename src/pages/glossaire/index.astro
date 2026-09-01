@@ -56,19 +56,19 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Glossaire</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Glossaire</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-12 sm:py-16">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         Glossaire du developpement web
       </h1>
-      <p class="text-lg text-text-body leading-relaxed max-w-2xl">
+      <p class="text-lg text-cartel leading-relaxed max-w-2xl">
         Retrouvez les definitions des termes techniques essentiels du developpement web.
         Chaque notion est expliquee simplement avec des exemples concrets.
       </p>
@@ -80,9 +80,9 @@ const schema = {
         {terms.map((term) => (
           <a
             href={`/glossaire/${term.slug}`}
-            class="block border border-border p-5 hover:bg-paper-alt transition-colors group"
+            class="block border border-filet p-5 hover:bg-oeuvre transition-colors group"
           >
-            <span class="font-serif text-lg text-ink group-hover:text-accent transition-colors">
+            <span class="font-display text-lg text-encre group-hover:text-point transition-colors">
               {term.name}
             </span>
           </a>
@@ -91,9 +91,9 @@ const schema = {
     </section>
 
     <!-- CTA -->
-    <section class="section-container pb-16 sm:pb-24 border-t border-border pt-12">
-      <h2 class="font-serif text-2xl font-bold text-ink mb-4">Un terme vous manque ?</h2>
-      <p class="text-text-body mb-6">
+    <section class="section-container pb-16 sm:pb-24 border-t border-filet pt-12">
+      <h2 class="font-display text-2xl font-bold text-encre mb-4">Un terme vous manque ?</h2>
+      <p class="text-cartel mb-6">
         Ce glossaire est regulierement enrichi. Si vous avez une question technique sur votre projet,
         n'hesitez pas a me contacter.
       </p>

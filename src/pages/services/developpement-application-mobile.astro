@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Application mobile Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Application mobile Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Application <em class="text-accent">mobile</em><br/>iOS & Android
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Application <em class="text-point">mobile</em><br/>iOS & Android
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Je développe des applications mobiles performantes avec Flutter — une seule codebase pour iPhone et Android. Idéal pour les startups et PME qui veulent aller vite sans sacrifier la qualité.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Je développe des applications mobiles performantes avec Flutter : une seule codebase pour iPhone et Android. Idéal pour les startups et PME qui veulent aller vite sans sacrifier la qualité.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">
@@ -99,16 +99,16 @@ const schema = {
     </section>
 
     <!-- Problème / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Deux applis pour le prix <em class="text-accent">d'une seule</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Deux applis pour le prix <em class="text-point">d'une seule</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Développer une app native iOS et une app Android séparément coûte cher et prend deux fois plus de temps. Flutter change la donne : une seule base de code, deux plateformes, performances proches du natif.</p>
-              <p>Que vous ayez besoin d'une application de gestion interne, d'un outil client B2C, ou d'une app de fidélité — je conçois une solution adaptée à vos besoins et à votre budget.</p>
+              <p>Que vous ayez besoin d'une application de gestion interne, d'un outil client B2C, ou d'une app de fidélité : je conçois une solution adaptée à vos besoins et à votre budget.</p>
               <p>Basé à Rennes, je travaille en direct avec vous, sans intermédiaire.</p>
             </div>
           </div>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Délai moyen', value: '6-8 sem.' },
               { label: 'Publication stores', value: 'Incluse' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Process -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Le process <em class="text-accent">de A à Z</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Le process <em class="text-point">de A à Z</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
@@ -141,22 +141,22 @@ const schema = {
           { step: '03', title: 'Développement', desc: 'Flutter front-end + back-end API si nécessaire. Tests sur vrais appareils iOS et Android.' },
           { step: '04', title: 'Publication', desc: 'Soumission App Store et Google Play, suivi de validation, et accompagnement post-lancement.' },
         ].map(item => (
-          <div class="border border-border p-6">
-            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Réalisations liées -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Mes <em class="text-accent">projets mobiles</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Mes <em class="text-point">projets mobiles</em>
         </h2>
-        <p class="text-text-body mb-8">Des applications concrètes développées avec Flutter.</p>
+        <p class="text-cartel mb-8">Des applications concrètes développées avec Flutter.</p>
         <a href="/#realisations" class="btn-primary">
           Voir toutes mes réalisations
         </a>
@@ -165,8 +165,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">fréquentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">fréquentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -191,24 +191,24 @@ const schema = {
             a: 'Oui, je développe aussi bien le back-end (API REST, authentification, base de données) que le front-end mobile. Si vous avez déjà une API, je l\'intègre directement.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0">+</span>
+              <span class="text-point shrink-0">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Votre app est à portée de main
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Dites-moi ce que vous voulez construire. Je vous aide à définir le périmètre et à lancer le projet.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

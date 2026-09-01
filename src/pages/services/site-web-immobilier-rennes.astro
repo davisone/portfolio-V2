@@ -53,7 +53,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web agence immobiliere Rennes | Evan Davison — Développeur Web"
+  title="Site web agence immobiliere Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour agence immobilière à Rennes. Annonces en ligne, visites virtuelles, estimation, synchronisation logiciel. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-immobilier-rennes/"
   schema={schema}
@@ -64,23 +64,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web immobilier Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web immobilier Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site <em class="text-accent">immobilier</em> qui vend<br/>vos biens avant les portails
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site <em class="text-point">immobilier</em> qui vend<br/>vos biens avant les portails
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Catalogue d'annonces, visites virtuelles, estimation en ligne — un site d'agence immobiliere qui capte les acheteurs et vendeurs a Rennes sans dependre uniquement de SeLoger ou LeBonCoin.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Catalogue d'annonces, visites virtuelles, estimation en ligne : un site d'agence immobiliere qui capte les acheteurs et vendeurs a Rennes sans dependre uniquement de SeLoger ou LeBonCoin.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -90,14 +90,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Arretez de payer des <em class="text-accent">commissions aux portails</em> pour vos propres mandats
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Arretez de payer des <em class="text-point">commissions aux portails</em> pour vos propres mandats
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Les portails immobiliers (SeLoger, LeBonCoin, Bien'ici) captent une grosse part du trafic acheteur. Mais chaque lead genere via ces plateformes vous coute cher en abonnement et en concurrence directe avec d'autres agences.</p>
               <p>Votre propre site web immobilier, c'est un canal d'acquisition que vous maitrisez : vos annonces, votre marque, vos leads exclusifs. Avec un bon referencement local sur "agence immobiliere Rennes", vous captez des prospects qui vous cherchent directement.</p>
               <p>Je developpe des sites immobiliers synchronises avec votre logiciel de transaction, equipes de filtres de recherche avances et de visites virtuelles. Une vitrine numerique a la hauteur de votre agence rennaise.</p>
@@ -110,9 +110,9 @@ const schema = {
               { label: 'Utilisent les filtres de recherche', value: '78%' },
               { label: 'Demandent une estimation en ligne', value: '41%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -122,8 +122,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les fonctionnalites cles d'un site <em class="text-accent">d'agence immobiliere</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les fonctionnalites cles d'un site <em class="text-point">d'agence immobiliere</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -134,29 +134,29 @@ const schema = {
           { title: 'Alertes personnalisees', desc: "Systeme d'alerte email pour les acheteurs : nouveau bien correspondant a leurs criteres. Fidelisation et reactivite garanties." },
           { title: 'Pages quartiers', desc: "Pages dediees par quartier de Rennes (Centre, Sainte-Therese, Beaulieu, etc.) avec donnees locales. Excellent pour le SEO et l'expertise locale." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui <em class="text-accent">vendent des biens</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui <em class="text-point">vendent des biens</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises dans le secteur immobilier.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises dans le secteur immobilier.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -177,24 +177,24 @@ const schema = {
             a: 'Un site immobilier avec catalogue d\'annonces, filtres et integration logiciel demarre autour de 2 000 euros. Le prix varie selon les fonctionnalites (estimation en ligne, espace proprietaire, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a capter plus de mandats et d'acheteurs ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre agence et de vos objectifs de croissance. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

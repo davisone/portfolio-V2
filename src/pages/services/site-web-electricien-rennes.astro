@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web électricien Rennes | Evan Davison — Développeur Web"
+  title="Site web électricien Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour électricien à Rennes : demande de devis, urgences, certifications, SEO local. Un site qui génère des chantiers. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-electricien-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web electricien Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web electricien Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre activite d'<em class="text-accent">electricien</em> merite<br/>un site qui inspire confiance
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre activite d'<em class="text-point">electricien</em> merite<br/>un site qui inspire confiance
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Demande de devis, certifications, urgences electriques — un site web concu pour rassurer vos clients et generer des demandes d'intervention a Rennes et ses alentours.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Demande de devis, certifications, urgences electriques : un site web concu pour rassurer vos clients et generer des demandes d'intervention a Rennes et ses alentours.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos clients veulent un electricien <em class="text-accent">certifie et disponible</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos clients veulent un electricien <em class="text-point">certifie et disponible</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Le secteur de l'electricite connait une demande croissante : renovation energetique, installation de bornes de recharge, domotique. Selon la FFB, 78% des particuliers recherchent un electricien en ligne et privilegient ceux qui affichent des certifications (RGE, Qualifelec).</p>
               <p>Un site d'electricien performant, c'est la mise en avant de vos certifications et labels, une liste detaillee de vos prestations, un formulaire de devis rapide et une section urgences accessible en un clic. Le tout optimise pour le referencement local.</p>
               <p>Je concois des sites adaptes aux artisans du batiment : design professionnel qui rassure, navigation mobile-first, bouton d'appel toujours visible et contenu optimise pour que Google vous positionne devant la concurrence sur votre zone.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Demandent un devis en ligne', value: '62%' },
               { label: 'Croissance marche electrique', value: '+28%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site d'<em class="text-accent">electricien</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site d'<em class="text-point">electricien</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Zone d\'intervention', desc: "Carte interactive avec Rennes et les communes couvertes. Vos clients verifient en un coup d'oeil que vous intervenez dans leur secteur." },
           { title: 'Galerie de chantiers', desc: "Photos avant/apres de vos realisations : tableaux electriques, installations domotiques, eclairages. La preuve visuelle de la qualite de votre travail." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui generent des <em class="text-accent">chantiers</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui generent des <em class="text-point">chantiers</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des artisans et professionnels du batiment.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des artisans et professionnels du batiment.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour electricien avec demande de devis et SEO local demarre autour de 700 euros. Le prix varie selon les fonctionnalites souhaitees (galerie chantiers, simulateur de devis, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a decrocher plus de chantiers ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre activite et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

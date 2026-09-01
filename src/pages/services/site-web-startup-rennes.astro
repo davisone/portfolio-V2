@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web startup Rennes | Evan Davison — Développeur Web"
+  title="Site web startup Rennes | Evan Davison · Développeur Web"
   description="Développement de site web et MVP pour startup à Rennes. Landing page, prototype, scalabilité, analytics. Validez votre idée rapidement. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-startup-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web startup Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web startup Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Du concept au <em class="text-accent">MVP</em> :<br/>lancez votre startup a Rennes
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Du concept au <em class="text-point">MVP</em> :<br/>lancez votre startup a Rennes
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Landing page de validation, prototype fonctionnel, code scalable — je transforme votre idee en produit testable rapidement, avec les bons outils et les bonnes metriques.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Landing page de validation, prototype fonctionnel, code scalable : je transforme votre idee en produit testable rapidement, avec les bons outils et les bonnes metriques.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,16 +95,16 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Arretez de planifier, commencez a <em class="text-accent">tester</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Arretez de planifier, commencez a <em class="text-point">tester</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Trop de startups passent des mois a perfectionner leur business plan avant d'avoir un seul utilisateur. La realite : vous ne saurez si votre idee fonctionne qu'en la mettant entre les mains de vrais utilisateurs.</p>
-              <p>Un MVP (Minimum Viable Product) n'est pas un produit bacle — c'est la version la plus simple qui permet de valider vos hypotheses. Une landing page qui mesure l'interet, un prototype qui teste le parcours utilisateur, des metriques qui guident les decisions.</p>
+              <p>Un MVP (Minimum Viable Product) n'est pas un produit bacle : c'est la version la plus simple qui permet de valider vos hypotheses. Une landing page qui mesure l'interet, un prototype qui teste le parcours utilisateur, des metriques qui guident les decisions.</p>
               <p>Basé pres de Rennes, je travaille avec des fondateurs de startups, des porteurs de projet et des incubes (Le Poool, Rennes Atalante, French Tech Rennes St-Malo). Je comprends l'urgence de valider vite et d'iterer.</p>
             </div>
           </div>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Iterations avant product-market fit', value: '3-5' },
               { label: 'Startups a Rennes (French Tech)', value: '500+' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que je developpe pour les <em class="text-accent">startups</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que je developpe pour les <em class="text-point">startups</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Deploiement continu', desc: "Pipeline CI/CD avec Vercel ou AWS. Chaque modification est deployee automatiquement. Vous iterez vite sans risque technique." },
           { title: 'Documentation technique', desc: "Code commente, README complet, architecture documentee. Votre futur CTO ou votre equipe tech reprend le projet sans perte d'information." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des produits lances, <em class="text-accent">pas des slides</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des produits lances, <em class="text-point">pas des slides</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des startups et porteurs de projet.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des startups et porteurs de projet.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Une landing page de validation demarre autour de 800 euros. Un MVP fonctionnel avec backend et base de donnees se situe entre 3 000 et 8 000 euros selon la complexite. Le scope est defini ensemble pour rester dans votre budget.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a transformer votre idee en produit ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre projet et de la meilleure approche pour le lancer. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

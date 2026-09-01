@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Création site web Angers | Evan Davison — Développeur Web"
+  title="Création site web Angers | Evan Davison · Développeur Web"
   description="Création de sites web à Angers : vitrines, applications web et e-commerce pour les entreprises du Maine-et-Loire. Code performant, SEO intégré. Devis gratuit."
   canonical="https://www.evandavison.fr/services/creation-site-web-angers/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Création site web Angers</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Création site web Angers</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Création <em class="text-accent">site web</em><br/>à Angers
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Création <em class="text-point">site web</em><br/>à Angers
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Angers, capitale du vegetal et ville reconnue pour sa qualite de vie, est un territoire en pleine croissance economique. Que vous soyez une entreprise de Vegepolys Valley, une startup de la Cite de l'objet connecte ou un commerce du quartier de la Doutre, je concois des sites web a la hauteur de votre expertise — pas des pages generiques sans ame.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Angers, capitale du vegetal et ville reconnue pour sa qualite de vie, est un territoire en pleine croissance economique. Que vous soyez une entreprise de Vegepolys Valley, une startup de la Cite de l'objet connecte ou un commerce du quartier de la Doutre, je concois des sites web a la hauteur de votre expertise : pas des pages generiques sans ame.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">
@@ -99,14 +99,14 @@ const schema = {
     </section>
 
     <!-- Problème / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              La capitale du <em class="text-accent">vegetal merite mieux</em> qu'un template
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              La capitale du <em class="text-point">vegetal merite mieux</em> qu'un template
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Le tissu economique angevin est diversifie et dynamique : filiere du vegetal avec Vegepolys Valley, electronique et objets connectes, sante, logistique et un centre-ville commercial vivant. Pourtant, beaucoup d'entreprises locales se contentent de sites vieillissants qui ne refletent pas leur savoir-faire.</p>
               <p>Je developpe des sites sur mesure qui repondent aux enjeux de chaque secteur : vitrine pour un pepinieriste, site e-commerce pour un producteur de vins de Loire, ou application web pour une entreprise de la French Tech angevine. Chaque projet est unique.</p>
               <p>Depuis Rennes, j'interviens a Angers en visio et en presentiel. La collaboration est fluide, avec des points d'etape reguliers et une livraison dans les delais.</p>
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Score Lighthouse', value: '95+' },
               { label: 'Clients satisfaits', value: '100%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,8 +131,8 @@ const schema = {
 
     <!-- Process -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Comment ça <em class="text-accent">se passe</em> ?
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Comment ça <em class="text-point">se passe</em> ?
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
@@ -141,22 +141,22 @@ const schema = {
           { step: '03', title: 'Production', desc: "Developpement avec des technologies modernes. Code propre, performant, et suivi transparent a chaque etape." },
           { step: '04', title: 'Deploiement', desc: "Mise en production, optimisation SEO local Maine-et-Loire, formation et support technique post-lancement." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Réalisations liées -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Quelques <em class="text-accent">realisations</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Quelques <em class="text-point">realisations</em>
         </h2>
-        <p class="text-text-body mb-8">Des projets concrets pour des entreprises de l'Ouest, du Maine-et-Loire a l'Ille-et-Vilaine.</p>
+        <p class="text-cartel mb-8">Des projets concrets pour des entreprises de l'Ouest, du Maine-et-Loire a l'Ille-et-Vilaine.</p>
         <a href="/#realisations" class="btn-primary">
           Voir toutes mes réalisations
         </a>
@@ -165,8 +165,8 @@ const schema = {
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -191,24 +191,24 @@ const schema = {
             a: 'Oui, je propose des forfaits d\'hebergement performant et de maintenance mensuelle : mises a jour de securite, sauvegardes automatiques, monitoring et corrections. Votre site reste rapide et securise.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Un projet web a Angers ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Echangeons sur votre besoin en visio ou lors d'un deplacement a Angers. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

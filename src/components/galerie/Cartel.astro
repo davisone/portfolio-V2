@@ -1,0 +1,32 @@
+---
+// Cartel d'exposition : fiche projet au vocabulaire muséal
+interface Props {
+  titre: string
+  medium: string
+  technologies: string[]
+  livre?: boolean
+  livreLabel?: string
+  lien?: string | null
+  lienLabel?: string
+}
+const { titre, medium, technologies, livre = false, livreLabel = 'Livré', lien = null, lienLabel } = Astro.props
+---
+<div class="cartel-box p-6 sm:p-7">
+  <h3 class="font-display text-2xl text-encre mb-1">
+    {lien ? (
+      <a href={lien} target="_blank" rel="noopener noreferrer" class="hover:text-point transition-colors" aria-label={lienLabel ? `${titre} · ${lienLabel}` : titre}>
+        {titre}
+      </a>
+    ) : titre}
+  </h3>
+  <p class="font-lecture italic text-cartel text-[15px] leading-relaxed mb-4">{medium}</p>
+  <p class="font-signal text-[11px] tracking-[0.09em] uppercase text-cartel pt-3.5 border-t border-filet flex items-center justify-between gap-3 flex-wrap">
+    <span>{technologies.join(' · ')}</span>
+    {livre && (
+      <span class="inline-flex items-center gap-2 text-encre font-semibold">
+        <span class="w-2 h-2 rounded-full bg-point" aria-hidden="true"></span>
+        {livreLabel}
+      </span>
+    )}
+  </p>
+</div>

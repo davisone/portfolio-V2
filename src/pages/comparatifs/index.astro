@@ -21,7 +21,7 @@ const schema = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "name": "Comparatifs — Evan Davison",
+      "name": "Comparatifs : Evan Davison",
       "description": "Comparatifs detailles pour choisir la meilleure solution web : WordPress vs sur mesure, Shopify vs WooCommerce, et plus.",
       "url": "https://www.evandavison.fr/comparatifs",
       "author": { "@id": "https://www.evandavison.fr/#person" }
@@ -49,19 +49,19 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Comparatifs</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Comparatifs</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-12 sm:py-20">
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink mb-6 leading-tight">
-        <em class="text-accent">Comparatifs</em> web
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-encre mb-6 leading-tight">
+        <em class="text-point">Comparatifs</em> web
       </h1>
-      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+      <p class="text-xl text-cartel max-w-2xl leading-relaxed">
         Vous hesitez entre plusieurs solutions pour votre projet ? Ces comparatifs detailles vous aident a faire le bon choix selon vos besoins, votre budget et vos objectifs.
       </p>
     </section>
@@ -72,15 +72,15 @@ const schema = {
         {comparatifs.map(item => (
           <a
             href={item.href}
-            class="block border border-border p-8 hover:bg-paper-alt transition-colors group"
+            class="block border border-filet p-8 hover:bg-oeuvre transition-colors group"
           >
-            <h2 class="font-serif text-xl sm:text-2xl text-ink font-bold mb-3 group-hover:text-accent transition-colors">
+            <h2 class="font-display text-xl sm:text-2xl text-encre font-bold mb-3 group-hover:text-point transition-colors">
               {item.title}
             </h2>
-            <p class="text-text-body leading-relaxed">
+            <p class="text-cartel leading-relaxed">
               {item.description}
             </p>
-            <span class="inline-block mt-4 text-accent font-medium text-sm">
+            <span class="inline-block mt-4 text-point font-medium text-sm">
               Lire le comparatif &rarr;
             </span>
           </a>
@@ -89,23 +89,23 @@ const schema = {
     </section>
 
     <!-- Liens utiles -->
-    <section class="py-12 bg-paper-alt border-t border-b border-border">
+    <section class="py-12 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl font-bold text-ink mb-6">
+        <h2 class="font-display text-2xl font-bold text-encre mb-6">
           Ressources complementaires
         </h2>
         <div class="grid sm:grid-cols-3 gap-4">
-          <a href="/faq" class="border border-border p-5 hover:bg-paper transition-colors">
-            <span class="font-semibold text-ink block mb-1">FAQ</span>
-            <span class="text-text-body text-sm">Toutes les reponses a vos questions</span>
+          <a href="/faq" class="border border-filet p-5 hover:bg-cimaise transition-colors">
+            <span class="font-semibold text-encre block mb-1">FAQ</span>
+            <span class="text-cartel text-sm">Toutes les reponses a vos questions</span>
           </a>
-          <a href="/blog" class="border border-border p-5 hover:bg-paper transition-colors">
-            <span class="font-semibold text-ink block mb-1">Blog</span>
-            <span class="text-text-body text-sm">Articles et conseils techniques</span>
+          <a href="/blog" class="border border-filet p-5 hover:bg-cimaise transition-colors">
+            <span class="font-semibold text-encre block mb-1">Blog</span>
+            <span class="text-cartel text-sm">Articles et conseils techniques</span>
           </a>
-          <a href="/glossaire" class="border border-border p-5 hover:bg-paper transition-colors">
-            <span class="font-semibold text-ink block mb-1">Glossaire</span>
-            <span class="text-text-body text-sm">Definitions des termes techniques</span>
+          <a href="/glossaire" class="border border-filet p-5 hover:bg-cimaise transition-colors">
+            <span class="font-semibold text-encre block mb-1">Glossaire</span>
+            <span class="text-cartel text-sm">Definitions des termes techniques</span>
           </a>
         </div>
       </div>
@@ -114,10 +114,10 @@ const schema = {
     <!-- CTA -->
     <section class="py-16">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Besoin d'un conseil personnalise ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Chaque projet est unique. Discutons de votre situation pour trouver la solution la plus adaptee.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

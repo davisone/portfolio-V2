@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web restaurant Rennes | Evan Davison — Développeur Web"
+  title="Site web restaurant Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour restaurant à Rennes : carte en ligne, réservation, photos de plats, avis Google. Un site qui remplit vos tables. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-restaurant-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web restaurant Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web restaurant Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Votre <em class="text-accent">restaurant</em> merite<br/>un site a la hauteur
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Votre <em class="text-point">restaurant</em> merite<br/>un site a la hauteur
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Carte en ligne, reservation, photos qui donnent faim — un site web concu pour remplir vos tables et fideliser vos clients a Rennes et ses alentours.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Carte en ligne, reservation, photos qui donnent faim : un site web concu pour remplir vos tables et fideliser vos clients a Rennes et ses alentours.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos clients cherchent votre <em class="text-accent">carte en ligne</em> avant de pousser la porte
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos clients cherchent votre <em class="text-point">carte en ligne</em> avant de pousser la porte
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Aujourd'hui, 80% des clients consultent le menu d'un restaurant sur internet avant de s'y rendre. Si votre carte est un PDF illisible sur mobile ou si votre site date de 2015, vous perdez des couverts chaque jour.</p>
               <p>Un site web de restaurant performant, c'est une carte interactive mise a jour en temps reel, un systeme de reservation qui fonctionne a minuit comme a midi, et des photos de plats qui declenchent l'envie. Le tout visible en premiere page Google quand quelqu'un cherche "restaurant Rennes".</p>
               <p>Je concois des sites specifiquement penses pour la restauration : navigation mobile-first (vos clients cherchent sur leur telephone), integration Google Maps pour etre trouve facilement, et affichage des avis Google pour rassurer les indecis.</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Lisent les avis avant', value: '90%' },
               { label: 'Reservent en ligne', value: '45%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que votre site de <em class="text-accent">restaurant</em> inclut
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que votre site de <em class="text-point">restaurant</em> inclut
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Avis Google affiches', desc: "Vos meilleurs avis Google affiches directement sur le site pour rassurer les nouveaux visiteurs et augmenter la confiance." },
           { title: 'Menu du jour et evenements', desc: "Section dediee pour le plat du jour, les soirees a theme ou les evenements speciaux. Mise a jour en autonomie." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites qui donnent <em class="text-accent">l'eau a la bouche</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites qui donnent <em class="text-point">l'eau a la bouche</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de la restauration.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des professionnels de la restauration.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour restaurant avec carte en ligne et reservation demarre autour de 900 euros. Le prix varie selon les fonctionnalites souhaitees (commande en ligne, click and collect, etc.). Devis gratuit sur demande.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a remplir vos tables ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre restaurant et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

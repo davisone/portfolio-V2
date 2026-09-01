@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web médecin Rennes | Evan Davison — Développeur Web"
+  title="Site web médecin Rennes | Evan Davison · Développeur Web"
   description="Création de site web pour médecin et professionnel de santé à Rennes. Intégration Doctolib, accessibilité, informations patients. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-medecin-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web medecin Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web medecin Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un site pour <em class="text-accent">professionnel de sante</em><br/>clair, accessible et rassurant
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un site pour <em class="text-point">professionnel de sante</em><br/>clair, accessible et rassurant
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Integration Doctolib, informations patients, accessibilite — un site web medical concu pour simplifier la vie de vos patients et allegor votre secretariat a Rennes.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Integration Doctolib, informations patients, accessibilite : un site web medical concu pour simplifier la vie de vos patients et allegor votre secretariat a Rennes.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,15 +95,15 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos patients veulent trouver les <em class="text-accent">bonnes informations</em> sans vous appeler
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos patients veulent trouver les <em class="text-point">bonnes informations</em> sans vous appeler
             </h2>
-            <div class="space-y-4 text-text-body">
-              <p>Horaires d'ouverture, modalites de consultation, documents a apporter, preparation a un examen — vos patients appellent votre secretariat pour des questions qui pourraient etre traitees par un site web clair et complet.</p>
+            <div class="space-y-4 text-cartel">
+              <p>Horaires d'ouverture, modalites de consultation, documents a apporter, preparation a un examen : vos patients appellent votre secretariat pour des questions qui pourraient etre traitees par un site web clair et complet.</p>
               <p>Un site web de professionnel de sante bien concu reduit les appels superflus, facilite la prise de rendez-vous via Doctolib, et offre un espace d'information fiable pour vos patients. C'est un prolongement numerique de votre accueil.</p>
               <p>Je concois des sites pour medecins, dentistes, kinesitherapeutes et autres professionnels de sante a Rennes, en respectant les normes d'accessibilite (RGAA) et la reglementation sur les donnees de sante.</p>
             </div>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Veulent des infos pratiques', value: '83%' },
               { label: 'Consultent sur mobile', value: '70%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Les essentiels d'un site de <em class="text-accent">professionnel de sante</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Les essentiels d'un site de <em class="text-point">professionnel de sante</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Teleconsultation', desc: "Lien vers votre solution de teleconsultation (Doctolib, Qare, etc.) directement accessible depuis le site pour les consultations a distance." },
           { title: 'Conformite RGPD', desc: "Aucune donnee medicale collectee sur le site. Formulaires securises, politique de confidentialite claire, consentement cookies conforme." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites pensés pour le <em class="text-accent">secteur medical</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites pensés pour le <em class="text-point">secteur medical</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des professionnels de sante.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un site vitrine pour medecin avec integration Doctolib et informations patients demarre autour de 800 euros. Le tarif varie selon le nombre de praticiens et les fonctionnalites souhaitees. Devis gratuit.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a simplifier le quotidien de votre cabinet ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre cabinet et de vos besoins. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

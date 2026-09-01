@@ -69,22 +69,22 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Refonte site web</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Refonte site web</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          <em class="text-accent">Refonte</em> de votre<br/>site web
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          <em class="text-point">Refonte</em> de votre<br/>site web
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
           Votre site a vieilli ? Design depasse, temps de chargement lent, pas adapte au mobile ? Je modernise votre site internet en preservant votre referencement et en ameliorant chaque aspect.
         </p>
         <div class="flex flex-wrap gap-4">
@@ -99,17 +99,17 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Moderniser sans <em class="text-accent">tout casser</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Moderniser sans <em class="text-point">tout casser</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>Un site obsolete, c'est des visiteurs qui partent, un taux de rebond qui explose et des positions Google qui chutent. Mais une refonte mal geree peut faire encore plus de degats.</p>
-              <p>Je procede avec methode : audit technique complet, plan de redirection, migration progressive du contenu. Votre referencement est preserve — et souvent ameliore — pendant que le design, les performances et l'experience utilisateur font un bond en avant.</p>
-              <p>Migration WordPress vers Astro ou Next.js, refonte visuelle complete, optimisation des Core Web Vitals — chaque refonte est adaptee a votre situation.</p>
+              <p>Je procede avec methode : audit technique complet, plan de redirection, migration progressive du contenu. Votre referencement est preserve : et souvent ameliore : pendant que le design, les performances et l'experience utilisateur font un bond en avant.</p>
+              <p>Migration WordPress vers Astro ou Next.js, refonte visuelle complete, optimisation des Core Web Vitals : chaque refonte est adaptee a votre situation.</p>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-4">
@@ -119,9 +119,9 @@ const schema = {
               { label: 'Redirections gerees', value: '100%' },
               { label: 'Perte SEO', value: '0' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -131,31 +131,31 @@ const schema = {
 
     <!-- Ce qui est inclus -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce que comprend <em class="text-accent">une refonte</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce que comprend <em class="text-point">une refonte</em>
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { title: 'Audit technique', desc: "Analyse complete de votre site actuel : performances, SEO, accessibilite, securite. Identification des points critiques a corriger." },
-          { title: 'Nouveau design', desc: "Interface moderne et responsive, pensee pour vos utilisateurs. Fini les layouts dates — un design qui reflete votre activite actuelle." },
+          { title: 'Nouveau design', desc: "Interface moderne et responsive, pensee pour vos utilisateurs. Fini les layouts dates · un design qui reflete votre activite actuelle." },
           { title: 'Migration de contenu', desc: "Recuperation et reorganisation de vos textes, images et documents. Optimisation SEO du contenu existant au passage." },
           { title: 'Redirections 301', desc: "Chaque ancienne URL est redirigee vers la nouvelle. Aucun lien casse, aucune page 404, aucune perte de referencement." },
           { title: 'Optimisation performances', desc: "Compression des images, chargement differe, code optimise. Votre nouveau site charge en moins de 2 secondes." },
           { title: 'SEO renforce', desc: "Donnees structurees Schema.org, balises meta, sitemap, Core Web Vitals optimises. Votre site repart sur des bases SEO solides." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Process -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Les etapes d'une <em class="text-accent">refonte reussie</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Les etapes d'une <em class="text-point">refonte reussie</em>
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -164,10 +164,10 @@ const schema = {
             { step: '03', title: 'Migration', desc: "Developpement du nouveau site, transfert du contenu, mise en place des redirections. Tests sur tous les appareils." },
             { step: '04', title: 'Bascule', desc: "Mise en ligne du nouveau site, verification des redirections, monitoring SEO. Suivi des positions dans les semaines suivantes." },
           ].map(item => (
-            <div class="border border-border p-6">
-              <div class="text-4xl font-serif font-black text-border/50 mb-3">{item.step}</div>
-              <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-              <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+            <div class="border border-filet p-6">
+              <div class="text-4xl font-display font-black text-filet/50 mb-3">{item.step}</div>
+              <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+              <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -176,20 +176,20 @@ const schema = {
 
     <!-- Realisations liees -->
     <section class="section-container py-16 sm:py-24 text-center">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-        Avant / <em class="text-accent">apres</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+        Avant / <em class="text-point">apres</em>
       </h2>
-      <p class="text-text-body mb-8">Des sites modernises avec des resultats mesurables.</p>
+      <p class="text-cartel mb-8">Des sites modernises avec des resultats mesurables.</p>
       <a href="/#realisations" class="btn-primary">
         Voir toutes mes realisations
       </a>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-          Questions <em class="text-accent">frequentes</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+          Questions <em class="text-point">frequentes</em>
         </h2>
         <div class="max-w-3xl mx-auto space-y-4">
           {[
@@ -214,12 +214,12 @@ const schema = {
               a: "Absolument. Une migration vers Astro ou Next.js permet d'obtenir un site plus rapide, plus securise et moins couteux a maintenir, tout en gardant votre contenu et votre referencement."
             },
           ].map(item => (
-            <details class="border border-border p-6 group">
-              <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+            <details class="border border-filet p-6 group">
+              <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
                 {item.q}
-                <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+                <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
               </summary>
-              <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+              <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>
@@ -227,12 +227,12 @@ const schema = {
     </section>
 
     <!-- CTA Contact -->
-    <section class="py-16 border-t border-border">
+    <section class="py-16 border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Votre site merite une seconde vie
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Demandez un audit gratuit de votre site actuel. On identifie ensemble ce qui doit changer.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

@@ -10,66 +10,66 @@ const t = getTranslations(locale)
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="border-t border-border py-12 px-4 sm:px-8 lg:px-16">
+<footer class="border-t border-filet py-12 px-4 sm:px-8 lg:px-16">
   <div class="max-w-6xl mx-auto">
     <!-- Liens internes pour crawlability -->
     <nav aria-label="Pied de page" class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.navigation}</h3>
+        <h3 class="font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cartel mb-3">{t.footer.columns.navigation}</h3>
         <ul class="space-y-2">
-          <li><a href={getLocalizedPath('/', locale) + '#accueil'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.home}</a></li>
-          <li><a href={getLocalizedPath('/', locale) + '#apropos'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.about}</a></li>
-          <li><a href={getLocalizedPath('/', locale) + '#realisations'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.projects}</a></li>
-          <li><a href={getLocalizedPath('/', locale) + '#contact'} class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.navLinks.contact}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#accueil'} class="text-sm text-cartel hover:text-point transition-colors">{t.footer.navLinks.home}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#apropos'} class="text-sm text-cartel hover:text-point transition-colors">{t.footer.navLinks.about}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#projets'} class="text-sm text-cartel hover:text-point transition-colors">{t.footer.navLinks.projects}</a></li>
+          <li><a href={getLocalizedPath('/', locale) + '#contact'} class="text-sm text-cartel hover:text-point transition-colors">{t.footer.navLinks.contact}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.services}</h3>
+        <h3 class="font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cartel mb-3">{t.footer.columns.services}</h3>
         <ul class="space-y-2">
-          <li><a href="/services/creation-site-web-rennes" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.webCreation}</a></li>
-          <li><a href="/services/creation-boutique-en-ligne" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.ecommerce}</a></li>
-          <li><a href="/services/developpement-application-mobile" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.mobileApp}</a></li>
-          <li><a href="/services/developpement-react-nextjs" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.reactNextjs}</a></li>
-          <li><a href="/services/developpement-flutter-dart" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.flutterDart}</a></li>
-          <li><a href="/services/refonte-site-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.redesign}</a></li>
-          <li><a href="/services/optimisation-seo" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.seo}</a></li>
-          <li><a href="/services/creation-application-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.webApp}</a></li>
-          <li><a href="/services/maintenance-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.maintenance}</a></li>
-          <li><a href="/services/hebergement-web" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.hosting}</a></li>
-          <li><a href="/services/identite-visuelle" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.serviceLinks.branding}</a></li>
+          <li><a href="/services/creation-site-web-rennes" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.webCreation}</a></li>
+          <li><a href="/services/creation-boutique-en-ligne" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.ecommerce}</a></li>
+          <li><a href="/services/developpement-application-mobile" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.mobileApp}</a></li>
+          <li><a href="/services/developpement-react-nextjs" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.reactNextjs}</a></li>
+          <li><a href="/services/developpement-flutter-dart" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.flutterDart}</a></li>
+          <li><a href="/services/refonte-site-web" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.redesign}</a></li>
+          <li><a href="/services/optimisation-seo" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.seo}</a></li>
+          <li><a href="/services/creation-application-web" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.webApp}</a></li>
+          <li><a href="/services/maintenance-web" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.maintenance}</a></li>
+          <li><a href="/services/hebergement-web" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.hosting}</a></li>
+          <li><a href="/services/identite-visuelle" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.branding}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.resources}</h3>
+        <h3 class="font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cartel mb-3">{t.footer.columns.resources}</h3>
         <ul class="space-y-2">
-          <li><a href="/blog" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.blog}</a></li>
-          <li><a href="/glossaire" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.glossary}</a></li>
-          <li><a href="/faq" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.faq}</a></li>
-          <li><a href="/comparatifs" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.comparisons}</a></li>
-          <li><a href="/cv/Evan_Davison_cv.pdf" class="text-sm text-text-body hover:text-ink transition-colors">{t.footer.resourceLinks.cv}</a></li>
+          <li><a href="/blog" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.resourceLinks.blog}</a></li>
+          <li><a href="/glossaire" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.resourceLinks.glossary}</a></li>
+          <li><a href="/faq" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.resourceLinks.faq}</a></li>
+          <li><a href="/comparatifs" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.resourceLinks.comparisons}</a></li>
+          <li><a href="/cv/Evan_Davison_cv.pdf" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.resourceLinks.cv}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="font-mono text-[0.65rem] tracking-[0.15em] uppercase text-muted mb-3">{t.footer.columns.links}</h3>
+        <h3 class="font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cartel mb-3">{t.footer.columns.links}</h3>
         <ul class="space-y-2">
-          <li><a href="https://github.com/davisone" target="_blank" rel="noopener noreferrer" class="text-sm text-text-body hover:text-ink transition-colors">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/evan-d-766478247" target="_blank" rel="noopener noreferrer" class="text-sm text-text-body hover:text-ink transition-colors">LinkedIn</a></li>
-          <li><a href="https://dvs-web.fr" target="_blank" rel="noopener noreferrer" class="text-sm text-accent hover:text-accent-hover transition-colors">DVS Web</a></li>
+          <li><a href="https://github.com/davisone" target="_blank" rel="noopener noreferrer" class="text-sm text-cartel hover:text-point transition-colors">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/evan-d-766478247" target="_blank" rel="noopener noreferrer" class="text-sm text-cartel hover:text-point transition-colors">LinkedIn</a></li>
+          <li><a href="https://dvs-web.fr" target="_blank" rel="noopener noreferrer" class="text-sm text-encre hover:text-point transition-colors">DVS Web</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Copyright -->
-    <div class="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-muted tracking-wide">
+    <div class="border-t border-filet pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-cartel tracking-wide">
         &copy; {currentYear} Evan Davison &middot; Rennes, France
       </p>
-      <p class="text-sm text-muted">
+      <p class="text-sm text-cartel">
         <a
           href="https://dvs-web.fr"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-accent hover:text-accent-hover transition-colors"
+          class="text-encre hover:text-point transition-colors"
         >
           DVS Web &nearr;
         </a>

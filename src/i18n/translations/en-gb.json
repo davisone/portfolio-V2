@@ -1,13 +1,13 @@
 {
   "hero": {
-    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. Alongside, I support businesses through my <strong>freelance</strong> activity. I am looking for a <strong>work-study programme in IT project management</strong> to combine my technical vision with a strategic and organisational approach."
+    "description": "Passionate about web and mobile development, I build <strong>modern applications</strong> with React, Next.js and Flutter. While pursuing a <strong>master's degree in web development</strong>, I work as a <strong>fullstack developer apprentice</strong> and support businesses through my <strong>freelance</strong> activity."
   },
   "about": {
     "paragraphs": [
-      "Fullstack developer based in <strong>Rennes</strong>, I am completing my <strong>Bachelor's degree</strong> in software development. My education has allowed me to master web and mobile development, from frontend to backend.",
+      "Fullstack developer based in <strong>Rennes</strong>, I am pursuing a <strong>master's degree in web development</strong> while working as a <strong>fullstack developer apprentice</strong>. My education has allowed me to master web and mobile development, from frontend to backend.",
       "Alongside my studies, I founded <a>DVS Web</a>, my freelance activity where I help businesses create their digital projects: showcase websites, web applications, e-commerce and SEO optimisation.",
-      "This dual role as <strong>student</strong> and <strong>entrepreneur</strong> allows me to combine technical rigour with hands-on experience, delivering concrete and high-performing solutions.",
-      "I am currently looking for a <strong>work-study programme in IT project management</strong>. My background as a developer gives me a deep understanding of technical challenges, which I want to complement with training in <strong>project leadership</strong>, team coordination and delivery management."
+      "This dual role as <strong>apprentice</strong> and <strong>entrepreneur</strong> allows me to combine technical rigour with hands-on experience, delivering concrete and high-performing solutions.",
+      "In the workplace as in freelancing, my background as a developer gives me a deep understanding of technical challenges, which I sharpen daily through <strong>project leadership</strong>, coordination and delivery management."
     ]
   },
   "services": {
@@ -42,7 +42,7 @@
       {
         "type": "work",
         "title": "Web Developer (Work-Study)",
-        "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
+        "company": "Le Reférencement Professionnel - Cesson-Sévigné",
         "period": "September 2025 - September 2026",
         "description": "Creation of Liquid blocks and integration into a CMS. Integration of a Tally form and its API into the company's CMS via Firebase."
       },
@@ -56,7 +56,7 @@
       {
         "type": "education",
         "title": "BTS SIO (SLAM)",
-        "company": "Lyc\u00e9e Saint Sauveur - Redon",
+        "company": "Lycée Saint Sauveur - Redon",
         "period": "2022 - 2025",
         "description": "Software Solutions and Business Applications. Learning the fundamentals of software development."
       }
@@ -82,7 +82,7 @@
           "ATS analysis: Score 0-100 with recommendations",
           "AI suggestions for content improvement",
           "OAuth authentication (Google, GitHub) + 2FA with QR code",
-          "Stripe payment (1 free template, premium at \u00a34.99)",
+          "Stripe payment (1 free template, premium at £4.99)",
           "High-quality PDF export",
           "Transactional emails (welcome, password reset, payment confirmation)"
         ]

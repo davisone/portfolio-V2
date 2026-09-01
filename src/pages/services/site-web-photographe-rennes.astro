@@ -58,7 +58,7 @@ const schema = {
 ---
 
 <Layout
-  title="Site web photographe Rennes | Evan Davison — Développeur Web"
+  title="Site web photographe Rennes | Evan Davison · Développeur Web"
   description="Création de portfolio et site web pour photographe à Rennes. Galeries optimisées, chargement rapide, protection images. Sublimez votre travail. Devis gratuit."
   canonical="https://www.evandavison.fr/services/site-web-photographe-rennes/"
   schema={schema}
@@ -69,23 +69,23 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/#services" class="hover:text-ink transition-colors">Services</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Site web photographe Rennes</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/#services" class="hover:text-encre transition-colors">Services</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Site web photographe Rennes</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-16 sm:py-24">
       <div class="max-w-3xl">
-        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-6 leading-tight">
-          Un <em class="text-accent">portfolio</em> en ligne<br/>a la hauteur de vos images
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-encre mb-6 leading-tight">
+          Un <em class="text-point">portfolio</em> en ligne<br/>a la hauteur de vos images
         </h1>
-        <p class="text-xl text-text-body mb-8 leading-relaxed">
-          Galeries optimisees, chargement instantane, protection de vos cliches — un site web de photographe qui laisse parler vos images et attire des clients a Rennes.
+        <p class="text-xl text-cartel mb-8 leading-relaxed">
+          Galeries optimisees, chargement instantane, protection de vos cliches : un site web de photographe qui laisse parler vos images et attire des clients a Rennes.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="/#contact" class="btn-primary">Obtenir un devis gratuit</a>
@@ -95,14 +95,14 @@ const schema = {
     </section>
 
     <!-- Probleme / Solution -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-6">
-              Vos photos meritent mieux qu'un <em class="text-accent">template generique</em>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+              Vos photos meritent mieux qu'un <em class="text-point">template generique</em>
             </h2>
-            <div class="space-y-4 text-text-body">
+            <div class="space-y-4 text-cartel">
               <p>En tant que photographe, votre site web est votre vitrine principale. Si vos images se chargent lentement, si la navigation est confuse ou si le design detourne l'attention, vous perdez des clients potentiels qui ne verront jamais la qualite de votre travail.</p>
               <p>Les plateformes comme Squarespace ou Wix offrent des templates corrects, mais ils limitent vos possibilites et ressemblent a des dizaines d'autres sites de photographes. Votre identite visuelle merite un traitement sur mesure.</p>
               <p>Je concois des portfolios photographiques performants : images optimisees qui se chargent en un eclair, galeries fluides avec lightbox plein ecran, et un design epure qui met vos cliches au centre de l'attention. Le tout reference sur Google pour "photographe Rennes".</p>
@@ -115,9 +115,9 @@ const schema = {
               { label: 'Comparent les portfolios', value: '82%' },
               { label: 'Reservent via le site', value: '47%' },
             ].map(stat => (
-              <div class="border border-border p-6 text-center">
-                <div class="text-3xl font-serif font-bold text-accent mb-1">{stat.value}</div>
-                <div class="text-muted text-sm">{stat.label}</div>
+              <div class="border border-filet p-6 text-center">
+                <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
+                <div class="text-cartel text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -127,8 +127,8 @@ const schema = {
 
     <!-- Fonctionnalites specifiques -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Ce qu'un site de <em class="text-accent">photographe</em> doit offrir
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Ce qu'un site de <em class="text-point">photographe</em> doit offrir
       </h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -139,29 +139,29 @@ const schema = {
           { title: 'Formulaire de prestation', desc: "Demande de devis avec choix du type de shooting, date souhaitee, lieu. Vous recevez des demandes qualifiees et structurees." },
           { title: 'Espace client prive', desc: "Galerie privee protegee par mot de passe pour livrer les photos a vos clients. Telechargement individuel ou par lot." },
         ].map(item => (
-          <div class="border border-border p-6">
-            <h3 class="text-ink font-semibold text-lg mb-2">{item.title}</h3>
-            <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+          <div class="border border-filet p-6">
+            <h3 class="text-encre font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-cartel text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
     </section>
 
     <!-- Realisations CTA -->
-    <section class="py-16 bg-paper-alt border-t border-b border-border">
+    <section class="py-16 bg-oeuvre border-t border-b border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
-          Des sites ou <em class="text-accent">l'image parle d'elle-meme</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
+          Des sites ou <em class="text-point">l'image parle d'elle-meme</em>
         </h2>
-        <p class="text-text-body mb-8">Decouvrez des projets realises pour des photographes et createurs visuels.</p>
+        <p class="text-cartel mb-8">Decouvrez des projets realises pour des photographes et createurs visuels.</p>
         <a href="/#realisations" class="btn-primary">Voir toutes mes realisations</a>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="section-container py-16 sm:py-24">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-12 text-center">
-        Questions <em class="text-accent">frequentes</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
+        Questions <em class="text-point">frequentes</em>
       </h2>
       <div class="max-w-3xl mx-auto space-y-4">
         {[
@@ -186,24 +186,24 @@ const schema = {
             a: 'Un portfolio en ligne avec galeries optimisees et formulaire de contact demarre autour de 900 euros. Avec espace client et livraison de photos en ligne, comptez 1 500 euros et plus. Devis gratuit.'
           },
         ].map(item => (
-          <details class="border border-border p-6 group">
-            <summary class="text-ink font-medium cursor-pointer list-none flex items-center justify-between gap-4">
+          <details class="border border-filet p-6 group">
+            <summary class="text-encre font-medium cursor-pointer list-none flex items-center justify-between gap-4">
               {item.q}
-              <span class="text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+              <span class="text-point shrink-0 transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p class="text-text-body mt-4 leading-relaxed">{item.a}</p>
+            <p class="text-cartel mt-4 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="py-16 bg-paper-alt border-t border-border">
+    <section class="py-16 bg-oeuvre border-t border-filet">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Pret a sublimer votre presence en ligne ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Parlons de votre univers photographique et de vos objectifs. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

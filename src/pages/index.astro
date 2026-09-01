@@ -1,36 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
-import Hero from '../components/Hero.astro'
-import About from '../components/About.jsx'
-import Services from '../components/Services.jsx'
-import Experience from '../components/Experience.jsx'
-import Projects from '../components/Projects.jsx'
-import Contact from '../components/Contact.jsx'
-import ScrollToTop from '../components/ScrollToTop.jsx'
 import Footer from '../components/Footer.astro'
+import SalleHall from '../components/galerie/SalleHall.astro'
+import SalleAPropos from '../components/galerie/SalleAPropos.astro'
+import SalleServices from '../components/galerie/SalleServices.astro'
+import GrandeSalle from '../components/galerie/GrandeSalle.astro'
+import SalleExperience from '../components/galerie/SalleExperience.astro'
+import SalleSortie from '../components/galerie/SalleSortie.astro'
 ---
 
 <Layout
-  title="Evan Davison | Développeur Fullstack & Alternance Chef de projet IT — Rennes"
-  description="Portfolio d'Evan Davison, développeur fullstack à Rennes et fondateur de DVS Web. En recherche d'alternance en gestion de projet IT. Spécialisé React, Next.js, TypeScript, Flutter."
+  title="Evan Davison | Développeur Web Fullstack à Rennes"
+  description="Portfolio d'Evan Davison, développeur fullstack à Rennes et fondateur de DVS Web. En master développement web et développeur fullstack en alternance. Spécialisé React, Next.js, TypeScript, Flutter."
   canonical="https://www.evandavison.fr/"
   ogType="profile"
   keywords="développeur fullstack Rennes, développeur web Rennes, React, Next.js, TypeScript, Flutter, DVS Web, création site web, portfolio développeur"
   hasTranslations
   locale="fr"
 >
-  <div class="min-h-screen">
-    <Header locale="fr" />
-    <main id="main-content">
-      <Hero locale="fr" />
-      <About locale="fr" client:visible />
-      <Services locale="fr" client:visible />
-      <Experience locale="fr" client:visible />
-      <Projects locale="fr" client:visible />
-      <Contact locale="fr" client:visible />
-    </main>
-    <Footer locale="fr" />
-    <ScrollToTop client:load />
-  </div>
+  <Header locale="fr" />
+  <main id="main-content" class="galerie-viewport">
+    <div class="galerie-monde">
+      <SalleHall locale="fr" />
+      <SalleAPropos locale="fr" />
+      <SalleServices locale="fr" />
+      <GrandeSalle locale="fr" />
+      <SalleExperience locale="fr" />
+      <SalleSortie locale="fr" />
+    </div>
+  </main>
+  <Footer locale="fr" />
 </Layout>
+
+<script>
+  import "../scripts/galerie.js"
+</script>

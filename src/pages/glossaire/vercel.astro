@@ -23,75 +23,75 @@ const schema = {
   <main id="main-content" class="pt-20">
 
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li><a href="/glossaire" class="hover:text-ink transition-colors">Glossaire</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Vercel</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Vercel</li>
       </ol>
     </nav>
 
     <article class="section-container py-12 sm:py-16 max-w-3xl">
-      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-ink mb-6 leading-tight">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-encre mb-6 leading-tight">
         Vercel
       </h1>
 
-      <div class="border-l-2 border-accent pl-6 mb-8">
-        <p class="text-lg text-text-body leading-relaxed italic">
-          Vercel est une plateforme cloud specialisee dans le deploiement d'applications web frontend. Creee par les developpeurs de <a href="/glossaire/nextjs" class="text-accent hover:text-accent-hover transition-colors">Next.js</a>, elle offre un deploiement en un clic, un CDN mondial et des fonctionnalites edge computing pour des performances optimales.
+      <div class="border-l-2 border-point pl-6 mb-8">
+        <p class="text-lg text-cartel leading-relaxed italic">
+          Vercel est une plateforme cloud specialisee dans le deploiement d'applications web frontend. Creee par les developpeurs de <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a>, elle offre un deploiement en un clic, un CDN mondial et des fonctionnalites edge computing pour des performances optimales.
         </p>
       </div>
 
       <div class="space-y-8">
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Comment fonctionne Vercel ?</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Vercel se connecte a un depot <a href="/glossaire/git" class="text-accent hover:text-accent-hover transition-colors">Git</a> (GitHub, GitLab ou Bitbucket) et deploie automatiquement chaque push. A chaque commit, Vercel build le projet, optimise les assets et deploie le resultat sur son CDN mondial. Chaque pull request genere une URL de preview pour valider les changements avant la mise en production.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne Vercel ?</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Vercel se connecte a un depot <a href="/glossaire/git" class="text-point hover:text-point transition-colors">Git</a> (GitHub, GitLab ou Bitbucket) et deploie automatiquement chaque push. A chaque commit, Vercel build le projet, optimise les assets et deploie le resultat sur son CDN mondial. Chaque pull request genere une URL de preview pour valider les changements avant la mise en production.
           </p>
-          <p class="text-text-body leading-relaxed mb-4">
-            La plateforme prend en charge le rendu statique, le <a href="/glossaire/ssr" class="text-accent hover:text-accent-hover transition-colors">SSR</a> et l'ISR (Incremental Static Regeneration) de maniere transparente. Les fonctions serverless s'executent automatiquement pour les pages dynamiques, tandis que les pages statiques sont servies depuis le CDN le plus proche de l'utilisateur.
+          <p class="text-cartel leading-relaxed mb-4">
+            La plateforme prend en charge le rendu statique, le <a href="/glossaire/ssr" class="text-point hover:text-point transition-colors">SSR</a> et l'ISR (Incremental Static Regeneration) de maniere transparente. Les fonctions serverless s'executent automatiquement pour les pages dynamiques, tandis que les pages statiques sont servies depuis le CDN le plus proche de l'utilisateur.
           </p>
-          <p class="text-text-body leading-relaxed">
+          <p class="text-cartel leading-relaxed">
             Les Edge Functions de Vercel executent du code au plus pres de l'utilisateur, dans plus de 30 regions mondiales. Cela permet des temps de reponse inferieurs a 50ms pour la personalisation, les redirections, l'A/B testing et l'authentification, sans la latence d'un serveur centralise.
           </p>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Pourquoi utiliser Vercel ?</h2>
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi utiliser Vercel ?</h2>
           <ul class="space-y-2">
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Deploiement automatique a chaque push Git, zero configuration</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> CDN mondial avec edge caching pour des performances maximales</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Preview deployments pour valider chaque pull request</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Integration native avec Next.js, Astro, Nuxt et d'autres frameworks</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> SSL automatique, domaines personnalises et analytics integrees</li>
-            <li class="text-text-body leading-relaxed"><span class="text-accent">--</span> Plan gratuit genereux pour les projets personnels et les portfolios</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Deploiement automatique a chaque push Git, zero configuration</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> CDN mondial avec edge caching pour des performances maximales</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Preview deployments pour valider chaque pull request</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Integration native avec Next.js, Astro, Nuxt et d'autres frameworks</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> SSL automatique, domaines personnalises et analytics integrees</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Plan gratuit genereux pour les projets personnels et les portfolios</li>
           </ul>
         </section>
 
         <section>
-          <h2 class="font-serif text-2xl font-bold text-ink mb-4">Vercel en pratique</h2>
-          <p class="text-text-body leading-relaxed mb-4">
-            Le workflow typique est simple : on developpe en local, on push sur Git, et Vercel s'occupe du reste. Combine avec un pipeline <a href="/glossaire/ci-cd" class="text-accent hover:text-accent-hover transition-colors">CI/CD</a>, on obtient un deploiement continu fiable et automatise. Les variables d'environnement, les redirections et les headers se configurent directement dans l'interface.
+          <h2 class="font-display text-2xl font-bold text-encre mb-4">Vercel en pratique</h2>
+          <p class="text-cartel leading-relaxed mb-4">
+            Le workflow typique est simple : on developpe en local, on push sur Git, et Vercel s'occupe du reste. Combine avec un pipeline <a href="/glossaire/ci-cd" class="text-point hover:text-point transition-colors">CI/CD</a>, on obtient un deploiement continu fiable et automatise. Les variables d'environnement, les redirections et les headers se configurent directement dans l'interface.
           </p>
-          <p class="text-text-body leading-relaxed">
-            Pour mes clients, Vercel est la plateforme de deploiement par defaut pour les projets <a href="/services/developpement-react-nextjs" class="text-accent hover:text-accent-hover transition-colors">React / Next.js</a>. La combinaison Next.js + Vercel offre des performances optimales sans effort de configuration, ce qui est ideal pour les <a href="/glossaire/jamstack" class="text-accent hover:text-accent-hover transition-colors">sites JAMstack</a> et les applications web a forte audience.
+          <p class="text-cartel leading-relaxed">
+            Pour mes clients, Vercel est la plateforme de deploiement par defaut pour les projets <a href="/services/developpement-react-nextjs" class="text-point hover:text-point transition-colors">React / Next.js</a>. La combinaison Next.js + Vercel offre des performances optimales sans effort de configuration, ce qui est ideal pour les <a href="/glossaire/jamstack" class="text-point hover:text-point transition-colors">sites JAMstack</a> et les applications web a forte audience.
           </p>
         </section>
       </div>
 
-      <div class="border-t border-border mt-12 pt-8">
-        <h2 class="font-mono text-[0.7rem] tracking-[0.15em] uppercase text-muted mb-4">Termes lies</h2>
+      <div class="border-t border-filet mt-12 pt-8">
+        <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/nextjs" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">Next.js</a>
-          <a href="/glossaire/jamstack" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">JAMstack</a>
-          <a href="/glossaire/ci-cd" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">CI/CD</a>
-          <a href="/glossaire/ssg" class="border border-border px-3 py-1 text-sm text-text-body hover:text-ink hover:bg-paper-alt transition-colors">SSG</a>
+          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
+          <a href="/glossaire/jamstack" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">JAMstack</a>
+          <a href="/glossaire/ci-cd" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">CI/CD</a>
+          <a href="/glossaire/ssg" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
         </div>
       </div>
 
-      <div class="border-t border-border mt-8 pt-8">
-        <p class="text-text-body mb-4">Besoin d'aide avec le deploiement sur Vercel ?</p>
+      <div class="border-t border-filet mt-8 pt-8">
+        <p class="text-cartel mb-4">Besoin d'aide avec le deploiement sur Vercel ?</p>
         <a href="/#contact" class="btn-primary">Me contacter</a>
       </div>
     </article>

@@ -12,35 +12,35 @@
     "closeMenu": "Fermer le menu"
   },
   "hero": {
-    "label": "En recherche d'alternance \u2014 Chef de projet IT",
-    "subtitle": "D\u00e9veloppeur Fullstack \u2014 Rennes, Fondateur de",
-    "description": "Passionn\u00e9 par le d\u00e9veloppement web et mobile, je cr\u00e9e des <strong>applications modernes</strong> avec React, Next.js et Flutter. En parall\u00e8le, j'accompagne les entreprises via mon activit\u00e9 <strong>freelance</strong>. Je recherche une <strong>alternance en gestion de projet IT</strong> pour allier ma vision technique \u00e0 une approche strat\u00e9gique et organisationnelle.",
-    "badge": "Disponible \u2014 Bac+3 Sup de Vinci",
+    "label": "Développeur fullstack en alternance",
+    "subtitle": "Développeur fullstack à Rennes, fondateur de",
+    "description": "Passionné par le développement web et mobile, je crée des <strong>applications modernes</strong> avec React, Next.js et Flutter. En <strong>master développement web</strong>, j'occupe un poste de <strong>développeur fullstack en alternance</strong> et j'accompagne les entreprises via mon activité <strong>freelance</strong>.",
+    "badge": "Master Développement Web · Sup de Vinci",
     "cta": "Me contacter",
-    "downloadCv": "T\u00e9l\u00e9charger mon CV"
+    "downloadCv": "Télécharger mon CV"
   },
   "about": {
     "label": "Qui suis-je",
-    "title": "\u00c0 propos",
+    "title": "À propos",
     "titleEmphasis": "moi",
     "paragraphs": [
-      "D\u00e9veloppeur fullstack bas\u00e9 \u00e0 <strong>Rennes</strong>, je suis en fin de cursus <strong>Bac+3</strong> en d\u00e9veloppement informatique. Ma formation m'a permis de ma\u00eetriser le d\u00e9veloppement web et mobile, du frontend au backend.",
-      "En parall\u00e8le de mes \u00e9tudes, j'ai fond\u00e9 <a>DVS Web</a>, mon activit\u00e9 freelance o\u00f9 j'accompagne les entreprises dans la cr\u00e9ation de leurs projets digitaux : sites vitrines, applications web, e-commerce et optimisation SEO.",
-      "Cette double casquette <strong>\u00e9tudiant</strong> et <strong>entrepreneur</strong> me permet d'allier rigueur technique et exp\u00e9rience terrain, pour livrer des solutions concr\u00e8tes et performantes.",
-      "Je suis actuellement \u00e0 la recherche d'une <strong>alternance en gestion de projet IT</strong>. Mon parcours de d\u00e9veloppeur me donne une compr\u00e9hension fine des enjeux techniques, que je souhaite compl\u00e9ter par une formation en <strong>pilotage de projets</strong>, coordination d'\u00e9quipes et suivi de livraisons."
+      "Développeur fullstack basé à <strong>Rennes</strong>, je poursuis un <strong>master développement web</strong> tout en occupant un poste de <strong>développeur fullstack en alternance</strong>. Ma formation m'a permis de maîtriser le développement web et mobile, du frontend au backend.",
+      "En parallèle de mes études, j'ai fondé <a>DVS Web</a>, mon activité freelance où j'accompagne les entreprises dans la création de leurs projets digitaux : sites vitrines, applications web, e-commerce et optimisation SEO.",
+      "Cette double casquette <strong>alternant</strong> et <strong>entrepreneur</strong> me permet d'allier rigueur technique et expérience terrain, pour livrer des solutions concrètes et performantes.",
+      "En entreprise comme en freelance, mon parcours de développeur me donne une compréhension fine des enjeux techniques, que je complète chaque jour par la pratique du <strong>pilotage de projets</strong>, de la coordination et du suivi de livraisons."
     ],
     "values": [
       {
         "title": "Gestion de projet",
-        "description": "Planification, coordination et suivi \u2014 transformer une id\u00e9e en livrable concret."
+        "description": "Planification, coordination et suivi : transformer une idée en livrable concret."
       },
       {
-        "title": "Efficacit\u00e9",
-        "description": "Livraison dans les d\u00e9lais avec une communication transparente."
+        "title": "Efficacité",
+        "description": "Livraison dans les délais avec une communication transparente."
       },
       {
         "title": "Collaboration",
-        "description": "\u00c0 l'\u00e9coute de vos besoins pour des solutions sur-mesure."
+        "description": "À l'écoute de vos besoins pour des solutions sur-mesure."
       }
     ]
   },
@@ -50,8 +50,8 @@
     "titleEmphasis": "services",
     "items": [
       {
-        "title": "D\u00e9veloppement Web",
-        "description": "Sites vitrines, applications web, e-commerce. Des solutions modernes et performantes adapt\u00e9es \u00e0 vos besoins."
+        "title": "Développement Web",
+        "description": "Sites vitrines, applications web, e-commerce. Des solutions modernes et performantes adaptées à vos besoins."
       },
       {
         "title": "Applications Mobiles",
@@ -59,11 +59,11 @@
       },
       {
         "title": "Refonte de site",
-        "description": "Modernisation de votre site existant : design, performance, accessibilit\u00e9 et exp\u00e9rience utilisateur."
+        "description": "Modernisation de votre site existant : design, performance, accessibilité et expérience utilisateur."
       },
       {
         "title": "SEO & Performance",
-        "description": "Optimisation du r\u00e9f\u00e9rencement naturel et des performances pour une meilleure visibilit\u00e9 Google."
+        "description": "Optimisation du référencement naturel et des performances pour une meilleure visibilité Google."
       }
     ],
     "learnMore": "En savoir plus"
@@ -79,99 +79,106 @@
     "items": [
       {
         "type": "work",
-        "title": "Fondateur & D\u00e9veloppeur Freelance",
+        "title": "Fondateur & Développeur Freelance",
         "company": "DVS Web - Rennes",
-        "period": "2026 - Pr\u00e9sent",
-        "description": "Cr\u00e9ation et d\u00e9veloppement de sites web et applications pour des clients vari\u00e9s. Gestion de projet, relation client, d\u00e9veloppement fullstack."
+        "period": "2026 - Présent",
+        "description": "Création et développement de sites web et applications pour des clients variés. Gestion de projet, relation client, développement fullstack."
       },
       {
         "type": "work",
-        "title": "D\u00e9veloppeur Web (Alternance)",
-        "company": "Le Ref\u00e9rencement Professionnel - Cesson-S\u00e9vign\u00e9",
-        "period": "septembre 2025 - septembre 2026",
-        "description": "Cr\u00e9ation de block liquid et int\u00e9gration dans un cms. Int\u00e9gration d'un formulaire tally et de son api dans le CMS de l'entreprise en passant par firebase."
+        "title": "Développeur Fullstack (Alternance)",
+        "company": "Le Reférencement Professionnel - Cesson-Sévigné",
+        "period": "septembre 2025 - Présent",
+        "description": "Création de block liquid et intégration dans un cms. Intégration d'un formulaire tally et de son api dans le CMS de l'entreprise en passant par firebase."
       },
       {
         "type": "education",
-        "title": "Bachelor D\u00e9veloppement Web",
+        "title": "Master Développement Web",
+        "company": "Sup de Vinci - Chantepie",
+        "period": "2026 - 2028",
+        "description": "Formation approfondie en développement web : architecture, technologies avancées et gestion de projet. Bac+5."
+      },
+      {
+        "type": "education",
+        "title": "Bachelor Développement Web",
         "company": "Sup de Vinci - Chantepie",
         "period": "2025 - 2026",
-        "description": "Formation compl\u00e8te en d\u00e9veloppement web, mobile, bases de donn\u00e9es, et gestion de projet. Bac+3."
+        "description": "Formation complète en développement web, mobile, bases de données, et gestion de projet. Bac+3."
       },
       {
         "type": "education",
         "title": "BTS SIO (SLAM)",
-        "company": "Lyc\u00e9e Saint Sauveur - Redon",
+        "company": "Lycée Saint Sauveur - Redon",
         "period": "2022 - 2025",
-        "description": "Solutions Logicielles et Applications M\u00e9tiers. Apprentissage des fondamentaux du d\u00e9veloppement."
+        "description": "Solutions Logicielles et Applications Métiers. Apprentissage des fondamentaux du développement."
       }
     ]
   },
   "projects": {
     "label": "Mes travaux",
-    "title": "R\u00e9alisations",
-    "featuresTitle": "Fonctionnalit\u00e9s cl\u00e9s",
+    "title": "Réalisations",
+    "featuresTitle": "Fonctionnalités clés",
     "viewSite": "Voir le site",
     "sourceCode": "Code source",
-    "privateProject": "Projet priv\u00e9 / en d\u00e9veloppement",
+    "privateProject": "Projet privé / en développement",
     "closeModal": "Fermer la modale",
     "viewMoreGithub": "Voir plus sur GitHub",
     "loading": "Chargement...",
     "items": [
       {
-        "description": "Site vitrine professionnel pour mon activit\u00e9 de d\u00e9veloppeur freelance. Design responsive noir/dor\u00e9, animations fluides, formulaire de contact avec API Resend, SEO optimis\u00e9 (sitemap dynamique, Schema.org) et conformit\u00e9 RGPD.",
+        "description": "Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.",
         "features": [
           "Design responsive mobile-first avec navigation adaptative",
           "Animations au scroll et micro-interactions",
-          "Formulaire de contact s\u00e9curis\u00e9 avec double envoi d'email",
-          "Sitemap et robots.txt dynamiques g\u00e9n\u00e9r\u00e9s c\u00f4t\u00e9 serveur",
-          "M\u00e9tadonn\u00e9es SEO compl\u00e8tes (Open Graph, Twitter Cards, Schema.org)",
-          "Banni\u00e8re cookies conforme RGPD"
+          "Formulaire de contact sécurisé avec double envoi d'email",
+          "Sitemap et robots.txt dynamiques générés côté serveur",
+          "Métadonnées SEO complètes (Open Graph, Twitter Cards, Schema.org)",
+          "Bannière cookies conforme RGPD"
         ]
       },
       {
-        "description": "Application SaaS de g\u00e9n\u00e9ration de CV avec IA. Int\u00e8gre OpenAI (GPT-4o-mini) pour l'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.",
+        "description": "Application SaaS de génération de CV avec IA. Intègre OpenAI (GPT-4o-mini) pour l'optimisation de contenu, Stripe pour les paiements, et NextAuth avec 2FA. 5 templates, analyse ATS et export PDF.",
         "features": [
           "5 templates de CV (Modern, Classic, ATS-Friendly, Minimal, Creative)",
           "Analyse ATS : Score 0-100 avec recommandations",
-          "Suggestions IA pour am\u00e9lioration du contenu",
+          "Suggestions IA pour amélioration du contenu",
           "Authentification OAuth (Google, GitHub) + 2FA avec QR code",
-          "Paiement Stripe (1 template gratuit, premium \u00e0 4.99\u20ac)",
-          "Export PDF haute qualit\u00e9",
+          "Paiement Stripe (1 template gratuit, premium à 4.99€)",
+          "Export PDF haute qualité",
           "Emails transactionnels (bienvenue, reset password, confirmation paiement)"
         ]
       },
       {
-        "description": "Application multiplateforme pour \u00e9leveurs et propri\u00e9taires d'animaux. Suivi m\u00e9dical complet, vaccins avec rappels automatiques, arbre g\u00e9n\u00e9alogique, \u00e9volution du poids et export PDF.",
+        "description": "Application multiplateforme pour éleveurs et propriétaires d'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.",
         "features": [
-          "Fiche compl\u00e8te par animal avec photo et identification",
+          "Fiche complète par animal avec photo et identification",
           "Suivi vaccins avec rappels automatiques",
-          "Historique des traitements et consultations v\u00e9t\u00e9rinaires",
-          "Graphique d'\u00e9volution du poids",
-          "Arbre g\u00e9n\u00e9alogique interactif",
-          "Export PDF du carnet de sant\u00e9 complet"
+          "Historique des traitements et consultations vétérinaires",
+          "Graphique d'évolution du poids",
+          "Arbre généalogique interactif",
+          "Export PDF du carnet de santé complet"
         ]
       },
       {
-        "description": "Application web full-stack de g\u00e9n\u00e9ration, personnalisation et gestion de QR codes. Pr\u00e9visualisation en temps r\u00e9el, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.",
+        "description": "Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.",
         "features": [
-          "G\u00e9n\u00e9ration de QR codes \u00e0 partir d'URLs ou texte avec pr\u00e9visualisation temps r\u00e9el",
-          "Personnalisation avanc\u00e9e : couleurs, taille, correction d'erreur, logo centr\u00e9, templates (Ocean, Forest, Sunset...)",
-          "Dashboard avec recherche, filtres (type, favoris) et s\u00e9lection multiple",
-          "Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports group\u00e9s",
+          "Génération de QR codes à partir d'URLs ou texte avec prévisualisation temps réel",
+          "Personnalisation avancée : couleurs, taille, correction d'erreur, logo centré, templates (Ocean, Forest, Sunset...)",
+          "Dashboard avec recherche, filtres (type, favoris) et sélection multiple",
+          "Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports groupés",
           "Partage public via liens uniques avec tokens",
-          "Authentification compl\u00e8te avec hashage bcrypt"
+          "Authentification complète avec hashage bcrypt"
         ]
       },
       {
-        "description": "Site vitrine pour une entreprise de peinture en b\u00e2timent. Internationalisation FR/EN, galerie avant/apr\u00e8s interactive, avis Google dynamiques, carte Leaflet et formulaire s\u00e9curis\u00e9.",
+        "description": "Site vitrine pour une entreprise de peinture en bâtiment. Internationalisation FR/EN, galerie avant/après interactive, avis Google dynamiques, carte Leaflet et formulaire sécurisé.",
         "features": [
-          "Internationalisation compl\u00e8te (FR/EN) avec next-intl",
-          "Dark mode avec persistance des pr\u00e9f\u00e9rences",
-          "Galerie avant/apr\u00e8s interactive avec slider tactile",
+          "Internationalisation complète (FR/EN) avec next-intl",
+          "Dark mode avec persistance des préférences",
+          "Galerie avant/après interactive avec slider tactile",
           "Avis Google dynamiques via API",
           "Carte interactive avec zone d'intervention",
-          "Formulaire s\u00e9curis\u00e9 avec rate limiting et hCaptcha"
+          "Formulaire sécurisé avec rate limiting et hCaptcha"
         ]
       }
     ]
@@ -179,8 +186,8 @@
   "contact": {
     "label": "Contact",
     "title": "Un projet",
-    "titleEmphasis": "t\u00eate",
-    "subtitle": "Que ce soit pour un site vitrine, une application web ou mobile, une refonte ou une optimisation SEO, je suis \u00e0 votre \u00e9coute.",
+    "titleEmphasis": "tête",
+    "subtitle": "Que ce soit pour un site vitrine, une application web ou mobile, une refonte ou une optimisation SEO, je suis à votre écoute.",
     "form": {
       "name": "Nom complet",
       "email": "Email",
@@ -188,14 +195,14 @@
       "message": "Message",
       "namePlaceholder": "John Doe",
       "emailPlaceholder": "john@exemple.com",
-      "subjectPlaceholder": "Cr\u00e9ation d'un site web",
-      "messagePlaceholder": "D\u00e9crivez votre projet...",
+      "subjectPlaceholder": "Création d'un site web",
+      "messagePlaceholder": "Décrivez votre projet...",
       "submit": "Envoyer le message",
       "submitting": "Envoi en cours..."
     },
     "status": {
-      "success": "Message envoy\u00e9 avec succ\u00e8s !",
-      "error": "Une erreur est survenue. Veuillez r\u00e9essayer."
+      "success": "Message envoyé avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
     },
     "proSite": "Besoin d'un site pro ?"
   },
@@ -236,14 +243,24 @@
   "notFound": {
     "title": "404",
     "pageTitle": "Page introuvable | Evan Davison",
-    "description": "La page que vous recherchez n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
-    "message": "Cette page n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
-    "backHome": "Retour \u00e0 l'accueil"
+    "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "message": "Cette page n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil"
   },
   "languageSwitcher": {
     "label": "Langue",
-    "fr": "Fran\u00e7ais",
+    "fr": "Français",
     "en-gb": "English (UK)",
     "en-us": "English (US)"
+  },
+  "galerie": {
+    "hall": "Hall",
+    "salle": "Salle",
+    "grandeSalle": "Grande salle",
+    "sortie": "Sortie",
+    "planLabel": "Plan de la visite",
+    "allerSalle": "Aller à la salle",
+    "delivered": "Livré",
+    "suite": "Suite de la visite"
   }
 }

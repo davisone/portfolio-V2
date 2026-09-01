@@ -108,7 +108,7 @@ const schema = {
   "@graph": [
     {
       "@type": "ItemList",
-      "name": "Services de developpement web — Evan Davison",
+      "name": "Services de developpement web : Evan Davison",
       "description": "Tous les services proposes par Evan Davison, developpeur web freelance a Rennes.",
       "url": "https://www.evandavison.fr/services",
       "numberOfItems": mainServices.length,
@@ -131,7 +131,7 @@ const schema = {
 ---
 
 <Layout
-  title="Services | Evan Davison — Developpeur Web Freelance Rennes"
+  title="Services | Evan Davison · Developpeur Web Freelance Rennes"
   description="Decouvrez tous les services proposes par Evan Davison : creation de sites web, boutiques en ligne, applications mobiles, SEO, maintenance et plus. Devis gratuit."
   canonical="https://www.evandavison.fr/services/"
   schema={schema}
@@ -142,19 +142,19 @@ const schema = {
 
     <!-- Breadcrumb -->
     <nav aria-label="Fil d'ariane" class="section-container py-4">
-      <ol class="flex items-center gap-2 text-sm text-muted">
-        <li><a href="/" class="hover:text-ink transition-colors">Accueil</a></li>
-        <li class="text-border">/</li>
-        <li class="text-ink">Services</li>
+      <ol class="flex items-center gap-2 text-sm text-cartel">
+        <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
+        <li class="text-filet">/</li>
+        <li class="text-encre">Services</li>
       </ol>
     </nav>
 
     <!-- Hero -->
     <section class="section-container py-12 sm:py-20">
-      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-ink mb-6 leading-tight">
-        Mes <em class="text-accent">services</em>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-encre mb-6 leading-tight">
+        Mes <em class="text-point">services</em>
       </h1>
-      <p class="text-xl text-text-body max-w-2xl leading-relaxed">
+      <p class="text-xl text-cartel max-w-2xl leading-relaxed">
         Du site vitrine a l'application mobile, je vous accompagne a chaque etape de votre projet digital. Solutions sur mesure, modernes et performantes.
       </p>
     </section>
@@ -165,15 +165,15 @@ const schema = {
         {mainServices.map(service => (
           <a
             href={service.href}
-            class="border border-border p-8 flex flex-col gap-3 hover:bg-paper-alt transition-colors duration-300 group"
+            class="border border-filet p-8 flex flex-col gap-3 hover:bg-oeuvre transition-colors duration-300 group"
           >
-            <h2 class="text-ink font-semibold text-lg group-hover:text-accent transition-colors">
+            <h2 class="text-encre font-semibold text-lg group-hover:text-point transition-colors">
               {service.title}
             </h2>
-            <p class="text-text-body text-sm leading-relaxed flex-1">
+            <p class="text-cartel text-sm leading-relaxed flex-1">
               {service.description}
             </p>
-            <span class="text-accent text-xs uppercase tracking-wide mt-2">
+            <span class="text-point text-xs uppercase tracking-wide mt-2">
               En savoir plus &rarr;
             </span>
           </a>
@@ -182,16 +182,16 @@ const schema = {
     </section>
 
     <!-- Technologies -->
-    <section class="py-12 bg-paper-alt border-t border-b border-border">
+    <section class="py-12 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-          Par <em class="text-accent">technologie</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+          Par <em class="text-point">technologie</em>
         </h2>
         <div class="flex flex-wrap gap-3">
           {techServices.map(tech => (
             <a
               href={tech.href}
-              class="border border-border px-5 py-3 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+              class="border border-filet px-5 py-3 text-sm text-cartel hover:bg-encre hover:text-cimaise transition-colors duration-300"
             >
               {tech.title}
             </a>
@@ -202,14 +202,14 @@ const schema = {
 
     <!-- Par ville -->
     <section class="section-container py-12">
-      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-        Par <em class="text-accent">ville</em>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+        Par <em class="text-point">ville</em>
       </h2>
       <div class="flex flex-wrap gap-3">
         {cityServices.map(city => (
           <a
             href={city.href}
-            class="border border-border px-4 py-2 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+            class="border border-filet px-4 py-2 text-sm text-cartel hover:bg-encre hover:text-cimaise transition-colors duration-300"
           >
             {city.title}
           </a>
@@ -218,16 +218,16 @@ const schema = {
     </section>
 
     <!-- Par metier -->
-    <section class="py-12 bg-paper-alt border-t border-b border-border">
+    <section class="py-12 bg-oeuvre border-t border-b border-filet">
       <div class="section-container">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-8">
-          Par <em class="text-accent">metier</em>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-8">
+          Par <em class="text-point">metier</em>
         </h2>
         <div class="flex flex-wrap gap-3">
           {proServices.map(pro => (
             <a
               href={pro.href}
-              class="border border-border px-4 py-2 text-sm text-text-body hover:bg-ink hover:text-paper transition-colors duration-300"
+              class="border border-filet px-4 py-2 text-sm text-cartel hover:bg-encre hover:text-cimaise transition-colors duration-300"
             >
               {pro.title}
             </a>
@@ -239,10 +239,10 @@ const schema = {
     <!-- CTA -->
     <section class="py-16">
       <div class="section-container text-center">
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-4">
           Un projet en tete ?
         </h2>
-        <p class="text-text-body mb-8 max-w-xl mx-auto">
+        <p class="text-cartel mb-8 max-w-xl mx-auto">
           Discutons de votre besoin. Premier echange gratuit, sans engagement.
         </p>
         <div class="flex flex-wrap justify-center gap-4">

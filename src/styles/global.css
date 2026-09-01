@@ -1,103 +1,63 @@
-/* DM Mono */
+/* Marcellus — display, capitales lapidaires */
 @font-face {
-  font-family: 'DM Mono';
+  font-family: 'Marcellus';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/dm-mono-400-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('/fonts/marcellus-v14-latin_latin-ext-regular.woff2') format('woff2');
+}
+
+/* Source Serif 4 — lecture */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-v14-latin_latin-ext-300.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'DM Mono';
+  font-family: 'Source Serif 4';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/dm-mono-400-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url('/fonts/source-serif-4-v14-latin_latin-ext-regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'DM Mono';
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-v14-latin_latin-ext-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-v14-latin_latin-ext-italic.woff2') format('woff2');
+}
+
+/* Archivo — signalétique et cartels */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/archivo-v25-latin_latin-ext-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/fonts/dm-mono-500-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url('/fonts/archivo-v25-latin_latin-ext-500.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'DM Mono';
+  font-family: 'Archivo';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-display: swap;
-  src: url('/fonts/dm-mono-500-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* DM Sans — variable font, meme fichier pour 300/400/500 */
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300 500;
-  font-display: swap;
-  src: url('/fonts/dm-sans-300-400-500-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 300 500;
-  font-display: swap;
-  src: url('/fonts/dm-sans-300-400-500-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* Playfair Display */
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/playfair-700-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/playfair-700-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('/fonts/playfair-900-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('/fonts/playfair-900-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/playfair-italic-700-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/playfair-italic-700-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url('/fonts/archivo-v25-latin_latin-ext-600.woff2') format('woff2');
 }
 
 @tailwind base;
@@ -106,25 +66,12 @@
 
 @layer base {
   :root {
-    --color-ink: 26 17 8;
-    --color-paper: 245 240 232;
-    --color-paper-alt: 237 232 223;
-    --color-accent: 192 57 43;
-    --color-accent-hover: 231 76 60;
-    --color-muted: 115 104 91;
-    --color-border: 212 203 191;
-    --color-text-body: 74 64 53;
-  }
-
-  .dark {
-    --color-ink: 240 235 225;
-    --color-paper: 18 16 14;
-    --color-paper-alt: 28 26 23;
-    --color-accent: 205 72 58;
-    --color-accent-hover: 231 76 60;
-    --color-muted: 160 153 145;
-    --color-border: 50 45 40;
-    --color-text-body: 180 172 162;
+    --color-cimaise: 250 250 247;
+    --color-oeuvre: 255 255 255;
+    --color-encre: 28 27 24;
+    --color-cartel: 111 106 99;
+    --color-filet: 230 227 220;
+    --color-point: 200 51 10;
   }
 
   html {
@@ -132,12 +79,16 @@
   }
 
   body {
-    @apply font-sans antialiased bg-paper text-ink font-light;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    @apply font-lecture antialiased bg-cimaise text-encre;
   }
 
   ::selection {
-    @apply bg-accent/20 text-ink;
+    @apply bg-point/15 text-encre;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-point));
+    outline-offset: 3px;
   }
 }
 
@@ -146,62 +97,146 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .section-label {
-    @apply font-mono text-xs tracking-[0.15em] uppercase text-accent flex items-center gap-3;
+  .signal-label {
+    @apply font-signal text-[11px] font-semibold tracking-[0.16em] uppercase text-cartel;
   }
 
-  .section-label::before {
-    content: '';
-    @apply block w-8 h-px bg-accent;
+  .cartel-box {
+    @apply bg-oeuvre border border-filet;
   }
 
-  .section-title {
-    @apply font-serif text-4xl sm:text-5xl font-bold text-ink leading-none tracking-tight;
+  .btn-galerie {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-encre text-cimaise
+           font-signal text-xs font-medium tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:bg-point cursor-pointer;
   }
 
-  .section-title em {
-    @apply text-accent;
-    font-style: italic;
-  }
-
-  .section-num {
-    @apply font-serif text-[8rem] font-black text-border/50 leading-none absolute right-4 sm:right-8 lg:right-16 -top-5 select-none pointer-events-none;
-  }
-
+  /* Alias historiques : utilisés par les pages services/blog */
   .btn-primary {
-    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-ink text-paper
-           text-xs font-medium tracking-[0.1em] uppercase
-           transition-all duration-200 hover:bg-accent;
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 bg-encre text-cimaise
+           font-signal text-xs font-medium tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:bg-point cursor-pointer;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-ink text-ink
-           text-xs font-normal tracking-[0.1em] uppercase
-           transition-all duration-200 hover:bg-ink hover:text-paper;
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-encre text-encre
+           font-signal text-xs tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:border-point hover:text-point cursor-pointer;
+  }
+
+  .btn-galerie-secondaire {
+    @apply inline-flex items-center gap-2.5 px-7 py-3.5 border border-encre text-encre
+           font-signal text-xs tracking-[0.1em] uppercase
+           transition-colors duration-200 hover:border-point hover:text-point cursor-pointer;
   }
 }
 
-/* Reveal animations */
-.reveal {
+/* Mode galerie : activé par JS quand la chorégraphie démarre */
+.galerie-active .galerie-viewport {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.galerie-active .galerie-monde {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  will-change: transform;
+  background: rgb(var(--color-cimaise));
+}
+
+/* Fil de visite : trait qui serpente entre les salles et se dessine au scroll */
+.fil-visite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.fil-visite path {
+  fill: none;
+  stroke: rgb(var(--color-point) / 0.55);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.galerie-active .salle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  background: rgb(var(--color-cimaise));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop : salles transparentes pour laisser vivre le fil de visite sous le contenu */
+@media (min-width: 768px) {
+  .galerie-active .salle {
+    background: transparent;
+  }
+}
+
+/* Centrage sûr : centré quand ça tient, aligné en haut (scrollable) sinon */
+.galerie-active .salle > .salle-contenu {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.galerie-active .salle-rangee {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* En mode galerie, le flux horizontal part de l'entrée de la salle */
+.galerie-active .salle-rangee > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.galerie-active .grande-entete {
+  width: 22rem;
+  flex: none;
+}
+
+@media (max-width: 767px) {
+  /* Dégagement sous le header fixe */
+  .galerie-active .salle > .salle-contenu {
+    padding-top: 3.5rem;
+  }
+
+  .galerie-active .grande-entete {
+    width: 70vw;
+  }
+
+  .galerie-active .oeuvre {
+    width: 85vw;
+  }
+
+  .galerie-active .salle-rangee {
+    gap: 1.5rem;
+  }
+}
+
+/* Fondus reduced-motion : opacité seule, jamais de translation */
+.fondu {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
 }
 
-.reveal.visible {
+.fondu.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
-.reveal-right {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.reveal-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+@media (prefers-reduced-motion: reduce) {
+  .fondu {
+    transition-duration: 0.01ms;
+  }
 }
 
 /* Scrollbar */
@@ -210,14 +245,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(var(--color-paper));
+  background: rgb(var(--color-cimaise));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(var(--color-border));
+  background: rgb(var(--color-filet));
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--color-muted));
+  background: rgb(var(--color-cartel));
 }

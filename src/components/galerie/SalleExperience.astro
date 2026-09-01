@@ -1,0 +1,46 @@
+---
+import { getTranslations, type Locale } from '../../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+---
+
+<section
+  id="experience"
+  class="salle min-h-screen flex items-center py-24"
+  data-salle-x="3.5" data-salle-y="3"
+>
+  <div class="salle-contenu section-container w-full">
+    <p class="signal-label mb-3">{t.galerie.salle} 4 · {t.experience.label}</p>
+    <h2 class="font-display text-4xl sm:text-5xl text-encre mb-10 sm:mb-14">
+      {t.experience.title} <span class="text-point">{t.experience.titleEmphasis}</span>
+    </h2>
+
+    <!-- Frise chronologique accrochée -->
+    <div>
+      {t.experience.items.map((exp) => (
+        <div class="border-t border-filet py-5 sm:py-6 grid grid-cols-1 lg:grid-cols-[120px_1fr_1fr] gap-2 lg:gap-8">
+          <time class="font-signal text-xs text-cartel uppercase tracking-wide block pt-0.5">
+            {exp.period}
+          </time>
+
+          <div>
+            <span class="font-signal text-[10px] text-cartel uppercase tracking-[0.12em]">
+              {exp.type === 'education' ? t.experience.typeLabels.education : t.experience.typeLabels.work}
+            </span>
+            <h3 class="font-display text-lg text-encre leading-snug">{exp.title}</h3>
+            <p class="font-lecture italic text-sm text-cartel mt-0.5">{exp.company}</p>
+          </div>
+
+          <div>
+            <p class="font-lecture text-sm text-encre leading-relaxed">{exp.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,5 +1,4 @@
 ---
-import ThemeToggle from './ThemeToggle.astro'
 import LanguageSwitcher from './LanguageSwitcher.astro'
 import { getTranslations, getLocalizedPath, type Locale } from '../i18n'
 
@@ -22,17 +21,17 @@ const navLinks = [
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
   <nav aria-label={t.nav.ariaLabel} class="section-container flex items-center justify-between">
     <!-- Logo -->
-    <a href={getLocalizedPath('/', locale)} class="text-xl font-serif text-ink animate-fade-in">
-      Evan<span class="text-accent">.</span>
+    <a href={getLocalizedPath('/', locale)} class="text-xl font-display text-encre">
+      Evan<span class="text-point">.</span>
     </a>
 
     <!-- Desktop Navigation -->
-    <ul class="hidden md:flex items-center gap-8 animate-fade-in">
+    <ul class="hidden md:flex items-center gap-8">
       {navLinks.map((link) => (
         <li>
           <a
             href={link.href}
-            class="font-sans text-xs tracking-[0.12em] uppercase text-muted hover:text-ink transition-colors duration-300"
+            class="font-signal text-xs tracking-[0.14em] uppercase text-cartel hover:text-point transition-colors duration-300"
           >
             {link.name}
           </a>
@@ -40,24 +39,23 @@ const navLinks = [
       ))}
     </ul>
 
-    <!-- CTA + Theme Toggle + Language Switcher -->
-    <div class="hidden md:flex items-center gap-4 animate-fade-in">
+    <!-- CTA + Language Switcher -->
+    <div class="hidden md:flex items-center gap-4">
       <a
         href="https://dvs-web.fr"
         target="_blank"
         rel="noopener noreferrer"
-        class="font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent hover:opacity-80 transition-opacity duration-300"
+        class="font-signal text-xs tracking-[0.14em] uppercase text-encre border-b border-encre hover:text-point hover:border-point transition-colors duration-300"
       >
         DVS Web &#8599;
       </a>
       <LanguageSwitcher locale={locale} currentPath={Astro.url.pathname} />
-      <ThemeToggle />
     </div>
 
     <!-- Mobile Menu Button -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden text-muted hover:text-ink p-2 transition-colors"
+      class="md:hidden text-cartel hover:text-encre p-2 transition-colors cursor-pointer"
       aria-label={t.nav.openMenu}
       aria-expanded="false"
       data-label-open={t.nav.openMenu}
@@ -78,13 +76,13 @@ const navLinks = [
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden bg-paper border-b border-border hidden">
+  <div id="mobile-menu" class="md:hidden bg-cimaise border-b border-filet hidden">
     <ul class="section-container py-4 space-y-4">
       {navLinks.map((link) => (
         <li>
           <a
             href={link.href}
-            class="mobile-nav-link block font-sans text-xs tracking-[0.12em] uppercase text-muted hover:text-ink transition-colors py-2"
+            class="mobile-nav-link block font-signal text-xs tracking-[0.14em] uppercase text-cartel hover:text-point transition-colors py-2"
           >
             {link.name}
           </a>
@@ -95,14 +93,11 @@ const navLinks = [
           href="https://dvs-web.fr"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-sans text-xs tracking-[0.12em] uppercase text-accent border-b border-accent"
+          class="font-signal text-xs tracking-[0.14em] uppercase text-encre border-b border-encre"
         >
           DVS Web &#8599;
         </a>
-        <div class="flex items-center gap-3">
-          <LanguageSwitcher locale={locale} currentPath={Astro.url.pathname} />
-          <ThemeToggle />
-        </div>
+        <LanguageSwitcher locale={locale} currentPath={Astro.url.pathname} />
       </li>
     </ul>
   </div>
@@ -119,10 +114,10 @@ const navLinks = [
 
     window.addEventListener('scroll', function() {
       if (window.scrollY > 50) {
-        header.classList.add('bg-paper', 'border-b', 'border-border', 'py-3');
+        header.classList.add('bg-cimaise', 'border-b', 'border-filet', 'py-3');
         header.classList.remove('bg-transparent', 'py-5');
       } else {
-        header.classList.remove('bg-paper', 'border-b', 'border-border', 'py-3');
+        header.classList.remove('bg-cimaise', 'border-b', 'border-filet', 'py-3');
         header.classList.add('bg-transparent', 'py-5');
       }
     });
