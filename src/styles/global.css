@@ -188,38 +188,10 @@
   margin-bottom: auto;
 }
 
-.galerie-active .salle-rangee {
-  flex-direction: row;
-  align-items: center;
-}
-
-/* En mode galerie, le flux horizontal part de l'entrée de la salle */
-.galerie-active .salle-rangee > * {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.galerie-active .grande-entete {
-  width: 22rem;
-  flex: none;
-}
-
 @media (max-width: 767px) {
   /* Dégagement sous le header fixe */
   .galerie-active .salle > .salle-contenu {
     padding-top: 3.5rem;
-  }
-
-  .galerie-active .grande-entete {
-    width: 70vw;
-  }
-
-  .galerie-active .oeuvre {
-    width: 85vw;
-  }
-
-  .galerie-active .salle-rangee {
-    gap: 1.5rem;
   }
 }
 
