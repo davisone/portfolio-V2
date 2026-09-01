@@ -65,14 +65,25 @@
   "projects": {
     "items": [
       {
-        "description": "Professional showcase website for my freelance developer activity. Responsive black/gold design, smooth animations, contact form with Resend API, optimised SEO (dynamic sitemap, Schema.org) and GDPR compliance.",
+        "description": "SaaS platform that analyses construction tender documents. AI reads the tender package (specifications, price schedules) and returns a priced bill of quantities lot by lot with confidence scores, Excel export and reports. Stripe subscriptions and asynchronous processing.",
         "features": [
-          "Mobile-first responsive design with adaptive navigation",
-          "Scroll animations and micro-interactions",
-          "Secure contact form with dual email sending",
-          "Server-side generated dynamic sitemap and robots.txt",
-          "Complete SEO metadata (Open Graph, Twitter Cards, Schema.org)",
-          "GDPR-compliant cookie banner"
+          "Full tender package upload (specifications, price schedules, drawings) with automatic extraction",
+          "Priced bill of quantities lot by lot with per-line confidence scores",
+          "Sensitive points, grey areas and questions for the project owner",
+          "Excel export and PDF report generation",
+          "Stripe subscriptions and payments",
+          "Long-running asynchronous jobs with live progress"
+        ]
+      },
+      {
+        "description": "Prediction platform for amateur football in Brittany (regional leagues and cups). Ionic/Capacitor mobile app published on Google Play, admin back office, SEO showcase website and Supabase backend (Edge Functions).",
+        "features": [
+          "Predictions on real weekend fixtures with leaderboards between friends",
+          "Ionic + Capacitor mobile app published on Google Play",
+          "React back office to manage matchdays and results",
+          "SEO-optimised Next.js showcase website (standings, clubs, fixtures)",
+          "Supabase backend: Edge Functions, migrations and seeds",
+          "Blog and editorial content about amateur football in Brittany"
         ]
       },
       {
@@ -88,25 +99,14 @@
         ]
       },
       {
-        "description": "Cross-platform application for breeders and pet owners. Complete medical tracking, vaccines with automatic reminders, family tree, weight evolution and PDF export.",
+        "description": "Professional showcase website for my freelance developer activity. Responsive black/gold design, smooth animations, contact form with Resend API, optimised SEO (dynamic sitemap, Schema.org) and GDPR compliance.",
         "features": [
-          "Complete profile per animal with photo and identification",
-          "Vaccine tracking with automatic reminders",
-          "Treatment and veterinary consultation history",
-          "Weight evolution chart",
-          "Interactive family tree",
-          "Complete health record PDF export"
-        ]
-      },
-      {
-        "description": "Full-stack web application for generating, customising and managing QR codes. Real-time preview, style templates, dashboard with filters, multi-format export and public sharing via unique links.",
-        "features": [
-          "QR code generation from URLs or text with real-time preview",
-          "Advanced customisation: colours, size, error correction, centred logo, templates (Ocean, Forest, Sunset...)",
-          "Dashboard with search, filters (type, favourites) and multiple selection",
-          "Multi-format export: PNG, JPEG, PDF (A4) and ZIP for batch exports",
-          "Public sharing via unique links with tokens",
-          "Complete authentication with bcrypt hashing"
+          "Mobile-first responsive design with adaptive navigation",
+          "Scroll animations and micro-interactions",
+          "Secure contact form with dual email sending",
+          "Server-side generated dynamic sitemap and robots.txt",
+          "Complete SEO metadata (Open Graph, Twitter Cards, Schema.org)",
+          "GDPR-compliant cookie banner"
         ]
       },
       {
