@@ -126,14 +126,25 @@
     "loading": "Chargement...",
     "items": [
       {
-        "description": "Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.",
+        "description": "Plateforme SaaS d'analyse de dossiers d'appel d'offres pour le BTP. L'IA lit le DCE (CCTP, DPGF) et restitue un métré chiffré lot par lot avec indice de confiance, export Excel et rapports. Abonnements Stripe et traitements asynchrones.",
         "features": [
-          "Design responsive mobile-first avec navigation adaptative",
-          "Animations au scroll et micro-interactions",
-          "Formulaire de contact sécurisé avec double envoi d'email",
-          "Sitemap et robots.txt dynamiques générés côté serveur",
-          "Métadonnées SEO complètes (Open Graph, Twitter Cards, Schema.org)",
-          "Bannière cookies conforme RGPD"
+          "Dépôt de DCE complet (CCTP, DPGF, plans) et extraction automatique",
+          "Métré chiffré lot par lot avec indice de confiance par ligne",
+          "Points sensibles, zones floues et questions au maître d'ouvrage",
+          "Export Excel et génération de rapports PDF",
+          "Abonnements et paiements Stripe",
+          "Traitements longs asynchrones avec suivi en temps réel"
+        ]
+      },
+      {
+        "description": "Plateforme de pronostics sur le football amateur breton (R1, R2, R3, coupes). Application mobile Ionic/Capacitor publiée sur Google Play, backoffice d'administration, site vitrine SEO et backend Supabase (Edge Functions).",
+        "features": [
+          "Pronostics sur les vrais matchs du week-end et classements entre amis",
+          "Application mobile Ionic + Capacitor publiée sur Google Play",
+          "Backoffice React d'administration des journées et résultats",
+          "Site vitrine Next.js optimisé SEO (classements, clubs, matchs)",
+          "Backend Supabase : Edge Functions, migrations et seeds",
+          "Blog et contenus éditoriaux sur le foot amateur breton"
         ]
       },
       {
@@ -149,25 +160,14 @@
         ]
       },
       {
-        "description": "Application multiplateforme pour éleveurs et propriétaires d'animaux. Suivi médical complet, vaccins avec rappels automatiques, arbre généalogique, évolution du poids et export PDF.",
+        "description": "Site vitrine professionnel pour mon activité de développeur freelance. Design responsive noir/doré, animations fluides, formulaire de contact avec API Resend, SEO optimisé (sitemap dynamique, Schema.org) et conformité RGPD.",
         "features": [
-          "Fiche complète par animal avec photo et identification",
-          "Suivi vaccins avec rappels automatiques",
-          "Historique des traitements et consultations vétérinaires",
-          "Graphique d'évolution du poids",
-          "Arbre généalogique interactif",
-          "Export PDF du carnet de santé complet"
-        ]
-      },
-      {
-        "description": "Application web full-stack de génération, personnalisation et gestion de QR codes. Prévisualisation en temps réel, templates de styles, dashboard avec filtres, export multi-format et partage public via liens uniques.",
-        "features": [
-          "Génération de QR codes à partir d'URLs ou texte avec prévisualisation temps réel",
-          "Personnalisation avancée : couleurs, taille, correction d'erreur, logo centré, templates (Ocean, Forest, Sunset...)",
-          "Dashboard avec recherche, filtres (type, favoris) et sélection multiple",
-          "Export multi-format : PNG, JPEG, PDF (A4) et ZIP pour exports groupés",
-          "Partage public via liens uniques avec tokens",
-          "Authentification complète avec hashage bcrypt"
+          "Design responsive mobile-first avec navigation adaptative",
+          "Animations au scroll et micro-interactions",
+          "Formulaire de contact sécurisé avec double envoi d'email",
+          "Sitemap et robots.txt dynamiques générés côté serveur",
+          "Métadonnées SEO complètes (Open Graph, Twitter Cards, Schema.org)",
+          "Bannière cookies conforme RGPD"
         ]
       },
       {
