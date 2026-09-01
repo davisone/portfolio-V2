@@ -1,0 +1,107 @@
+---
+import { getTranslations, type Locale } from '../../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+---
+
+<!-- Ouverture du musée : deux cloisons coulissent sur le Hall, une fois par session.
+     Masquée par défaut : le script inline l'affiche avant le premier rendu si besoin,
+     donc jamais visible sans JS ni en reduced-motion. -->
+<div id="entree-galerie" class="fixed inset-0 z-[90]" aria-hidden="true" hidden>
+  <div class="cloison cloison-gauche absolute inset-y-0 left-0 w-[50.5%] bg-cimaise border-r border-filet shadow-[6px_0_24px_-12px_rgb(28_27_24/0.25)]"></div>
+  <div class="cloison cloison-droite absolute inset-y-0 right-0 w-[50.5%] bg-cimaise border-l border-filet shadow-[-6px_0_24px_-12px_rgb(28_27_24/0.25)]"></div>
+
+  <!-- Plaque de porte : cartel sur la jointure, le point s'allume avant l'ouverture -->
+  <div class="plaque absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3.5 text-center">
+    <span class="point w-2.5 h-2.5 rounded-full bg-point"></span>
+    <p class="font-signal text-[12px] font-semibold tracking-[0.22em] uppercase text-encre">
+      {t.galerie.entreeNom}
+    </p>
+    <span class="block w-10 border-t border-filet"></span>
+    <p class="font-signal text-[10px] tracking-[0.18em] uppercase text-cartel">
+      {t.galerie.entreeMention}
+    </p>
+  </div>
+</div>
+
+<script is:inline>
+  // Avant le premier rendu : n'ouvre les portes qu'une fois par session, jamais en reduced-motion
+  ;(() => {
+    const entree = document.getElementById('entree-galerie')
+    if (!entree) return
+    try {
+      if (
+        !sessionStorage.getItem('entree-galerie-vue') &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ) {
+        sessionStorage.setItem('entree-galerie-vue', '1')
+        entree.hidden = false
+      }
+    } catch {
+      /* stockage indisponible : pas d'animation plutôt qu'une porte à chaque visite */
+    }
+  })()
+</script>
+
+<style>
+  .point {
+    transform: scale(0);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  #entree-galerie.allume .point {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgb(var(--color-point) / 0.14);
+  }
+
+  .plaque {
+    transition: opacity 0.18s ease-in;
+  }
+
+  .cloison {
+    transition: transform 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  #entree-galerie.ouvre .plaque {
+    opacity: 0;
+  }
+
+  #entree-galerie.ouvre .cloison-gauche {
+    transform: translateX(-102%);
+  }
+
+  #entree-galerie.ouvre .cloison-droite {
+    transform: translateX(102%);
+  }
+</style>
+
+<script>
+  // Séquence : le point s'allume, puis les cloisons coulissent ; tout geste saute à la fin
+  const entree = document.getElementById('entree-galerie')
+  if (entree && !entree.hidden) {
+    const finir = () => {
+      entree.remove()
+      retirerEcouteurs()
+    }
+    const sauter = () => finir()
+    const retirerEcouteurs = () => {
+      window.removeEventListener('pointerdown', sauter)
+      window.removeEventListener('keydown', sauter)
+      window.removeEventListener('wheel', sauter)
+      window.removeEventListener('touchstart', sauter)
+    }
+    window.addEventListener('pointerdown', sauter)
+    window.addEventListener('keydown', sauter)
+    window.addEventListener('wheel', sauter, { passive: true })
+    window.addEventListener('touchstart', sauter, { passive: true })
+
+    setTimeout(() => entree.classList.add('allume'), 200)
+    setTimeout(() => entree.classList.add('ouvre'), 650)
+    setTimeout(finir, 1450)
+  }
+</script>
