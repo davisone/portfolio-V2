@@ -261,6 +261,8 @@
     "planLabel": "Visitor map",
     "allerSalle": "Go to room",
     "delivered": "Delivered",
-    "suite": "Continue the visit"
+    "suite": "Continue the visit",
+    "entreeNom": "The Gallery",
+    "entreeMention": "Free admission"
   }
 }
