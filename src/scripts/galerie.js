@@ -3,15 +3,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Amplitude horizontale réduite sur mobile (spec : ~40 %)
-const AMPLITUDE_MOBILE = 0.4
 const MOBILE_MAX = 767
 
-const construireParcours = (salles, facteurX, travels) => {
+const construireParcours = (salles, travels) => {
   // Un waypoint par salle + un second en sortie de salle traversante (travelling interne)
   const waypoints = []
   salles.forEach((salle) => {
-    const x = parseFloat(salle.dataset.salleX) * facteurX
+    const x = parseFloat(salle.dataset.salleX)
     const y = parseFloat(salle.dataset.salleY)
     waypoints.push({ id: salle.id, x, y })
     const travel = travels.get(salle.id)
@@ -159,8 +157,6 @@ const initChoregraphie = () => {
   const salles = [...document.querySelectorAll('.salle')]
   if (!monde || salles.length === 0) return null
 
-  const estMobile = window.innerWidth <= MOBILE_MAX
-  const facteurX = estMobile ? AMPLITUDE_MOBILE : 1
   const vw = window.innerWidth
   const vh = window.innerHeight
 
@@ -169,7 +165,7 @@ const initChoregraphie = () => {
   // Placement des salles dans le monde
   salles.forEach((salle, i) => {
     gsap.set(salle, {
-      x: parseFloat(salle.dataset.salleX) * facteurX * vw,
+      x: parseFloat(salle.dataset.salleX) * vw,
       y: parseFloat(salle.dataset.salleY) * vh,
       width: vw,
       zIndex: i + 1,
@@ -187,7 +183,7 @@ const initChoregraphie = () => {
     }
   })
 
-  const { waypoints, segments, total } = construireParcours(salles, facteurX, travels)
+  const { waypoints, segments, total } = construireParcours(salles, travels)
 
   // Timeline caméra : translation du monde, vitesse constante
   const tl = gsap.timeline({ defaults: { ease: 'none' } })
@@ -196,25 +192,22 @@ const initChoregraphie = () => {
     tl.to(monde, { x: -w.x * vw, y: -w.y * vh, duration: segments[i] })
   })
 
-  // Fil de visite dessiné en parallèle du voyage, pointe synchronisée avec la caméra (desktop)
-  let fil = null
-  if (!estMobile) {
-    fil = construireFil(waypoints, vw, vh)
-    monde.prepend(fil.svg)
-    const longueurFil = fil.path.getTotalLength()
-    const echelle = longueurFil / fil.cumule[fil.cumule.length - 1]
-    gsap.set(fil.path, { strokeDasharray: longueurFil, strokeDashoffset: longueurFil })
-    let position = 0
-    waypoints.forEach((w, i) => {
-      if (i === 0) return
-      tl.to(
-        fil.path,
-        { strokeDashoffset: longueurFil - fil.cumule[i] * echelle, duration: segments[i], ease: 'none' },
-        position
-      )
-      position += segments[i]
-    })
-  }
+  // Fil de visite dessiné en parallèle du voyage, pointe synchronisée avec la caméra
+  const fil = construireFil(waypoints, vw, vh)
+  monde.prepend(fil.svg)
+  const longueurFil = fil.path.getTotalLength()
+  const echelle = longueurFil / fil.cumule[fil.cumule.length - 1]
+  gsap.set(fil.path, { strokeDasharray: longueurFil, strokeDashoffset: longueurFil })
+  let position = 0
+  waypoints.forEach((w, i) => {
+    if (i === 0) return
+    tl.to(
+      fil.path,
+      { strokeDashoffset: longueurFil - fil.cumule[i] * echelle, duration: segments[i], ease: 'none' },
+      position
+    )
+    position += segments[i]
+  })
 
   const progressions = (() => {
     let cumul = 0
@@ -277,16 +270,28 @@ const detruireChoregraphie = (instance) => {
   document.documentElement.classList.remove('galerie-active')
 }
 
+// Parcours vertical natif : salles empilées, simple apparition des contenus au défilement
+const initStatique = () => {
+  const contenus = document.querySelectorAll('.salle .salle-contenu')
+  contenus.forEach((c) => c.classList.add('fondu'))
+  const io = new IntersectionObserver(
+    (entrees) => entrees.forEach((e) => e.isIntersecting && e.target.classList.add('visible')),
+    { threshold: 0.15 }
+  )
+  contenus.forEach((c) => io.observe(c))
+}
+
+// Tactile ou petit écran : pas d'épinglage. Sur téléphone, la barre d'URL déclenche
+// un resize à chaque inversion de scroll, les salles plus hautes que l'écran avalent
+// le geste, et la vélocité des flicks fait sauter le snap — parcours vertical natif.
+const estStatique = () =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+  window.matchMedia('(pointer: coarse)').matches ||
+  window.innerWidth <= MOBILE_MAX
+
 export const initGalerie = () => {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    // Chorégraphie désactivée : simple apparition des contenus au défilement
-    const contenus = document.querySelectorAll('.salle .salle-contenu')
-    contenus.forEach((c) => c.classList.add('fondu'))
-    const io = new IntersectionObserver(
-      (entrees) => entrees.forEach((e) => e.isIntersecting && e.target.classList.add('visible')),
-      { threshold: 0.15 }
-    )
-    contenus.forEach((c) => io.observe(c))
+  if (estStatique()) {
+    initStatique()
     return
   }
 
@@ -314,13 +319,20 @@ export const initGalerie = () => {
     requestAnimationFrame(() => window.__galerie?.allerA(id))
   }
 
-  // Reconstruction au redimensionnement (positions en px)
+  // Reconstruction au redimensionnement (positions en px) ; bascule en parcours
+  // vertical si la fenêtre passe sous le seuil mobile
   let delaiResize
   window.addEventListener('resize', () => {
     clearTimeout(delaiResize)
     delaiResize = setTimeout(() => {
-      const progression = instance ? instance.st.progress : 0
+      if (!instance) return
+      const progression = instance.st.progress
       detruireChoregraphie(instance)
+      if (estStatique()) {
+        instance = null
+        initStatique()
+        return
+      }
       instance = initChoregraphie()
       if (instance) {
         window.scrollTo({ top: instance.st.start + progression * (instance.st.end - instance.st.start) })
