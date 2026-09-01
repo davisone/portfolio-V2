@@ -1,5 +1,4 @@
 ---
-import Cartel from './Cartel.astro'
 import { getTranslations, type Locale } from '../../i18n'
 
 interface Props {
@@ -47,56 +46,200 @@ const projets = [
 <section
   id="projets"
   class="salle min-h-screen flex items-center py-24"
-  data-salle-x="2" data-salle-y="2" data-salle-largeur="2.5"
+  data-salle-x="2" data-salle-y="2"
 >
   <div class="salle-contenu w-full px-4 sm:px-6 lg:px-8">
-    <!-- Le mur des œuvres : colonne en fallback, rangée en mode galerie -->
-    <div class="salle-rangee flex flex-col gap-12 lg:gap-16">
-      <header class="grande-entete w-full max-w-6xl mx-auto">
+    <div class="w-full max-w-4xl mx-auto">
+      <header class="mb-8">
         <p class="signal-label mb-3">{t.galerie.grandeSalle} · {t.projects.label}</p>
         <h2 class="font-display text-4xl sm:text-5xl text-encre">
           {t.projects.title}
         </h2>
       </header>
-      {projets.map((projet, index) => (
-        <article class="oeuvre w-full max-w-xl mx-auto shrink-0">
-          <div class="relative aspect-[16/10] overflow-hidden bg-oeuvre border border-filet mb-0">
-            <img
-              src={projet.image}
-              alt={`${projet.titre} · ${projet.technologies.slice(0, 3).join(', ')}`}
-              loading="lazy"
-              decoding="async"
-              width="1280"
-              height="800"
-              class="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-          <Cartel
-            titre={projet.titre}
-            medium={t.projects.items[index].description}
-            technologies={projet.technologies}
-            livre={projet.lien !== null}
-            livreLabel={t.galerie.delivered}
-            lien={projet.lien}
-            lienLabel={t.projects.viewSite}
-          />
-        </article>
-      ))}
 
-      <!-- Sortie de salle : le reste de la collection -->
-      <a
-        href="https://github.com/davisone"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="oeuvre cartel-box group w-full max-w-xl mx-auto shrink-0 flex flex-col items-center justify-center p-10 text-center hover:border-point transition-colors duration-300 min-h-[200px]"
-      >
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-cartel mb-4 group-hover:text-encre transition-colors duration-300">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-        </svg>
-        <span class="font-signal text-sm text-cartel group-hover:text-encre uppercase tracking-[0.1em] transition-colors duration-300">
+      <!-- Borne de médiation : tablette sur pied, catalogue des œuvres -->
+      <div class="borne-tablette">
+        <div class="relative bg-encre rounded-[1.25rem] sm:rounded-[1.75rem] p-2.5 pt-5 sm:p-4 sm:pt-7 shadow-[0_18px_40px_-18px_rgb(28_27_24/0.45)]">
+          <!-- Pastille caméra sur le bord haut -->
+          <span class="absolute top-[7px] sm:top-[11px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-cimaise/30" aria-hidden="true"></span>
+
+          <div class="bg-oeuvre rounded-[0.65rem] sm:rounded-[0.9rem] overflow-hidden border border-encre/40">
+            <!-- Barre d'onglets : un cartel miniature par œuvre -->
+            <div role="tablist" aria-label={t.projects.title} class="flex overflow-x-auto bg-cimaise border-b border-filet">
+              {projets.map((projet, index) => (
+                <button
+                  type="button"
+                  role="tab"
+                  id={`onglet-projet-${index}`}
+                  aria-controls={`panneau-projet-${index}`}
+                  aria-selected={index === 0 ? 'true' : 'false'}
+                  tabindex={index === 0 ? 0 : -1}
+                  class:list={['onglet shrink-0 px-4 sm:px-5 py-3.5 font-signal text-[11px] font-semibold tracking-[0.1em] uppercase text-cartel border-b-2 border-transparent -mb-px whitespace-nowrap cursor-pointer transition-colors duration-200 hover:text-encre', index === 0 && 'actif']}
+                >
+                  <span class="numero mr-1.5" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                  {projet.titre}
+                </button>
+              ))}
+            </div>
+
+            <!-- Fiches d'œuvre empilées : la plus haute donne sa hauteur à l'écran -->
+            <div class="borne-panneaux grid">
+              {projets.map((projet, index) => (
+                <div
+                  role="tabpanel"
+                  id={`panneau-projet-${index}`}
+                  aria-labelledby={`onglet-projet-${index}`}
+                  tabindex="0"
+                  class:list={['panneau grid md:grid-cols-[3fr_2fr]', index === 0 && 'actif']}
+                >
+                  <div class="relative aspect-[16/10] md:aspect-auto md:min-h-[20rem] overflow-hidden bg-cimaise md:border-r border-b md:border-b-0 border-filet">
+                    <img
+                      src={projet.image}
+                      alt={`${projet.titre} · ${projet.technologies.slice(0, 3).join(', ')}`}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      width="1280"
+                      height="800"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-5 sm:p-6 flex flex-col">
+                    <h3 class="font-display text-2xl text-encre mb-2">{projet.titre}</h3>
+                    <p class="font-lecture text-[15px] leading-relaxed text-cartel mb-5">
+                      {t.projects.items[index].description}
+                    </p>
+                    <p class="font-signal text-[11px] tracking-[0.09em] uppercase text-cartel mt-auto pt-3.5 border-t border-filet">
+                      {projet.technologies.join(' · ')}
+                    </p>
+                    <p class="font-signal text-[11px] tracking-[0.09em] uppercase pt-3 flex items-center justify-between gap-3 flex-wrap">
+                      {projet.lien ? (
+                        <a
+                          href={projet.lien}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-1.5 py-2 font-semibold text-encre hover:text-point transition-colors duration-200"
+                        >
+                          {t.projects.viewSite} &rarr;
+                        </a>
+                      ) : (
+                        <span class="py-2 text-cartel">{t.projects.privateProject}</span>
+                      )}
+                      {projet.lien && (
+                        <span class="inline-flex items-center gap-2 text-encre font-semibold">
+                          <span class="w-2 h-2 rounded-full bg-point" aria-hidden="true"></span>
+                          {t.galerie.delivered}
+                        </span>
+                      )}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Pied de la borne -->
+        <div class="hidden sm:flex flex-col items-center" aria-hidden="true">
+          <div class="w-20 h-6 bg-encre [clip-path:polygon(16%_0,84%_0,100%_100%,0_100%)]"></div>
+          <div class="w-44 h-1.5 bg-encre rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Le reste de la collection -->
+      <p class="mt-8 sm:mt-10 text-center">
+        <a
+          href="https://github.com/davisone"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2.5 py-2 font-signal text-xs text-cartel hover:text-encre uppercase tracking-[0.1em] transition-colors duration-200"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
           {t.projects.viewMoreGithub} &rarr;
-        </span>
-      </a>
+        </a>
+      </p>
     </div>
   </div>
 </section>
+
+<style>
+  /* Onglet actif : numéro d'inventaire et soulignement au rouge du point */
+  .onglet .numero {
+    color: rgb(var(--color-cartel) / 0.55);
+  }
+
+  .onglet.actif {
+    color: rgb(var(--color-encre));
+    border-color: rgb(var(--color-point));
+  }
+
+  .onglet.actif .numero {
+    color: rgb(var(--color-point));
+  }
+
+  /* Fiches superposées : fondu croisé sans saut de hauteur */
+  .borne-panneaux > .panneau {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out, visibility 0s 0.2s;
+  }
+
+  .borne-panneaux > .panneau.actif {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .borne-panneaux > .panneau,
+    .borne-panneaux > .panneau.actif {
+      transition-duration: 0.01ms;
+      transition-delay: 0s;
+    }
+  }
+</style>
+
+<script>
+  // Pattern ARIA tabs : activation au clic, flèches clavier, roving tabindex
+  const borne = document.querySelector('.borne-tablette')
+  if (borne) {
+    const onglets = [...borne.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
+    const panneaux = [...borne.querySelectorAll<HTMLElement>('[role="tabpanel"]')]
+
+    const activer = (index: number, focaliser = false) => {
+      onglets.forEach((onglet, i) => {
+        const actif = i === index
+        onglet.setAttribute('aria-selected', String(actif))
+        onglet.tabIndex = actif ? 0 : -1
+        onglet.classList.toggle('actif', actif)
+      })
+      panneaux.forEach((panneau, i) => panneau.classList.toggle('actif', i === index))
+      if (focaliser) onglets[index].focus({ preventScroll: true })
+      // Défilement local de la barre seulement : jamais scrollIntoView, qui
+      // ferait défiler la page et casserait l'épinglage GSAP de la galerie
+      const liste = onglets[index].closest('[role="tablist"]')
+      if (liste) {
+        const decalage = onglets[index].offsetLeft - liste.offsetLeft
+        liste.scrollTo({ left: decalage - (liste.clientWidth - onglets[index].offsetWidth) / 2 })
+      }
+    }
+
+    onglets.forEach((onglet, i) => {
+      onglet.addEventListener('click', () => activer(i))
+      onglet.addEventListener('keydown', (e) => {
+        const dernier = onglets.length - 1
+        let cible: number | null = null
+        if (e.key === 'ArrowRight') cible = i === dernier ? 0 : i + 1
+        else if (e.key === 'ArrowLeft') cible = i === 0 ? dernier : i - 1
+        else if (e.key === 'Home') cible = 0
+        else if (e.key === 'End') cible = dernier
+        if (cible !== null) {
+          e.preventDefault()
+          activer(cible, true)
+        }
+      })
+    })
+  }
+</script>
