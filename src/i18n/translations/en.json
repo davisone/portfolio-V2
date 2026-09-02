@@ -245,7 +245,12 @@
     "pageTitle": "Page not found | Evan Davison",
     "description": "The page you are looking for does not exist or has been moved.",
     "message": "This page does not exist or has been moved.",
-    "backHome": "Back to home"
+    "backHome": "Back to home",
+    "inventaire": "Inventory no. 404",
+    "oeuvreTitre": "Artwork missing",
+    "constat": "This piece has been moved, stolen, or never existed.",
+    "signalement": "The incident has been reported to the management.",
+    "backHall": "Back to the hall"
   },
   "languageSwitcher": {
     "label": "Language",
@@ -263,6 +268,7 @@
     "delivered": "Delivered",
     "suite": "Continue the visit",
     "entreeNom": "The Gallery",
-    "entreeMention": "Free admission"
+    "entreeMention": "Free admission",
+    "reservePorte": "Storage room — restricted access"
   }
 }
