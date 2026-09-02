@@ -261,6 +261,8 @@
     "planLabel": "Plan de la visite",
     "allerSalle": "Aller à la salle",
     "delivered": "Livré",
-    "suite": "Suite de la visite"
+    "suite": "Suite de la visite",
+    "entreeNom": "La Galerie",
+    "entreeMention": "Entrée libre"
   }
 }
