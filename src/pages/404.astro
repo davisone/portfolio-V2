@@ -1,26 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getTranslations, getLocaleFromUrl, type Locale } from '../i18n'
+import { getTranslations, getLocaleFromUrl } from '../i18n'
 
 const locale = getLocaleFromUrl(Astro.url)
 const t = getTranslations(locale)
 ---
 
 <Layout
-  title={`${t.notFound.title} | Evan Davison`}
+  title={t.notFound.pageTitle}
   description={t.notFound.description}
   noindex={true}
   locale={locale}
 >
-  <div class="min-h-screen flex items-center justify-center px-4">
-    <div class="text-center">
-      <h1 class="font-display text-8xl font-bold text-point mb-4">404</h1>
-      <p class="text-xl text-cartel mb-8">
-        {t.notFound.message}
-      </p>
-      <a href={locale === 'fr' ? '/' : `/${locale}/`} class="btn-primary">
-        {t.notFound.backHome}
-      </a>
+  <div class="min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="flex flex-col items-center text-center">
+      <!-- Le cadre vide, légèrement de travers : il ne reste que le clou
+           et la trace plus claire laissée par l'œuvre sur le mur -->
+      <div class="relative -rotate-2" aria-hidden="true">
+        <div class="w-56 h-72 sm:w-64 sm:h-80 border-[10px] border-encre bg-cimaise shadow-[0_14px_30px_-16px_rgb(28_27_24/0.4)] flex items-center justify-center">
+          <div class="relative w-3/4 h-3/4 bg-oeuvre/80 blur-[1px]"></div>
+          <span class="absolute top-6 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-cartel shadow-[0_1px_2px_rgb(28_27_24/0.5)]"></span>
+        </div>
+
+        <!-- Cordon de sécurité devant le cadre -->
+        <svg
+          class="absolute -bottom-9 left-1/2 -translate-x-1/2 w-[130%] max-w-none"
+          viewBox="0 0 360 64"
+          fill="none"
+        >
+          <path d="M14 8 C 110 52, 250 52, 346 8" stroke="rgb(var(--color-point))" stroke-width="3" stroke-linecap="round" />
+          <rect x="10" y="4" width="8" height="56" rx="4" fill="rgb(var(--color-encre))" />
+          <rect x="342" y="4" width="8" height="56" rx="4" fill="rgb(var(--color-encre))" />
+          <circle cx="14" cy="6" r="6" fill="rgb(var(--color-encre))" />
+          <circle cx="346" cy="6" r="6" fill="rgb(var(--color-encre))" />
+        </svg>
+      </div>
+
+      <!-- Le cartel du constat -->
+      <div class="cartel-box mt-16 px-8 py-7 max-w-md text-left">
+        <p class="signal-label mb-3">{t.notFound.inventaire}</p>
+        <h1 class="font-display text-3xl sm:text-4xl text-encre mb-3">{t.notFound.oeuvreTitre}</h1>
+        <p class="font-lecture text-[15px] leading-relaxed text-cartel">
+          {t.notFound.constat}
+          <em class="block mt-1.5">{t.notFound.signalement}</em>
+        </p>
+        <a href={locale === 'fr' ? '/' : `/${locale}/`} class="btn-galerie mt-6">
+          {t.notFound.backHall} &rarr;
+        </a>
+      </div>
     </div>
   </div>
 </Layout>

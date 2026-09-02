@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+// Œuvres remisées : prototypes et études jamais accrochés en Grande Salle
+const remisees = [
+  {
+    titre: 'Carnet de Santé Animal',
+    technique: 'Flutter · Dart',
+    statut: 'Prototype remisé',
+    note: 'Suivi de santé pour animaux de compagnie : carnet, rappels de vaccins, historique vétérinaire.',
+  },
+  {
+    titre: 'Générateur de QR codes',
+    technique: 'Next.js · TypeScript',
+    statut: 'Étude',
+    note: 'Génération de QR codes personnalisés, aux couleurs et au logo de la marque.',
+  },
+  {
+    titre: 'Mon Budget',
+    technique: 'Next.js · Drizzle',
+    statut: 'En restauration',
+    note: 'Suivi de budget personnel : catégories, récurrences et vue mensuelle.',
+  },
+  {
+    titre: 'MonPEA',
+    technique: 'Swift · iOS',
+    statut: 'Étude préparatoire',
+    note: "Suivi d'un plan d'épargne en actions, natif iPhone.",
+  },
+  {
+    titre: 'Squish Convert',
+    technique: 'Next.js · TypeScript',
+    statut: 'Expérimentation',
+    note: 'Conversion et compression de fichiers dans le navigateur.',
+  },
+]
+---
+
+<Layout
+  title="La Réserve | Evan Davison"
+  description="Les pièces qui ne sont pas exposées : prototypes, études et expérimentations."
+  noindex={true}
+  locale="fr"
+>
+  <Header locale="fr" />
+  <main id="main-content" class="min-h-screen pt-28 pb-20">
+    <div class="section-container">
+      <header class="max-w-2xl mb-12">
+        <p class="signal-label mb-3">Sous-sol · Accès restreint</p>
+        <h1 class="font-display text-4xl sm:text-5xl text-encre mb-5">La Réserve</h1>
+        <p class="font-lecture text-[15px] leading-relaxed text-cartel">
+          Vous avez trouvé la porte de service. Ici dorment les pièces qui ne sont pas
+          exposées : prototypes, études et expérimentations. Certaines attendent une
+          restauration, d'autres resteront sous housse.
+          <em class="block mt-1.5">Merci de ne pas toucher aux œuvres.</em>
+        </p>
+      </header>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {remisees.map((piece) => (
+          <article class="cartel-box flex flex-col">
+            <!-- Toile sous housse : hachures de protection sur le cadre -->
+            <div
+              class="h-32 border-b border-filet bg-[repeating-linear-gradient(-45deg,rgb(var(--color-cimaise)),rgb(var(--color-cimaise))_10px,rgb(var(--color-filet)/0.55)_10px,rgb(var(--color-filet)/0.55)_12px)]"
+              aria-hidden="true"
+            ></div>
+            <div class="p-5 flex flex-col flex-1">
+              <p class="font-signal text-[10px] tracking-[0.14em] uppercase text-point mb-2">{piece.statut}</p>
+              <h2 class="font-display text-xl text-encre mb-2">{piece.titre}</h2>
+              <p class="font-lecture text-sm leading-relaxed text-cartel mb-4">{piece.note}</p>
+              <p class="font-signal text-[10px] tracking-[0.1em] uppercase text-cartel mt-auto pt-3 border-t border-filet">
+                {piece.technique}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p class="mt-12">
+        <a href="/" class="btn-galerie-secondaire">Remonter au hall &rarr;</a>
+      </p>
+    </div>
+  </main>
+  <Footer locale="fr" />
+</Layout>

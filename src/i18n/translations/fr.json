@@ -245,7 +245,12 @@
     "pageTitle": "Page introuvable | Evan Davison",
     "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
     "message": "Cette page n'existe pas ou a été déplacée.",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "inventaire": "N° d'inventaire 404",
+    "oeuvreTitre": "Œuvre introuvable",
+    "constat": "Cette pièce a été déplacée, volée, ou n'a jamais existé.",
+    "signalement": "L'incident a été signalé à la direction.",
+    "backHall": "Retourner au hall"
   },
   "languageSwitcher": {
     "label": "Langue",
@@ -263,6 +268,7 @@
     "delivered": "Livré",
     "suite": "Suite de la visite",
     "entreeNom": "La Galerie",
-    "entreeMention": "Entrée libre"
+    "entreeMention": "Entrée libre",
+    "reservePorte": "Réserve — accès restreint"
   }
 }
