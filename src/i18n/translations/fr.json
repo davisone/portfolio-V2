@@ -42,7 +42,11 @@
         "title": "Collaboration",
         "description": "À l'écoute de vos besoins pour des solutions sur-mesure."
       }
-    ]
+    ],
+    "portrait": {
+      "alt": "Portrait d'Evan Davison",
+      "legende": "Développeur fullstack, Rennes"
+    }
   },
   "services": {
     "label": "Expertise",
