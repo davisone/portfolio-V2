@@ -11,9 +11,9 @@ const t = getTranslations(locale)
 
 const navLinks = [
   { name: t.nav.links.home, href: getLocalizedPath('/', locale) },
-  { name: t.nav.links.services, href: '/services' },
-  { name: t.nav.links.blog, href: '/blog' },
-  { name: t.nav.links.faq, href: '/faq' },
+  { name: t.nav.links.services, href: '/services/' },
+  { name: t.nav.links.blog, href: '/blog/' },
+  { name: t.nav.links.faq, href: '/faq/' },
   { name: t.nav.links.contact, href: getLocalizedPath('/', locale) + '#contact' },
 ]
 ---
@@ -103,43 +103,48 @@ const navLinks = [
   </div>
 </header>
 
-<script is:inline>
-  (function() {
-    var header = document.getElementById('site-header');
-    var menuBtn = document.getElementById('mobile-menu-btn');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var iconMenu = document.getElementById('icon-menu');
-    var iconClose = document.getElementById('icon-close');
-    var isOpen = false;
+<script>
+  // Fond du header au défilement : un seul écouteur, le header est relu à chaque
+  // événement car le routeur client remplace le DOM à chaque navigation
+  const majFond = () => {
+    const header = document.getElementById('site-header')
+    if (!header) return
+    const defile = window.scrollY > 50
+    header.classList.toggle('bg-cimaise', defile)
+    header.classList.toggle('border-b', defile)
+    header.classList.toggle('border-filet', defile)
+    header.classList.toggle('py-3', defile)
+    header.classList.toggle('bg-transparent', !defile)
+    header.classList.toggle('py-5', !defile)
+  }
+  window.addEventListener('scroll', majFond, { passive: true })
 
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        header.classList.add('bg-cimaise', 'border-b', 'border-filet', 'py-3');
-        header.classList.remove('bg-transparent', 'py-5');
-      } else {
-        header.classList.remove('bg-cimaise', 'border-b', 'border-filet', 'py-3');
-        header.classList.add('bg-transparent', 'py-5');
-      }
-    });
+  const lierMenu = () => {
+    const menuBtn = document.getElementById('mobile-menu-btn')
+    const mobileMenu = document.getElementById('mobile-menu')
+    const iconMenu = document.getElementById('icon-menu')
+    const iconClose = document.getElementById('icon-close')
+    if (!menuBtn || !mobileMenu || !iconMenu || !iconClose || menuBtn.dataset.lie) return
+    menuBtn.dataset.lie = 'true'
+    let ouvert = false
 
-    menuBtn.addEventListener('click', function() {
-      isOpen = !isOpen;
-      mobileMenu.classList.toggle('hidden', !isOpen);
-      iconMenu.classList.toggle('hidden', isOpen);
-      iconClose.classList.toggle('hidden', !isOpen);
-      menuBtn.setAttribute('aria-expanded', isOpen);
-      menuBtn.setAttribute('aria-label', isOpen ? menuBtn.dataset.labelClose : menuBtn.dataset.labelOpen);
-    });
+    const basculer = (etat: boolean) => {
+      ouvert = etat
+      mobileMenu.classList.toggle('hidden', !ouvert)
+      iconMenu.classList.toggle('hidden', ouvert)
+      iconClose.classList.toggle('hidden', !ouvert)
+      menuBtn.setAttribute('aria-expanded', String(ouvert))
+      menuBtn.setAttribute('aria-label', (ouvert ? menuBtn.dataset.labelClose : menuBtn.dataset.labelOpen) ?? '')
+    }
 
-    var mobileLinks = document.querySelectorAll('.mobile-nav-link');
-    mobileLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-        isOpen = false;
-        mobileMenu.classList.add('hidden');
-        iconMenu.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
+    menuBtn.addEventListener('click', () => basculer(!ouvert))
+    mobileMenu.querySelectorAll('.mobile-nav-link').forEach((lien) => {
+      lien.addEventListener('click', () => basculer(false))
+    })
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    majFond()
+    lierMenu()
+  })
 </script>

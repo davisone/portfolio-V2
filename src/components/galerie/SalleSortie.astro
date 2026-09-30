@@ -164,35 +164,42 @@ const contactLinks = [
 <script>
   import emailjs from '@emailjs/browser'
 
-  const form = document.getElementById('contact-form') as HTMLFormElement | null
-  const statut = document.getElementById('contact-status')
+  // Rebranché à chaque navigation client, le formulaire étant recréé
+  const lierFormulaire = () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null
+    const statut = document.getElementById('contact-status')
+    if (!form || form.dataset.lie) return
+    form.dataset.lie = 'true'
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault()
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
 
-    // Honeypot : abandon silencieux si rempli
-    const honeypot = form.querySelector('input[name="website"]') as HTMLInputElement
-    if (honeypot?.value) return
+      // Honeypot : abandon silencieux si rempli
+      const honeypot = form.querySelector('input[name="website"]') as HTMLInputElement
+      if (honeypot?.value) return
 
-    const bouton = form.querySelector('button[type="submit"]') as HTMLButtonElement
-    bouton.disabled = true
-    bouton.textContent = bouton.dataset.labelSubmitting ?? ''
-    if (statut) statut.textContent = ''
+      const bouton = form.querySelector('button[type="submit"]') as HTMLButtonElement
+      bouton.disabled = true
+      bouton.textContent = bouton.dataset.labelSubmitting ?? ''
+      if (statut) statut.textContent = ''
 
-    try {
-      await emailjs.sendForm(
-        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
-        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
-        form,
-        { publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY }
-      )
-      if (statut) statut.textContent = form.dataset.successMessage ?? ''
-      form.reset()
-    } catch {
-      if (statut) statut.textContent = form.dataset.errorMessage ?? ''
-    } finally {
-      bouton.disabled = false
-      bouton.textContent = bouton.dataset.label ?? ''
-    }
-  })
+      try {
+        await emailjs.sendForm(
+          import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+          form,
+          { publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY }
+        )
+        if (statut) statut.textContent = form.dataset.successMessage ?? ''
+        form.reset()
+      } catch {
+        if (statut) statut.textContent = form.dataset.errorMessage ?? ''
+      } finally {
+        bouton.disabled = false
+        bouton.textContent = bouton.dataset.label ?? ''
+      }
+    })
+  }
+
+  document.addEventListener('astro:page-load', lierFormulaire)
 </script>

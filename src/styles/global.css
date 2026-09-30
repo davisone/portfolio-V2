@@ -132,6 +132,11 @@
 }
 
 /* Mode galerie : activé par JS quand la chorégraphie démarre */
+/* Le lissage natif se battrait avec l'aimantation GSAP : la caméra seule adoucit */
+html.galerie-active {
+  scroll-behavior: auto;
+}
+
 .galerie-active .galerie-viewport {
   height: 100vh;
   height: 100dvh;
@@ -180,6 +185,128 @@
 .galerie-active .salle > .salle-contenu {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+/* Rail de visite : fil vertical au bord droit, repères à la distance réelle
+   des salles, point rouge qui suit la caméra. Desktop en mode galerie seulement. */
+.rail-visite {
+  display: none;
+}
+
+.galerie-active .rail-visite {
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: 1.75rem;
+  z-index: 40;
+  transform: translateY(-50%);
+}
+
+.rail-piste {
+  position: relative;
+  width: 1px;
+  height: 15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgb(var(--color-filet));
+}
+
+.rail-piste li {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.rail-repere {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 2rem;
+  padding-left: 0.75rem;
+  transform: translateY(-50%);
+  color: rgb(var(--color-cartel));
+  text-decoration: none;
+}
+
+.rail-trait {
+  display: block;
+  width: 0.875rem;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease-out, background-color 0.25s ease-out;
+}
+
+.rail-nom {
+  font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(4px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.rail-repere:hover,
+.rail-repere:focus-visible,
+.rail-repere[aria-current='true'] {
+  color: rgb(var(--color-encre));
+}
+
+.rail-repere:hover .rail-nom,
+.rail-repere:focus-visible .rail-nom,
+.rail-repere[aria-current='true'] .rail-nom {
+  opacity: 1;
+  transform: none;
+}
+
+.rail-repere[aria-current='true'] .rail-trait {
+  width: 1.5rem;
+}
+
+.rail-point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 9999px;
+  background: rgb(var(--color-point));
+  will-change: transform;
+}
+
+/* Passage entre les pages : fondu court, la nouvelle page se pose de 6 px */
+@keyframes page-sortie {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-entree {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+:root::view-transition-old(root) {
+  animation: 120ms cubic-bezier(0.4, 0, 1, 1) both page-sortie;
+}
+
+:root::view-transition-new(root) {
+  animation: 240ms cubic-bezier(0, 0, 0.2, 1) both page-entree;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root::view-transition-old(root),
+  :root::view-transition-new(root) {
+    animation: none;
+  }
 }
 
 /* Fondus reduced-motion : opacité seule, jamais de translation */

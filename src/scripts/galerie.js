@@ -1,9 +1,14 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 const MOBILE_MAX = 767
+
+// Part de la longueur géométrique convertie en scroll pour les transitions entre
+// salles ; le travelling de la grande salle reste à 1:1 pour laisser lire les œuvres
+const FACTEUR_TRANSITION = 0.7
 
 const construireParcours = (salles, travels) => {
   // Un waypoint par salle + un second en sortie de salle traversante (travelling interne)
@@ -15,13 +20,15 @@ const construireParcours = (salles, travels) => {
     const travel = travels.get(salle.id)
     if (travel) waypoints.push({ id: `${salle.id}-fin`, x: x + travel, y })
   })
-  // Distances cumulées pour une vitesse de déplacement constante
+  // Longueur de scroll par segment (en hauteurs d'écran) : vitesse constante entre
+  // salles, plus lente dans les salles traversantes
   let total = 0
   const segments = waypoints.map((w, i) => {
     if (i === 0) return 0
     const d = Math.hypot(w.x - waypoints[i - 1].x, w.y - waypoints[i - 1].y)
-    total += d
-    return d
+    const s = w.id.endsWith('-fin') ? d : d * FACTEUR_TRANSITION
+    total += s
+    return s
   })
   return { waypoints, segments, total }
 }
@@ -152,6 +159,63 @@ const construireFil = (waypoints, vw, vh) => {
   return { svg, path, cumule }
 }
 
+// Rail de visite : repères placés à la distance réelle de chaque salle, point rouge
+// qui suit la caméra, salle courante signalée
+const initRail = (waypoints, progressions) => {
+  const rail = document.querySelector('[data-rail-visite]')
+  if (!rail) return null
+  const point = rail.querySelector('.rail-point')
+  const reperes = [...rail.querySelectorAll('.rail-repere')]
+
+  // Intervalle de progression couvert par chaque salle (une salle traversante
+  // s'étend jusqu'à son waypoint de fin)
+  const salles = reperes
+    .map((repere) => {
+      const id = repere.dataset.salle
+      const debut = waypoints.findIndex((w) => w.id === id)
+      if (debut === -1) return null
+      const fin = waypoints.findIndex((w) => w.id === `${id}-fin`)
+      return { repere, debut: progressions[debut], fin: progressions[fin === -1 ? debut : fin] }
+    })
+    .filter(Boolean)
+
+  salles.forEach(({ repere, debut }) => {
+    repere.parentElement.style.top = `${debut * 100}%`
+  })
+
+  let hauteur = rail.querySelector('.rail-piste')?.clientHeight || 0
+  let courante = null
+  const maj = (progression) => {
+    if (point) point.style.transform = `translateY(${progression * hauteur}px)`
+    let meilleure = null
+    let distance = Infinity
+    salles.forEach((salle) => {
+      const d = progression < salle.debut ? salle.debut - progression
+        : progression > salle.fin ? progression - salle.fin : 0
+      if (d < distance) {
+        distance = d
+        meilleure = salle
+      }
+    })
+    if (meilleure && meilleure !== courante) {
+      courante?.repere.removeAttribute('aria-current')
+      meilleure.repere.setAttribute('aria-current', 'true')
+      courante = meilleure
+    }
+  }
+
+  return {
+    maj,
+    detruire: () => {
+      salles.forEach(({ repere }) => {
+        repere.removeAttribute('aria-current')
+        repere.parentElement.style.top = ''
+      })
+      if (point) point.style.transform = ''
+    },
+  }
+}
+
 const initChoregraphie = () => {
   const monde = document.querySelector('.galerie-monde')
   const salles = [...document.querySelectorAll('.salle')]
@@ -161,6 +225,17 @@ const initChoregraphie = () => {
   const vh = window.innerHeight
 
   document.documentElement.classList.add('galerie-active')
+
+  // Un défilement natif hérité (ancre, restauration) aurait pu décaler le viewport
+  // ou une salle : on repart d'un cadrage propre
+  const viewport = document.querySelector('.galerie-viewport')
+  if (viewport) {
+    viewport.scrollTop = 0
+    viewport.scrollLeft = 0
+  }
+  salles.forEach((salle) => {
+    salle.scrollTop = 0
+  })
 
   // Placement des salles dans le monde
   salles.forEach((salle, i) => {
@@ -217,13 +292,18 @@ const initChoregraphie = () => {
     })
   })()
 
+  const rail = initRail(waypoints, progressions)
+
   const st = ScrollTrigger.create({
     animation: tl,
     trigger: '.galerie-viewport',
     start: 'top top',
     end: () => `+=${Math.round(total * vh)}`,
     pin: true,
-    scrub: 1,
+    // Léger retard de la caméra sur la molette : assez pour lisser les crans,
+    // pas assez pour donner une sensation d'élastique
+    scrub: 0.5,
+    onUpdate: (self) => rail?.maj(self.progress),
     snap: {
       // Aimantation de proximité seulement : on se cale sur une salle quand on
       // s'arrête tout près, on ne happe jamais l'utilisateur entre deux salles
@@ -247,31 +327,45 @@ const initChoregraphie = () => {
         }
         return 1
       },
-      duration: { min: 0.15, max: 0.4 },
-      ease: 'power1.inOut',
-      delay: 0.1,
+      duration: { min: 0.3, max: 0.6 },
+      ease: 'power2.out',
+      // Le calage attend une vraie pause : une hésitation ne le déclenche pas
+      delay: 0.2,
+      // Sans inertie : GSAP projetait la vélocité du dernier cran de molette et
+      // poussait la caméra plus loin que l'arrêt réel, d'où l'effet d'élastique
+      inertia: false,
     },
   })
+  rail?.maj(st.progress)
 
-  // Navigation : ancre de salle -> position de scroll correspondante
+  // Navigation : ancre de salle -> voyage de la caméra jusqu'à la salle
   const allerA = (id) => {
     const index = waypoints.findIndex((w) => w.id === id)
     if (index === -1) return
-    const cible = progressions[index]
-    window.scrollTo({ top: st.start + cible * (st.end - st.start), behavior: 'smooth' })
+    const y = st.start + progressions[index] * (st.end - st.start)
+    const ecrans = Math.abs(window.scrollY - y) / vh
+    gsap.to(window, {
+      scrollTo: { y, autoKill: false },
+      duration: gsap.utils.clamp(0.5, 1.4, 0.35 * ecrans),
+      ease: 'power2.inOut',
+      overwrite: 'auto',
+    })
   }
   window.__galerie = { allerA, st, tl, waypoints, progressions }
 
-  return { st, tl, salles, monde, fil }
+  return { st, tl, salles, monde, fil, rail }
 }
 
 const detruireChoregraphie = (instance) => {
   if (!instance) return
+  gsap.killTweensOf(window)
   instance.st.kill()
   instance.tl.kill()
   instance.fil?.svg.remove()
+  instance.rail?.detruire()
   gsap.set([instance.monde, ...instance.salles], { clearProps: 'all' })
   document.documentElement.classList.remove('galerie-active')
+  delete window.__galerie
 }
 
 // Parcours vertical natif : salles empilées, simple apparition des contenus au défilement
@@ -293,56 +387,66 @@ const estStatique = () =>
   window.matchMedia('(pointer: coarse)').matches ||
   window.innerWidth <= MOBILE_MAX
 
-export const initGalerie = () => {
+let instance = null
+
+// Arrivée sur une page : chorégraphie si la page est une home desktop, sinon rien
+const demarrer = () => {
+  if (!document.querySelector('.galerie-monde')) return
   if (estStatique()) {
     initStatique()
     return
   }
-
-  let instance = initChoregraphie()
+  instance = initChoregraphie()
   if (!instance) return
 
-  // Ancres internes vers les salles : voyage au lieu du saut natif
-  document.querySelectorAll('a[href*="#"]').forEach((lien) => {
-    const href = lien.getAttribute('href')
-    const id = href.split('#')[1]
-    if (!id) return
-    lien.addEventListener('click', (e) => {
-      const cible = document.getElementById(id)
-      if (cible?.classList.contains('salle')) {
-        e.preventDefault()
-        window.__galerie?.allerA(id)
-        history.replaceState(null, '', `#${id}`)
-      }
-    })
-  })
-
-  // Arrivée avec une ancre dans l'URL
+  // Arrivée avec une ancre dans l'URL : voyage depuis le hall
   if (location.hash) {
     const id = location.hash.slice(1)
     requestAnimationFrame(() => window.__galerie?.allerA(id))
   }
-
-  // Reconstruction au redimensionnement (positions en px) ; bascule en parcours
-  // vertical si la fenêtre passe sous le seuil mobile
-  let delaiResize
-  window.addEventListener('resize', () => {
-    clearTimeout(delaiResize)
-    delaiResize = setTimeout(() => {
-      if (!instance) return
-      const progression = instance.st.progress
-      detruireChoregraphie(instance)
-      if (estStatique()) {
-        instance = null
-        initStatique()
-        return
-      }
-      instance = initChoregraphie()
-      if (instance) {
-        window.scrollTo({ top: instance.st.start + progression * (instance.st.end - instance.st.start) })
-      }
-    }, 250)
-  })
 }
 
-initGalerie()
+// Départ vers une autre page : on libère l'épinglage avant l'échange du DOM
+const arreter = () => {
+  detruireChoregraphie(instance)
+  instance = null
+}
+
+// Ancres internes vers les salles : voyage au lieu du saut natif
+document.addEventListener('click', (e) => {
+  if (!instance) return
+  const lien = e.target.closest('a[href*="#"]')
+  if (!lien) return
+  const href = lien.getAttribute('href')
+  const [chemin, id] = href.split('#')
+  if (!id || (chemin && chemin !== location.pathname)) return
+  const cible = document.getElementById(id)
+  if (!cible?.classList.contains('salle')) return
+  e.preventDefault()
+  window.__galerie?.allerA(id)
+  history.replaceState(null, '', `#${id}`)
+})
+
+// Reconstruction au redimensionnement (positions en px) ; bascule en parcours
+// vertical si la fenêtre passe sous le seuil mobile
+let delaiResize
+window.addEventListener('resize', () => {
+  clearTimeout(delaiResize)
+  delaiResize = setTimeout(() => {
+    if (!instance) return
+    const progression = instance.st.progress
+    detruireChoregraphie(instance)
+    if (estStatique()) {
+      instance = null
+      initStatique()
+      return
+    }
+    instance = initChoregraphie()
+    if (instance) {
+      window.scrollTo({ top: instance.st.start + progression * (instance.st.end - instance.st.start) })
+    }
+  }, 250)
+})
+
+document.addEventListener('astro:page-load', demarrer)
+document.addEventListener('astro:before-swap', arreter)
