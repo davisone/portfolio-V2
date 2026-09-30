@@ -1,0 +1,41 @@
+---
+import { getTranslations, type Locale } from '../../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+
+// Même ordre que la visite ; les positions sur le fil sont posées par galerie.js
+// à la distance réelle de chaque salle dans le parcours
+const salles = [
+  { id: 'accueil', nom: t.galerie.hall },
+  { id: 'apropos', nom: t.about.label },
+  { id: 'services', nom: t.services.label },
+  { id: 'projets', nom: t.projects.label },
+  { id: 'experience', nom: t.experience.label },
+  { id: 'contact', nom: t.contact.label },
+]
+---
+
+<!-- Rail de visite : visible seulement en mode galerie (desktop, chorégraphie active) -->
+<nav class="rail-visite" data-rail-visite aria-label={t.galerie.planLabel}>
+  <ol class="rail-piste">
+    {salles.map((salle) => (
+      <li>
+        <a
+          href={`#${salle.id}`}
+          class="rail-repere"
+          data-salle={salle.id}
+          aria-label={`${t.galerie.allerSalle} ${salle.nom}`}
+        >
+          <span class="rail-nom">{salle.nom}</span>
+          <span class="rail-trait" aria-hidden="true"></span>
+        </a>
+      </li>
+    ))}
+  </ol>
+  <span class="rail-point" aria-hidden="true"></span>
+</nav>

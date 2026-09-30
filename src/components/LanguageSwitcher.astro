@@ -69,11 +69,13 @@ const localeLabels: Record<Locale, { short: string; full: string }> = {
     document.querySelectorAll('.lang-toggle').forEach((t) => t.setAttribute('aria-expanded', 'false'))
   }
 
-  document.querySelectorAll('.lang-switcher').forEach((switcher) => {
-    const toggle = switcher.querySelector('.lang-toggle')
-    const dropdown = switcher.querySelector('.lang-dropdown')
-    const chevron = switcher.querySelector('.lang-chevron')
-    if (!toggle || !dropdown) return
+  // Rebranché à chaque navigation client, le sélecteur étant recréé
+  const lierSelecteurs = () => document.querySelectorAll<HTMLElement>('.lang-switcher').forEach((switcher) => {
+    const toggle = switcher.querySelector<HTMLElement>('.lang-toggle')
+    const dropdown = switcher.querySelector<HTMLElement>('.lang-dropdown')
+    const chevron = switcher.querySelector<HTMLElement>('.lang-chevron')
+    if (!toggle || !dropdown || switcher.dataset.lie) return
+    switcher.dataset.lie = 'true'
 
     toggle.addEventListener('click', (e) => {
       e.stopPropagation()
@@ -87,6 +89,7 @@ const localeLabels: Record<Locale, { short: string; full: string }> = {
     })
   })
 
+  document.addEventListener('astro:page-load', lierSelecteurs)
   document.addEventListener('click', closeAllLangDropdowns)
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllLangDropdowns() })
 </script>

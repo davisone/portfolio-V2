@@ -202,44 +202,50 @@ const projets = [
 </style>
 
 <script>
-  // Pattern ARIA tabs : activation au clic, flèches clavier, roving tabindex
-  const borne = document.querySelector('.borne-tablette')
-  if (borne) {
-    const onglets = [...borne.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
-    const panneaux = [...borne.querySelectorAll<HTMLElement>('[role="tabpanel"]')]
+  // Pattern ARIA tabs : activation au clic, flèches clavier, roving tabindex.
+  // Rebranché à chaque navigation client, le DOM de la borne étant recréé.
+  const lierBorne = () => {
+    const borne = document.querySelector<HTMLElement>('.borne-tablette')
+    if (borne && !borne.dataset.lie) {
+      borne.dataset.lie = 'true'
+      const onglets = [...borne.querySelectorAll<HTMLButtonElement>('[role="tab"]')]
+      const panneaux = [...borne.querySelectorAll<HTMLElement>('[role="tabpanel"]')]
 
-    const activer = (index: number, focaliser = false) => {
-      onglets.forEach((onglet, i) => {
-        const actif = i === index
-        onglet.setAttribute('aria-selected', String(actif))
-        onglet.tabIndex = actif ? 0 : -1
-        onglet.classList.toggle('actif', actif)
-      })
-      panneaux.forEach((panneau, i) => panneau.classList.toggle('actif', i === index))
-      if (focaliser) onglets[index].focus({ preventScroll: true })
-      // Défilement local de la barre seulement : jamais scrollIntoView, qui
-      // ferait défiler la page et casserait l'épinglage GSAP de la galerie
-      const liste = onglets[index].closest('[role="tablist"]')
-      if (liste) {
-        const decalage = onglets[index].offsetLeft - liste.offsetLeft
-        liste.scrollTo({ left: decalage - (liste.clientWidth - onglets[index].offsetWidth) / 2 })
-      }
-    }
-
-    onglets.forEach((onglet, i) => {
-      onglet.addEventListener('click', () => activer(i))
-      onglet.addEventListener('keydown', (e) => {
-        const dernier = onglets.length - 1
-        let cible: number | null = null
-        if (e.key === 'ArrowRight') cible = i === dernier ? 0 : i + 1
-        else if (e.key === 'ArrowLeft') cible = i === 0 ? dernier : i - 1
-        else if (e.key === 'Home') cible = 0
-        else if (e.key === 'End') cible = dernier
-        if (cible !== null) {
-          e.preventDefault()
-          activer(cible, true)
+      const activer = (index: number, focaliser = false) => {
+        onglets.forEach((onglet, i) => {
+          const actif = i === index
+          onglet.setAttribute('aria-selected', String(actif))
+          onglet.tabIndex = actif ? 0 : -1
+          onglet.classList.toggle('actif', actif)
+        })
+        panneaux.forEach((panneau, i) => panneau.classList.toggle('actif', i === index))
+        if (focaliser) onglets[index].focus({ preventScroll: true })
+        // Défilement local de la barre seulement : jamais scrollIntoView, qui
+        // ferait défiler la page et casserait l'épinglage GSAP de la galerie
+        const liste = onglets[index].closest('[role="tablist"]')
+        if (liste) {
+          const decalage = onglets[index].offsetLeft - liste.offsetLeft
+          liste.scrollTo({ left: decalage - (liste.clientWidth - onglets[index].offsetWidth) / 2 })
         }
+      }
+
+      onglets.forEach((onglet, i) => {
+        onglet.addEventListener('click', () => activer(i))
+        onglet.addEventListener('keydown', (e) => {
+          const dernier = onglets.length - 1
+          let cible: number | null = null
+          if (e.key === 'ArrowRight') cible = i === dernier ? 0 : i + 1
+          else if (e.key === 'ArrowLeft') cible = i === 0 ? dernier : i - 1
+          else if (e.key === 'Home') cible = 0
+          else if (e.key === 'End') cible = dernier
+          if (cible !== null) {
+            e.preventDefault()
+            activer(cible, true)
+          }
+        })
       })
-    })
+    }
   }
+
+  document.addEventListener('astro:page-load', lierBorne)
 </script>
