@@ -42,7 +42,11 @@
         "title": "Collaboration",
         "description": "Listening to your needs for tailor-made solutions."
       }
-    ]
+    ],
+    "portrait": {
+      "alt": "Portrait of Evan Davison",
+      "legende": "Fullstack developer, Rennes"
+    }
   },
   "services": {
     "label": "Expertise",
