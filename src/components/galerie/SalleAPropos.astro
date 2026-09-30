@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets'
 import { getTranslations, type Locale } from '../../i18n'
+import portrait from '../../assets/portrait-evan.jpg'
 
 interface Props {
   locale?: Locale
@@ -17,16 +19,34 @@ const paragrapheDvs = t.about.paragraphs[1].replace(
 
 <section
   id="apropos"
-  class="salle min-h-screen flex items-center py-24"
+  class="salle min-h-screen flex items-center py-24 lg:py-16"
   data-salle-x="0" data-salle-y="1"
 >
   <div class="salle-contenu section-container w-full">
     <p class="signal-label mb-3">{t.galerie.salle} 1 · {t.about.label}</p>
-    <h2 class="font-display text-4xl sm:text-5xl text-encre mb-10 sm:mb-14">
+    <h2 class="font-display text-4xl sm:text-5xl text-encre mb-10 lg:mb-12">
       {t.about.title} de <span class="text-point">{t.about.titleEmphasis}</span>
     </h2>
 
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+    <div class="grid lg:grid-cols-[13rem_minmax(0,1fr)_minmax(0,1fr)] gap-10 lg:gap-12">
+      <!-- Portrait accroché : cadre, passe-partout et cartel -->
+      <figure class="w-52 lg:w-full">
+        <div class="cartel-box p-2.5 shadow-[0_18px_40px_-28px_rgb(28_27_24/0.35)]">
+          <Image
+            src={portrait}
+            alt={t.about.portrait.alt}
+            widths={[208, 416, 624]}
+            sizes="13rem"
+            format="webp"
+            class="block w-full aspect-[4/5] object-cover"
+          />
+        </div>
+        <figcaption class="mt-3">
+          <p class="font-display text-base text-encre">Evan Davison</p>
+          <p class="font-lecture italic text-sm text-cartel">{t.about.portrait.legende}</p>
+        </figcaption>
+      </figure>
+
       <!-- Texte -->
       <div class="space-y-4 sm:space-y-5">
         <p class="font-lecture text-[15px] sm:text-base leading-relaxed text-encre" set:html={t.about.paragraphs[0]} />
