@@ -39,7 +39,7 @@ Le certificat SSL/TLS qui active le HTTPS n'est plus une option. Il chiffre les 
 - Les navigateurs affichent un avertissement "Non sécurisé" qui fait fuir les visiteurs
 - Les données transmises (formulaires, paiement) transitent en clair
 
-La plupart des hébergeurs modernes fournissent un certificat SSL gratuit via Let's Encrypt. Les plateformes comme [Vercel](/glossaire/vercel) l'activent automatiquement. Il n'y a aucune excuse pour ne pas avoir de HTTPS en 2026.
+La plupart des hébergeurs modernes fournissent un certificat SSL gratuit via Let's Encrypt. Les plateformes comme [Vercel](/glossaire/vercel/) l'activent automatiquement. Il n'y a aucune excuse pour ne pas avoir de HTTPS en 2026.
 
 ### 2. Les mises à jour régulières
 
@@ -53,7 +53,7 @@ Cela concerne :
 - Le système d'exploitation du serveur
 - PHP, Node.js ou tout autre runtime
 
-Pour les sites développés avec des frameworks modernes comme [Next.js](/glossaire/nextjs) ou Astro, les mises à jour sont plus simples car il y a moins de dépendances tierces. C'est l'un des avantages du développement sur mesure par rapport à un CMS comme WordPress, point que j'aborde dans mon article sur [WordPress vs code sur mesure](/blog/wordpress-vs-code-sur-mesure).
+Pour les sites développés avec des frameworks modernes comme [Next.js](/glossaire/nextjs/) ou Astro, les mises à jour sont plus simples car il y a moins de dépendances tierces. C'est l'un des avantages du développement sur mesure par rapport à un CMS comme WordPress, point que j'aborde dans mon article sur [WordPress vs code sur mesure](/blog/wordpress-vs-code-sur-mesure/).
 
 ### 3. Les mots de passe et l'authentification
 
@@ -122,15 +122,15 @@ Les amendes RGPD peuvent atteindre 4% du chiffre d'affaires annuel ou 20 million
 
 ### Site vitrine
 
-Un [site vitrine](/services/creation-site-web-rennes) a une surface d'attaque réduite, surtout s'il est statique (généré avec Astro ou Next.js en [SSG](/glossaire/ssg)). Les points d'attention : le formulaire de contact, le panneau d'administration (s'il existe), et les mises à jour des dépendances.
+Un [site vitrine](/services/creation-site-web-rennes/) a une surface d'attaque réduite, surtout s'il est statique (généré avec Astro ou Next.js en [SSG](/glossaire/ssg/)). Les points d'attention : le formulaire de contact, le panneau d'administration (s'il existe), et les mises à jour des dépendances.
 
 ### Site e-commerce
 
-Une [boutique en ligne](/services/creation-boutique-en-ligne) manipule des données sensibles : informations personnelles, adresses, données de paiement. La sécurité doit être renforcée à chaque niveau. Utilisez un prestataire de paiement certifié PCI DSS (comme Stripe), ne stockez jamais les numéros de carte, et chiffrez les données sensibles en base.
+Une [boutique en ligne](/services/creation-boutique-en-ligne/) manipule des données sensibles : informations personnelles, adresses, données de paiement. La sécurité doit être renforcée à chaque niveau. Utilisez un prestataire de paiement certifié PCI DSS (comme Stripe), ne stockez jamais les numéros de carte, et chiffrez les données sensibles en base.
 
 ### Application web
 
-Une [application web](/services/creation-application-web) avec des comptes utilisateurs, une base de données et des fonctionnalités interactives nécessite une approche sécurité complète : authentification robuste, gestion des sessions, contrôle d'accès par rôles, chiffrement des données sensibles, audit de sécurité régulier.
+Une [application web](/services/creation-application-web/) avec des comptes utilisateurs, une base de données et des fonctionnalités interactives nécessite une approche sécurité complète : authentification robuste, gestion des sessions, contrôle d'accès par rôles, chiffrement des données sensibles, audit de sécurité régulier.
 
 ## Le plan d'action en 5 étapes
 
@@ -140,10 +140,10 @@ Une [application web](/services/creation-application-web) avec des comptes utili
 4. **Renforcez la protection** : en-têtes de sécurité, validation des entrées, monitoring
 5. **Planifiez la maintenance** : mises à jour régulières, audits périodiques, veille sécurité
 
-La sécurité n'est pas un état, c'est un processus continu. C'est aussi l'une des raisons pour lesquelles la [maintenance régulière](/blog/maintenance-site-web-pourquoi) de votre site est indispensable.
+La sécurité n'est pas un état, c'est un processus continu. C'est aussi l'une des raisons pour lesquelles la [maintenance régulière](/blog/maintenance-site-web-pourquoi/) de votre site est indispensable.
 
 ## Conclusion
 
 Sécuriser votre site web n'est pas une dépense, c'est une assurance. Le coût de la prévention est toujours inférieur au coût d'une attaque réussie. En appliquant les mesures décrites dans ce guide, vous protégez votre activité, vos clients et votre réputation.
 
-Si vous avez un doute sur la sécurité de votre site actuel, ou si vous souhaitez lancer un projet avec des bases sécurisées dès le départ, n'hésitez pas à [me contacter](/contact). Mieux vaut prévenir que réparer.
+Si vous avez un doute sur la sécurité de votre site actuel, ou si vous souhaitez lancer un projet avec des bases sécurisées dès le départ, n'hésitez pas à [me contacter](/#contact). Mieux vaut prévenir que réparer.

@@ -36,7 +36,7 @@ Ce point est crucial : chaque étape supplémentaire dans le parcours d'installa
 
 Une PWA bien construite est rapide. Très rapide. Le Service Worker met en cache les ressources statiques (HTML, CSS, JavaScript, images) lors de la première visite. Les visites suivantes sont quasi instantanées, même sur un réseau lent.
 
-Combinée à un framework performant comme [Next.js](/glossaire/nextjs) ou Astro, une PWA offre des temps de chargement qui rivalisent avec les applications natives. L'importance de la vitesse pour votre activité est détaillée dans mon article sur [pourquoi un site rapide est essentiel](/blog/pourquoi-site-web-rapide-important).
+Combinée à un framework performant comme [Next.js](/glossaire/nextjs/) ou Astro, une PWA offre des temps de chargement qui rivalisent avec les applications natives. L'importance de la vitesse pour votre activité est détaillée dans mon article sur [pourquoi un site rapide est essentiel](/blog/pourquoi-site-web-rapide-important/).
 
 ### 3. Le fonctionnement hors ligne
 
@@ -52,7 +52,7 @@ Une PWA fonctionne sur tous les appareils et tous les systèmes d'exploitation :
 
 ### 6. Le SEO natif
 
-Contrairement à une application native, le contenu d'une PWA est indexable par les moteurs de recherche. Votre application bénéficie de tout le potentiel du [référencement naturel](/services/optimisation-seo). C'est un avantage décisif par rapport aux apps natives, qui vivent dans un silo invisible pour Google.
+Contrairement à une application native, le contenu d'une PWA est indexable par les moteurs de recherche. Votre application bénéficie de tout le potentiel du [référencement naturel](/services/optimisation-seo/). C'est un avantage décisif par rapport aux apps natives, qui vivent dans un silo invisible pour Google.
 
 ### 7. Les mises à jour transparentes
 
@@ -63,7 +63,7 @@ Pas de mise à jour à télécharger depuis un store. Quand vous déployez une n
 ### Quand choisir une PWA
 
 - Votre budget ne permet pas le développement de deux apps natives (iOS + Android)
-- Le [SEO](/glossaire/seo) est important pour votre acquisition de clients
+- Le [SEO](/glossaire/seo/) est important pour votre acquisition de clients
 - Votre application n'a pas besoin d'accéder à des fonctionnalités matérielles avancées
 - Vous voulez une mise en marché rapide
 - Votre cible utilise principalement le web pour vous trouver
@@ -75,7 +75,7 @@ Pas de mise à jour à télécharger depuis un store. Quand vous déployez une n
 - La présence sur les stores est stratégique pour votre marque
 - Votre application nécessite un traitement lourd en arrière-plan
 
-Pour un comparatif détaillé des technologies mobiles natives, consultez mon article sur [Flutter vs React Native](/blog/flutter-vs-react-native-2026). Et si vous hésitez entre un [site vitrine et une application web](/blog/site-vitrine-vs-application-web), cet article vous aidera à clarifier vos besoins.
+Pour un comparatif détaillé des technologies mobiles natives, consultez mon article sur [Flutter vs React Native](/blog/flutter-vs-react-native-2026/). Et si vous hésitez entre un [site vitrine et une application web](/blog/site-vitrine-vs-application-web/), cet article vous aidera à clarifier vos besoins.
 
 ### Les limites des PWA en 2026
 
@@ -95,7 +95,7 @@ Une PWA e-commerce combine la découvrabilité du web (SEO) avec l'expérience d
 
 ### Catalogue et vitrine
 
-Pour les restaurants, les artisans, les professionnels de santé : une PWA permet d'afficher votre menu, vos services, vos tarifs, même sans connexion. L'installation sur l'écran d'accueil vous rend aussi visible qu'une app native. C'est une alternative pertinente et économique pour un [site professionnel](/services/creation-site-web-rennes).
+Pour les restaurants, les artisans, les professionnels de santé : une PWA permet d'afficher votre menu, vos services, vos tarifs, même sans connexion. L'installation sur l'écran d'accueil vous rend aussi visible qu'une app native. C'est une alternative pertinente et économique pour un [site professionnel](/services/creation-site-web-rennes/).
 
 ### Outils métier
 
@@ -111,7 +111,7 @@ Les sites d'information, les blogs et les plateformes de contenu bénéficient f
 
 Les frameworks web modernes facilitent la création de PWA :
 
-- **Next.js** avec le module `next-pwa` : [SSR](/glossaire/ssr) + PWA, le meilleur des deux mondes
+- **Next.js** avec le module `next-pwa` : [SSR](/glossaire/ssr/) + PWA, le meilleur des deux mondes
 - **Astro** : génération statique ultra-performante, idéale pour les PWA orientées contenu
 - **Nuxt** : l'équivalent Vue.js, avec un support PWA natif
 
@@ -130,7 +130,7 @@ Google définit des critères pour qu'une PWA soit considérée comme "installab
 
 ## Combien coûte une PWA ?
 
-Le coût de développement d'une PWA est généralement inférieur à celui de deux applications natives. Pour une comparaison avec les apps mobiles traditionnelles, consultez mon article sur [combien coûte une application mobile](/blog/combien-coute-application-mobile).
+Le coût de développement d'une PWA est généralement inférieur à celui de deux applications natives. Pour une comparaison avec les apps mobiles traditionnelles, consultez mon article sur [combien coûte une application mobile](/blog/combien-coute-application-mobile/).
 
 L'avantage économique de la PWA se prolonge dans le temps : une seule base de code à maintenir, pas de commissions de store, des mises à jour simplifiées. Le coût total de possession est significativement inférieur.
 
@@ -138,4 +138,4 @@ L'avantage économique de la PWA se prolonge dans le temps : une seule base de c
 
 Les PWA représentent une alternative mature et économique aux applications natives pour de nombreux cas d'usage. Elles combinent la portée du web, la performance d'une app, et la simplicité de déploiement. En 2026, avec l'amélioration continue du support navigateur, elles couvrent les besoins de la majorité des projets mobiles.
 
-Si vous envisagez de créer une [application web](/services/creation-application-web) ou mobile, la PWA mérite d'être sérieusement considérée. N'hésitez pas à [me contacter](/contact) pour évaluer si c'est la bonne approche pour votre projet.
+Si vous envisagez de créer une [application web](/services/creation-application-web/) ou mobile, la PWA mérite d'être sérieusement considérée. N'hésitez pas à [me contacter](/#contact) pour évaluer si c'est la bonne approche pour votre projet.

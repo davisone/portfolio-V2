@@ -8,8 +8,8 @@ const schema = {
   "@type": "DefinedTerm",
   "name": "CI/CD",
   "description": "CI/CD designe l'integration continue et le deploiement continu, un ensemble de pratiques DevOps qui automatisent les tests, la construction et la mise en production du code.",
-  "inDefinedTermSet": "https://www.evandavison.fr/glossaire",
-  "url": "https://www.evandavison.fr/glossaire/ci-cd"
+  "inDefinedTermSet": "https://www.evandavison.fr/glossaire/",
+  "url": "https://www.evandavison.fr/glossaire/ci-cd/"
 }
 ---
 
@@ -26,7 +26,7 @@ const schema = {
       <ol class="flex items-center gap-2 text-sm text-cartel">
         <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
         <li class="text-filet">/</li>
-        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li><a href="/glossaire/" class="hover:text-encre transition-colors">Glossaire</a></li>
         <li class="text-filet">/</li>
         <li class="text-encre">CI/CD</li>
       </ol>
@@ -47,13 +47,13 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne le CI/CD ?</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            L'integration continue (CI) se declenche automatiquement a chaque push de code sur le depot <a href="/glossaire/git" class="text-point hover:text-point transition-colors">Git</a>. Le pipeline CI execute les tests unitaires, les tests d'integration, l'analyse de code statique et la construction de l'application. Si une etape echoue, l'equipe est immediatement notifiee.
+            L'integration continue (CI) se declenche automatiquement a chaque push de code sur le depot <a href="/glossaire/git/" class="text-point hover:text-point transition-colors">Git</a>. Le pipeline CI execute les tests unitaires, les tests d'integration, l'analyse de code statique et la construction de l'application. Si une etape echoue, l'equipe est immediatement notifiee.
           </p>
           <p class="text-cartel leading-relaxed mb-4">
             Le deploiement continu (CD) prend le relais apres la CI. Une fois les tests passes et le code fusionne dans la branche principale, le CD deploie automatiquement l'application en production (ou en staging pour le Continuous Delivery, qui necessite une validation manuelle avant la production).
           </p>
           <p class="text-cartel leading-relaxed">
-            Les outils de CI/CD les plus utilises incluent GitHub Actions, GitLab CI, Jenkins et CircleCI. Des plateformes comme <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a> integrent nativement le CD : chaque push sur la branche principale declenche automatiquement un deploiement en production, et chaque pull request genere un environnement de preview.
+            Les outils de CI/CD les plus utilises incluent GitHub Actions, GitLab CI, Jenkins et CircleCI. Des plateformes comme <a href="/glossaire/vercel/" class="text-point hover:text-point transition-colors">Vercel</a> integrent nativement le CD : chaque push sur la branche principale declenche automatiquement un deploiement en production, et chaque pull request genere un environnement de preview.
           </p>
         </section>
 
@@ -72,10 +72,10 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">CI/CD en pratique</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            Le CI/CD est integre dans tous mes projets de developpement. Avec <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a>, chaque push declenche un deploiement automatique. Les pipelines GitHub Actions executent les linters, les tests <a href="/glossaire/typescript" class="text-point hover:text-point transition-colors">TypeScript</a> et les verifications de build avant chaque merge. Les conteneurs <a href="/glossaire/docker" class="text-point hover:text-point transition-colors">Docker</a> garantissent la reproductibilite des builds.
+            Le CI/CD est integre dans tous mes projets de developpement. Avec <a href="/glossaire/vercel/" class="text-point hover:text-point transition-colors">Vercel</a>, chaque push declenche un deploiement automatique. Les pipelines GitHub Actions executent les linters, les tests <a href="/glossaire/typescript/" class="text-point hover:text-point transition-colors">TypeScript</a> et les verifications de build avant chaque merge. Les conteneurs <a href="/glossaire/docker/" class="text-point hover:text-point transition-colors">Docker</a> garantissent la reproductibilite des builds.
           </p>
           <p class="text-cartel leading-relaxed">
-            Que ce soit pour une <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">application web</a> ou un <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">site web</a>, la mise en place de pipelines CI/CD assure des livraisons rapides, fiables et sans stress.
+            Que ce soit pour une <a href="/services/creation-application-web/" class="text-point hover:text-point transition-colors">application web</a> ou un <a href="/services/creation-site-web-rennes/" class="text-point hover:text-point transition-colors">site web</a>, la mise en place de pipelines CI/CD assure des livraisons rapides, fiables et sans stress.
           </p>
         </section>
       </div>
@@ -83,11 +83,11 @@ const schema = {
       <div class="border-t border-filet mt-12 pt-8">
         <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/git" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Git</a>
-          <a href="/glossaire/vercel" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
-          <a href="/glossaire/docker" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Docker</a>
-          <a href="/glossaire/typescript" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">TypeScript</a>
-          <a href="/glossaire/jamstack" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Jamstack</a>
+          <a href="/glossaire/git/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Git</a>
+          <a href="/glossaire/vercel/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
+          <a href="/glossaire/docker/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Docker</a>
+          <a href="/glossaire/typescript/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">TypeScript</a>
+          <a href="/glossaire/jamstack/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Jamstack</a>
         </div>
       </div>
 

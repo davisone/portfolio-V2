@@ -10,6 +10,14 @@ const { locale, currentPath } = Astro.props
 
 const basePath = currentPath.replace(/^\/(en-gb|en-us)/, '') || '/'
 
+// Seul l'accueil existe en anglais : ailleurs, les versions anglaises renvoient vers
+// l'accueil traduit plutôt que vers une page inexistante (404)
+const translatedPaths = ['/']
+const hrefFor = (loc: Locale) =>
+  loc === 'fr' || translatedPaths.includes(basePath)
+    ? getLocalizedPath(basePath, loc)
+    : getLocalizedPath('/', loc)
+
 const localeLabels: Record<Locale, { short: string; full: string }> = {
   fr: { short: 'FR', full: 'Français' },
   'en-gb': { short: 'UK', full: 'English (UK)' },
@@ -41,7 +49,7 @@ const localeLabels: Record<Locale, { short: string; full: string }> = {
   >
     {locales.map((loc) => (
       <a
-        href={getLocalizedPath(basePath, loc)}
+        href={hrefFor(loc)}
         role="option"
         aria-selected={loc === locale ? 'true' : 'false'}
         class:list={[

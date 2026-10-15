@@ -19,16 +19,17 @@ const terms = [
   { slug: 'vercel', name: 'Vercel' },
   { slug: 'jamstack', name: 'JAMstack' },
   { slug: 'pwa', name: 'Progressive Web App (PWA)' },
-  { slug: 'core-web-vitals', name: 'Core Web Vitals' },
-  { slug: 'schema-org', name: 'Schema.org' },
-  { slug: 'oauth', name: 'OAuth 2.0' },
   { slug: 'ci-cd', name: 'CI/CD' },
   { slug: 'docker', name: 'Docker' },
   { slug: 'git', name: 'Git' },
-  { slug: 'saas', name: 'SaaS' },
-  { slug: 'mvp', name: 'MVP (Minimum Viable Product)' },
   { slug: 'ui-ux', name: 'UI/UX Design' },
   { slug: 'cms', name: 'CMS (Content Management System)' },
+  { slug: 'astro', name: 'Astro' },
+  { slug: 'supabase', name: 'Supabase' },
+  { slug: 'firebase', name: 'Firebase' },
+  { slug: 'mongodb', name: 'MongoDB' },
+  { slug: 'graphql', name: 'GraphQL' },
+  { slug: 'zustand', name: 'Zustand' },
 ]
 
 const schema = {
@@ -36,11 +37,11 @@ const schema = {
   "@type": "DefinedTermSet",
   "name": "Glossaire du developpement web",
   "description": "Glossaire des termes techniques du developpement web : definitions, explications et guides pratiques par Evan Davison, developpeur fullstack a Rennes.",
-  "url": "https://www.evandavison.fr/glossaire",
+  "url": "https://www.evandavison.fr/glossaire/",
   "hasDefinedTerm": terms.map((t) => ({
     "@type": "DefinedTerm",
     "name": t.name,
-    "url": `https://www.evandavison.fr/glossaire/${t.slug}`
+    "url": `https://www.evandavison.fr/glossaire/${t.slug}/`
   }))
 }
 ---
@@ -79,7 +80,7 @@ const schema = {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {terms.map((term) => (
           <a
-            href={`/glossaire/${term.slug}`}
+            href={`/glossaire/${term.slug}/`}
             class="block border border-filet p-5 hover:bg-oeuvre transition-colors group"
           >
             <span class="font-display text-lg text-encre group-hover:text-point transition-colors">

@@ -91,7 +91,7 @@ Flutter est le meilleur choix dans les cas suivants :
 - **Cohérence pixel-perfect entre plateformes** : si votre application doit être identique sur iOS et Android.
 - **Applications au-delà du mobile** : Flutter cible aussi le web, le desktop (Windows, macOS, Linux), et les systèmes embarqués. Si vous visez le multi-plateforme au sens large, Flutter est pertinent.
 
-C'est d'ailleurs la technologie que je privilégie pour les [projets d'applications mobiles](/services/developpement-application-mobile) de mes clients, pour sa fiabilité et sa qualité de rendu.
+C'est d'ailleurs la technologie que je privilégie pour les [projets d'applications mobiles](/services/developpement-application-mobile/) de mes clients, pour sa fiabilité et sa qualité de rendu.
 
 ## Quand choisir React Native
 
@@ -105,7 +105,7 @@ React Native est préférable quand :
 
 ## Les coûts en 2026
 
-Le choix du framework impacte aussi le budget. Le développement cross-platform (Flutter ou React Native) coûte en moyenne 30 à 40% moins cher que le développement natif séparé (Swift + Kotlin). Pour une estimation détaillée des coûts selon votre projet, consultez notre article sur [le prix d'une application mobile en 2026](/blog/combien-coute-application-mobile).
+Le choix du framework impacte aussi le budget. Le développement cross-platform (Flutter ou React Native) coûte en moyenne 30 à 40% moins cher que le développement natif séparé (Swift + Kotlin). Pour une estimation détaillée des coûts selon votre projet, consultez notre article sur [le prix d'une application mobile en 2026](/blog/combien-coute-application-mobile/).
 
 En termes de maintenance, les deux frameworks ont un coût similaire. Les mises à jour majeures de Flutter et React Native arrivent environ deux fois par an et nécessitent généralement quelques jours d'adaptation.
 

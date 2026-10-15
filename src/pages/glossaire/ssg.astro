@@ -8,8 +8,8 @@ const schema = {
   "@type": "DefinedTerm",
   "name": "Static Site Generation (SSG)",
   "description": "Le Static Site Generation est une methode de creation de sites web ou toutes les pages HTML sont generees au moment du build, avant le deploiement.",
-  "inDefinedTermSet": "https://www.evandavison.fr/glossaire",
-  "url": "https://www.evandavison.fr/glossaire/ssg"
+  "inDefinedTermSet": "https://www.evandavison.fr/glossaire/",
+  "url": "https://www.evandavison.fr/glossaire/ssg/"
 }
 ---
 
@@ -26,7 +26,7 @@ const schema = {
       <ol class="flex items-center gap-2 text-sm text-cartel">
         <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
         <li class="text-filet">/</li>
-        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li><a href="/glossaire/" class="hover:text-encre transition-colors">Glossaire</a></li>
         <li class="text-filet">/</li>
         <li class="text-encre">SSG</li>
       </ol>
@@ -50,10 +50,10 @@ const schema = {
             Lors de la phase de build, le generateur de site statique compile l'ensemble des pages en fichiers HTML, CSS et JavaScript. Ces fichiers sont ensuite deployes sur un CDN (Content Delivery Network) et servis directement aux visiteurs sans aucun traitement serveur a chaque requete.
           </p>
           <p class="text-cartel leading-relaxed mb-4">
-            Contrairement au <a href="/glossaire/ssr" class="text-point hover:text-point transition-colors">Server-Side Rendering (SSR)</a>, il n'y a pas de generation dynamique a chaque visite. Les donnees sont recuperees une seule fois au moment du build, ce qui elimine la latence liee aux requetes serveur et aux acces base de donnees.
+            Contrairement au <a href="/glossaire/ssr/" class="text-point hover:text-point transition-colors">Server-Side Rendering (SSR)</a>, il n'y a pas de generation dynamique a chaque visite. Les donnees sont recuperees une seule fois au moment du build, ce qui elimine la latence liee aux requetes serveur et aux acces base de donnees.
           </p>
           <p class="text-cartel leading-relaxed">
-            Des frameworks comme <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a>, Astro ou Gatsby permettent de generer des sites statiques tout en conservant la puissance des composants <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a>. L'approche <a href="/glossaire/jamstack" class="text-point hover:text-point transition-colors">JAMstack</a> s'appuie largement sur le SSG pour offrir des sites rapides et fiables.
+            Des frameworks comme <a href="/glossaire/nextjs/" class="text-point hover:text-point transition-colors">Next.js</a>, Astro ou Gatsby permettent de generer des sites statiques tout en conservant la puissance des composants <a href="/glossaire/react/" class="text-point hover:text-point transition-colors">React</a>. L'approche <a href="/glossaire/jamstack/" class="text-point hover:text-point transition-colors">JAMstack</a> s'appuie largement sur le SSG pour offrir des sites rapides et fiables.
           </p>
         </section>
 
@@ -62,7 +62,7 @@ const schema = {
           <ul class="space-y-2">
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Performances optimales : les fichiers statiques sont servis depuis un CDN mondial</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Securite renforcee : aucune base de donnees ou serveur dynamique expose</li>
-            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> excellent grace au HTML pre-rendu et aux temps de chargement rapides</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo/" class="text-point hover:text-point transition-colors">SEO</a> excellent grace au HTML pre-rendu et aux temps de chargement rapides</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Couts d'hebergement reduits : pas de serveur a maintenir</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Fiabilite maximale : pas de panne serveur possible sur du contenu statique</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Scalabilite naturelle : un CDN gere sans effort les pics de trafic</li>
@@ -75,7 +75,7 @@ const schema = {
             Le SSG est le choix ideal pour les sites vitrines, blogs, portfolios et documentations. Si votre contenu ne change pas a chaque visite, le SSG offre le meilleur rapport performance/cout. Ce portfolio meme est construit avec Astro, un framework SSG moderne.
           </p>
           <p class="text-cartel leading-relaxed">
-            Pour une <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">creation de site vitrine</a>, le SSG combine avec un <a href="/glossaire/cms" class="text-point hover:text-point transition-colors">CMS headless</a> permet de proposer une interface d'administration simple pour le client tout en conservant des performances exceptionnelles. Le deploiement sur <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a> avec rebuild automatique garantit un site toujours a jour.
+            Pour une <a href="/services/creation-site-web-rennes/" class="text-point hover:text-point transition-colors">creation de site vitrine</a>, le SSG combine avec un <a href="/glossaire/cms/" class="text-point hover:text-point transition-colors">CMS headless</a> permet de proposer une interface d'administration simple pour le client tout en conservant des performances exceptionnelles. Le deploiement sur <a href="/glossaire/vercel/" class="text-point hover:text-point transition-colors">Vercel</a> avec rebuild automatique garantit un site toujours a jour.
           </p>
         </section>
       </div>
@@ -83,11 +83,11 @@ const schema = {
       <div class="border-t border-filet mt-12 pt-8">
         <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/ssr" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSR</a>
-          <a href="/glossaire/jamstack" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">JAMstack</a>
-          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
-          <a href="/glossaire/vercel" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
-          <a href="/glossaire/cms" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">CMS</a>
+          <a href="/glossaire/ssr/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSR</a>
+          <a href="/glossaire/jamstack/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">JAMstack</a>
+          <a href="/glossaire/nextjs/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
+          <a href="/glossaire/vercel/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
+          <a href="/glossaire/cms/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">CMS</a>
         </div>
       </div>
 

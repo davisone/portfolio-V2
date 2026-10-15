@@ -24,7 +24,7 @@ Un développeur freelance travaille seul ou avec un réseau de collaborateurs po
 - Capacité limitée sur les très gros projets (mais un bon freelance saura s'entourer)
 - Disponibilité variable selon la charge de travail
 
-Un freelance basé à Rennes connaît le tissu économique local, peut se déplacer pour des rendez-vous en personne, et comprend les enjeux des entreprises bretonnes. C'est un atout non négligeable quand on travaille sur du [SEO local](/blog/guide-seo-local-rennes).
+Un freelance basé à Rennes connaît le tissu économique local, peut se déplacer pour des rendez-vous en personne, et comprend les enjeux des entreprises bretonnes. C'est un atout non négligeable quand on travaille sur du [SEO local](/blog/guide-seo-local-rennes/).
 
 ### Passer par une agence web
 
@@ -63,7 +63,7 @@ C'est le critère numéro un. Un bon développeur a un portfolio qui montre des 
 
 - **La diversité des projets** : sites vitrines, e-commerce, applications web. Un développeur qui ne fait que des WordPress n'aura pas la même approche qu'un développeur full-stack qui code sur mesure.
 - **La qualité technique** : ouvrez les sites en question. Sont-ils rapides ? Sont-ils bien référencés ? Fonctionnent-ils correctement sur mobile ?
-- **La pertinence par rapport à votre projet** : si vous voulez une [boutique en ligne](/services/creation-boutique-en-ligne), vérifiez qu'il en a déjà réalisé.
+- **La pertinence par rapport à votre projet** : si vous voulez une [boutique en ligne](/services/creation-boutique-en-ligne/), vérifiez qu'il en a déjà réalisé.
 
 ### 2. Les compétences techniques
 
@@ -72,10 +72,10 @@ Le web évolue vite. Un développeur qui utilise des technologies modernes vous 
 Les technologies à privilégier en 2026 :
 - **Frontend** : React, Next.js, Astro, Tailwind CSS. Si vous entendez parler de jQuery ou de tableaux HTML, fuyez.
 - **Backend** : Node.js, Python, PHP (avec un framework comme Laravel). Le choix dépend du projet.
-- **Mobile** : Flutter ou React Native pour les [applications mobiles](/services/developpement-application-mobile).
+- **Mobile** : Flutter ou React Native pour les [applications mobiles](/services/developpement-application-mobile/).
 - **CMS** : WordPress (avec un thème sur mesure, pas un template), Shopify pour le e-commerce simple, ou un CMS headless pour les projets ambitieux.
 
-Pour aller plus loin sur le choix des technologies, consultez mon article sur les [avantages et inconvénients de Tailwind CSS](/blog/tailwind-css-avantages-inconvenients).
+Pour aller plus loin sur le choix des technologies, consultez mon article sur les [avantages et inconvénients de Tailwind CSS](/blog/tailwind-css-avantages-inconvenients/).
 
 ### 3. La méthodologie de travail
 
@@ -91,7 +91,7 @@ Si le développeur ne pose aucune question sur votre projet et vous envoie un de
 
 ### 4. La transparence tarifaire
 
-Les prix dans le web varient énormément. Un [site vitrine à Rennes coûte entre 600 et 2 000 euros](/blog/site-web-rennes-combien-ca-coute), une application web peut dépasser les 15 000 euros. Méfiez-vous des tarifs trop bas comme des tarifs exorbitants.
+Les prix dans le web varient énormément. Un [site vitrine à Rennes coûte entre 600 et 2 000 euros](/blog/site-web-rennes-combien-ca-coute/), une application web peut dépasser les 15 000 euros. Méfiez-vous des tarifs trop bas comme des tarifs exorbitants.
 
 Un bon développeur :
 - Détaille son devis poste par poste
@@ -112,7 +112,7 @@ Les avis Google, les témoignages sur le site, les recommandations LinkedIn sont
 Travailler avec un développeur basé à Rennes ou en Bretagne a des avantages concrets :
 
 - Des rendez-vous en personne pour les phases clés du projet
-- Une compréhension du marché local (utile pour le [référencement local](/services/optimisation-seo))
+- Une compréhension du marché local (utile pour le [référencement local](/services/optimisation-seo/))
 - Une réactivité en cas d'urgence
 - Un réseau local de partenaires (photographe, rédacteur, graphiste)
 
@@ -170,7 +170,7 @@ En tant que développeur web freelance basé près de Rennes, je travaille princ
 - **Transparence totale** : devis détaillé, accès au code, pas de surprise.
 - **Suivi long terme** : maintenance, évolutions, conseil stratégique.
 
-Que vous ayez besoin d'un [site vitrine](/services/creation-site-web-rennes), d'une [boutique en ligne](/services/creation-boutique-en-ligne), d'une [application web sur mesure](/services/developpement-react-nextjs) ou d'une [application mobile](/services/developpement-application-mobile), je vous accompagne de A à Z.
+Que vous ayez besoin d'un [site vitrine](/services/creation-site-web-rennes/), d'une [boutique en ligne](/services/creation-boutique-en-ligne/), d'une [application web sur mesure](/services/developpement-react-nextjs/) ou d'une [application mobile](/services/developpement-application-mobile/), je vous accompagne de A à Z.
 
 ## Prêt à lancer votre projet ?
 

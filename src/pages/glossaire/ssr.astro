@@ -8,8 +8,8 @@ const schema = {
   "@type": "DefinedTerm",
   "name": "Server-Side Rendering (SSR)",
   "description": "Le Server-Side Rendering est une technique de rendu web ou le HTML est genere cote serveur avant d'etre envoye au navigateur.",
-  "inDefinedTermSet": "https://www.evandavison.fr/glossaire",
-  "url": "https://www.evandavison.fr/glossaire/ssr"
+  "inDefinedTermSet": "https://www.evandavison.fr/glossaire/",
+  "url": "https://www.evandavison.fr/glossaire/ssr/"
 }
 ---
 
@@ -26,7 +26,7 @@ const schema = {
       <ol class="flex items-center gap-2 text-sm text-cartel">
         <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
         <li class="text-filet">/</li>
-        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li><a href="/glossaire/" class="hover:text-encre transition-colors">Glossaire</a></li>
         <li class="text-filet">/</li>
         <li class="text-encre">SSR</li>
       </ol>
@@ -47,20 +47,20 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne le SSR ?</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            Lorsqu'un utilisateur demande une page, le serveur execute le code de l'application, recupere les donnees necessaires (depuis une base de donnees ou une <a href="/glossaire/api-rest" class="text-point hover:text-point transition-colors">API REST</a>), puis genere le HTML complet. Ce HTML est envoye au navigateur qui peut l'afficher immediatement, sans attendre le chargement de fichiers JavaScript volumineux.
+            Lorsqu'un utilisateur demande une page, le serveur execute le code de l'application, recupere les donnees necessaires (depuis une base de donnees ou une <a href="/glossaire/api-rest/" class="text-point hover:text-point transition-colors">API REST</a>), puis genere le HTML complet. Ce HTML est envoye au navigateur qui peut l'afficher immediatement, sans attendre le chargement de fichiers JavaScript volumineux.
           </p>
           <p class="text-cartel leading-relaxed mb-4">
             Apres le premier affichage, le JavaScript client prend le relais pour rendre la page interactive. Ce processus, appele hydratation, permet de combiner les avantages du rendu serveur avec l'interactivite d'une application JavaScript moderne.
           </p>
           <p class="text-cartel leading-relaxed">
-            Contrairement au <a href="/glossaire/ssg" class="text-point hover:text-point transition-colors">Static Site Generation (SSG)</a> ou les pages sont generees au moment du build, le SSR genere le HTML a chaque requete. Cela le rend ideal pour les contenus dynamiques ou personnalises, comme les tableaux de bord ou les pages qui dependent de l'authentification de l'utilisateur.
+            Contrairement au <a href="/glossaire/ssg/" class="text-point hover:text-point transition-colors">Static Site Generation (SSG)</a> ou les pages sont generees au moment du build, le SSR genere le HTML a chaque requete. Cela le rend ideal pour les contenus dynamiques ou personnalises, comme les tableaux de bord ou les pages qui dependent de l'authentification de l'utilisateur.
           </p>
         </section>
 
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi utiliser le SSR ?</h2>
           <ul class="space-y-2">
-            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Meilleur <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">referencement naturel (SEO)</a> grace au HTML pre-rendu</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Meilleur <a href="/glossaire/seo/" class="text-point hover:text-point transition-colors">referencement naturel (SEO)</a> grace au HTML pre-rendu</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Temps d'affichage initial (First Contentful Paint) reduit pour l'utilisateur</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Contenu toujours a jour car genere a chaque requete</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Ideal pour les pages dynamiques, personnalisees ou protegees</li>
@@ -71,10 +71,10 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">SSR en pratique</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a> est le framework de reference pour le SSR dans l'ecosysteme <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a>. Avec son App Router, il offre un controle granulaire sur le rendu : on peut choisir page par page entre SSR, SSG ou un mode hybride. Deploye sur <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a>, un site Next.js en SSR offre des performances remarquables grace au edge rendering.
+            <a href="/glossaire/nextjs/" class="text-point hover:text-point transition-colors">Next.js</a> est le framework de reference pour le SSR dans l'ecosysteme <a href="/glossaire/react/" class="text-point hover:text-point transition-colors">React</a>. Avec son App Router, il offre un controle granulaire sur le rendu : on peut choisir page par page entre SSR, SSG ou un mode hybride. Deploye sur <a href="/glossaire/vercel/" class="text-point hover:text-point transition-colors">Vercel</a>, un site Next.js en SSR offre des performances remarquables grace au edge rendering.
           </p>
           <p class="text-cartel leading-relaxed">
-            Pour une <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">creation de site web</a>, le choix entre SSR et SSG depend du contenu. Un blog ou un site vitrine profite davantage du SSG, tandis qu'une <a href="/services/creation-application-web" class="text-point hover:text-point transition-colors">application web</a> avec authentification necessite du SSR pour servir un contenu personnalise a chaque utilisateur.
+            Pour une <a href="/services/creation-site-web-rennes/" class="text-point hover:text-point transition-colors">creation de site web</a>, le choix entre SSR et SSG depend du contenu. Un blog ou un site vitrine profite davantage du SSG, tandis qu'une <a href="/services/creation-application-web/" class="text-point hover:text-point transition-colors">application web</a> avec authentification necessite du SSR pour servir un contenu personnalise a chaque utilisateur.
           </p>
         </section>
       </div>
@@ -82,11 +82,11 @@ const schema = {
       <div class="border-t border-filet mt-12 pt-8">
         <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/ssg" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
-          <a href="/glossaire/nextjs" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
-          <a href="/glossaire/react" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
-          <a href="/glossaire/seo" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SEO</a>
-          <a href="/glossaire/jamstack" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">JAMstack</a>
+          <a href="/glossaire/ssg/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
+          <a href="/glossaire/nextjs/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Next.js</a>
+          <a href="/glossaire/react/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
+          <a href="/glossaire/seo/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SEO</a>
+          <a href="/glossaire/jamstack/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">JAMstack</a>
         </div>
       </div>
 

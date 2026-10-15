@@ -53,7 +53,7 @@ Avec Tailwind :
 1. Écrire le HTML avec les classes utilitaires
 2. Ajuster en temps réel
 
-Ce gain de temps est réel et mesurable. Sur un projet de [site vitrine](/services/creation-site-web-rennes), ça peut représenter plusieurs jours de travail en moins.
+Ce gain de temps est réel et mesurable. Sur un projet de [site vitrine](/services/creation-site-web-rennes/), ça peut représenter plusieurs jours de travail en moins.
 
 ### 2. La cohérence du design
 
@@ -183,7 +183,7 @@ La solution : personnaliser le fichier de configuration pour chaque projet. Chan
 - Les projets avec des frameworks de composants (React, Vue, Astro)
 - Les designs sur mesure avec un système de design cohérent
 - Les projets qui privilégient la performance
-- Les [applications web](/blog/site-vitrine-vs-application-web) complexes avec beaucoup de composants
+- Les [applications web](/blog/site-vitrine-vs-application-web/) complexes avec beaucoup de composants
 
 **Limites :**
 - La verbosité du HTML
@@ -196,13 +196,13 @@ J'utilise Tailwind CSS sur la quasi-totalité de mes projets depuis 2023. C'est 
 
 Mais je ne l'utilise pas par dogme. Sur certains projets (un widget à intégrer dans un site existant, par exemple), du CSS classique est plus adapté. L'outil doit servir le projet, pas l'inverse.
 
-Si vous êtes entrepreneur et que vous cherchez à comprendre pourquoi votre [développeur web](/blog/developpeur-web-rennes-comment-choisir) utilise Tailwind, retenez ceci : c'est un choix technique qui vous bénéficie directement en termes de rapidité de livraison, de performance du site, et de facilité de maintenance.
+Si vous êtes entrepreneur et que vous cherchez à comprendre pourquoi votre [développeur web](/blog/developpeur-web-rennes-comment-choisir/) utilise Tailwind, retenez ceci : c'est un choix technique qui vous bénéficie directement en termes de rapidité de livraison, de performance du site, et de facilité de maintenance.
 
 ## Tailwind CSS dans le contexte d'un projet web
 
-Le choix du framework CSS n'est qu'une pièce du puzzle. Il s'intègre dans un écosystème technique plus large. Par exemple, sur mes projets [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site) ou Astro, Tailwind s'intègre parfaitement et tire parti du système de composants pour gérer la verbosité.
+Le choix du framework CSS n'est qu'une pièce du puzzle. Il s'intègre dans un écosystème technique plus large. Par exemple, sur mes projets [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site/) ou Astro, Tailwind s'intègre parfaitement et tire parti du système de composants pour gérer la verbosité.
 
-Pour les [boutiques en ligne](/services/creation-boutique-en-ligne), Tailwind permet de créer des interfaces produit uniques sans dépendre des templates génériques. Pour les [applications mobiles avec Flutter](/blog/creer-application-mobile-flutter-guide), le style est géré différemment (Flutter a son propre système de widgets), mais les principes de design system restent les mêmes.
+Pour les [boutiques en ligne](/services/creation-boutique-en-ligne/), Tailwind permet de créer des interfaces produit uniques sans dépendre des templates génériques. Pour les [applications mobiles avec Flutter](/blog/creer-application-mobile-flutter-guide/), le style est géré différemment (Flutter a son propre système de widgets), mais les principes de design system restent les mêmes.
 
 ## Des questions sur le choix technique de votre projet ?
 
