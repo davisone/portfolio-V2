@@ -1,5 +1,32 @@
 {
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:lang(en-us|en-gb)/glossaire/:term(core-web-vitals|schema-org|oauth|saas|mvp)/",
+      "destination": "/glossaire/",
+      "permanent": true
+    },
+    {
+      "source": "/glossaire/:term(core-web-vitals|schema-org|oauth|saas|mvp)/",
+      "destination": "/glossaire/",
+      "permanent": true
+    },
+    {
+      "source": "/:lang(en-us|en-gb)/:path+/",
+      "destination": "/:path+/",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/#contact",
+      "permanent": true
+    },
+    {
+      "source": "/cv-evan-davison.pdf",
+      "destination": "/cv/Evan_Davison_cv.pdf",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
