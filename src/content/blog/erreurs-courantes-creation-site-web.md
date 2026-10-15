@@ -22,7 +22,7 @@ Après des dizaines de projets réalisés pour des entrepreneurs, TPE et PME, je
 Chaque objectif implique des choix différents en termes de structure, de contenu, de design et de fonctionnalités. Un site dont l'objectif est de générer des devis sera très différent d'un site dont l'objectif est de vendre des produits.
 
 **Comment l'éviter :**
-Avant de contacter un [développeur web](/blog/developpeur-web-rennes-comment-choisir), répondez à ces questions :
+Avant de contacter un [développeur web](/blog/developpeur-web-rennes-comment-choisir/), répondez à ces questions :
 - Qui est ma cible ?
 - Quelle action je veux que les visiteurs accomplissent ?
 - Comment vais-je mesurer le succès de mon site ?
@@ -34,11 +34,11 @@ WordPress, Shopify, Wix, développement sur mesure... Le choix de la solution te
 **Les erreurs courantes :**
 - Utiliser WordPress pour un simple site vitrine de 5 pages (trop lourd, trop de maintenance)
 - Utiliser Wix pour un site e-commerce sérieux (trop limité, mauvais pour le SEO)
-- Développer une [application web sur mesure](/blog/site-vitrine-vs-application-web) quand un site vitrine suffirait (budget démesuré)
+- Développer une [application web sur mesure](/blog/site-vitrine-vs-application-web/) quand un site vitrine suffirait (budget démesuré)
 - Choisir une technologie parce que "c'est ce que tout le monde utilise"
 
 **Comment l'éviter :**
-Exposez votre besoin à un professionnel et laissez-le vous recommander la solution adaptée. Un bon développeur ne vous vendra pas du sur-mesure si une solution simple suffit. Consultez mon article sur les différences entre [site vitrine et application web](/blog/site-vitrine-vs-application-web) pour y voir plus clair.
+Exposez votre besoin à un professionnel et laissez-le vous recommander la solution adaptée. Un bon développeur ne vous vendra pas du sur-mesure si une solution simple suffit. Consultez mon article sur les différences entre [site vitrine et application web](/blog/site-vitrine-vs-application-web/) pour y voir plus clair.
 
 ## Erreur n.3 : Négliger le mobile
 
@@ -50,11 +50,11 @@ En 2026, plus de 60% du trafic web vient des téléphones mobiles. Et pourtant, 
 - Vous perdez plus de la moitié de votre audience potentielle
 
 **Comment l'éviter :**
-Exigez un design "mobile-first" : le site est d'abord conçu pour les petits écrans, puis adapté aux grands écrans. Testez systématiquement sur un vrai téléphone, pas seulement sur un simulateur. Les technologies modernes comme [Tailwind CSS](/blog/tailwind-css-avantages-inconvenients) facilitent grandement le responsive design.
+Exigez un design "mobile-first" : le site est d'abord conçu pour les petits écrans, puis adapté aux grands écrans. Testez systématiquement sur un vrai téléphone, pas seulement sur un simulateur. Les technologies modernes comme [Tailwind CSS](/blog/tailwind-css-avantages-inconvenients/) facilitent grandement le responsive design.
 
 ## Erreur n.4 : Ignorer le SEO dès le départ
 
-Le [SEO](/glossaire/seo) n'est pas quelque chose qu'on ajoute après la création du site. C'est une composante structurelle qui doit être intégrée dès la conception.
+Le [SEO](/glossaire/seo/) n'est pas quelque chose qu'on ajoute après la création du site. C'est une composante structurelle qui doit être intégrée dès la conception.
 
 **Les éléments SEO à prévoir dès le départ :**
 - La structure des URLs (courtes, lisibles, avec des mots-clés)
@@ -66,7 +66,7 @@ Le [SEO](/glossaire/seo) n'est pas quelque chose qu'on ajoute après la créatio
 - Le fichier sitemap.xml et robots.txt
 
 **Comment l'éviter :**
-Travaillez avec un développeur qui intègre le SEO dans sa méthodologie. Si vous visez une clientèle locale, lisez mon [guide du SEO local à Rennes](/blog/guide-seo-local-rennes) pour comprendre les enjeux.
+Travaillez avec un développeur qui intègre le SEO dans sa méthodologie. Si vous visez une clientèle locale, lisez mon [guide du SEO local à Rennes](/blog/guide-seo-local-rennes/) pour comprendre les enjeux.
 
 ## Erreur n.5 : Vouloir tout faire d'un coup
 
@@ -81,7 +81,7 @@ Travaillez avec un développeur qui intègre le SEO dans sa méthodologie. Si vo
 **Comment l'éviter :**
 Adoptez l'approche MVP (Minimum Viable Product). Identifiez les fonctionnalités essentielles pour la première version, lancez-les, mesurez les résultats, puis itérez. Un site simple en ligne vaut mieux qu'un projet ambitieux en développement depuis 8 mois.
 
-C'est aussi vrai pour les [applications mobiles](/blog/creer-application-mobile-flutter-guide) : commencez petit, validez votre concept, puis développez.
+C'est aussi vrai pour les [applications mobiles](/blog/creer-application-mobile-flutter-guide/) : commencez petit, validez votre concept, puis développez.
 
 ## Erreur n.6 : Écrire du contenu médiocre (ou pas de contenu du tout)
 
@@ -101,7 +101,7 @@ Le contenu est le coeur de votre site. C'est ce que lisent vos visiteurs et ce q
 - Lancez un blog et publiez régulièrement (même un article par mois, c'est un bon début)
 - Relisez-vous, ou mieux, faites relire
 
-Le contenu est aussi le meilleur levier pour le [SEO](/services/optimisation-seo). Un article de blog bien rédigé peut vous apporter des visiteurs pendant des années.
+Le contenu est aussi le meilleur levier pour le [SEO](/services/optimisation-seo/). Un article de blog bien rédigé peut vous apporter des visiteurs pendant des années.
 
 ## Erreur n.7 : Négliger la vitesse de chargement
 
@@ -121,7 +121,7 @@ Un site qui met plus de 3 secondes à charger perd plus de 50% de ses visiteurs.
 - Utilisez des technologies performantes par défaut (Astro, Next.js)
 - Mesurez régulièrement la vitesse avec Google PageSpeed Insights
 
-J'ai détaillé l'importance de la performance dans mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important).
+J'ai détaillé l'importance de la performance dans mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important/).
 
 ## Erreur n.8 : Oublier les appels à l'action
 
@@ -171,7 +171,7 @@ C'est la plus coûteuse des erreurs. Un site à 300 euros ne donnera pas le mêm
 **Comment l'éviter :**
 Comparez 3 prestataires minimum. Regardez les réalisations, posez des questions, demandez des références. Le tarif n'est qu'un critère parmi d'autres. La qualité du travail, la communication, la méthodologie et le suivi après livraison sont tout aussi importants.
 
-Pour approfondir ce sujet, consultez mon guide sur [comment choisir son développeur web à Rennes](/blog/developpeur-web-rennes-comment-choisir) et mon article sur le [coût d'un site web à Rennes](/blog/site-web-rennes-combien-ca-coute).
+Pour approfondir ce sujet, consultez mon guide sur [comment choisir son développeur web à Rennes](/blog/developpeur-web-rennes-comment-choisir/) et mon article sur le [coût d'un site web à Rennes](/blog/site-web-rennes-combien-ca-coute/).
 
 ## Récapitulatif : les 10 erreurs en un coup d'oeil
 

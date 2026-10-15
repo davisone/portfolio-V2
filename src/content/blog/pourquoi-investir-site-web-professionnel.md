@@ -47,9 +47,9 @@ Un site web, c'est votre terrain. Vous en êtes propriétaire et maître.
 
 ### Calculons ensemble
 
-Prenons un exemple concret. Vous êtes artisan à Rennes. Vous investissez 1 200 euros dans un [site vitrine professionnel](/services/creation-site-web-rennes).
+Prenons un exemple concret. Vous êtes artisan à Rennes. Vous investissez 1 200 euros dans un [site vitrine professionnel](/services/creation-site-web-rennes/).
 
-Grâce à ce site et au [SEO local](/blog/guide-seo-local-rennes), vous apparaissez dans les résultats Google pour "artisan [votre métier] Rennes". Chaque mois, 200 personnes visitent votre site. 5% vous contactent via le formulaire : 10 prospects par mois. Vous convertissez 30% de ces prospects en clients : 3 nouveaux clients par mois.
+Grâce à ce site et au [SEO local](/blog/guide-seo-local-rennes/), vous apparaissez dans les résultats Google pour "artisan [votre métier] Rennes". Chaque mois, 200 personnes visitent votre site. 5% vous contactent via le formulaire : 10 prospects par mois. Vous convertissez 30% de ces prospects en clients : 3 nouveaux clients par mois.
 
 Si votre panier moyen est de 500 euros, c'est 1 500 euros de chiffre d'affaires supplémentaire par mois. Votre site est rentabilisé dès le premier mois.
 
@@ -79,7 +79,7 @@ Un site professionnel est la base d'une stratégie SEO efficace :
 - **Maillage interne** : une architecture qui aide Google à comprendre votre activité
 - **Données structurées** : des informations que Google peut afficher directement dans les résultats
 
-Pour les entreprises locales, le [SEO local](/services/optimisation-seo) est particulièrement puissant. Apparaître dans le "pack local" de Google (la carte avec les 3 résultats) peut multiplier votre visibilité par dix.
+Pour les entreprises locales, le [SEO local](/services/optimisation-seo/) est particulièrement puissant. Apparaître dans le "pack local" de Google (la carte avec les 3 résultats) peut multiplier votre visibilité par dix.
 
 ### Le contenu comme levier d'acquisition
 
@@ -113,7 +113,7 @@ Pas de template générique. Votre site doit refléter votre identité, votre po
 
 ### Performance technique
 
-Un site qui charge en moins de 2 secondes. En 2026, les utilisateurs ne tolèrent plus la lenteur. Les technologies modernes (Astro, Next.js, images optimisées, CDN) permettent d'atteindre des performances excellentes. Pour comprendre pourquoi la vitesse est cruciale, lisez mon article sur [l'importance d'un site rapide](/blog/pourquoi-site-web-rapide-important).
+Un site qui charge en moins de 2 secondes. En 2026, les utilisateurs ne tolèrent plus la lenteur. Les technologies modernes (Astro, Next.js, images optimisées, CDN) permettent d'atteindre des performances excellentes. Pour comprendre pourquoi la vitesse est cruciale, lisez mon article sur [l'importance d'un site rapide](/blog/pourquoi-site-web-rapide-important/).
 
 ### Responsive design
 
@@ -121,7 +121,7 @@ Plus de 60% du trafic web vient des mobiles. Votre site doit être parfait sur t
 
 ### Optimisation SEO
 
-Structure HTML sémantique, balises meta, performance, contenu optimisé. Le [SEO](/glossaire/seo) doit être intégré dès la conception, pas ajouté après coup.
+Structure HTML sémantique, balises meta, performance, contenu optimisé. Le [SEO](/glossaire/seo/) doit être intégré dès la conception, pas ajouté après coup.
 
 ### Sécurité
 
@@ -137,9 +137,9 @@ Beaucoup d'entrepreneurs font l'erreur de confier leur site au "neveu qui s'y co
 
 Un site au rabais finit par coûter plus cher qu'un site professionnel. Parce qu'il faudra tout refaire, souvent dans l'urgence, avec la frustration d'avoir perdu du temps et de l'argent.
 
-J'ai détaillé les pièges à éviter dans mon article sur les [erreurs courantes lors de la création d'un site web](/blog/erreurs-courantes-creation-site-web).
+J'ai détaillé les pièges à éviter dans mon article sur les [erreurs courantes lors de la création d'un site web](/blog/erreurs-courantes-creation-site-web/).
 
-Pour [bien choisir votre développeur web](/blog/developpeur-web-rennes-comment-choisir), prenez le temps de comparer les offres, de regarder les réalisations, et de poser les bonnes questions.
+Pour [bien choisir votre développeur web](/blog/developpeur-web-rennes-comment-choisir/), prenez le temps de comparer les offres, de regarder les réalisations, et de poser les bonnes questions.
 
 ## Votre site web est un investissement, pas une dépense
 

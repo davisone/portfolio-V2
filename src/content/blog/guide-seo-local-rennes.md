@@ -10,7 +10,7 @@ Vous êtes entrepreneur, artisan ou commerçant à Rennes et vous voulez que vos
 
 ## Qu'est-ce que le SEO local ?
 
-Le [SEO](/glossaire/seo) local est l'ensemble des techniques qui permettent à votre entreprise d'apparaître dans les résultats de recherche géolocalisés. Quand un internaute tape "boulangerie Rennes" ou "développeur web près de chez moi", Google affiche des résultats adaptés à sa localisation.
+Le [SEO](/glossaire/seo/) local est l'ensemble des techniques qui permettent à votre entreprise d'apparaître dans les résultats de recherche géolocalisés. Quand un internaute tape "boulangerie Rennes" ou "développeur web près de chez moi", Google affiche des résultats adaptés à sa localisation.
 
 Le SEO local se manifeste principalement de deux façons :
 1. **Le pack local** : le bloc avec la carte Google Maps et les 3 entreprises mises en avant. C'est la place la plus convoitée.
@@ -124,10 +124,10 @@ Attention : ne suroptimisez pas. "Développeur web Rennes développeur Rennes si
 ### Les pages de services localisées
 
 Si vous proposez plusieurs services, créez une page dédiée pour chacun avec un focus local :
-- [Création de site web à Rennes](/services/creation-site-web-rennes)
-- [Optimisation SEO à Rennes](/services/optimisation-seo)
-- [Développement d'application mobile](/services/developpement-application-mobile)
-- [Création de boutique en ligne](/services/creation-boutique-en-ligne)
+- [Création de site web à Rennes](/services/creation-site-web-rennes/)
+- [Optimisation SEO à Rennes](/services/optimisation-seo/)
+- [Développement d'application mobile](/services/developpement-application-mobile/)
+- [Création de boutique en ligne](/services/creation-boutique-en-ligne/)
 
 Chaque page doit avoir un contenu unique, pas une simple copie avec le nom de la ville changé.
 
@@ -140,13 +140,13 @@ Les données structurées (Schema.org) aident Google à comprendre les informati
 - Type d'entreprise
 - URL du site, URL de la fiche Google
 
-Si votre site est développé avec un framework moderne, votre [développeur web](/blog/developpeur-web-rennes-comment-choisir) peut intégrer ces données facilement.
+Si votre site est développé avec un framework moderne, votre [développeur web](/blog/developpeur-web-rennes-comment-choisir/) peut intégrer ces données facilement.
 
 ### La performance technique
 
 Google privilégie les sites rapides et bien codés. Les Core Web Vitals (LCP, INP, CLS) sont des facteurs de classement. Un site professionnel construit avec des technologies modernes comme Astro ou Next.js offre des performances nettement supérieures aux sites WordPress surchargés de plugins.
 
-Pour en savoir plus sur l'importance de la vitesse, consultez mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important).
+Pour en savoir plus sur l'importance de la vitesse, consultez mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important/).
 
 ## Étape 5 : Créer du contenu local
 
@@ -193,7 +193,7 @@ Acheter des avis ou demander à des proches qui n'ont jamais été clients de la
 
 ### Négliger le mobile
 
-Plus de 60% des recherches locales se font sur mobile. Si votre site n'est pas optimisé pour les petits écrans, vous perdez la majorité de votre audience potentielle. C'est l'une des [erreurs courantes](/blog/erreurs-courantes-creation-site-web) les plus fréquentes.
+Plus de 60% des recherches locales se font sur mobile. Si votre site n'est pas optimisé pour les petits écrans, vous perdez la majorité de votre audience potentielle. C'est l'une des [erreurs courantes](/blog/erreurs-courantes-creation-site-web/) les plus fréquentes.
 
 ### Oublier de mettre à jour ses informations
 
@@ -221,7 +221,7 @@ Suivez ces indicateurs mensuellement pour mesurer votre progression et ajuster v
 
 Le SEO local est un travail de fond. Les premiers résultats apparaissent généralement après 3 à 6 mois d'efforts réguliers. Pour les requêtes peu concurrentielles, ça peut aller plus vite. Pour les requêtes très concurrentielles dans une ville comme Rennes, comptez 6 à 12 mois.
 
-La clé, c'est la régularité. Un peu de travail chaque semaine vaut mieux qu'un gros effort ponctuel. C'est pour cela qu'investir dans un [site web professionnel](/blog/pourquoi-investir-site-web-professionnel) dès le départ vous donne une longueur d'avance.
+La clé, c'est la régularité. Un peu de travail chaque semaine vaut mieux qu'un gros effort ponctuel. C'est pour cela qu'investir dans un [site web professionnel](/blog/pourquoi-investir-site-web-professionnel/) dès le départ vous donne une longueur d'avance.
 
 ## Besoin d'aide pour votre SEO local ?
 

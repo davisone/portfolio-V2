@@ -14,7 +14,7 @@ Stripe est une plateforme de paiement en ligne créée en 2010. Elle est utilis�
 
 ### Une API exceptionnelle
 
-L'[API](/glossaire/api-rest) de Stripe est considérée comme la référence en matière de design d'API. Elle est documentée de manière exemplaire, cohérente, et facile à intégrer pour un développeur. Chaque endpoint est documenté avec des exemples de code dans une dizaine de langages.
+L'[API](/glossaire/api-rest/) de Stripe est considérée comme la référence en matière de design d'API. Elle est documentée de manière exemplaire, cohérente, et facile à intégrer pour un développeur. Chaque endpoint est documenté avec des exemples de code dans une dizaine de langages.
 
 ### La sécurité intégrée
 
@@ -58,7 +58,7 @@ Stripe Checkout est une page de paiement hébergée par Stripe. Vous redirigez v
 
 **Idéal pour :**
 - Les sites vitrines avec vente ponctuelle
-- Les [boutiques en ligne](/services/creation-boutique-en-ligne) simples
+- Les [boutiques en ligne](/services/creation-boutique-en-ligne/) simples
 - Les ventes de services ou de formations
 - Les dons et contributions
 
@@ -90,7 +90,7 @@ Stripe Elements fournit des composants d'interface (champ de carte, champ IBAN, 
 
 **Idéal pour :**
 - Les sites e-commerce avec une expérience utilisateur soignée
-- Les [applications web](/services/developpement-react-nextjs) avec un tunnel de paiement intégré
+- Les [applications web](/services/developpement-react-nextjs/) avec un tunnel de paiement intégré
 - Les projets qui nécessitent un contrôle fin sur le parcours d'achat
 
 ### Option 3 : L'API Payment Intents (le plus flexible)
@@ -239,11 +239,11 @@ Pour éviter les doublons de paiement (en cas de double-clic ou de problème ré
 
 ### Next.js et React
 
-L'intégration de Stripe avec [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site) est fluide. Les API Routes (ou les Server Actions en App Router) servent de backend pour créer les sessions Checkout ou les Payment Intents. Côté client, la bibliothèque `@stripe/react-stripe-js` fournit les composants Elements prêts à l'emploi.
+L'intégration de Stripe avec [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site/) est fluide. Les API Routes (ou les Server Actions en App Router) servent de backend pour créer les sessions Checkout ou les Payment Intents. Côté client, la bibliothèque `@stripe/react-stripe-js` fournit les composants Elements prêts à l'emploi.
 
 ### Flutter
 
-Pour les [applications mobiles Flutter](/blog/creer-application-mobile-flutter-guide), Stripe fournit un SDK natif (`flutter_stripe`) qui intègre les moyens de paiement natifs (Apple Pay, Google Pay) et les Payment Sheets.
+Pour les [applications mobiles Flutter](/blog/creer-application-mobile-flutter-guide/), Stripe fournit un SDK natif (`flutter_stripe`) qui intègre les moyens de paiement natifs (Apple Pay, Google Pay) et les Payment Sheets.
 
 ### Astro
 
@@ -273,8 +273,8 @@ Le coût d'intégration dépend de la complexité :
 | Abonnements Stripe Billing | 2 000 - 5 000 euros |
 | Marketplace Stripe Connect | 5 000 - 15 000 euros |
 
-Ces budgets incluent le développement, les tests et la mise en production. Ils s'ajoutent au coût de développement du site ou de l'application elle-même. Pour un apercu des coûts globaux, consultez mon article sur le [prix d'un site web à Rennes](/blog/site-web-rennes-combien-ca-coute).
+Ces budgets incluent le développement, les tests et la mise en production. Ils s'ajoutent au coût de développement du site ou de l'application elle-même. Pour un apercu des coûts globaux, consultez mon article sur le [prix d'un site web à Rennes](/blog/site-web-rennes-combien-ca-coute/).
 
 ## Prêt à accepter les paiements en ligne ?
 
-L'intégration de Stripe est un projet technique qui nécessite de l'expérience. Une mauvaise intégration peut entraîner des paiements perdus, des problèmes de sécurité ou une mauvaise expérience utilisateur. Si vous avez besoin d'intégrer des paiements en ligne dans votre [site web](/services/creation-site-web-rennes) ou votre [application](/services/developpement-application-mobile), [contactez-moi](/#contact). Je vous guide vers la solution la plus adaptée à votre projet et votre budget.
+L'intégration de Stripe est un projet technique qui nécessite de l'expérience. Une mauvaise intégration peut entraîner des paiements perdus, des problèmes de sécurité ou une mauvaise expérience utilisateur. Si vous avez besoin d'intégrer des paiements en ligne dans votre [site web](/services/creation-site-web-rennes/) ou votre [application](/services/developpement-application-mobile/), [contactez-moi](/#contact). Je vous guide vers la solution la plus adaptée à votre projet et votre budget.

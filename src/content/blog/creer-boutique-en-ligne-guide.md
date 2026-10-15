@@ -40,19 +40,19 @@ Soyez réaliste sur votre budget. Il doit couvrir :
 - Le marketing de lancement
 - La maintenance et les évolutions futures
 
-Pour une estimation détaillée, consultez mon article sur [combien coûte un site web](/blog/site-web-rennes-combien-ca-coute).
+Pour une estimation détaillée, consultez mon article sur [combien coûte un site web](/blog/site-web-rennes-combien-ca-coute/).
 
 ## Choisir la bonne plateforme
 
 ### Les options en 2026
 
-Le choix de la plateforme est la décision technique la plus importante. J'ai réalisé un [comparatif détaillé Shopify vs WooCommerce vs sur mesure](/blog/shopify-vs-woocommerce-vs-custom) qui vous aidera à trancher. En résumé :
+Le choix de la plateforme est la décision technique la plus importante. J'ai réalisé un [comparatif détaillé Shopify vs WooCommerce vs sur mesure](/blog/shopify-vs-woocommerce-vs-custom/) qui vous aidera à trancher. En résumé :
 
 - **Shopify** : pour démarrer vite avec un budget mensuel flexible
 - **WooCommerce** : si vous avez déjà un site WordPress et un budget limité
 - **Sur mesure** : pour une performance optimale, un SEO maximal et une expérience d'achat unique
 
-Pour un projet ambitieux qui vise la rentabilité à long terme, je recommande le développement [sur mesure](/services/creation-boutique-en-ligne) avec des technologies modernes comme [Next.js](/glossaire/nextjs) et [React](/glossaire/react).
+Pour un projet ambitieux qui vise la rentabilité à long terme, je recommande le développement [sur mesure](/services/creation-boutique-en-ligne/) avec des technologies modernes comme [Next.js](/glossaire/nextjs/) et [React](/glossaire/react/).
 
 ## Construire votre catalogue
 
@@ -82,7 +82,7 @@ La fiche produit est la page la plus importante de votre boutique. Elle doit con
 
 ### Les solutions de paiement
 
-En 2026, [Stripe](/blog/stripe-integration-paiement-en-ligne) reste la référence pour l'intégration de paiement en ligne. Ses avantages : une API puissante, un support de toutes les méthodes de paiement courantes, une conformité PCI DSS intégrée, et des frais transparents.
+En 2026, [Stripe](/blog/stripe-integration-paiement-en-ligne/) reste la référence pour l'intégration de paiement en ligne. Ses avantages : une API puissante, un support de toutes les méthodes de paiement courantes, une conformité PCI DSS intégrée, et des frais transparents.
 
 Les méthodes de paiement à proposer au minimum :
 - Carte bancaire (Visa, Mastercard)
@@ -91,7 +91,7 @@ Les méthodes de paiement à proposer au minimum :
 
 ### La sécurité des paiements
 
-Ne stockez jamais les données de carte bancaire sur votre serveur. Utilisez toujours un prestataire de paiement certifié PCI DSS qui gère cette responsabilité pour vous. C'est un sujet que j'aborde plus en détail dans mon [guide de sécurité web](/blog/securiser-site-web-guide).
+Ne stockez jamais les données de carte bancaire sur votre serveur. Utilisez toujours un prestataire de paiement certifié PCI DSS qui gère cette responsabilité pour vous. C'est un sujet que j'aborde plus en détail dans mon [guide de sécurité web](/blog/securiser-site-web-guide/).
 
 ### L'optimisation du tunnel de paiement
 
@@ -129,19 +129,19 @@ Un système de gestion des stocks en temps réel évite les déceptions :
 
 ### Le SEO technique
 
-Le [référencement naturel](/services/optimisation-seo) est souvent le premier canal d'acquisition pour un e-commerce. Les fondamentaux techniques :
+Le [référencement naturel](/services/optimisation-seo/) est souvent le premier canal d'acquisition pour un e-commerce. Les fondamentaux techniques :
 
-- **La vitesse de chargement** : objectif sous les 2 secondes. Les technologies modernes ([SSR](/glossaire/ssr), [SSG](/glossaire/ssg)) permettent d'y parvenir facilement.
+- **La vitesse de chargement** : objectif sous les 2 secondes. Les technologies modernes ([SSR](/glossaire/ssr/), [SSG](/glossaire/ssg/)) permettent d'y parvenir facilement.
 - **Le responsive design** : votre boutique doit être parfaite sur mobile. Plus de 60% des achats en ligne se font sur smartphone.
 - **Les URL propres** : `/produits/sac-cuir-noir-25l` plutôt que `/product?id=12345`
 - **Les données structurées** : schéma Product pour afficher le prix, la disponibilité et les avis directement dans les résultats Google
 - **Le sitemap XML** : pour que Google indexe toutes vos pages produit
 
-Pour aller plus loin, consultez mon guide complet sur [l'optimisation SEO](/blog/comment-optimiser-seo-site-web).
+Pour aller plus loin, consultez mon guide complet sur [l'optimisation SEO](/blog/comment-optimiser-seo-site-web/).
 
 ### Le SEO local
 
-Si vous avez aussi un point de vente physique, le [SEO local](/blog/guide-seo-local-rennes) est un levier puissant. Fiche Google Business Profile, avis Google, citations locales : ces éléments attirent les clients de votre zone géographique.
+Si vous avez aussi un point de vente physique, le [SEO local](/blog/guide-seo-local-rennes/) est un levier puissant. Fiche Google Business Profile, avis Google, citations locales : ces éléments attirent les clients de votre zone géographique.
 
 ### Le contenu
 
@@ -179,12 +179,12 @@ Un blog intégré à votre boutique est un atout SEO majeur. Des articles sur l'
 
 **Ignorer les obligations légales.** Mentions légales, CGV, politique de confidentialité, droit de rétractation (14 jours en France), médiation de la consommation. Ces éléments sont obligatoires et leur absence peut entraîner des sanctions.
 
-**Lancer sans tester.** Commandez vous-même sur votre boutique. Faites tester par votre entourage. Vérifiez chaque e-mail automatique (confirmation de commande, expédition, etc.). Les [erreurs courantes](/blog/erreurs-courantes-creation-site-web) se détectent avant le lancement, pas après.
+**Lancer sans tester.** Commandez vous-même sur votre boutique. Faites tester par votre entourage. Vérifiez chaque e-mail automatique (confirmation de commande, expédition, etc.). Les [erreurs courantes](/blog/erreurs-courantes-creation-site-web/) se détectent avant le lancement, pas après.
 
-**Oublier la maintenance.** Une boutique en ligne vit et évolue. Sans [maintenance régulière](/blog/maintenance-site-web-pourquoi), les problèmes s'accumulent.
+**Oublier la maintenance.** Une boutique en ligne vit et évolue. Sans [maintenance régulière](/blog/maintenance-site-web-pourquoi/), les problèmes s'accumulent.
 
 ## Conclusion
 
 Créer une boutique en ligne rentable demande de la rigueur à chaque étape : stratégie, plateforme, catalogue, paiement, logistique, SEO, marketing. C'est un vrai projet entrepreneurial, pas un simple site web.
 
-Si vous voulez lancer votre boutique avec des bases solides, je vous accompagne de la conception au lancement. [Contactez-moi](/contact) pour discuter de votre projet, ou consultez ma page dédiée à la [création de boutique en ligne](/services/creation-boutique-en-ligne) pour en savoir plus sur mon approche.
+Si vous voulez lancer votre boutique avec des bases solides, je vous accompagne de la conception au lancement. [Contactez-moi](/#contact) pour discuter de votre projet, ou consultez ma page dédiée à la [création de boutique en ligne](/services/creation-boutique-en-ligne/) pour en savoir plus sur mon approche.

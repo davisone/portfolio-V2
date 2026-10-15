@@ -12,11 +12,11 @@ Votre site web est prêt, le design est impeccable, le code est optimisé. Mais 
 
 ### L'impact direct sur la performance
 
-Le temps de chargement de votre site dépend en grande partie de votre hébergeur. Un serveur lent, surchargé ou mal configuré peut transformer un site bien conçu en une expérience frustrante pour vos visiteurs. Et comme je l'explique dans mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important), chaque seconde de chargement supplémentaire fait fuir vos clients.
+Le temps de chargement de votre site dépend en grande partie de votre hébergeur. Un serveur lent, surchargé ou mal configuré peut transformer un site bien conçu en une expérience frustrante pour vos visiteurs. Et comme je l'explique dans mon article sur [pourquoi un site rapide est important](/blog/pourquoi-site-web-rapide-important/), chaque seconde de chargement supplémentaire fait fuir vos clients.
 
 ### L'impact sur le SEO
 
-Google intègre la vitesse de chargement dans ses critères de classement. Un hébergeur performant contribue directement à votre [référencement naturel](/glossaire/seo). A l'inverse, un hébergeur médiocre peut plomber tous vos efforts d'[optimisation SEO](/services/optimisation-seo).
+Google intègre la vitesse de chargement dans ses critères de classement. Un hébergeur performant contribue directement à votre [référencement naturel](/glossaire/seo/). A l'inverse, un hébergeur médiocre peut plomber tous vos efforts d'[optimisation SEO](/services/optimisation-seo/).
 
 ### L'impact sur la sécurité
 
@@ -77,7 +77,7 @@ Les plateformes cloud comme AWS, Google Cloud ou Azure offrent une infrastructur
 
 ### Le déploiement serverless et les plateformes modernes
 
-C'est l'approche qui a pris le dessus en 2026 pour les sites construits avec des frameworks modernes. Des plateformes comme [Vercel](/glossaire/vercel), Netlify ou Cloudflare Pages offrent un déploiement simplifié avec des performances exceptionnelles.
+C'est l'approche qui a pris le dessus en 2026 pour les sites construits avec des frameworks modernes. Des plateformes comme [Vercel](/glossaire/vercel/), Netlify ou Cloudflare Pages offrent un déploiement simplifié avec des performances exceptionnelles.
 
 **Avantages :**
 - Déploiement automatique depuis Git
@@ -88,11 +88,11 @@ C'est l'approche qui a pris le dessus en 2026 pour les sites construits avec des
 - Pas de gestion serveur
 
 **Inconvénients :**
-- Adapté principalement aux sites statiques et aux frameworks [SSG](/glossaire/ssg)/[SSR](/glossaire/ssr)
+- Adapté principalement aux sites statiques et aux frameworks [SSG](/glossaire/ssg/)/[SSR](/glossaire/ssr/)
 - Coûts qui augmentent avec le trafic sur les plans payants
 - Dépendance à une plateforme tierce
 
-**Pour qui ?** Les sites construits avec des frameworks modernes comme [Next.js](/glossaire/nextjs), Astro, Nuxt. C'est l'option que je recommande pour la majorité des projets professionnels.
+**Pour qui ?** Les sites construits avec des frameworks modernes comme [Next.js](/glossaire/nextjs/), Astro, Nuxt. C'est l'option que je recommande pour la majorité des projets professionnels.
 
 ## Les critères de choix essentiels
 
@@ -124,15 +124,15 @@ Ne choisissez pas le moins cher par défaut. Un hébergement à 3 euros par mois
 
 ### Pour un site vitrine professionnel
 
-Si votre site est développé avec un framework moderne (Astro, [Next.js](/glossaire/nextjs)), déployez-le sur Vercel ou Netlify. Les performances seront excellentes, le déploiement est automatisé, et le plan gratuit suffit souvent pour un [site vitrine](/services/creation-site-web-rennes).
+Si votre site est développé avec un framework moderne (Astro, [Next.js](/glossaire/nextjs/)), déployez-le sur Vercel ou Netlify. Les performances seront excellentes, le déploiement est automatisé, et le plan gratuit suffit souvent pour un [site vitrine](/services/creation-site-web-rennes/).
 
 ### Pour un e-commerce
 
-Une [boutique en ligne](/services/creation-boutique-en-ligne) nécessite un hébergement plus robuste. Si vous utilisez une solution sur mesure, un VPS performant ou une plateforme cloud est recommandé. Si vous optez pour Shopify, l'hébergement est inclus dans l'abonnement.
+Une [boutique en ligne](/services/creation-boutique-en-ligne/) nécessite un hébergement plus robuste. Si vous utilisez une solution sur mesure, un VPS performant ou une plateforme cloud est recommandé. Si vous optez pour Shopify, l'hébergement est inclus dans l'abonnement.
 
 ### Pour une application web
 
-Une [application web](/services/creation-application-web) avec des fonctionnalités temps réel, une base de données importante ou un trafic variable nécessite une infrastructure cloud (AWS, Google Cloud) ou une plateforme serverless adaptée.
+Une [application web](/services/creation-application-web/) avec des fonctionnalités temps réel, une base de données importante ou un trafic variable nécessite une infrastructure cloud (AWS, Google Cloud) ou une plateforme serverless adaptée.
 
 ## Les erreurs à éviter
 
@@ -140,7 +140,7 @@ Une [application web](/services/creation-application-web) avec des fonctionnalit
 
 **Négliger les sauvegardes.** Même avec un bon hébergeur, mettez en place vos propres sauvegardes. Ne dépendez jamais d'un seul point de sauvegarde.
 
-**Ignorer la localisation des serveurs.** Pour le [SEO local](/blog/guide-seo-local-rennes) et la performance, la proximité géographique des serveurs avec votre audience compte.
+**Ignorer la localisation des serveurs.** Pour le [SEO local](/blog/guide-seo-local-rennes/) et la performance, la proximité géographique des serveurs avec votre audience compte.
 
 **Oublier la migration future.** Assurez-vous de pouvoir migrer facilement si votre hébergeur ne vous convient plus. Évitez les solutions propriétaires qui vous enferment.
 
@@ -148,4 +148,4 @@ Une [application web](/services/creation-application-web) avec des fonctionnalit
 
 Le choix de l'hébergeur n'est pas une décision anodine. Il impacte directement la performance, la sécurité et le référencement de votre site. En 2026, les plateformes serverless et les déploiements automatisés offrent le meilleur rapport performance-simplicité pour la majorité des projets web modernes.
 
-Si vous hésitez, n'hésitez pas à [me contacter](/contact). Je pourrai vous orienter vers la solution la plus adaptée à votre projet et à votre budget.
+Si vous hésitez, n'hésitez pas à [me contacter](/#contact). Je pourrai vous orienter vers la solution la plus adaptée à votre projet et à votre budget.

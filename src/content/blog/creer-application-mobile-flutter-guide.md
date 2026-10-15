@@ -29,7 +29,7 @@ Pendant le développement, les modifications de code sont visibles instantanéme
 **Un écosystème mature :**
 Flutter dispose de milliers de packages pour ajouter des fonctionnalités : authentification, paiement, géolocalisation, notifications push, stockage local, etc. La communauté est active et les ressources sont abondantes.
 
-Pour une comparaison détaillée avec l'alternative principale, consultez mon article [Flutter vs React Native en 2026](/blog/flutter-vs-react-native-2026).
+Pour une comparaison détaillée avec l'alternative principale, consultez mon article [Flutter vs React Native en 2026](/blog/flutter-vs-react-native-2026/).
 
 ## Les étapes de création d'une application mobile
 
@@ -40,7 +40,7 @@ Avant d'écrire la moindre ligne de code, il faut répondre à ces questions fon
 **Le problème :**
 - Quel problème votre application résout-elle ?
 - Comment les utilisateurs résolvent-ils ce problème aujourd'hui ?
-- Pourquoi une application mobile est-elle la meilleure solution (et pas un [site web](/blog/site-vitrine-vs-application-web)) ?
+- Pourquoi une application mobile est-elle la meilleure solution (et pas un [site web](/blog/site-vitrine-vs-application-web/)) ?
 
 **La cible :**
 - Qui sont vos utilisateurs ?
@@ -93,7 +93,7 @@ Chaque fonctionnalité est développée itérativement. Pour chacune :
 5. Validation
 
 **Le backend :**
-La plupart des applications mobiles nécessitent un backend : un serveur qui stocke les données, gère l'authentification, envoie les notifications push, expose des [API](/glossaire/api-rest).
+La plupart des applications mobiles nécessitent un backend : un serveur qui stocke les données, gère l'authentification, envoie les notifications push, expose des [API](/glossaire/api-rest/).
 
 Les options courantes pour le backend d'une application Flutter :
 - **Firebase** : la solution de Google, rapide à mettre en place, idéale pour les MVP et les petites applications
@@ -149,9 +149,9 @@ La publication n'est que le début. Après le lancement :
 - Nouvelles fonctionnalités progressives
 
 **Marketing :**
-- ASO (App Store Optimization) : l'équivalent du [SEO](/glossaire/seo) pour les stores
+- ASO (App Store Optimization) : l'équivalent du [SEO](/glossaire/seo/) pour les stores
 - Communication sur les réseaux sociaux
-- Un [site web vitrine](/services/creation-site-web-rennes) dédié à l'application pour le référencement naturel
+- Un [site web vitrine](/services/creation-site-web-rennes/) dédié à l'application pour le référencement naturel
 
 ## Les coûts détaillés
 
@@ -165,7 +165,7 @@ Les coûts de développement dépendent de la complexité de l'application :
 | Application moyenne | Réservation, e-commerce simple, réseau social basique | 8 000 - 25 000 euros |
 | Application complexe | Marketplace, SaaS, temps réel, multi-rôles | 25 000 - 60 000+ euros |
 
-Pour des estimations plus détaillées, consultez mon article sur le [coût d'une application mobile](/blog/combien-coute-application-mobile).
+Pour des estimations plus détaillées, consultez mon article sur le [coût d'une application mobile](/blog/combien-coute-application-mobile/).
 
 ### Coûts récurrents
 
@@ -215,14 +215,14 @@ Une application mobile nécessite une maintenance continue : mises à jour des d
 
 ### 5. Ne pas prévoir de site web complémentaire
 
-Votre application a besoin d'un site web pour le [SEO](/services/optimisation-seo), pour la page de présentation sur les stores, pour le support client. Ce site peut être simple (un [site vitrine](/blog/site-vitrine-vs-application-web)), mais il est indispensable.
+Votre application a besoin d'un site web pour le [SEO](/services/optimisation-seo/), pour la page de présentation sur les stores, pour le support client. Ce site peut être simple (un [site vitrine](/blog/site-vitrine-vs-application-web/)), mais il est indispensable.
 
 ## Flutter et les paiements in-app
 
 Si votre application inclut des paiements, vous avez deux options :
 
 1. **Les achats in-app (IAP)** : gérés par Apple et Google, obligatoires pour les biens numériques. Commission de 15 à 30%.
-2. **Les paiements externes** : via [Stripe](/blog/stripe-integration-paiement-en-ligne) par exemple, pour les biens physiques et services. Pas de commission des stores.
+2. **Les paiements externes** : via [Stripe](/blog/stripe-integration-paiement-en-ligne/) par exemple, pour les biens physiques et services. Pas de commission des stores.
 
 Le choix dépend de votre modèle économique. Les règles des stores sont strictes sur ce sujet : les biens numériques (abonnements, contenus premium) doivent passer par les IAP. Les biens physiques et les services rendus hors application peuvent utiliser un système de paiement externe.
 

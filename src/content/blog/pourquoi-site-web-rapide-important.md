@@ -83,7 +83,7 @@ Google analyse aussi les signaux comportementaux. Un site lent génère :
 
 Ces signaux indiquent à Google que votre site ne satisfait pas les visiteurs, ce qui dégrade progressivement votre classement. C'est un cercle vicieux : un site lent attire moins de trafic, ce qui réduit les signaux positifs, ce qui dégrade encore le classement.
 
-Pour une stratégie SEO complète qui intègre la performance, consultez notre [guide d'optimisation SEO](/blog/comment-optimiser-seo-site-web).
+Pour une stratégie SEO complète qui intègre la performance, consultez notre [guide d'optimisation SEO](/blog/comment-optimiser-seo-site-web/).
 
 ## L'impact sur les conversions
 
@@ -190,11 +190,11 @@ Pour un site e-commerce ou une application web :
 
 Le framework utilisé pour construire votre site a un impact majeur sur la performance de base.
 
-**Astro** est actuellement le champion de la performance pour les sites de contenu. En n'envoyant aucun JavaScript par défaut et en utilisant le rendu statique, un site Astro atteint facilement 95+ sur PageSpeed sans optimisation particulière. C'est la technologie que j'utilise pour ce portfolio, et c'est un excellent choix pour les [sites vitrines](/services/creation-site-web-rennes).
+**Astro** est actuellement le champion de la performance pour les sites de contenu. En n'envoyant aucun JavaScript par défaut et en utilisant le rendu statique, un site Astro atteint facilement 95+ sur PageSpeed sans optimisation particulière. C'est la technologie que j'utilise pour ce portfolio, et c'est un excellent choix pour les [sites vitrines](/services/creation-site-web-rennes/).
 
 **Next.js** offre un bon équilibre pour les applications web complexes. Les Server Components et le streaming réduisent le JavaScript côté client, mais le framework reste plus lourd qu'Astro pour un simple site vitrine.
 
-Pour une comparaison détaillée, consultez notre article [Astro vs Next.js](/blog/astro-vs-nextjs-quel-framework-choisir).
+Pour une comparaison détaillée, consultez notre article [Astro vs Next.js](/blog/astro-vs-nextjs-quel-framework-choisir/).
 
 ## Conclusion
 

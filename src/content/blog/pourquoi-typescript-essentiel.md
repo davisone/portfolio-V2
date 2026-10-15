@@ -6,7 +6,7 @@ tags: ["TypeScript", "JavaScript", "développement web", "qualité de code", "fr
 draft: false
 ---
 
-Il y a quelques années, [TypeScript](/glossaire/typescript) était considéré comme un "nice to have", un ajout optionnel pour les projets ambitieux. En 2026, la donne a changé. TypeScript est devenu le standard de facto du développement web professionnel. Pratiquement tous les frameworks majeurs l'ont adopté, et les offres d'emploi en JavaScript pur se font de plus en plus rares.
+Il y a quelques années, [TypeScript](/glossaire/typescript/) était considéré comme un "nice to have", un ajout optionnel pour les projets ambitieux. En 2026, la donne a changé. TypeScript est devenu le standard de facto du développement web professionnel. Pratiquement tous les frameworks majeurs l'ont adopté, et les offres d'emploi en JavaScript pur se font de plus en plus rares.
 
 ## Qu'est-ce que TypeScript ?
 
@@ -42,13 +42,13 @@ Renommer une variable, modifier la structure d'un objet, changer la signature d'
 
 En 2026, la question n'est plus "faut-il utiliser TypeScript ?" mais "pourquoi ne pas l'utiliser ?". Voici l'état de l'écosystème :
 
-- **[Next.js](/glossaire/nextjs)** : TypeScript par défaut depuis la version 13
-- **[React](/glossaire/react)** : types intégrés directement dans le package principal
+- **[Next.js](/glossaire/nextjs/)** : TypeScript par défaut depuis la version 13
+- **[React](/glossaire/react/)** : types intégrés directement dans le package principal
 - **Angular** : TypeScript depuis le premier jour
 - **Vue 3** : écrit en TypeScript, support natif
 - **Astro** : support TypeScript natif
 - **Node.js** : support natif du TypeScript sans transpilation depuis la version 23
-- **[Prisma](/glossaire/prisma)** : génère automatiquement des types depuis le schéma de base de données
+- **[Prisma](/glossaire/prisma/)** : génère automatiquement des types depuis le schéma de base de données
 - **tRPC** : typage de bout en bout entre le client et le serveur
 
 Quand tous les outils que vous utilisez parlent TypeScript, ne pas l'utiliser revient à se priver d'une partie de leur puissance.
@@ -57,7 +57,7 @@ Quand tous les outils que vous utilisez parlent TypeScript, ne pas l'utiliser re
 
 ### Un code plus fiable
 
-TypeScript réduit significativement le nombre de bugs en production. Pour un site e-commerce ou une [application web](/services/creation-application-web), cela signifie moins de pannes, moins de pertes de revenus, moins de frustration utilisateur.
+TypeScript réduit significativement le nombre de bugs en production. Pour un site e-commerce ou une [application web](/services/creation-application-web/), cela signifie moins de pannes, moins de pertes de revenus, moins de frustration utilisateur.
 
 ### Un développement plus rapide à long terme
 
@@ -65,7 +65,7 @@ L'investissement initial en typage est rentabilisé dès que le projet atteint u
 
 ### Une maintenance simplifiée
 
-Un projet TypeScript est plus facile à maintenir dans le temps. Les types servent de contrat entre les différentes parties du code. Quand vous modifiez une partie, TypeScript vous indique ce qui doit être ajusté ailleurs. C'est un argument de poids pour la [maintenance à long terme](/blog/maintenance-site-web-pourquoi) de votre site ou application.
+Un projet TypeScript est plus facile à maintenir dans le temps. Les types servent de contrat entre les différentes parties du code. Quand vous modifiez une partie, TypeScript vous indique ce qui doit être ajusté ailleurs. C'est un argument de poids pour la [maintenance à long terme](/blog/maintenance-site-web-pourquoi/) de votre site ou application.
 
 ### Une meilleure collaboration
 
@@ -75,19 +75,19 @@ Dans une équipe, TypeScript impose un langage commun. Les interfaces et les typ
 
 ### Pour un site vitrine
 
-Même pour un [site vitrine](/services/creation-site-web-rennes), TypeScript apporte de la valeur. Les composants sont typés, les props sont validées, les données du CMS sont structurées. Le résultat : un site plus fiable, plus facile à faire évoluer.
+Même pour un [site vitrine](/services/creation-site-web-rennes/), TypeScript apporte de la valeur. Les composants sont typés, les props sont validées, les données du CMS sont structurées. Le résultat : un site plus fiable, plus facile à faire évoluer.
 
 ### Pour une application web
 
-C'est là que TypeScript brille le plus. Une application web avec des formulaires complexes, des appels API, une gestion d'état : le typage prévient les erreurs à chaque couche. Avec des outils comme [TanStack Query](/glossaire/react) et Zustand en TypeScript, la gestion des données asynchrones devient limpide.
+C'est là que TypeScript brille le plus. Une application web avec des formulaires complexes, des appels API, une gestion d'état : le typage prévient les erreurs à chaque couche. Avec des outils comme [TanStack Query](/glossaire/react/) et Zustand en TypeScript, la gestion des données asynchrones devient limpide.
 
 ### Pour une application mobile
 
-[Flutter](/glossaire/flutter) utilise Dart, un langage typé, et [React Native](/blog/flutter-vs-react-native-2026) utilise TypeScript. Le typage statique est la norme dans le développement mobile moderne, et pour les mêmes bonnes raisons.
+[Flutter](/glossaire/flutter/) utilise Dart, un langage typé, et [React Native](/blog/flutter-vs-react-native-2026/) utilise TypeScript. Le typage statique est la norme dans le développement mobile moderne, et pour les mêmes bonnes raisons.
 
 ### Pour une API
 
-TypeScript côté serveur (Node.js, Deno, Bun) combiné avec [Prisma](/glossaire/prisma) pour la base de données et tRPC ou GraphQL pour l'API permet un typage de bout en bout. Une modification du schéma de base de données se propage automatiquement jusqu'au client. Les erreurs d'intégration deviennent quasi impossibles.
+TypeScript côté serveur (Node.js, Deno, Bun) combiné avec [Prisma](/glossaire/prisma/) pour la base de données et tRPC ou GraphQL pour l'API permet un typage de bout en bout. Une modification du schéma de base de données se propage automatiquement jusqu'au client. Les erreurs d'intégration deviennent quasi impossibles.
 
 ## Les objections courantes
 
@@ -111,7 +111,7 @@ Au contraire. Quand l'IA génère du code, le typage permet de vérifier que le 
 
 ### Pour un nouveau projet
 
-Utilisez TypeScript dès le départ. Tous les frameworks modernes le supportent nativement. C'est le choix par défaut que je fais pour chaque projet de [développement React/Next.js](/services/developpement-react-nextjs).
+Utilisez TypeScript dès le départ. Tous les frameworks modernes le supportent nativement. C'est le choix par défaut que je fais pour chaque projet de [développement React/Next.js](/services/developpement-react-nextjs/).
 
 ### Pour un projet existant
 
@@ -125,4 +125,4 @@ Activez le mode strict (`"strict": true` dans tsconfig.json). C'est plus exigean
 
 TypeScript n'est plus un luxe ni une option. C'est le standard du développement web professionnel en 2026. Il réduit les bugs, accélère le développement, facilite la maintenance et améliore la collaboration. Si votre prochain projet web n'utilise pas TypeScript, posez-vous la question : pourquoi ?
 
-Pour comprendre comment TypeScript s'intègre dans une stack moderne, consultez mes articles sur [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site) et sur [Tailwind CSS](/blog/tailwind-css-avantages-inconvenients), deux piliers qui, combinés à TypeScript, forment une base solide pour tout projet web ambitieux.
+Pour comprendre comment TypeScript s'intègre dans une stack moderne, consultez mes articles sur [Next.js](/blog/pourquoi-choisir-next-js-pour-votre-site/) et sur [Tailwind CSS](/blog/tailwind-css-avantages-inconvenients/), deux piliers qui, combinés à TypeScript, forment une base solide pour tout projet web ambitieux.
