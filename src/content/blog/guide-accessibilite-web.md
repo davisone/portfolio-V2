@@ -91,11 +91,11 @@ Le contenu doit être suffisamment robuste pour être interprété par une large
 
 C'est la base. Utiliser les bonnes balises HTML donne du sens à votre contenu pour les technologies d'assistance. Un titre doit être un `<h1>` à `<h6>`, une liste doit être un `<ul>` ou `<ol>`, un bouton doit être un `<button>`.
 
-Trop de sites utilisent des `<div>` pour tout. C'est une erreur qui nuit à l'accessibilité et au [SEO](/glossaire/seo). Une structure sémantique correcte aide à la fois les lecteurs d'écran et les moteurs de recherche. C'est un point que j'aborde aussi dans mon article sur les [erreurs courantes en création de site web](/blog/erreurs-courantes-creation-site-web).
+Trop de sites utilisent des `<div>` pour tout. C'est une erreur qui nuit à l'accessibilité et au [SEO](/glossaire/seo/). Une structure sémantique correcte aide à la fois les lecteurs d'écran et les moteurs de recherche. C'est un point que j'aborde aussi dans mon article sur les [erreurs courantes en création de site web](/blog/erreurs-courantes-creation-site-web/).
 
 ### Le responsive design
 
-Un site [responsive](/glossaire/responsive-design) est un site qui s'adapte à tous les écrans. C'est un critère d'accessibilité : les utilisateurs qui agrandissent le texte ou qui utilisent un écran de taille réduite doivent pouvoir naviguer sans perdre de contenu ou de fonctionnalité.
+Un site [responsive](/glossaire/responsive-design/) est un site qui s'adapte à tous les écrans. C'est un critère d'accessibilité : les utilisateurs qui agrandissent le texte ou qui utilisent un écran de taille réduite doivent pouvoir naviguer sans perdre de contenu ou de fonctionnalité.
 
 ### Les formulaires accessibles
 
@@ -112,11 +112,11 @@ Chaque champ de formulaire doit avoir une étiquette visible et associée via l'
 
 ### Un meilleur SEO
 
-Google favorise les sites accessibles. La structure sémantique, les textes alternatifs, le contraste suffisant, la navigation au clavier : tous ces critères d'accessibilité sont aussi des critères de [référencement](/services/optimisation-seo). Rendre votre site accessible améliore mécaniquement votre positionnement.
+Google favorise les sites accessibles. La structure sémantique, les textes alternatifs, le contraste suffisant, la navigation au clavier : tous ces critères d'accessibilité sont aussi des critères de [référencement](/services/optimisation-seo/). Rendre votre site accessible améliore mécaniquement votre positionnement.
 
 ### Une meilleure expérience pour tous
 
-Les améliorations d'accessibilité profitent à tous vos visiteurs. Des contrastes lisibles, des formulaires clairs, une navigation intuitive, un site rapide et [performant](/blog/pourquoi-site-web-rapide-important) : ce sont des critères de qualité universels.
+Les améliorations d'accessibilité profitent à tous vos visiteurs. Des contrastes lisibles, des formulaires clairs, une navigation intuitive, un site rapide et [performant](/blog/pourquoi-site-web-rapide-important/) : ce sont des critères de qualité universels.
 
 ### Un marché élargi
 
@@ -140,6 +140,6 @@ Pour une évaluation complète, il faut tester manuellement : navigation au clav
 
 L'accessibilité ne doit pas être un ajout après coup. Elle doit être pensée dès la conception du projet. C'est plus simple, moins coûteux et plus efficace que de corriger un site existant.
 
-Quand je développe un [site professionnel](/services/creation-site-web-rennes) ou une [application web](/services/creation-application-web), l'accessibilité fait partie intégrante du processus, de la maquette au déploiement. C'est un engagement de qualité qui profite à tous vos utilisateurs.
+Quand je développe un [site professionnel](/services/creation-site-web-rennes/) ou une [application web](/services/creation-application-web/), l'accessibilité fait partie intégrante du processus, de la maquette au déploiement. C'est un engagement de qualité qui profite à tous vos utilisateurs.
 
-Si votre site actuel présente des problèmes d'accessibilité, une [refonte](/services/refonte-site-web) peut être l'occasion de repartir sur de bonnes bases.
+Si votre site actuel présente des problèmes d'accessibilité, une [refonte](/services/refonte-site-web/) peut être l'occasion de repartir sur de bonnes bases.

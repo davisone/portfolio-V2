@@ -25,7 +25,7 @@ Pour un entrepreneur qui souhaite un site simple, WordPress offre plusieurs avan
 
 Mais cette accessibilité a un prix. En 2026, les limites de WordPress sont de plus en plus visibles :
 
-**La performance.** Un site WordPress avec une dizaine de plugins charge en moyenne entre 3 et 5 secondes. C'est trop. Les utilisateurs abandonnent un site qui met plus de 3 secondes à charger. Et Google pénalise les sites lents dans ses résultats. J'en parle en détail dans mon article sur [l'importance d'un site rapide](/blog/pourquoi-site-web-rapide-important).
+**La performance.** Un site WordPress avec une dizaine de plugins charge en moyenne entre 3 et 5 secondes. C'est trop. Les utilisateurs abandonnent un site qui met plus de 3 secondes à charger. Et Google pénalise les sites lents dans ses résultats. J'en parle en détail dans mon article sur [l'importance d'un site rapide](/blog/pourquoi-site-web-rapide-important/).
 
 **La sécurité.** WordPress est la cible numéro un des attaques sur le web. Sa popularité en fait une proie facile. Plugins obsolètes, thèmes mal codés, mises à jour négligées : les failles sont nombreuses. Selon les rapports de sécurité, plus de 90% des sites CMS piratés tournent sous WordPress.
 
@@ -37,19 +37,19 @@ Mais cette accessibilité a un prix. En 2026, les limites de WordPress sont de p
 
 ### Ce que "sur mesure" signifie vraiment
 
-Un site développé sur mesure, c'est un site conçu spécifiquement pour vos besoins. Pas de thème générique, pas de plugins empilés : chaque ligne de code a une raison d'être. Les technologies modernes comme [Next.js](/glossaire/nextjs), [React](/glossaire/react) ou Astro permettent de créer des sites performants, sécurisés et évolutifs.
+Un site développé sur mesure, c'est un site conçu spécifiquement pour vos besoins. Pas de thème générique, pas de plugins empilés : chaque ligne de code a une raison d'être. Les technologies modernes comme [Next.js](/glossaire/nextjs/), [React](/glossaire/react/) ou Astro permettent de créer des sites performants, sécurisés et évolutifs.
 
 ### Les avantages du sur mesure
 
-**La performance.** Un site sur mesure, bien développé, charge en moins d'une seconde. Pas de code inutile, pas de requêtes superflues, des images optimisées automatiquement. C'est un avantage décisif pour le [SEO](/glossaire/seo) et l'expérience utilisateur.
+**La performance.** Un site sur mesure, bien développé, charge en moins d'une seconde. Pas de code inutile, pas de requêtes superflues, des images optimisées automatiquement. C'est un avantage décisif pour le [SEO](/glossaire/seo/) et l'expérience utilisateur.
 
 **La sécurité.** Pas de plugins tiers vulnérables, pas de base de données exposée par défaut. La surface d'attaque est considérablement réduite. Un site statique généré avec Astro ou Next.js est, par nature, beaucoup plus difficile à pirater qu'un WordPress.
 
 **L'évolutivité.** Votre site grandit avec vous. Besoin d'une fonctionnalité spécifique ? Elle est développée exactement comme vous le souhaitez. Pas de compromis, pas de bidouillage.
 
-**Le design unique.** Fini les sites qui se ressemblent tous. Un développement sur mesure permet de créer une identité visuelle forte, qui reflète vraiment votre marque. C'est l'une des [erreurs courantes](/blog/erreurs-courantes-creation-site-web) que je constate : des entreprises qui choisissent un thème WordPress et se retrouvent avec un site identique à celui de leurs concurrents.
+**Le design unique.** Fini les sites qui se ressemblent tous. Un développement sur mesure permet de créer une identité visuelle forte, qui reflète vraiment votre marque. C'est l'une des [erreurs courantes](/blog/erreurs-courantes-creation-site-web/) que je constate : des entreprises qui choisissent un thème WordPress et se retrouvent avec un site identique à celui de leurs concurrents.
 
-**Le SEO optimisé.** La structure HTML, les balises meta, le temps de chargement, le maillage interne : tout est pensé dès le départ pour le référencement. J'explique les fondamentaux dans mon guide sur [comment optimiser le SEO de son site](/blog/comment-optimiser-seo-site-web).
+**Le SEO optimisé.** La structure HTML, les balises meta, le temps de chargement, le maillage interne : tout est pensé dès le départ pour le référencement. J'explique les fondamentaux dans mon guide sur [comment optimiser le SEO de son site](/blog/comment-optimiser-seo-site-web/).
 
 ### Les inconvénients du sur mesure
 
@@ -80,7 +80,7 @@ Soyons honnêtes, le sur mesure a aussi ses contraintes :
 
 Le vrai calcul ne se fait pas sur le coût initial, mais sur le coût total de possession. Un site WordPress à 500 euros qui nécessite 200 euros par an de maintenance, de mises à jour de sécurité et de corrections de bugs finit par coûter aussi cher qu'un site sur mesure en quelques années. Sans parler du manque à gagner lié aux performances médiocres.
 
-Pour avoir une idée précise des tarifs, consultez mon article sur [combien coûte un site web à Rennes](/blog/site-web-rennes-combien-ca-coute).
+Pour avoir une idée précise des tarifs, consultez mon article sur [combien coûte un site web à Rennes](/blog/site-web-rennes-combien-ca-coute/).
 
 ## L'alternative : le headless CMS
 
@@ -90,8 +90,8 @@ Cette approche offre la facilité de gestion de contenu d'un CMS avec les perfor
 
 ## Mon conseil
 
-Si vous êtes un entrepreneur, une TPE ou une PME qui veut se démarquer en ligne, investir dans un [site sur mesure](/services/creation-site-web-rennes) est presque toujours le meilleur choix à moyen terme. La performance, la sécurité, le SEO et l'identité visuelle justifient l'investissement supplémentaire.
+Si vous êtes un entrepreneur, une TPE ou une PME qui veut se démarquer en ligne, investir dans un [site sur mesure](/services/creation-site-web-rennes/) est presque toujours le meilleur choix à moyen terme. La performance, la sécurité, le SEO et l'identité visuelle justifient l'investissement supplémentaire.
 
 WordPress reste pertinent pour les projets à très petit budget ou les blogs personnels. Mais pour un site professionnel qui doit générer du business, le sur mesure a pris une avance considérable en 2026.
 
-Le plus important, quel que soit votre choix, c'est de [bien choisir votre prestataire](/blog/developpeur-web-rennes-comment-choisir). Un WordPress bien réalisé vaudra toujours mieux qu'un site sur mesure bâclé.
+Le plus important, quel que soit votre choix, c'est de [bien choisir votre prestataire](/blog/developpeur-web-rennes-comment-choisir/). Un WordPress bien réalisé vaudra toujours mieux qu'un site sur mesure bâclé.

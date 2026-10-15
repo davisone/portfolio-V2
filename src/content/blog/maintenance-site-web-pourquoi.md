@@ -23,9 +23,9 @@ Un site non maintenu ne cesse pas de fonctionner du jour au lendemain. La dégra
 
 **Un site piraté.** C'est le scénario le plus redouté. Un site non maintenu est le terrain de jeu idéal pour les hackers. Injection de code malveillant, vol de données, redirection vers des sites frauduleux. Les conséquences : perte de confiance de vos clients, sanction Google (votre site est marqué comme dangereux), amendes RGPD si des données personnelles sont compromises.
 
-**Une perte de clients.** Un site lent ou buggué fait fuir les visiteurs. Comme je l'explique dans mon article sur [l'importance de la vitesse](/blog/pourquoi-site-web-rapide-important), chaque seconde de chargement en plus réduit votre taux de conversion. Un formulaire de contact cassé, c'est des prospects qui ne vous contactent jamais.
+**Une perte de clients.** Un site lent ou buggué fait fuir les visiteurs. Comme je l'explique dans mon article sur [l'importance de la vitesse](/blog/pourquoi-site-web-rapide-important/), chaque seconde de chargement en plus réduit votre taux de conversion. Un formulaire de contact cassé, c'est des prospects qui ne vous contactent jamais.
 
-**Un coût de réparation élevé.** Plus un problème est détecté tard, plus il coûte cher à corriger. Un bug mineur corrigé en 30 minutes lors d'une maintenance de routine peut devenir un problème majeur nécessitant des heures de travail si on le laisse s'aggraver. Parfois, la seule solution est une [refonte complète](/services/refonte-site-web).
+**Un coût de réparation élevé.** Plus un problème est détecté tard, plus il coûte cher à corriger. Un bug mineur corrigé en 30 minutes lors d'une maintenance de routine peut devenir un problème majeur nécessitant des heures de travail si on le laisse s'aggraver. Parfois, la seule solution est une [refonte complète](/services/refonte-site-web/).
 
 ## Les composantes d'une maintenance efficace
 
@@ -33,11 +33,11 @@ Un site non maintenu ne cesse pas de fonctionner du jour au lendemain. La dégra
 
 C'est le socle de la maintenance. Cela comprend :
 
-**Les mises à jour du framework.** Que votre site utilise [Next.js](/glossaire/nextjs), Astro, WordPress ou tout autre outil, des mises à jour sont publiées régulièrement. Elles corrigent des failles de sécurité, améliorent les performances et ajoutent des fonctionnalités.
+**Les mises à jour du framework.** Que votre site utilise [Next.js](/glossaire/nextjs/), Astro, WordPress ou tout autre outil, des mises à jour sont publiées régulièrement. Elles corrigent des failles de sécurité, améliorent les performances et ajoutent des fonctionnalités.
 
 **Les mises à jour des dépendances.** Un projet web moderne utilise des dizaines de bibliothèques. Chacune évolue indépendamment. Des outils comme Dependabot ou Renovate automatisent la détection des mises à jour disponibles.
 
-**Les mises à jour du serveur.** Si votre site tourne sur un VPS ou un serveur dédié, le système d'exploitation, le serveur web et le runtime (Node.js, PHP) doivent être maintenus à jour. Sur des plateformes comme [Vercel](/glossaire/vercel), cette couche est gérée automatiquement.
+**Les mises à jour du serveur.** Si votre site tourne sur un VPS ou un serveur dédié, le système d'exploitation, le serveur web et le runtime (Node.js, PHP) doivent être maintenus à jour. Sur des plateformes comme [Vercel](/glossaire/vercel/), cette couche est gérée automatiquement.
 
 ### 2. Les sauvegardes
 
@@ -62,7 +62,7 @@ Sans sauvegarde fiable, un incident peut signifier la perte totale de votre site
 
 La maintenance, ce n'est pas seulement empêcher les choses de casser. C'est aussi améliorer en continu :
 
-**L'optimisation SEO.** Analyser les positions, identifier les opportunités, optimiser les contenus existants, corriger les erreurs techniques. Le [SEO](/services/optimisation-seo) n'est pas un travail ponctuel, c'est un effort continu. Consultez mon guide sur [l'optimisation SEO](/blog/comment-optimiser-seo-site-web) pour comprendre les enjeux.
+**L'optimisation SEO.** Analyser les positions, identifier les opportunités, optimiser les contenus existants, corriger les erreurs techniques. Le [SEO](/services/optimisation-seo/) n'est pas un travail ponctuel, c'est un effort continu. Consultez mon guide sur [l'optimisation SEO](/blog/comment-optimiser-seo-site-web/) pour comprendre les enjeux.
 
 **L'optimisation des performances.** Compresser les nouvelles images, vérifier les scores Lighthouse, optimiser les requêtes base de données, réduire la taille des bundles JavaScript.
 
@@ -81,15 +81,15 @@ Un site dont le contenu ne change jamais envoie un signal négatif aux visiteurs
 
 ### Site vitrine
 
-Un [site vitrine](/services/creation-site-web-rennes) nécessite une maintenance légère mais régulière : mises à jour trimestrielles des dépendances, vérification mensuelle des formulaires et des liens, mise à jour du contenu quand nécessaire, surveillance continue de la disponibilité.
+Un [site vitrine](/services/creation-site-web-rennes/) nécessite une maintenance légère mais régulière : mises à jour trimestrielles des dépendances, vérification mensuelle des formulaires et des liens, mise à jour du contenu quand nécessaire, surveillance continue de la disponibilité.
 
 ### Site e-commerce
 
-Une [boutique en ligne](/services/creation-boutique-en-ligne) exige une maintenance plus rigoureuse. Les enjeux financiers sont directs : un bug de paiement, un temps de chargement trop long ou une faille de sécurité impacte immédiatement votre chiffre d'affaires. Mises à jour hebdomadaires, sauvegardes quotidiennes, monitoring en temps réel.
+Une [boutique en ligne](/services/creation-boutique-en-ligne/) exige une maintenance plus rigoureuse. Les enjeux financiers sont directs : un bug de paiement, un temps de chargement trop long ou une faille de sécurité impacte immédiatement votre chiffre d'affaires. Mises à jour hebdomadaires, sauvegardes quotidiennes, monitoring en temps réel.
 
 ### Application web
 
-Une [application web](/services/creation-application-web) avec des utilisateurs actifs nécessite la maintenance la plus poussée. Tests réguliers de toutes les fonctionnalités, monitoring des performances serveur, gestion des montées en charge, mise à jour continue des dépendances de sécurité.
+Une [application web](/services/creation-application-web/) avec des utilisateurs actifs nécessite la maintenance la plus poussée. Tests réguliers de toutes les fonctionnalités, monitoring des performances serveur, gestion des montées en charge, mise à jour continue des dépendances de sécurité.
 
 ## Combien coûte la maintenance ?
 
@@ -102,7 +102,7 @@ Le coût d'un contrat de maintenance mensuel varie entre 50 et 500 euros selon l
 - Refonte complète d'un site obsolète : plusieurs milliers d'euros
 - Perte de clients due à un site en panne : difficile à chiffrer, mais réel
 
-Pour avoir une idée des coûts globaux d'un projet web, consultez mon article sur [combien coûte un site web](/blog/site-web-rennes-combien-ca-coute).
+Pour avoir une idée des coûts globaux d'un projet web, consultez mon article sur [combien coûte un site web](/blog/site-web-rennes-combien-ca-coute/).
 
 ### Ce qu'un contrat de maintenance inclut typiquement
 
@@ -127,4 +127,4 @@ Quand je développe un site ou une application, je propose systématiquement un 
 
 Si votre site actuel manque de maintenance, il n'est jamais trop tard pour reprendre les choses en main. Et si vous lancez un nouveau projet, intégrez la maintenance dans votre budget dès le départ. C'est un investissement qui protège tous les autres.
 
-N'hésitez pas à [me contacter](/contact) pour discuter de la maintenance de votre site ou pour un audit de l'état actuel de votre présence en ligne.
+N'hésitez pas à [me contacter](/#contact) pour discuter de la maintenance de votre site ou pour un audit de l'état actuel de votre présence en ligne.

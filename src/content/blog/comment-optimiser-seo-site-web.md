@@ -32,7 +32,7 @@ Les actions les plus impactantes pour la vitesse :
 
 **Utiliser un CDN.** Un Content Delivery Network distribue votre site depuis des serveurs proches de vos visiteurs. Cloudflare, Vercel ou AWS CloudFront réduisent la latence de manière significative, surtout pour les visiteurs éloignés de votre serveur principal.
 
-Pour approfondir ce sujet, lisez notre article dédié sur [l'importance de la vitesse de votre site web](/blog/pourquoi-site-web-rapide-important).
+Pour approfondir ce sujet, lisez notre article dédié sur [l'importance de la vitesse de votre site web](/blog/pourquoi-site-web-rapide-important/).
 
 ### Le balisage HTML sémantique
 
@@ -89,7 +89,7 @@ Un contenu bien structuré se positionne mieux et retient les visiteurs plus lon
 Les liens internes distribuent l'autorité entre vos pages et aident Google à comprendre la thématique de votre site. Bonnes pratiques :
 
 - Liez vos articles de blog vers vos pages de services (et inversement).
-- Utilisez des ancres descriptives : "nos services de [création de site web à Rennes](/services/creation-site-web-rennes)" plutôt que "cliquez ici".
+- Utilisez des ancres descriptives : "nos services de [création de site web à Rennes](/services/creation-site-web-rennes/)" plutôt que "cliquez ici".
 - Créez des clusters thématiques : un article pilier lié à plusieurs articles détaillés sur le même sujet.
 
 ### Le contenu E-E-A-T
@@ -150,6 +150,6 @@ Fixez-vous des objectifs réalistes. Un nouveau site met en moyenne 3 à 6 mois 
 
 Le SEO en 2026 repose sur trois piliers : un site techniquement irréprochable, un contenu de qualité qui répond aux questions de vos prospects, et une autorité construite dans la durée. Il n'y a pas de raccourci ni de formule magique.
 
-Si votre site web ne génère pas le trafic que vous espérez, c'est probablement qu'un ou plusieurs de ces piliers sont défaillants. Un [site web bien conçu dès le départ](/services/creation-site-web-rennes) intègre ces bonnes pratiques nativement, ce qui vous évite de devoir tout reprendre plus tard.
+Si votre site web ne génère pas le trafic que vous espérez, c'est probablement qu'un ou plusieurs de ces piliers sont défaillants. Un [site web bien conçu dès le départ](/services/creation-site-web-rennes/) intègre ces bonnes pratiques nativement, ce qui vous évite de devoir tout reprendre plus tard.
 
 Besoin d'un audit SEO de votre site ou d'un accompagnement pour améliorer votre référencement ? [Contactez-moi](/#contact) pour en discuter.

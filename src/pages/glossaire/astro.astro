@@ -8,8 +8,8 @@ const schema = {
   "@type": "DefinedTerm",
   "name": "Astro",
   "description": "Astro est un framework web moderne concu pour construire des sites statiques performants en envoyant zero JavaScript par defaut au navigateur.",
-  "inDefinedTermSet": "https://www.evandavison.fr/glossaire",
-  "url": "https://www.evandavison.fr/glossaire/astro"
+  "inDefinedTermSet": "https://www.evandavison.fr/glossaire/",
+  "url": "https://www.evandavison.fr/glossaire/astro/"
 }
 ---
 
@@ -26,7 +26,7 @@ const schema = {
       <ol class="flex items-center gap-2 text-sm text-cartel">
         <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
         <li class="text-filet">/</li>
-        <li><a href="/glossaire" class="hover:text-encre transition-colors">Glossaire</a></li>
+        <li><a href="/glossaire/" class="hover:text-encre transition-colors">Glossaire</a></li>
         <li class="text-filet">/</li>
         <li class="text-encre">Astro</li>
       </ol>
@@ -47,13 +47,13 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Comment fonctionne Astro ?</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            Astro genere du HTML statique au moment du build par defaut (<a href="/glossaire/ssg" class="text-point hover:text-point transition-colors">SSG</a>). Chaque page est pre-rendue en HTML pur, sans JavaScript cote client. Cela produit des pages qui se chargent quasi instantanement et obtiennent d'excellents scores sur les Core Web Vitals de Google.
+            Astro genere du HTML statique au moment du build par defaut (<a href="/glossaire/ssg/" class="text-point hover:text-point transition-colors">SSG</a>). Chaque page est pre-rendue en HTML pur, sans JavaScript cote client. Cela produit des pages qui se chargent quasi instantanement et obtiennent d'excellents scores sur les Core Web Vitals de Google.
           </p>
           <p class="text-cartel leading-relaxed mb-4">
             L'architecture Islands est la grande innovation d'Astro. Les composants interactifs (un menu mobile, un formulaire, un carrousel) sont isoles en "iles" independantes qui s'hydratent individuellement. Le reste de la page reste du HTML statique. Les directives client:load, client:visible et client:idle controlent precisement quand chaque ile est hydratee.
           </p>
           <p class="text-cartel leading-relaxed">
-            Astro est agnostique au framework UI. Il supporte nativement <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a>, Vue, Svelte, SolidJS et meme plusieurs frameworks dans le meme projet. Les Content Collections offrent un systeme type pour gerer le contenu Markdown et MDX avec validation de schema.
+            Astro est agnostique au framework UI. Il supporte nativement <a href="/glossaire/react/" class="text-point hover:text-point transition-colors">React</a>, Vue, Svelte, SolidJS et meme plusieurs frameworks dans le meme projet. Les Content Collections offrent un systeme type pour gerer le contenu Markdown et MDX avec validation de schema.
           </p>
         </section>
 
@@ -61,7 +61,7 @@ const schema = {
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Pourquoi choisir Astro ?</h2>
           <ul class="space-y-2">
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Performances exceptionnelles : zero JavaScript par defaut, pages HTML statiques</li>
-            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> optimal grace au rendu statique et aux Core Web Vitals parfaits</li>
+            <li class="text-cartel leading-relaxed"><span class="text-point">--</span> <a href="/glossaire/seo/" class="text-point hover:text-point transition-colors">SEO</a> optimal grace au rendu statique et aux Core Web Vitals parfaits</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Architecture Islands : interactivite la ou c'est necessaire, HTML statique partout ailleurs</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Compatible avec React, Vue, Svelte et d'autres frameworks UI</li>
             <li class="text-cartel leading-relaxed"><span class="text-point">--</span> Content Collections pour gerer le contenu avec typage et validation</li>
@@ -72,10 +72,10 @@ const schema = {
         <section>
           <h2 class="font-display text-2xl font-bold text-encre mb-4">Astro en pratique</h2>
           <p class="text-cartel leading-relaxed mb-4">
-            Ce portfolio est construit avec Astro, utilisant des composants <a href="/glossaire/react" class="text-point hover:text-point transition-colors">React</a> pour les parties interactives et <a href="/glossaire/tailwind-css" class="text-point hover:text-point transition-colors">Tailwind CSS</a> pour le style. L'approche <a href="/glossaire/jamstack" class="text-point hover:text-point transition-colors">Jamstack</a> avec deploiement sur <a href="/glossaire/vercel" class="text-point hover:text-point transition-colors">Vercel</a> offre des temps de chargement ultra-rapides et un <a href="/glossaire/seo" class="text-point hover:text-point transition-colors">SEO</a> naturellement performant.
+            Ce portfolio est construit avec Astro, utilisant des composants <a href="/glossaire/react/" class="text-point hover:text-point transition-colors">React</a> pour les parties interactives et <a href="/glossaire/tailwind-css/" class="text-point hover:text-point transition-colors">Tailwind CSS</a> pour le style. L'approche <a href="/glossaire/jamstack/" class="text-point hover:text-point transition-colors">Jamstack</a> avec deploiement sur <a href="/glossaire/vercel/" class="text-point hover:text-point transition-colors">Vercel</a> offre des temps de chargement ultra-rapides et un <a href="/glossaire/seo/" class="text-point hover:text-point transition-colors">SEO</a> naturellement performant.
           </p>
           <p class="text-cartel leading-relaxed">
-            Astro est mon choix privilegie pour les <a href="/services/creation-site-web-rennes" class="text-point hover:text-point transition-colors">sites vitrines</a> et les sites centres sur le contenu. Pour les applications web avec beaucoup d'interactivite, <a href="/glossaire/nextjs" class="text-point hover:text-point transition-colors">Next.js</a> reste plus adapte grace a ses capacites de <a href="/glossaire/ssr" class="text-point hover:text-point transition-colors">SSR</a> et de gestion d'etat avancee.
+            Astro est mon choix privilegie pour les <a href="/services/creation-site-web-rennes/" class="text-point hover:text-point transition-colors">sites vitrines</a> et les sites centres sur le contenu. Pour les applications web avec beaucoup d'interactivite, <a href="/glossaire/nextjs/" class="text-point hover:text-point transition-colors">Next.js</a> reste plus adapte grace a ses capacites de <a href="/glossaire/ssr/" class="text-point hover:text-point transition-colors">SSR</a> et de gestion d'etat avancee.
           </p>
         </section>
       </div>
@@ -83,11 +83,11 @@ const schema = {
       <div class="border-t border-filet mt-12 pt-8">
         <h2 class="font-signal text-[0.7rem] tracking-[0.15em] uppercase text-cartel mb-4">Termes lies</h2>
         <div class="flex flex-wrap gap-2">
-          <a href="/glossaire/jamstack" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Jamstack</a>
-          <a href="/glossaire/ssg" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
-          <a href="/glossaire/react" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
-          <a href="/glossaire/tailwind-css" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Tailwind CSS</a>
-          <a href="/glossaire/vercel" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
+          <a href="/glossaire/jamstack/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Jamstack</a>
+          <a href="/glossaire/ssg/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">SSG</a>
+          <a href="/glossaire/react/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">React</a>
+          <a href="/glossaire/tailwind-css/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Tailwind CSS</a>
+          <a href="/glossaire/vercel/" class="border border-filet px-3 py-1 text-sm text-cartel hover:text-encre hover:bg-oeuvre transition-colors">Vercel</a>
         </div>
       </div>
 

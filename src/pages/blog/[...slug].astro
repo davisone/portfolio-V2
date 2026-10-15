@@ -34,12 +34,12 @@ const schema = {
   "author": { "@id": "https://www.evandavison.fr/#person" },
   "datePublished": post.data.pubDate.toISOString(),
   "dateModified": dateModified.toISOString(),
-  "url": `https://www.evandavison.fr/blog/${post.slug}`,
+  "url": `https://www.evandavison.fr/blog/${post.slug}/`,
   "publisher": { "@id": "https://www.evandavison.fr/#person" },
   "inLanguage": "fr-FR",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://www.evandavison.fr/blog/${post.slug}`
+    "@id": `https://www.evandavison.fr/blog/${post.slug}/`
   }
 }
 ---
@@ -62,7 +62,7 @@ const schema = {
       <ol class="flex items-center gap-2 text-sm text-cartel">
         <li><a href="/" class="hover:text-encre transition-colors">Accueil</a></li>
         <li class="text-filet">/</li>
-        <li><a href="/blog" class="hover:text-encre transition-colors">Blog</a></li>
+        <li><a href="/blog/" class="hover:text-encre transition-colors">Blog</a></li>
         <li class="text-filet">/</li>
         <li class="text-encre truncate max-w-[200px]">{post.data.title}</li>
       </ol>
@@ -108,7 +108,7 @@ const schema = {
     <!-- Nav bas de page -->
     <section class="border-t border-filet py-12">
       <div class="section-container flex flex-wrap justify-between items-center gap-4">
-        <a href="/blog" class="btn-secondary">
+        <a href="/blog/" class="btn-secondary">
           &larr; Tous les articles
         </a>
         <a href="/#contact" class="btn-primary">

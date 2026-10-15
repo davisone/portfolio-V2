@@ -48,7 +48,7 @@ La différence fondamentale est architecturale. Astro effectue tout le travail a
 
 Next.js, même en mode statique (SSG), inclut toujours le runtime React pour permettre la navigation côté client (prefetching, transitions) et l'hydratation potentielle. C'est un compromis de design : Next.js privilégie l'expérience de navigation (transitions douces entre pages) au détriment du poids initial.
 
-Pour comprendre l'impact concret de ces différences de performance sur votre référencement, consultez notre article sur [l'importance de la vitesse de votre site web](/blog/pourquoi-site-web-rapide-important).
+Pour comprendre l'impact concret de ces différences de performance sur votre référencement, consultez notre article sur [l'importance de la vitesse de votre site web](/blog/pourquoi-site-web-rapide-important/).
 
 ## Fonctionnalités : Next.js est plus complet
 
@@ -97,7 +97,7 @@ Pour le recrutement, Astro est plus facile à apprendre pour un développeur fro
 
 ### Choisir Astro pour :
 
-- **Sites vitrines et landing pages.** Performance maximale, SEO excellent, maintenance minimale. C'est la raison pour laquelle je recommande Astro pour la [création de sites web à Rennes](/services/creation-site-web-rennes).
+- **Sites vitrines et landing pages.** Performance maximale, SEO excellent, maintenance minimale. C'est la raison pour laquelle je recommande Astro pour la [création de sites web à Rennes](/services/creation-site-web-rennes/).
 - **Blogs et sites de contenu.** Les Content Collections sont un outil redoutable. Le rendu statique est idéal pour le SEO.
 - **Sites de documentation.** Starlight, le thème documentation d'Astro, est l'un des meilleurs outils pour créer de la documentation technique.
 - **Portfolios.** Performance, simplicité, déploiement statique. Ce site en est la preuve.
@@ -106,7 +106,7 @@ Pour le recrutement, Astro est plus facile à apprendre pour un développeur fro
 ### Choisir Next.js pour :
 
 - **Applications web avec authentification.** Espace client, dashboard, SaaS, plateforme de gestion. Next.js + NextAuth + Prisma est un combo éprouvé.
-- **E-commerce dynamique.** Catalogue avec filtres en temps réel, panier persistant, recommandations personnalisées. Pour les projets de [boutique en ligne](/services/creation-boutique-en-ligne), Next.js offre la flexibilité nécessaire.
+- **E-commerce dynamique.** Catalogue avec filtres en temps réel, panier persistant, recommandations personnalisées. Pour les projets de [boutique en ligne](/services/creation-boutique-en-ligne/), Next.js offre la flexibilité nécessaire.
 - **Applications avec données en temps réel.** Chat, notifications, feeds, tableaux de bord. Le SSR dynamique et les Server Actions facilitent ces cas d'usage.
 - **Plateformes multi-utilisateurs.** Rôles, permissions, espaces personnalisés.
 - **Projets nécessitant une API backend.** Si votre front-end et votre back-end sont dans le même projet, Next.js est naturel.

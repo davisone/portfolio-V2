@@ -22,7 +22,7 @@ Shopify est une plateforme SaaS (Software as a Service). Vous payez un abonnemen
 
 **L'écosystème d'applications.** Des milliers d'applications disponibles pour étendre les fonctionnalités : avis clients, marketing par e-mail, gestion avancée des stocks, multi-devises, etc.
 
-**Le paiement intégré.** Shopify Payments permet d'accepter les cartes bancaires sans passerelle tierce. Pour les solutions plus avancées, l'intégration [Stripe](/blog/stripe-integration-paiement-en-ligne) est native.
+**Le paiement intégré.** Shopify Payments permet d'accepter les cartes bancaires sans passerelle tierce. Pour les solutions plus avancées, l'intégration [Stripe](/blog/stripe-integration-paiement-en-ligne/) est native.
 
 ### Les inconvénients de Shopify
 
@@ -48,7 +48,7 @@ WooCommerce est un plugin gratuit pour WordPress qui transforme votre site en bo
 
 **La propriété des données.** Votre boutique tourne sur votre serveur. Vous êtes propriétaire de tout : code, données, contenu.
 
-**Le contenu marketing.** WordPress excelle dans la gestion de contenu. Combiner une boutique WooCommerce avec un blog optimisé pour le [SEO](/glossaire/seo) est naturel.
+**Le contenu marketing.** WordPress excelle dans la gestion de contenu. Combiner une boutique WooCommerce avec un blog optimisé pour le [SEO](/glossaire/seo/) est naturel.
 
 ### Les inconvénients de WooCommerce
 
@@ -64,15 +64,15 @@ WooCommerce est un plugin gratuit pour WordPress qui transforme votre site en bo
 
 ### Présentation
 
-Un e-commerce sur mesure est développé spécifiquement pour votre activité avec des technologies modernes : [React](/glossaire/react)/[Next.js](/glossaire/nextjs) pour le front-end, une [API REST](/glossaire/api-rest) ou GraphQL pour le back-end, [Stripe](/blog/stripe-integration-paiement-en-ligne) pour le paiement.
+Un e-commerce sur mesure est développé spécifiquement pour votre activité avec des technologies modernes : [React](/glossaire/react/)/[Next.js](/glossaire/nextjs/) pour le front-end, une [API REST](/glossaire/api-rest/) ou GraphQL pour le back-end, [Stripe](/blog/stripe-integration-paiement-en-ligne/) pour le paiement.
 
 ### Les avantages du sur mesure
 
-**La performance.** Un e-commerce sur mesure bien développé charge en moins d'une seconde. Pas de code superflu, pas de plugins lourds. En e-commerce, la vitesse est directement liée au chiffre d'affaires. Consultez mon article sur [l'importance de la vitesse](/blog/pourquoi-site-web-rapide-important) pour comprendre l'impact concret.
+**La performance.** Un e-commerce sur mesure bien développé charge en moins d'une seconde. Pas de code superflu, pas de plugins lourds. En e-commerce, la vitesse est directement liée au chiffre d'affaires. Consultez mon article sur [l'importance de la vitesse](/blog/pourquoi-site-web-rapide-important/) pour comprendre l'impact concret.
 
 **L'expérience utilisateur unique.** Le parcours d'achat est conçu sur mesure pour votre clientèle. Pas de compromis imposés par une plateforme générique. Chaque étape est optimisée pour convertir.
 
-**Le SEO optimal.** Structure des URL, balisage sémantique, performance, données structurées : tout est pensé dès le départ pour le [référencement](/services/optimisation-seo). En e-commerce, le SEO peut représenter 40 à 60% du trafic. C'est un levier qu'il ne faut pas négliger.
+**Le SEO optimal.** Structure des URL, balisage sémantique, performance, données structurées : tout est pensé dès le départ pour le [référencement](/services/optimisation-seo/). En e-commerce, le SEO peut représenter 40 à 60% du trafic. C'est un levier qu'il ne faut pas négliger.
 
 **L'évolutivité.** Votre boutique peut évoluer sans les contraintes d'une plateforme. Nouvelles fonctionnalités, intégrations spécifiques, internationalisation : tout est possible.
 
@@ -123,8 +123,8 @@ Un e-commerce sur mesure est développé spécifiquement pour votre activité av
 
 ## Mon avis
 
-Pour une [boutique en ligne professionnelle](/services/creation-boutique-en-ligne), le développement sur mesure offre le meilleur retour sur investissement à moyen et long terme. La performance, le SEO et l'expérience utilisateur sont les trois piliers d'un e-commerce rentable, et c'est exactement ce que le sur mesure permet de maximiser.
+Pour une [boutique en ligne professionnelle](/services/creation-boutique-en-ligne/), le développement sur mesure offre le meilleur retour sur investissement à moyen et long terme. La performance, le SEO et l'expérience utilisateur sont les trois piliers d'un e-commerce rentable, et c'est exactement ce que le sur mesure permet de maximiser.
 
 Shopify reste une excellente porte d'entrée pour tester un concept rapidement. WooCommerce est pertinent si vous êtes déjà dans l'écosystème WordPress.
 
-Quel que soit votre choix, le plus important est de [ne pas commettre les erreurs classiques](/blog/erreurs-courantes-creation-site-web) qui plombent tant de boutiques en ligne dès leur lancement. Prenez le temps de bien définir votre projet avant de vous lancer.
+Quel que soit votre choix, le plus important est de [ne pas commettre les erreurs classiques](/blog/erreurs-courantes-creation-site-web/) qui plombent tant de boutiques en ligne dès leur lancement. Prenez le temps de bien définir votre projet avant de vous lancer.

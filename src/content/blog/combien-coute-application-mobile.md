@@ -98,11 +98,11 @@ Quand c'est justifié : applications avec des besoins hardware poussés (réalit
 
 #### Cross-platform (Flutter / React Native) : le rapport qualité-prix
 
-Le cross-platform permet de développer une seule base de code pour iOS et Android. Pour une comparaison technique détaillée entre les deux options, consultez notre [article Flutter vs React Native](/blog/flutter-vs-react-native-2026).
+Le cross-platform permet de développer une seule base de code pour iOS et Android. Pour une comparaison technique détaillée entre les deux options, consultez notre [article Flutter vs React Native](/blog/flutter-vs-react-native-2026/).
 
 Avantages : coût réduit de 30 à 40%, maintenance simplifiée (une seule base de code), mise sur le marché plus rapide.
 
-C'est le choix que je recommande pour la grande majorité des projets, et c'est la raison pour laquelle je travaille principalement avec Flutter pour le [développement d'applications mobiles](/services/developpement-application-mobile).
+C'est le choix que je recommande pour la grande majorité des projets, et c'est la raison pour laquelle je travaille principalement avec Flutter pour le [développement d'applications mobiles](/services/developpement-application-mobile/).
 
 #### No-code / low-code : le prototype
 
