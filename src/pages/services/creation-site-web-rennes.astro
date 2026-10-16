@@ -29,7 +29,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Combien coûte la création d'un site web à Rennes ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Le prix d'un site web varie selon la complexité : un site vitrine démarre autour de 800€, une boutique en ligne à partir de 1 500€. Chaque projet est unique, un devis gratuit est réalisé après analyse de vos besoins." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Je facture au temps passé, 40 € de l'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d'heures, soit environ 600 €, une boutique en ligne une cinquantaine d'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone." }
         },
         {
           "@type": "Question",
@@ -49,7 +49,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Proposez-vous la maintenance après la livraison ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je propose des forfaits de maintenance mensuelle incluant les mises à jour de sécurité, les sauvegardes, et les petites modifications de contenu. Idéal pour que votre site reste performant dans le temps." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, sans abonnement : les corrections sont incluses pendant trois mois après la livraison, puis les mises à jour de sécurité, les évolutions et les modifications de contenu sont facturées au temps passé, au même taux de 40 € de l'heure. Une mise à jour simple prend rarement plus d'une heure." }
         }
       ]
     }
@@ -172,7 +172,7 @@ const schema = {
         {[
           {
             q: 'Combien coûte la création d\'un site web à Rennes ?',
-            a: 'Le prix varie selon la complexité : un site vitrine démarre autour de 800€, une boutique en ligne à partir de 1 500€. Chaque projet est unique : un devis gratuit est réalisé après analyse de vos besoins.'
+            a: 'Je facture au temps passé, 40 € de l\'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d\'heures, soit environ 600 €, une boutique en ligne une cinquantaine d\'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone.'
           },
           {
             q: 'Combien de temps faut-il pour créer un site web ?',
@@ -188,7 +188,7 @@ const schema = {
           },
           {
             q: 'Proposez-vous la maintenance après livraison ?',
-            a: 'Oui, des forfaits de maintenance mensuelle sont disponibles : mises à jour de sécurité, sauvegardes, et petites modifications de contenu. Idéal pour garder votre site performant dans le temps.'
+            a: 'Oui, sans abonnement : les corrections sont incluses pendant trois mois après la livraison, puis les mises à jour de sécurité, les évolutions et les modifications de contenu sont facturées au temps passé, au même taux de 40 € de l\'heure. Une mise à jour simple prend rarement plus d\'une heure.'
           },
         ].map(item => (
           <details class="border border-filet p-6 group">
