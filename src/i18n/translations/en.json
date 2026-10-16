@@ -202,7 +202,9 @@
       "subjectPlaceholder": "Website creation",
       "messagePlaceholder": "Describe your project...",
       "submit": "Send message",
-      "submitting": "Sending..."
+      "submitting": "Sending...",
+      "privacy": "Your message is sent through EmailJS and is only used to reply to you; I keep it for three years after our last exchange. Details and rights:",
+      "privacyLink": "privacy policy (French)"
     },
     "status": {
       "success": "Message sent successfully!",
