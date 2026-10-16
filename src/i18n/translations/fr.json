@@ -247,8 +247,16 @@
     "legal": {
       "notice": "Mentions légales",
       "privacy": "Confidentialité",
-      "terms": "CGV"
+      "terms": "CGV",
+      "cookies": "Gérer les cookies"
     }
+  },
+  "cookies": {
+    "title": "Un cookie, pour la mesure d'audience.",
+    "text": "Avec votre accord, Google Analytics mesure les pages lues (cookies _ga, 13 mois). Rien d'autre, et vous pouvez changer d'avis à tout moment avec « Gérer les cookies », en bas de page. ",
+    "more": "Détails",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   },
   "notFound": {
     "title": "404",

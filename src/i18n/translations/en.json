@@ -247,8 +247,16 @@
     "legal": {
       "notice": "Legal notice (French)",
       "privacy": "Privacy (French)",
-      "terms": "Terms of sale (French)"
+      "terms": "Terms of sale (French)",
+      "cookies": "Manage cookies"
     }
+  },
+  "cookies": {
+    "title": "One cookie, for audience measurement.",
+    "text": "With your consent, Google Analytics measures which pages are read (_ga cookies, 13 months). Nothing else, and you can change your mind at any time with \"Manage cookies\" at the bottom of the page. ",
+    "more": "Details (French)",
+    "accept": "Accept",
+    "refuse": "Refuse"
   },
   "notFound": {
     "title": "404",
