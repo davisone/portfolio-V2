@@ -242,6 +242,12 @@
       "faq": "FAQ",
       "comparisons": "Comparisons",
       "cv": "My resume"
+    },
+    "identity": "Evan Davison EI · Chantepie, near Rennes, France",
+    "legal": {
+      "notice": "Legal notice (French)",
+      "privacy": "Privacy (French)",
+      "terms": "Terms of sale (French)"
     }
   },
   "notFound": {
