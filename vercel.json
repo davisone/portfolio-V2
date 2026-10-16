@@ -17,6 +17,11 @@
       "permanent": true
     },
     {
+      "source": "/services/:page(hebergement-web|maintenance-web)/",
+      "destination": "https://www.dvs-web.fr/tarifs",
+      "permanent": true
+    },
+    {
       "source": "/contact/",
       "destination": "/#contact",
       "permanent": true

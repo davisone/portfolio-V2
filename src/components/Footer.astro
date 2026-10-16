@@ -34,8 +34,6 @@ const currentYear = new Date().getFullYear()
           <li><a href="/services/refonte-site-web/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.redesign}</a></li>
           <li><a href="/services/optimisation-seo/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.seo}</a></li>
           <li><a href="/services/creation-application-web/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.webApp}</a></li>
-          <li><a href="/services/maintenance-web/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.maintenance}</a></li>
-          <li><a href="/services/hebergement-web/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.hosting}</a></li>
           <li><a href="/services/identite-visuelle/" class="text-sm text-cartel hover:text-point transition-colors">{t.footer.serviceLinks.branding}</a></li>
         </ul>
       </div>
@@ -62,18 +60,26 @@ const currentYear = new Date().getFullYear()
     <!-- Copyright -->
     <div class="border-t border-filet pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-sm text-cartel tracking-wide">
-        &copy; {currentYear} Evan Davison &middot; Rennes, France
+        &copy; {currentYear} {t.footer.identity}
       </p>
-      <p class="text-sm text-cartel">
-        <a
-          href="https://www.dvs-web.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-encre hover:text-point transition-colors"
-        >
-          DVS Web &nearr;
-        </a>
-      </p>
+      <ul class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-cartel">
+        <li><a href="/mentions-legales/" class="hover:text-point transition-colors">{t.footer.legal.notice}</a></li>
+        <li><a href="https://www.dvs-web.fr/confidentialite" target="_blank" rel="noopener noreferrer" class="hover:text-point transition-colors">{t.footer.legal.privacy}</a></li>
+        <li><a href="https://www.dvs-web.fr/cgv" target="_blank" rel="noopener noreferrer" class="hover:text-point transition-colors">{t.footer.legal.terms}</a></li>
+        <li>
+          <button type="button" data-cookies-ouvrir class="hover:text-point transition-colors">{t.footer.legal.cookies}</button>
+        </li>
+        <li>
+          <a
+            href="https://www.dvs-web.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-encre hover:text-point transition-colors"
+          >
+            DVS Web &nearr;
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>

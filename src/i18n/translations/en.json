@@ -202,7 +202,9 @@
       "subjectPlaceholder": "Website creation",
       "messagePlaceholder": "Describe your project...",
       "submit": "Send message",
-      "submitting": "Sending..."
+      "submitting": "Sending...",
+      "privacy": "Your message is sent through EmailJS and is only used to reply to you; I keep it for three years after our last exchange. Details and rights:",
+      "privacyLink": "privacy policy (French)"
     },
     "status": {
       "success": "Message sent successfully!",
@@ -232,8 +234,6 @@
       "redesign": "Website redesign",
       "seo": "SEO optimization",
       "webApp": "Web application",
-      "maintenance": "Web maintenance",
-      "hosting": "Web hosting",
       "branding": "Visual identity"
     },
     "resourceLinks": {
@@ -242,7 +242,21 @@
       "faq": "FAQ",
       "comparisons": "Comparisons",
       "cv": "My resume"
+    },
+    "identity": "Evan Davison EI · Chantepie, near Rennes, France",
+    "legal": {
+      "notice": "Legal notice (French)",
+      "privacy": "Privacy (French)",
+      "terms": "Terms of sale (French)",
+      "cookies": "Manage cookies"
     }
+  },
+  "cookies": {
+    "title": "One cookie, for audience measurement.",
+    "text": "With your consent, Google Analytics measures which pages are read (_ga cookies, 13 months). Nothing else, and you can change your mind at any time with \"Manage cookies\" at the bottom of the page. ",
+    "more": "Details (French)",
+    "accept": "Accept",
+    "refuse": "Refuse"
   },
   "notFound": {
     "title": "404",

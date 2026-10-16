@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Layout
+  title="Mentions légales | Evan Davison"
+  description="Éditeur, hébergeur et conditions d'utilisation du site evandavison.fr."
+  canonical="https://www.evandavison.fr/mentions-legales/"
+  noindex={true}
+  locale="fr"
+>
+  <Header locale="fr" />
+  <main id="main-content" class="min-h-screen pt-28 pb-20">
+    <article class="section-container max-w-3xl prose
+      prose-headings:font-display prose-headings:text-encre prose-headings:font-normal
+      prose-p:text-cartel prose-p:leading-relaxed
+      prose-a:text-point prose-a:underline prose-a:underline-offset-4
+      prose-strong:text-encre prose-strong:font-medium
+      prose-li:text-cartel
+    ">
+      <h1>Mentions légales</h1>
+
+      <h2>Éditeur</h2>
+      <ul>
+        <li>Evan Davison, entrepreneur individuel (EI), exerçant sous l'enseigne DVS Web</li>
+        <li>SIRET : 100 077 247 00011</li>
+        <li>Adresse : 1 Esplanade Christian Hauvette, Résidence Eden Square, appartement 16, 35135 Chantepie, France</li>
+        <li>Email : <a href="mailto:contact@evandavison.fr">contact@evandavison.fr</a></li>
+        <li>Téléphone : <a href="tel:+33651019506">06 51 01 95 06</a></li>
+        <li>Directeur de la publication : Evan Davison</li>
+      </ul>
+      <p>TVA non applicable, article 293 B du code général des impôts.</p>
+
+      <h2>Hébergeur</h2>
+      <ul>
+        <li>Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</li>
+        <li>Contact : <a href="https://vercel.com/contact" target="_blank" rel="noopener noreferrer">vercel.com/contact</a></li>
+      </ul>
+
+      <h2>Prestations</h2>
+      <p>
+        Ce site est mon portfolio. Les prestations que je propose, leur tarif (au temps passé) et les conditions
+        générales de vente sont celles de DVS Web :
+        <a href="https://www.dvs-web.fr/tarifs" target="_blank" rel="noopener noreferrer">tarifs</a> et
+        <a href="https://www.dvs-web.fr/cgv" target="_blank" rel="noopener noreferrer">conditions générales de vente</a>.
+      </p>
+
+      <h2>Données personnelles et cookies</h2>
+      <p>
+        Le formulaire de contact, la mesure d'audience et vos droits sont décrits dans la
+        <a href="https://www.dvs-web.fr/confidentialite" target="_blank" rel="noopener noreferrer">politique de confidentialité</a>,
+        commune à dvs-web.fr et à ce site. Google Analytics ne se charge qu'avec votre accord ; le lien « Gérer les
+        cookies », en bas de chaque page, permet de changer d'avis à tout moment.
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        Les textes, images et le code de ce site sont ma propriété, sauf mention contraire. Toute reproduction sans
+        mon accord écrit est interdite.
+      </p>
+
+      <p>Dernière mise à jour : 16 octobre 2026</p>
+    </article>
+  </main>
+  <Footer locale="fr" />
+</Layout>

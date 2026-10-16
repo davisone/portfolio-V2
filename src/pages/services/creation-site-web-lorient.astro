@@ -29,7 +29,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Travaillez-vous avec des entreprises liées à la filière nautique à Lorient ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Lorient étant la capitale de la voile et un pôle majeur de la course au large, je travaille avec des entreprises du nautisme, de la construction navale et des équipementiers. Je crée des sites adaptés à ces secteurs exigeants." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, Lorient étant la capitale de la voile et un pôle majeur de la course au large, je peux travailler avec des entreprises du nautisme, de la construction navale et des équipementiers. Je crée des sites adaptés à ces secteurs exigeants." }
         },
         {
           "@type": "Question",
@@ -44,12 +44,12 @@ const schema = {
         {
           "@type": "Question",
           "name": "Quel budget prévoir pour un site web à Lorient ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, un e-commerce à partir de 1 500 euros. Pour les projets techniques plus complexes (portails métier, applications web), le budget est défini sur devis après analyse de vos besoins spécifiques." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Je facture au temps passé, 40 € de l'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d'heures, soit environ 600 €, une boutique en ligne une cinquantaine d'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone." }
         },
         {
           "@type": "Question",
           "name": "Proposez-vous un hébergement et une maintenance pour les sites lorientais ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, je propose des forfaits d'hébergement performant et de maintenance mensuelle : mises à jour de sécurité, sauvegardes automatiques, monitoring des performances et corrections. Votre site reste rapide et sécurisé dans le temps." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, sans abonnement : les corrections sont incluses pendant trois mois après la livraison, puis les mises à jour de sécurité, les évolutions et les modifications de contenu sont facturées au temps passé, au même taux de 40 € de l'heure. Une mise à jour simple prend rarement plus d'une heure." }
         }
       ]
     }
@@ -114,10 +114,10 @@ const schema = {
           </div>
           <div class="grid grid-cols-2 gap-4">
             {[
-              { label: 'Projets livrés', value: '20+' },
+              { label: 'Taux horaire net', value: '40 €' },
               { label: 'Délai moyen', value: '3-4 sem.' },
               { label: 'Score Lighthouse', value: '95+' },
-              { label: 'Clients satisfaits', value: '100%' },
+              { label: 'Corrections incluses', value: '3 mois' },
             ].map(stat => (
               <div class="border border-filet p-6 text-center">
                 <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
@@ -172,7 +172,7 @@ const schema = {
         {[
           {
             q: 'Travaillez-vous avec des entreprises de la filiere nautique a Lorient ?',
-            a: 'Oui, Lorient etant la capitale de la voile et un pole de la course au large, je travaille avec des entreprises du nautisme, de la construction navale et des equipementiers. Je cree des sites adaptes a ces secteurs exigeants.'
+            a: 'Oui, Lorient etant la capitale de la voile et un pole de la course au large, je peux travailler avec des entreprises du nautisme, de la construction navale et des equipementiers. Je cree des sites adaptes a ces secteurs exigeants.'
           },
           {
             q: 'Comment se passent les echanges si vous etes base pres de Rennes ?',
@@ -184,11 +184,11 @@ const schema = {
           },
           {
             q: 'Quel budget prevoir pour un site web a Lorient ?',
-            a: 'Un site vitrine demarre a 800 euros, un e-commerce a partir de 1 500 euros. Pour les projets techniques complexes (portails metier, applications web), le budget est defini sur devis apres analyse de vos besoins.'
+            a: 'Je facture au temps passé, 40 € de l\'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d\'heures, soit environ 600 €, une boutique en ligne une cinquantaine d\'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone.'
           },
           {
             q: 'Proposez-vous hebergement et maintenance ?',
-            a: 'Oui, je propose des forfaits d\'hebergement performant et de maintenance mensuelle : mises a jour de securite, sauvegardes automatiques, monitoring et corrections. Votre site reste rapide et securise.'
+            a: 'Oui, sans abonnement : les corrections sont incluses pendant trois mois après la livraison, puis les mises à jour de sécurité, les évolutions et les modifications de contenu sont facturées au temps passé, au même taux de 40 € de l\'heure. Une mise à jour simple prend rarement plus d\'une heure.'
           },
         ].map(item => (
           <details class="border border-filet p-6 group">

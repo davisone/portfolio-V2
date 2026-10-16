@@ -34,7 +34,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Combien de propositions de logo recevrai-je ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Selon la formule, vous recevez 2 a 5 propositions de logo distinctes. Chaque proposition est accompagnee d'une explication du concept et du choix creatif. Vous pouvez ensuite demander des ajustements sur la direction retenue." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Selon ce qui est convenu dans l'estimation, vous recevez 2 a 5 propositions de logo distinctes. Chaque proposition est accompagnee d'une explication du concept et du choix creatif. Vous pouvez ensuite demander des ajustements sur la direction retenue." }
         },
         {
           "@type": "Question",
@@ -49,7 +49,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Proposez-vous des declinaisons pour les reseaux sociaux ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Oui, les formules Identite complete et Branding complet incluent les declinaisons pour les reseaux sociaux : photo de profil, banniere, templates de publications. Tout est fourni aux dimensions exactes de chaque plateforme." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, si vous le souhaitez, je prepare les declinaisons pour les reseaux sociaux : photo de profil, banniere, templates de publications. Tout est fourni aux dimensions exactes de chaque plateforme." }
         }
       ]
     }
@@ -59,7 +59,7 @@ const schema = {
 
 <Layout
   title="Identite visuelle | Evan Davison · Developpeur Web Freelance"
-  description="Creation d'identite visuelle : logo, charte graphique, palette de couleurs, typographie et declinaisons. Une image de marque unique et coherente. A partir de 500 euros."
+  description="Creation d'identite visuelle : logo, charte graphique, palette de couleurs, typographie et declinaisons. Une image de marque unique et coherente, facturee au temps passe."
   canonical="https://www.evandavison.fr/services/identite-visuelle/"
   schema={schema}
 >
@@ -92,7 +92,7 @@ const schema = {
             Demander un devis
           </a>
           <a href="#tarifs" class="btn-secondary">
-            Voir les formules
+            Voir les tarifs
           </a>
         </div>
       </div>
@@ -114,9 +114,9 @@ const schema = {
           </div>
           <div class="grid grid-cols-2 gap-4">
             {[
-              { label: 'Identites creees', value: '15+' },
+              { label: 'Taux horaire net', value: '40 €' },
               { label: 'Propositions par projet', value: '3-5' },
-              { label: 'Satisfaction client', value: '100%' },
+              { label: 'Corrections incluses', value: '3 mois' },
               { label: 'Delai moyen', value: '2-4 sem.' },
             ].map(stat => (
               <div class="border border-filet p-6 text-center">
@@ -153,72 +153,13 @@ const schema = {
 
     <!-- Tarifs -->
     <section id="tarifs" class="py-16 bg-oeuvre border-t border-b border-filet">
-      <div class="section-container">
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-12 text-center">
-          Nos <em class="text-point">formules</em>
+      <div class="section-container max-w-3xl">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-encre mb-6">
+          Au <em class="text-point">temps passe</em>
         </h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            {
-              name: 'Logo essentiel',
-              price: 'A partir de 500',
-              unit: '',
-              features: [
-                '2 propositions de logo',
-                '2 tours de retouches',
-                'Declinaisons principales',
-                'Palette de couleurs',
-                'Fichiers sources + exports',
-                'Livraison sous 2 semaines',
-              ]
-            },
-            {
-              name: 'Identite complete',
-              price: 'A partir de 1 200',
-              unit: '',
-              features: [
-                '3 propositions de logo',
-                'Retouches illimitees',
-                'Charte graphique complete',
-                'Typographie + palette',
-                'Declinaisons reseaux sociaux',
-                'Livraison sous 3 semaines',
-              ]
-            },
-            {
-              name: 'Branding complet',
-              price: 'A partir de 2 500',
-              unit: '',
-              features: [
-                '5 propositions de logo',
-                'Retouches illimitees',
-                'Charte graphique detaillee',
-                'Templates print + digital',
-                'Cartes de visite + papeterie',
-                'Livraison sous 5 semaines',
-              ]
-            },
-          ].map(plan => (
-            <div class="border border-filet p-8 flex flex-col">
-              <h3 class="text-encre font-semibold text-xl mb-2">{plan.name}</h3>
-              <div class="mb-6">
-                <span class="text-3xl font-display font-bold text-point">{plan.price}</span>
-                <span class="text-cartel text-sm"> euros{plan.unit}</span>
-              </div>
-              <ul class="space-y-3 text-cartel text-sm mb-8 flex-1">
-                {plan.features.map(f => (
-                  <li class="flex items-start gap-2">
-                    <span class="text-point mt-0.5 shrink-0">-</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a href="/#contact" class="btn-primary text-center w-full">
-                Choisir cette formule
-              </a>
-            </div>
-          ))}
-        </div>
+        <p class="text-cartel leading-relaxed">
+          Pas de formule fermee : je facture au temps passe, 40 euros de l'heure (net, TVA non applicable, art. 293 B du CGI), sur une estimation en heures validee avant de commencer. Un logo seul ne demande pas le meme temps qu'une charte complete avec ses declinaisons : on fixe ensemble ce qu'il vous faut. Les conditions sont celles de <a href="https://www.dvs-web.fr/tarifs" target="_blank" rel="noopener noreferrer" class="text-point underline underline-offset-4">DVS Web</a>.
+        </p>
       </div>
     </section>
 
@@ -235,7 +176,7 @@ const schema = {
           },
           {
             q: 'Combien de propositions de logo recevrai-je ?',
-            a: 'Selon la formule, vous recevez 2 a 5 propositions distinctes. Chaque proposition est accompagnee d\'une explication du concept. Vous pouvez ensuite demander des ajustements sur la direction retenue.'
+            a: 'Selon ce qui est convenu dans l\'estimation, vous recevez 2 a 5 propositions distinctes. Chaque proposition est accompagnee d\'une explication du concept. Vous pouvez ensuite demander des ajustements sur la direction retenue.'
           },
           {
             q: 'Les fichiers sources sont-ils fournis ?',
@@ -247,7 +188,7 @@ const schema = {
           },
           {
             q: 'Proposez-vous des declinaisons pour les reseaux sociaux ?',
-            a: 'Oui, les formules Identite complete et Branding complet incluent les declinaisons reseaux sociaux : photo de profil, banniere, templates de publications aux dimensions exactes de chaque plateforme.'
+            a: 'Oui, si vous le souhaitez, je prepare les declinaisons reseaux sociaux : photo de profil, banniere, templates de publications aux dimensions exactes de chaque plateforme.'
           },
         ].map(item => (
           <details class="border border-filet p-6 group">

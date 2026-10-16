@@ -202,7 +202,9 @@
       "subjectPlaceholder": "Création d'un site web",
       "messagePlaceholder": "Décrivez votre projet...",
       "submit": "Envoyer le message",
-      "submitting": "Envoi en cours..."
+      "submitting": "Envoi en cours...",
+      "privacy": "Votre message transite par EmailJS et ne sert qu'à vous répondre ; je le garde trois ans après notre dernier échange. Détails et droits :",
+      "privacyLink": "politique de confidentialité"
     },
     "status": {
       "success": "Message envoyé avec succès !",
@@ -232,8 +234,6 @@
       "redesign": "Refonte site web",
       "seo": "Optimisation SEO",
       "webApp": "Application web",
-      "maintenance": "Maintenance web",
-      "hosting": "Hebergement web",
       "branding": "Identite visuelle"
     },
     "resourceLinks": {
@@ -242,7 +242,21 @@
       "faq": "FAQ",
       "comparisons": "Comparatifs",
       "cv": "Mon CV"
+    },
+    "identity": "Evan Davison EI · Chantepie, près de Rennes",
+    "legal": {
+      "notice": "Mentions légales",
+      "privacy": "Confidentialité",
+      "terms": "CGV",
+      "cookies": "Gérer les cookies"
     }
+  },
+  "cookies": {
+    "title": "Un cookie, pour la mesure d'audience.",
+    "text": "Avec votre accord, Google Analytics mesure les pages lues (cookies _ga, 13 mois). Rien d'autre, et vous pouvez changer d'avis à tout moment avec « Gérer les cookies », en bas de page. ",
+    "more": "Détails",
+    "accept": "Accepter",
+    "refuse": "Refuser"
   },
   "notFound": {
     "title": "404",
