@@ -11,7 +11,7 @@ const t = getTranslations(locale)
 const contactLinks = [
   { label: 'contact@evandavison.fr', href: 'mailto:contact@evandavison.fr' },
   { label: '+33 6 51 01 95 06', href: 'tel:+33651019506' },
-  { label: 'Rennes, France', href: null },
+  { label: 'Chantepie (Rennes), France', href: null },
   { label: 'GitHub', href: 'https://github.com/davisone' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/evan-d-766478247' },
 ]
@@ -151,6 +151,16 @@ const contactLinks = [
           >
             {t.contact.form.submit}
           </button>
+
+          <p class="font-lecture text-xs leading-relaxed text-cartel mt-4">
+            {t.contact.form.privacy}
+            <a
+              href="https://www.dvs-web.fr/confidentialite"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline underline-offset-2 hover:text-point"
+            >{t.contact.form.privacyLink}</a>.
+          </p>
 
           <div aria-live="polite" aria-atomic="true">
             <p id="contact-status" class="font-lecture text-sm mt-4 text-center text-encre"></p>

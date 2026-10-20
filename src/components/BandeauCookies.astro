@@ -1,0 +1,151 @@
+---
+import { getTranslations, type Locale } from '../i18n'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'fr' } = Astro.props
+const t = getTranslations(locale)
+---
+
+<div
+  id="bandeau-cookies"
+  role="dialog"
+  aria-live="polite"
+  aria-label={t.cookies.title}
+  class="fixed inset-x-0 bottom-0 z-[95] p-4 sm:p-6"
+  hidden
+>
+  <div class="mx-auto max-w-2xl bg-encre text-cimaise p-5 sm:p-6">
+    <p class="font-display text-xl mb-2">{t.cookies.title}</p>
+    <p class="font-lecture text-[15px] leading-relaxed text-cimaise/85 mb-5">
+      {t.cookies.text}
+      <a
+        href="https://www.dvs-web.fr/confidentialite#cookies"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline underline-offset-4 hover:text-cimaise"
+      >{t.cookies.more}</a>
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <button
+        type="button"
+        data-cookies-choix="all"
+        class="min-h-11 px-6 border border-cimaise text-cimaise font-signal text-xs tracking-[0.1em] uppercase hover:bg-cimaise hover:text-encre transition-colors"
+      >{t.cookies.accept}</button>
+      <button
+        type="button"
+        data-cookies-choix="essential"
+        class="min-h-11 px-6 border border-cimaise text-cimaise font-signal text-xs tracking-[0.1em] uppercase hover:bg-cimaise hover:text-encre transition-colors"
+      >{t.cookies.refuse}</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // GA ne se charge qu'après accord. Le choix est daté et redemandé après six mois ;
+  // le retrait coupe la mesure et efface les cookies _ga.
+  type Choix = 'all' | 'essential'
+
+  declare global {
+    interface Window {
+      dataLayer: unknown[]
+      gtag: (...args: unknown[]) => void
+      [drapeau: `ga-disable-${string}`]: boolean
+    }
+  }
+
+  const GA_ID = 'G-ZS8DC81PH4'
+  const CLE = 'cookie-consent'
+
+  const choixValide = (): Choix | null => {
+    let valeur: unknown
+    try {
+      valeur = JSON.parse(localStorage.getItem(CLE) ?? 'null')
+    } catch {
+      return null
+    }
+    if (typeof valeur !== 'object' || valeur === null || !('choix' in valeur) || !('date' in valeur)) return null
+    const { choix, date } = valeur
+    if ((choix !== 'all' && choix !== 'essential') || typeof date !== 'string') return null
+    const limite = new Date(date)
+    limite.setMonth(limite.getMonth() + 6)
+    return limite > new Date() ? choix : null
+  }
+
+  let gaCharge = false
+  let derniereUrl = ''
+
+  const vuePage = () => {
+    if (derniereUrl === location.href) return
+    derniereUrl = location.href
+    window.gtag('event', 'page_view', { page_path: location.pathname })
+  }
+
+  const activerGa = () => {
+    window[`ga-disable-${GA_ID}`] = false
+    if (gaCharge) {
+      window.gtag('consent', 'update', { analytics_storage: 'granted' })
+      return
+    }
+    gaCharge = true
+    window.dataLayer = window.dataLayer || []
+    window.gtag = function () {
+      // gtag.js attend l'objet arguments tel quel
+      window.dataLayer.push(arguments)
+    }
+    window.gtag('js', new Date())
+    window.gtag('config', GA_ID, { send_page_view: false, cookie_expires: 34128000 })
+    vuePage()
+    const script = document.createElement('script')
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`
+    script.async = true
+    document.head.appendChild(script)
+  }
+
+  const couperGa = () => {
+    window[`ga-disable-${GA_ID}`] = true
+    if (gaCharge) window.gtag('consent', 'update', { analytics_storage: 'denied' })
+    const morceaux = location.hostname.split('.')
+    const domaines = morceaux.slice(0, -1).map((_, i) => morceaux.slice(i).join('.'))
+    const noms = document.cookie.split('; ').map((c) => c.split('=')[0]).filter((n) => n.startsWith('_ga'))
+    for (const nom of noms) {
+      document.cookie = `${nom}=; max-age=0; path=/`
+      for (const d of domaines) document.cookie = `${nom}=; max-age=0; path=/; domain=.${d}`
+    }
+  }
+
+  const afficher = (visible: boolean) => {
+    const bandeau = document.getElementById('bandeau-cookies')
+    if (bandeau) bandeau.hidden = !visible
+  }
+
+  document.addEventListener('click', (e) => {
+    if (!(e.target instanceof Element)) return
+    if (e.target.closest('[data-cookies-ouvrir]')) {
+      afficher(true)
+      return
+    }
+    const bouton = e.target.closest<HTMLElement>('[data-cookies-choix]')
+    if (!bouton) return
+    const choix: Choix = bouton.dataset.cookiesChoix === 'all' ? 'all' : 'essential'
+    localStorage.setItem(CLE, JSON.stringify({ choix, date: new Date().toISOString() }))
+    if (choix === 'all') activerGa()
+    else couperGa()
+    afficher(false)
+  })
+
+  // Navigation client : le bandeau est recréé à chaque page
+  document.addEventListener('astro:page-load', () => {
+    const choix = choixValide()
+    afficher(choix === null)
+    if (choix !== 'all') {
+      // Y compris les cookies _ga posés avant l'arrivée du bandeau
+      couperGa()
+      return
+    }
+    if (gaCharge) vuePage()
+    else activerGa()
+  })
+</script>

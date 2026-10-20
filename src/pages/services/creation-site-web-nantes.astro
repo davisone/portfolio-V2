@@ -39,7 +39,7 @@ const schema = {
         {
           "@type": "Question",
           "name": "Combien coûte un site web professionnel à Nantes ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine démarre à partir de 800 euros, une boutique en ligne à partir de 1 500 euros. Le tarif dépend des fonctionnalités, du design et du volume de pages. Devis gratuit sous 48h." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Je facture au temps passé, 40 € de l'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d'heures, soit environ 600 €, une boutique en ligne une cinquantaine d'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone." }
         },
         {
           "@type": "Question",
@@ -114,10 +114,10 @@ const schema = {
           </div>
           <div class="grid grid-cols-2 gap-4">
             {[
-              { label: 'Sites livrés', value: '20+' },
+              { label: 'Taux horaire net', value: '40 €' },
               { label: 'Délai moyen', value: '3 sem.' },
               { label: 'Score Lighthouse', value: '95+' },
-              { label: 'Satisfaction client', value: '100%' },
+              { label: 'Corrections incluses', value: '3 mois' },
             ].map(stat => (
               <div class="border border-filet p-6 text-center">
                 <div class="text-3xl font-display font-bold text-point mb-1">{stat.value}</div>
@@ -180,7 +180,7 @@ const schema = {
           },
           {
             q: 'Combien coute un site web professionnel a Nantes ?',
-            a: 'Un site vitrine demarre a 800 euros, une boutique en ligne a partir de 1 500 euros. Le tarif depend des fonctionnalites et du volume de pages. Devis gratuit sous 48h.'
+            a: 'Je facture au temps passé, 40 € de l\'heure (net, TVA non applicable, art. 293 B du CGI), sans forfait : un site vitrine demande une quinzaine d\'heures, soit environ 600 €, une boutique en ligne une cinquantaine d\'heures, une application web plus de cent heures et une application mobile environ deux cents heures. La grille complète et le simulateur sont sur dvs-web.fr/tarifs, et on affine ensemble au téléphone.'
           },
           {
             q: 'Pouvez-vous refondre un site existant ?',
